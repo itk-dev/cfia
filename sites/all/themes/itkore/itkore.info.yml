@@ -1,0 +1,22 @@
+name: itkore
+type: theme
+description: 'The Itkore theme.'
+package: Itkore
+
+libraries:
+
+stylesheets-remove:
+  - normalize.css
+
+regions:
+  header: Header
+  help: Help
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  content: Content
+  footer: Footer
+
+version: '0.6'
+core: '8.x'
+datestamp: 1418825451
+
