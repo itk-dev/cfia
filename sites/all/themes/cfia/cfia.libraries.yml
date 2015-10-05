@@ -1,0 +1,7 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      css/styles.css: { media: screen }
+    component:
+      css/components/toolbar.css: {}

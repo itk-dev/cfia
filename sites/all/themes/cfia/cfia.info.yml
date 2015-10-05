@@ -1,0 +1,19 @@
+name: cfia
+type: theme
+description: 'The CFIA theme.'
+package: CFIA
+
+libraries:
+  - cfia/global-styling
+
+stylesheets-remove:
+  - normalize.css
+
+regions:
+  header: Header
+  content: Content
+  footer: Footer
+
+version: '0.6'
+core: '8.x'
+datestamp: 1418825451
