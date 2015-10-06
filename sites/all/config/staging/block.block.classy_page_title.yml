@@ -1,0 +1,18 @@
+uuid: e3f47f9c-e3bf-4e6d-a400-c25e527d4a55
+langcode: da
+status: true
+dependencies:
+  theme:
+    - classy
+id: classy_page_title
+theme: classy
+region: content
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: Sidetitel
+  provider: core
+  label_display: '0'
+visibility: {  }

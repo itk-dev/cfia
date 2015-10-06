@@ -1,0 +1,20 @@
+uuid: 2764c410-ce0a-4081-9900-0cd23a3ef02d
+langcode: da
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - cfia
+id: cfia_login
+theme: cfia
+region: header
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'Log ind'
+  provider: user
+  label_display: visible
+visibility: {  }

@@ -1,0 +1,18 @@
+uuid: 30d7d50f-7f22-4372-bd00-a375acc76135
+langcode: da
+status: true
+dependencies:
+  theme:
+    - cfia
+id: cfia_local_actions
+theme: cfia
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

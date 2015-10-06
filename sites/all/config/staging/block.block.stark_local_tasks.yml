@@ -1,0 +1,20 @@
+uuid: a9f102b4-a040-456e-8d05-5a5ef78818ef
+langcode: da
+status: true
+dependencies:
+  theme:
+    - stark
+id: stark_local_tasks
+theme: stark
+region: content
+weight: -20
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Faner
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

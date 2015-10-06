@@ -1,0 +1,18 @@
+uuid: 15eca97b-67d7-44fa-a100-d510ac31c9d7
+langcode: da
+status: true
+dependencies:
+  theme:
+    - classy
+id: classy_local_actions
+theme: classy
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }
