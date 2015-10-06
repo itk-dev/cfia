@@ -9,7 +9,7 @@ dependencies:
   theme:
     - itkore
 id: itkore_admin
-theme: itkore
+theme: cfia
 region: '-1'
 weight: 1
 provider: null
