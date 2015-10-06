@@ -24,9 +24,9 @@ browserSync.init({
 });
 
 // We only want to process our own non-processed JavaScript files.
-var jsPath = ['./sites/all/themes/cfia/js/*.js', '!./sites/all/themes/cfia/js/*.min.*'];
-var sassPath = './sites/all/themes/cfia/sass/**/*.scss';
-var twigPath = './sites/all/themes/cfia/templates/**/*.php'; //could also be twig files
+var jsPath = ['./sites/all/themes/cfia/js/*.js', '!./sites/all/themes/cfia/js/**/*.min.*'];
+var sassPath = './sites/all/themes/cfia/scss/**/*.scss';
+var twigPath = './sites/all/themes/cfia/templates/**/*.twig'; //could also be twig files
 
 var buildDir = './sites/all/themes/cfia/js';
 
@@ -46,10 +46,7 @@ gulp.task('sass', function () {
   gulp.src(sassPath)
     .pipe(sourcemaps.init())
     .pipe(sass({
-      outputStyle: 'compressed',
-      includePaths: [
-        'scss/assets/compass-mixins/lib',
-      ]
+      outputStyle: 'compressed'
     }).on('error', sass.logError))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./sites/all/themes/cfia/css'))
