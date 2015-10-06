@@ -1,4 +1,4 @@
-uuid: 0cb1f412-ebd0-4f40-8a49-7396ed2c2acb
+uuid: 3f0f5393-c364-4834-be0d-13a2048ff6e3
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: 'Overview Page'
 type: overview_page
-description: 'Displays a collection of pages'
+description: ''
 help: ''
 new_revision: false
 preview_mode: 1

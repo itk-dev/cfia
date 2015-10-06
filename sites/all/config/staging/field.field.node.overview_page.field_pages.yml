@@ -1,4 +1,4 @@
-uuid: fb44321d-2a1c-43af-b100-bbd6f83730af
+uuid: 5e49f4c8-05ac-4e21-b00a-106936916ad3
 langcode: en
 status: true
 dependencies:
@@ -13,7 +13,7 @@ entity_type: node
 bundle: overview_page
 label: Pages
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

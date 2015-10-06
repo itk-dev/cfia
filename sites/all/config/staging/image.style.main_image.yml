@@ -1,12 +1,12 @@
-uuid: 22902c46-e118-4b77-981b-27d305e3040f
+uuid: 9968edba-716c-4842-b700-f90379d172cf
 langcode: en
 status: true
 dependencies: {  }
 name: main_image
-label: 'Main Image'
+label: 'Main Image (W: 1216)'
 effects:
-  6d098272-6d38-4a28-9b08-8a936ee23df0:
-    uuid: 6d098272-6d38-4a28-9b08-8a936ee23df0
+  b02ce3d8-5e82-4358-a000-dad79b75cf0b:
+    uuid: b02ce3d8-5e82-4358-a000-dad79b75cf0b
     id: image_scale
     weight: 1
     data:
