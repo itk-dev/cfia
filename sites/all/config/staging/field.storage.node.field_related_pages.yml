@@ -1,0 +1,19 @@
+uuid: 666d3bc6-ca73-47f4-9c00-ec6c3c2e4a35
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference
+    - node
+id: node.field_related_pages
+field_name: field_related_pages
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: entity_reference
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false

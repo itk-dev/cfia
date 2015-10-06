@@ -1,0 +1,27 @@
+uuid: fb44321d-2a1c-43af-b100-bbd6f83730af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pages
+    - node.type.overview_page
+  module:
+    - entity_reference
+id: node.overview_page.field_pages
+field_name: field_pages
+entity_type: node
+bundle: overview_page
+label: Pages
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+    sort:
+      field: _none
+field_type: entity_reference

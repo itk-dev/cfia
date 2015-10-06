@@ -1,0 +1,28 @@
+uuid: 568bdc3d-95a4-4878-8f01-1ae1280bc405
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_pages
+    - node.type.page
+  module:
+    - entity_reference
+id: node.page.field_related_pages
+field_name: field_related_pages
+entity_type: node
+bundle: page
+label: 'Related Pages'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      overview_page: overview_page
+      page: page
+    sort:
+      field: _none
+field_type: entity_reference
