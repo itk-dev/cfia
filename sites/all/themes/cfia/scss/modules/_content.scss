@@ -1,0 +1,46 @@
+/**
+ *
+ * Content.
+ *
+ */
+
+.content {
+  padding-right: 1em;
+  padding-left: 1em;
+
+  h1 {
+    margin-bottom: .5em;
+
+    color: transparentize($black, .25);
+    font-size: 3em;
+    text-align: center;
+  }
+
+  &--image-wrapper {
+    margin-right: -6em;
+    margin-bottom: 2.5em;
+    margin-left: -6em;
+  }
+
+  h2 {
+    margin-bottom: .5em;
+
+  }
+
+  &--text {
+    border-bottom: 1px solid $gray-lighter;
+
+    margin-right: -6em;
+    margin-bottom: 3em;
+    margin-left: -6em;
+    padding-right: 6em;
+    padding-bottom: 3em;
+    padding-left: 6em;
+  }
+
+  @include breakpoint($breakpoint-desk) {
+    h1 {
+      font-size: 5em;
+    }
+  }
+}

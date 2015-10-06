@@ -1,0 +1,68 @@
+/**
+ *
+ * Layout.
+ *
+ */
+
+
+body, html {
+  overflow-x: hidden;
+}
+
+body.is-page {
+  padding-top: 8em;
+}
+
+&.is-frontpage {
+  .logo {
+    @include breakpoint($breakpoint-desk) {
+      top: 5em;
+      left: 2em;
+
+      height: 3.5em;
+      width: 8em;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      left: 8em;
+
+      height: 13.5em;
+      width: 10em;
+    }
+  }
+}
+
+.logo,
+.logo.is-sticky {
+  position: absolute;
+  top: 1.5em;
+  left: 1em;
+  z-index: 90;
+
+  display: block;
+  height: 2.6em;
+  width: 6em;
+  overflow: hidden;
+
+  @include breakpoint($breakpoint-desk) {
+    position: fixed;
+    top: 1.3em;
+    left: 1em;
+
+    height: 2.2em;
+    width: 5em;
+
+    transition: all .35s;
+  }
+}
+
+main[role=main] {
+  margin-right: auto;
+  margin-bottom: 8em;
+  margin-left: auto;
+  max-width: $breakpoint-desk;
+
+  @include breakpoint($breakpoint-desk) {
+    margin-bottom: 6em;
+  }
+}
