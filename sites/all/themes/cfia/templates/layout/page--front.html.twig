@@ -62,27 +62,39 @@
  * @ingroup themeable
  */
 #}
-
-<header>
-  <div class="overlay js-menu-toggle"></div>
-  <a href="/" class="logo js-logo" title="Center for Innovation i Aarhus"><img src="/sites/all/themes/cfia/logo.svg"></a>
-  <nav class="nav js-nav">
-    <div class="nav--links">
-      {{ page.nav_menu }}
-    </div>
-  </nav>
-  <div class="nav-toggle js-menu-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+<div class="overlay js-menu-toggle"></div>
+<a href="/" class="logo js-logo" title="Center for Innovation i Aarhus"><img src="/sites/all/themes/cfia/logo.svg"></a>
+<nav class="nav js-nav">
+  <div class="nav--links">
+    {{ page.nav_menu }}
   </div>
-  <nav class="hamburger-menu">
-    <div class="hamburger-menu--links">
-      {{ page.hamburger }}
+</nav>
+<div class="nav-toggle js-menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<nav class="hamburger-menu">
+  <div class="hamburger-menu--links">
+    {{ page.hamburger }}
+  </div>
+</nav>
+
+<div class="header" role="banner" id="home" style="background:url({{ front_image }})">
+  <div class="header--inner">
+    <h1 class="header--big">{{ front_title }}</h1>
+    <p class="header--lead">
+      {{ front_lead }}
+    </p>
+    <p class="header--sub">
+      {{ front_sub }}
+    </p>
+    <div class="header--button-wrapper">
+      <a href="{{ front_button_link }}" class="header--button-link is-primary">{{ front_button_text }}</a>
     </div>
-  </nav>
-</header>
+  </div>
+</div>
 
 <main role="main">
   {{ page.content }}
@@ -100,5 +112,6 @@
     </div>
   </div>
 </footer>
+
 {# Tabs positioned fixed. #}
 {{ tabs }}

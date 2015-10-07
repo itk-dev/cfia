@@ -1,0 +1,164 @@
+<?php
+/**
+ * @file
+ * Contains Drupal\cfia_base\Form\BookingSettingsForm.
+ */
+
+namespace Drupal\cfia_base\Form;
+
+use Drupal\Core\Form\FormBase;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File;
+
+
+/**
+ * Class ContentEntityExampleSettingsForm.
+ * @package Drupal\cfia_base\Form
+ * @ingroup cfia_booking
+ */
+class CfiaSettingsForm extends FormBase {
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getFormId() {
+    return 'cfia_settings';
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function buildForm(array $form, FormStateInterface $form_state) {
+    $config = $this->config('cfia_base.settings');
+
+    // Add booking wrapper.
+    $form['frontpage_wrapper'] = array(
+      '#title' => $this->t('Frontpage settings'),
+      '#type' => 'details',
+      '#weight' => '1',
+      '#open' => TRUE,
+    );
+
+    $form['frontpage_wrapper']['frontpage_title'] = array(
+      '#title' => $this->t('Frontpage title'),
+      '#type' => 'textfield',
+      '#default_value' => $config->get('cfia_frontpage.frontpage_title'),
+      '#weight' => '1',
+    );
+
+    $form['frontpage_wrapper']['frontpage_lead'] = array(
+      '#title' => $this->t('Frontpage lead text'),
+      '#type' => 'textfield',
+      '#default_value' => $config->get('cfia_frontpage.frontpage_lead'),
+      '#weight' => '2',
+    );
+
+    $form['frontpage_wrapper']['frontpage_sub'] = array(
+      '#title' => $this->t('Frontpage sub text'),
+      '#type' => 'textfield',
+      '#default_value' => $config->get('cfia_frontpage.frontpage_sub'),
+      '#weight' => '3',
+    );
+
+    $form['frontpage_wrapper']['frontpage_button'] = array(
+      '#title' => $this->t('Frontpage button text'),
+      '#type' => 'textfield',
+      '#default_value' => $config->get('cfia_frontpage.frontpage_button'),
+      '#weight' => '4',
+    );
+
+    $form['frontpage_wrapper']['frontpage_link'] = array(
+      '#title' => $this->t('Frontpage button link'),
+      '#type' => 'textfield',
+      '#default_value' => $config->get('cfia_frontpage.frontpage_link'),
+      '#weight' => '5',
+    );
+
+    $fids = array();
+    if (!empty($input)) {
+      if (!empty($input['frontpage_image'])) {
+        $fids[0] = $form_state->getValue('frontpage_image');
+      }
+    }
+    else {
+      $fids[0] = $config->get('cfia_frontpage.frontpage_image', '');
+    }
+
+    $form['frontpage_wrapper']['frontpage_image'] = array(
+      '#title' => $this->t('Frontpage image'),
+      '#type' => 'managed_file',
+      '#default_value' => ($fids[0]) ? $fids : '',
+      '#upload_location' => 'public://',
+      '#weight' => '3',
+      '#open' => TRUE,
+      '#description' => t('The image used at the top of the frontpage.'),
+    );
+
+    $form['submit'] = array(
+      '#type' => 'submit',
+      '#value' => t('Save changes'),
+      '#weight' => '6',
+    );
+
+    return $form;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+    drupal_set_message('Settings saved');
+
+    // Fetch the file id previously saved.
+    $config = $this->config('cfia_base.settings');
+    $old_fid = $config->get('cfia_frontpage.frontpage_image', '');
+
+    // Load the file set in the form.
+    $value = $form_state->getValue('frontpage_image');
+    $form_fid = count($value) > 0 ? $value[0] : 0;
+    $file = ($form_fid) ? File::load($form_fid) : FALSE;
+
+    // If a file is set.
+    if ($file) {
+      $fid = $file->id();
+      // Check if the file has changed.
+      if ($fid != $old_fid) {
+
+        // Remove old file.
+        if ($old_fid) {
+          removeFile($old_fid);
+        }
+
+        // Add file to file_usage table.
+        \Drupal::service('file.usage')->add($file, 'cfia_base', 'user', '1');
+      }
+    }
+    else {
+      // If old file exists but no file set in form, remove old file.
+      if ($old_fid) {
+        removeFile($old_fid);
+      }
+    }
+
+    $this->configFactory()->getEditable('cfia_base.settings')
+      ->set('cfia_frontpage.frontpage_title', $form_state->getValue('frontpage_title'))
+      ->set('cfia_frontpage.frontpage_lead', $form_state->getValue('frontpage_lead'))
+      ->set('cfia_frontpage.frontpage_sub', $form_state->getValue('frontpage_sub'))
+      ->set('cfia_frontpage.frontpage_button', $form_state->getValue('frontpage_button'))
+      ->set('cfia_frontpage.frontpage_link', $form_state->getValue('frontpage_link'))
+      ->set('cfia_frontpage.frontpage_image', $file ? $file->id() : NULL)
+      ->save();
+  }
+}
+
+/**
+ * Deletes a a file from file usage table.
+ *
+ * @param int $fid
+ *   The file id of the file to delete.
+ */
+function removeFile($fid) {
+  // Load and delete old file.
+  $file = File::load($fid);
+  \Drupal::service('file.usage')->delete($file, 'cfia_base', 'user', '1', '1');
+}

@@ -35,7 +35,7 @@
   {% import _self as menus %}
   {% if items %}
     {% for item in items %}
-      <span class="hamburger-menu--link">{{ link(item.title, item.url) }}</span>
+      <span class="nav--link">{{ link(item.title, item.url) }}</span>
       {% if item.below %}
         {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
       {% endif %}

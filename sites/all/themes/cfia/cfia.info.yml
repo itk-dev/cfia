@@ -11,11 +11,9 @@ stylesheets-remove:
   - normalize.css
 
 regions:
-  header: Header
   hamburger: Hamburger menu
   nav_menu: Nav menu
   content: Content
-  footer: Footer
 
 version: '0.6'
 core: '8.x'
