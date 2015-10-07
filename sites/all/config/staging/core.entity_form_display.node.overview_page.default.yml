@@ -1,18 +1,19 @@
-uuid: ac5ebb30-1b28-40cd-8903-3b86b6f44f88
+uuid: ec57d5ea-338c-4015-8342-661f9a37cfff
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.itkore_resource.body
-    - field.field.node.itkore_resource.field_itkore_image
-    - node.type.itkore_resource
+    - field.field.node.overview_page.body
+    - field.field.node.overview_page.field_main_image
+    - field.field.node.overview_page.field_pages
+    - node.type.overview_page
   module:
     - image
     - path
     - text
-id: node.itkore_resource.default
+id: node.overview_page.default
 targetEntityType: node
-bundle: itkore_resource
+bundle: overview_page
 mode: default
 content:
   body:
@@ -28,15 +29,21 @@ content:
     weight: 10
     settings: {  }
     third_party_settings: {  }
-  field_itkore_image:
+  field_main_image:
     weight: 32
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
-    third_party_settings:
-      imce:
-        enabled: 1
+    third_party_settings: {  }
     type: image_image
+  field_pages:
+    weight: 33
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
   langcode:
     type: language_select
     weight: 2

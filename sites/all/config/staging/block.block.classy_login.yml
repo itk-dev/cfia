@@ -1,14 +1,14 @@
-uuid: 6b8160f6-f01d-47bf-9e34-521172462637
+uuid: 9616c216-1f20-4735-870a-108f0d70352e
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - user
   theme:
-    - itkore
-id: itkore_login
-theme: cfia
-region: '-1'
+    - classy
+id: classy_login
+theme: classy
+region: sidebar_first
 weight: 0
 provider: null
 plugin: user_login_block

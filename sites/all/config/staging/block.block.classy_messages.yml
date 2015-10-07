@@ -1,14 +1,14 @@
-uuid: d0873069-c648-443c-aa04-0453d1e8f430
+uuid: 05cca0b0-5c7b-49fc-8509-9cda310c51b6
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
   theme:
-    - itkore
-id: itkore_messages
-theme: cfia
-region: '-1'
+    - classy
+id: classy_messages
+theme: classy
+region: highlighted
 weight: 0
 provider: null
 plugin: system_messages_block

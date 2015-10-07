@@ -1,16 +1,16 @@
-uuid: 8842cf89-a6f1-4e22-b13e-626dfb274b44
+uuid: b4273e5b-aa42-42f1-9260-96a479c52074
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.admin
   module:
     - system
   theme:
-    - itkore
-id: itkore_admin
-theme: cfia
-region: '-1'
+    - classy
+id: classy_admin
+theme: classy
+region: sidebar_first
 weight: 1
 provider: null
 plugin: 'system_menu_block:admin'

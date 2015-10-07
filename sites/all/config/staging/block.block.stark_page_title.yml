@@ -1,0 +1,18 @@
+uuid: b26adda8-b82c-4150-b009-095f0377f11c
+langcode: da
+status: true
+dependencies:
+  theme:
+    - stark
+id: stark_page_title
+theme: stark
+region: content
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: Sidetitel
+  provider: core
+  label_display: '0'
+visibility: {  }

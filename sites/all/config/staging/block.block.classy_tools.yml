@@ -1,16 +1,16 @@
-uuid: ee322354-1980-4a9d-8e00-ac633cbbbd0d
+uuid: 3aff688e-7d82-472f-990f-15f6176fbba9
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.tools
   module:
     - system
   theme:
-    - itkore
-id: itkore_tools
-theme: cfia
-region: '-1'
+    - classy
+id: classy_tools
+theme: classy
+region: sidebar_first
 weight: 0
 provider: null
 plugin: 'system_menu_block:tools'

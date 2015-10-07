@@ -1,22 +1,19 @@
-uuid: d6a01983-7596-4912-a605-5b5e382cdf69
+uuid: 1943f405-2d87-4f2e-8000-a03574d92b8d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.itkore_event.body
-    - field.field.node.itkore_event.field_itkcore_starttime
-    - field.field.node.itkore_event.field_itkore_endtime
-    - field.field.node.itkore_event.field_itkore_image
-    - field.field.node.itkore_event.field_itkore_resource
-    - node.type.itkore_event
+    - field.field.node.page.body
+    - field.field.node.page.field_main_image
+    - field.field.node.page.field_related_pages
+    - node.type.page
   module:
-    - datetime
     - image
     - path
     - text
-id: node.itkore_event.default
+id: node.page.default
 targetEntityType: node
-bundle: itkore_event
+bundle: page
 mode: default
 content:
   body:
@@ -32,27 +29,15 @@ content:
     weight: 10
     settings: {  }
     third_party_settings: {  }
-  field_itkcore_starttime:
+  field_main_image:
     weight: 32
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-  field_itkore_endtime:
-    weight: 33
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-  field_itkore_image:
-    weight: 35
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
-    third_party_settings:
-      imce:
-        enabled: 1
+    third_party_settings: {  }
     type: image_image
-  field_itkore_resource:
-    weight: 34
+  field_related_pages:
+    weight: 33
     settings:
       match_operator: CONTAINS
       size: 60

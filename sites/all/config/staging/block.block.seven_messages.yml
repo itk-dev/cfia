@@ -1,14 +1,14 @@
-uuid: d0873069-c648-443c-aa04-0453d1e8f430
+uuid: 7d979ab5-1d69-4214-af05-5f867841797f
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
   theme:
-    - itkore
-id: itkore_messages
-theme: cfia
-region: '-1'
+    - seven
+id: seven_messages
+theme: seven
+region: highlighted
 weight: 0
 provider: null
 plugin: system_messages_block
