@@ -5,12 +5,15 @@ package: CFIA
 
 libraries:
   - cfia/global-styling
+  - cfia/global-js
 
 stylesheets-remove:
   - normalize.css
 
 regions:
   header: Header
+  hamburger: Hamburger menu
+  nav_menu: Nav menu
   content: Content
   footer: Footer
 

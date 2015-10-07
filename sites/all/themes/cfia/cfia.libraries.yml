@@ -5,3 +5,12 @@ global-styling:
       css/styles.css: { media: screen }
     component:
       css/components/toolbar.css: {}
+
+global-js:
+  version: VERSION
+  js:
+    js/menu-toggle.js: {}
+    js/header-scrolling.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
