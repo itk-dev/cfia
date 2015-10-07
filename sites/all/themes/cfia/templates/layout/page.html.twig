@@ -65,21 +65,18 @@
 
 <header>
   <div class="overlay js-menu-toggle"></div>
-  <a href="/innovationscenteret" class="logo js-logo" title="Center for Innovation i Aarhus"><img src="images/assets/logo.svg"></a>
-  <!--menu.html.twig START-->
+  <a href="/" class="logo js-logo" title="Center for Innovation i Aarhus"><img src="/sites/all/themes/cfia/logo.svg"></a>
   <nav class="nav js-nav">
     <div class="nav--links">
       {{ page.nav_menu }}
     </div>
   </nav>
-  <!--menu.html.twig END-->
   <div class="nav-toggle js-menu-toggle">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
   </div>
-  <!--menu.html.twig START-->
   <nav class="hamburger-menu">
     <div class="hamburger-menu--links">
       {{ page.hamburger }}
@@ -87,17 +84,21 @@
   </nav>
 </header>
 
-{# Main content. (Includes heading and breadcrumb and content region) #}
-<main>
-  {{ page.header }}
+<main role="main">
   {{ page.content }}
 </main>
 
-{# Footer content holds footer region and a custom block. #}
-{% if page.footer %}
-  <footer>
-    {{ page.footer }}
-  </footer>
-{% endif %}
+<footer class="footer">
+  <div class="footer--content">
+    <div class="footer--mail">
+      Dokk1, Hack Kampmanns Plads 2 8000 Aarhus C - <a href="mailto:cfi@aarhus.dk">cfi@aarhus.dk</a>
+    </div>
+    <div class="footer--social">
+      <a href="#"><figure class="footer--icons"><img src="/sites/all/themes/cfia/images/twitter.png"></figure></a>
+      <a href="#"><figure class="footer--icons"><img src="/sites/all/themes/cfia/images/instagram.png"></figure></a>
+      <a href="#"><figure class="footer--icons"><img src="/sites/all/themes/cfia/images/linkedin.png"></figure></a>
+    </div>
+  </div>
+</footer>
 {# Tabs positioned fixed. #}
 {{ tabs }}
