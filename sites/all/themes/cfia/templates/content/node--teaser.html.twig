@@ -68,4 +68,11 @@
  */
 #}
 
-{{ content|without('comment', 'links') }}
+<article class="itk-boxlist--item">
+  <header>
+    <h2 class="itk-boxlist--header"><a href="{{ url }}">{{ label }}</a></h2>
+    {{ content.body }}
+    <a href="{{ url }}">{% trans %}Read about{% endtrans %} {{ label }}</a>
+  </header>
+  {{ content.field_related_page_image }}
+</article>
