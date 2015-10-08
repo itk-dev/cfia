@@ -2,6 +2,7 @@ name: cfia
 type: theme
 description: 'The CFIA theme.'
 package: CFIA
+base theme: false
 
 libraries:
   - cfia/global-styling
