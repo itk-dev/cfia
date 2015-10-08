@@ -67,5 +67,13 @@
  * @ingroup themeable
  */
 #}
-<h1 class="content--header">{{ label }}</h1>
-{{ content|without('comment', 'links') }}
+
+<article class="itk-boxlist-news--item">
+  <header>
+    <h2 class="itk-boxlist-news--header"><a href="{{ url }}">{{ label }}</a></h2>
+    <p class="itk-boxlist--meta">{{ date }}</p>
+    {{ content.field_summary }}
+    <a href="{{ url }}">{% trans %}Read news{% endtrans %}</a>
+  </header>
+  {{ content.field_main_image }}
+</article>
