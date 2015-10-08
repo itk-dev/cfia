@@ -19,11 +19,11 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 1
     settings: {  }
     third_party_settings: {  }
   field_main_image:
-    weight: 102
+    weight: 0
     label: hidden
     settings:
       image_style: main_image
@@ -31,7 +31,7 @@ content:
     third_party_settings: {  }
     type: image
   field_pages:
-    weight: 103
+    weight: 2
     label: hidden
     settings:
       view_mode: teaser
