@@ -1,8 +1,9 @@
-uuid: 56917bc8-10b7-43b0-b72a-42858aa52258
+uuid: af44fa68-4790-46b2-952e-46eb391b00b2
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.news_teaser
     - field.field.node.news.body
     - field.field.node.news.field_main_image
     - field.field.node.news.field_related_pages
@@ -12,34 +13,36 @@ dependencies:
     - image
     - text
     - user
-id: node.news.default
+id: node.news.news_teaser
 targetEntityType: node
 bundle: news
-mode: default
+mode: news_teaser
 content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
   field_main_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: news_teaser_image
+      image_link: content
+    third_party_settings: {  }
+    type: image
+  field_summary:
+    type: string
     weight: 0
     label: hidden
     settings:
-      image_style: main_image
-      image_link: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: image
-  field_related_pages:
-    weight: 2
-    label: hidden
-    settings:
-      view_mode: related_pages
-      link: false
+  links:
+    weight: 3
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_entity_view
 hidden:
-  field_summary: true
+  field_related_pages: true
   langcode: true
-  links: true
