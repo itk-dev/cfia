@@ -4,5 +4,10 @@ cfia_frontpage:
   frontpage_sub: 'Ambitioni dedisse scripsisse iudicaretur. Prima luce, cum quibus mons aliud consensu ab eo.'
   frontpage_button: 'Lorem ipsum'
   frontpage_link: /front
-  frontpage_image: '0'
+  frontpage_image: null
 langcode: da
+cfia_footer:
+  footer_text: ''
+  footer_twitter: ''
+  footer_instagram: ''
+  footer_linkedin: ''

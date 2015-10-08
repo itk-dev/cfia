@@ -1,0 +1,14 @@
+uuid: 5bc9f262-d1e1-46ed-9f32-50e1ba25ab62
+langcode: en
+status: true
+dependencies: {  }
+name: news_teaser_image
+label: 'News teaser image '
+effects:
+  25ac1d5d-162a-450e-9436-54e94f49ad94:
+    uuid: 25ac1d5d-162a-450e-9436-54e94f49ad94
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 224
+      height: 224

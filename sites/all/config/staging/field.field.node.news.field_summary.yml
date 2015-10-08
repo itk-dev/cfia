@@ -1,0 +1,19 @@
+uuid: c20b59ef-386a-4906-ad00-a507f0549d3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.news
+id: node.news.field_summary
+field_name: field_summary
+entity_type: node
+bundle: news
+label: Summary
+description: 'Displayed below the titel in the "Related Page" view'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

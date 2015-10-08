@@ -1,20 +1,20 @@
-uuid: cc100b31-6616-48f4-9b00-ab77f95c6e24
+uuid: c867b55a-27d6-4388-b63e-6223ab5bc7d7
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_related_pages
-    - node.type.page
+    - node.type.news
   module:
     - entity_reference
-id: node.page.field_related_pages
+id: node.news.field_related_pages
 field_name: field_related_pages
 entity_type: node
-bundle: page
+bundle: news
 label: 'Related Pages'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
