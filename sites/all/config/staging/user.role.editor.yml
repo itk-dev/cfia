@@ -33,3 +33,4 @@ permissions:
   - 'access toolbar'
   - 'administer users'
   - 'access user profiles'
+  - 'access cfia settings'
