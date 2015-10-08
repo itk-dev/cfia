@@ -31,7 +31,9 @@ class CfiaSettingsForm extends FormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('cfia_base.settings');
 
-    // Add booking wrapper.
+    // ----------- Frontpage ----------- //
+
+    // Add frontpage wrapper.
     $form['frontpage_wrapper'] = array(
       '#title' => $this->t('Frontpage settings'),
       '#type' => 'details',
@@ -94,6 +96,46 @@ class CfiaSettingsForm extends FormBase {
       '#description' => t('The image used at the top of the frontpage.'),
     );
 
+
+    // ----------- Footer ----------- //
+
+    // Add footer wrapper.
+    $form['footer_wrapper'] = array(
+      '#title' => $this->t('Footer settings'),
+      '#type' => 'details',
+      '#weight' => '2',
+      '#open' => TRUE,
+    );
+
+    $form['footer_wrapper']['footer_text'] = array(
+      '#title' => $this->t('Footer text'),
+      '#type' => 'text_format',
+      '#format' => 'filtered_html',
+      '#default_value' => $config->get('cfia_footer.footer_text'),
+      '#weight' => '1',
+    );
+
+    $form['footer_wrapper']['footer_twitter'] = array(
+      '#title' => $this->t('Twitter URL'),
+      '#type' => 'textfield',
+      '#default_value' => $config->get('cfia_footer.footer_twitter'),
+      '#weight' => '2',
+    );
+
+    $form['footer_wrapper']['footer_instagram'] = array(
+      '#title' => $this->t('Instagram URL'),
+      '#type' => 'textfield',
+      '#default_value' => $config->get('cfia_footer.footer_instagram'),
+      '#weight' => '3',
+    );
+
+    $form['footer_wrapper']['footer_linkedin'] = array(
+      '#title' => $this->t('Linkedin URL'),
+      '#type' => 'textfield',
+      '#default_value' => $config->get('cfia_footer.footer_linkedin'),
+      '#weight' => '4',
+    );
+
     $form['submit'] = array(
       '#type' => 'submit',
       '#value' => t('Save changes'),
@@ -146,6 +188,10 @@ class CfiaSettingsForm extends FormBase {
       ->set('cfia_frontpage.frontpage_sub', $form_state->getValue('frontpage_sub'))
       ->set('cfia_frontpage.frontpage_button', $form_state->getValue('frontpage_button'))
       ->set('cfia_frontpage.frontpage_link', $form_state->getValue('frontpage_link'))
+      ->set('cfia_footer.footer_text', $form_state->getValue('footer_text')['value'])
+      ->set('cfia_footer.footer_twitter', $form_state->getValue('footer_twitter'))
+      ->set('cfia_footer.footer_instagram', $form_state->getValue('footer_instagram'))
+      ->set('cfia_footer.footer_linkedin', $form_state->getValue('footer_linkedin'))
       ->set('cfia_frontpage.frontpage_image', $file ? $file->id() : NULL)
       ->save();
   }

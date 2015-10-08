@@ -5,3 +5,8 @@ cfia_frontpage:
   frontpage_button: 'Lorem ipsum'
   frontpage_link: '/front'
   frontpage_image: '0'
+cfia_footer:
+  footer_text: 'Prima luce, cum quibus mons aliud consensu ab eo.'
+  footer_twitter: 'https://twitter.com/'
+  footer_instagram: 'https://instagram.com/'
+  footer_linkedin: 'https://linkedin.com/'

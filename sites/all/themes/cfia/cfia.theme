@@ -13,6 +13,7 @@ function cfia_preprocess_page (&$variables) {
   // Fetch cfia config settings.
   $config = \Drupal::config('cfia_base.settings');
 
+  // Frontpage variables for page template.
   if (isset($config) && $variables['is_front'] == TRUE) {
     // Fetch header top file.
     $top_image_id = $config->get('cfia_frontpage.frontpage_image');
@@ -24,5 +25,13 @@ function cfia_preprocess_page (&$variables) {
     $variables['front_button_text'] = $config->get('cfia_frontpage.frontpage_button');
     $variables['front_button_link'] = $config->get('cfia_frontpage.frontpage_link');
     $variables['front_image'] = ($file) ? $file->url() : 'sites/all/themes/cfia/images/header-background.jpg';
+  }
+
+  // Footer variables for page template.
+  if (isset($config)) {
+    $variables['footer_text'] = check_markup($config->get('cfia_footer.footer_text'), 'filtered_html');
+    $variables['footer_twitter'] = $config->get('cfia_footer.footer_twitter');
+    $variables['footer_instagram'] = $config->get('cfia_footer.footer_instagram');
+    $variables['footer_linkedin'] = $config->get('cfia_footer.footer_linkedin');
   }
 }
