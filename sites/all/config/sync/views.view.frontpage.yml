@@ -2,6 +2,9 @@ uuid: 4e9a3803-aff4-43d8-b84f-7971922c9e74
 langcode: da
 status: false
 dependencies:
+  config:
+    - core.entity_view_mode.node.rss
+    - core.entity_view_mode.node.teaser
   module:
     - node
     - user
@@ -240,12 +243,13 @@ display:
     id: default
     position: 0
     cache_metadata:
+      max-age: -1
       contexts:
         - 'languages:language_interface'
-        - 'url.query_args.pagers:0'
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      cacheable: false
+      tags: {  }
   feed_1:
     display_plugin: feed
     id: feed_1
@@ -275,11 +279,12 @@ display:
           view_mode: rss
       display_extenders: {  }
     cache_metadata:
+      max-age: -1
       contexts:
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
-      cacheable: false
+      tags: {  }
   page_1:
     display_options:
       path: node
@@ -289,9 +294,10 @@ display:
     id: page_1
     position: 1
     cache_metadata:
+      max-age: -1
       contexts:
         - 'languages:language_interface'
-        - 'url.query_args.pagers:0'
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      cacheable: false
+      tags: {  }

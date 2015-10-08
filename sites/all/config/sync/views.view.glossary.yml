@@ -2,6 +2,8 @@ uuid: ac3b69ae-04ae-4dfe-bf26-380cced0e851
 langcode: da
 status: false
 dependencies:
+  config:
+    - system.menu.main
   module:
     - node
     - user
@@ -347,16 +349,15 @@ display:
           entity_field: langcode
       display_extenders: {  }
     cache_metadata:
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - 'url.query_args.pagers:0'
-        - 'url.query_args:order'
-        - 'url.query_args:sort'
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      cacheable: false
+      tags: {  }
   attachment_1:
     id: attachment_1
     display_title: Attachment
@@ -416,15 +417,15 @@ display:
       inherit_arguments: false
       display_extenders: {  }
     cache_metadata:
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - 'url.query_args:order'
-        - 'url.query_args:sort'
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      cacheable: false
+      tags: {  }
   page_1:
     id: page_1
     display_title: Page
@@ -443,13 +444,12 @@ display:
         parent: ''
       display_extenders: {  }
     cache_metadata:
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - 'url.query_args.pagers:0'
-        - 'url.query_args:order'
-        - 'url.query_args:sort'
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      cacheable: false
+      tags: {  }

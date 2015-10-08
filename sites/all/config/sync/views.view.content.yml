@@ -559,17 +559,16 @@ display:
     id: default
     position: 0
     cache_metadata:
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - 'url.query_args.pagers:0'
-        - 'url.query_args:order'
-        - 'url.query_args:sort'
+        - url.query_args
         - user
         - 'user.node_grants:view'
         - user.permissions
-      cacheable: false
+      tags: {  }
   page_1:
     display_options:
       path: admin/content/node
@@ -592,14 +591,13 @@ display:
     id: page_1
     position: 1
     cache_metadata:
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - 'url.query_args.pagers:0'
-        - 'url.query_args:order'
-        - 'url.query_args:sort'
+        - url.query_args
         - user
         - 'user.node_grants:view'
         - user.permissions
-      cacheable: false
+      tags: {  }

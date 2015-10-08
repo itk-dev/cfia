@@ -7,7 +7,7 @@ cfia_frontpage:
   frontpage_image: null
 langcode: da
 cfia_footer:
-  footer_text: 'Prima luce, cum quibus mons aliud consensu ab eo.'
+  footer_text: "<p>Prima luce, cum quibus mons aliud consensu ab eo.</p>\r\n"
   footer_twitter: 'https://twitter.com/'
   footer_instagram: 'https://instagram.com/'
   footer_linkedin: 'https://linkedin.com/'

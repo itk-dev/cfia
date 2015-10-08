@@ -714,15 +714,14 @@ display:
       show_admin_links: true
       display_extenders: {  }
     cache_metadata:
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - 'url.query_args.pagers:0'
-        - 'url.query_args:order'
-        - 'url.query_args:sort'
+        - url.query_args
         - user.permissions
-      cacheable: false
+      tags: {  }
   page_1:
     display_plugin: page
     id: page_1
@@ -752,15 +751,14 @@ display:
           required: false
       display_extenders: {  }
     cache_metadata:
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - 'url.query_args.pagers:0'
-        - 'url.query_args:order'
-        - 'url.query_args:sort'
+        - url.query_args
         - user.permissions
-      cacheable: false
+      tags: {  }
   page_2:
     display_plugin: page
     id: page_2
@@ -1111,11 +1109,10 @@ display:
           required: true
       display_extenders: {  }
     cache_metadata:
+      max-age: 0
       contexts:
         - 'languages:language_interface'
         - url
-        - 'url.query_args.pagers:0'
-        - 'url.query_args:order'
-        - 'url.query_args:sort'
+        - url.query_args
         - user.permissions
-      cacheable: false
+      tags: {  }

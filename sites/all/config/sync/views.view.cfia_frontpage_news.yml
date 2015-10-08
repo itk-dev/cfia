@@ -169,11 +169,12 @@ display:
     id: default
     position: 0
     cache_metadata:
+      max-age: -1
       contexts:
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
-      cacheable: false
+      tags: {  }
   block_1:
     display_plugin: block
     id: block_1
@@ -182,8 +183,9 @@ display:
     display_options:
       display_extenders: {  }
     cache_metadata:
+      max-age: -1
       contexts:
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
-      cacheable: false
+      tags: {  }
