@@ -24,7 +24,7 @@ npm install
 ```
 
 and run gulp
-´´´
+```
 gulp
 ```
 
