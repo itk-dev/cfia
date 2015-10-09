@@ -1,0 +1,18 @@
+uuid: 075ef4be-8369-49eb-b757-87635862bbd3
+langcode: da
+status: true
+dependencies:
+  theme:
+    - seven
+id: seven_page_title
+theme: seven
+region: content
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: Sidetitel
+  provider: core
+  label_display: '0'
+visibility: {  }

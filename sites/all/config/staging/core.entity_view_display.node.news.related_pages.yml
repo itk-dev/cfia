@@ -1,0 +1,48 @@
+uuid: 8a9c6571-9747-488d-b006-6da27964f9bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.related_pages
+    - field.field.node.news.body
+    - field.field.node.news.field_main_image
+    - field.field.node.news.field_related_pages
+    - field.field.node.news.field_summary
+    - node.type.news
+  module:
+    - image
+    - text
+    - user
+id: node.news.related_pages
+targetEntityType: node
+bundle: news
+mode: related_pages
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  field_main_image:
+    type: image
+    weight: 1
+    label: hidden
+    settings:
+      image_style: related_page_image
+      image_link: content
+    third_party_settings: {  }
+  field_summary:
+    type: string
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  links:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_related_pages: true
+  langcode: true
