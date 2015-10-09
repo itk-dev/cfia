@@ -17,6 +17,9 @@
  * @ingroup themeable
  */
 #}
+{% if title %}
+  <h3 class="itk-boxlist-news--header-text">{{ title }}</h3>
+{% endif %}
 {% for row in rows %}
   {{ row.content }}
 {% endfor %}

@@ -56,7 +56,9 @@
   {{ pager }}
 
   {{ attachment_after }}
-  {{ more }}
+  {% if more %}
+    <span class="button is-block">{{ more }}</span>
+  {% endif %}
 
   {% if footer %}
     <footer>
