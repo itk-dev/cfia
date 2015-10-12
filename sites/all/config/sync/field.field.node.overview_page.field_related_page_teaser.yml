@@ -11,7 +11,7 @@ entity_type: node
 bundle: overview_page
 label: 'Related Page Teaser'
 description: 'Text displayed when using related pages.'
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
