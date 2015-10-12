@@ -1,6 +1,8 @@
 /**
-* Created by jakobrindom on 28/08/15.
-*/
+ *
+ * Toggle hamburgermenu
+ *
+ */
 
 (function ($) {
   "use strict";
@@ -41,4 +43,4 @@
       body.addClass('is-locked');
     }
   });
-}(jQuery, Drupal));
+})(jQuery);
