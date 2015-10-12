@@ -2,7 +2,7 @@
 * Created by jakobrindom on 28/08/15.
 */
 
-$(document).ready(function () {
+(function ($) {
   "use strict";
 
   var hamburger_button = $('.nav-toggle');
@@ -41,4 +41,4 @@ $(document).ready(function () {
       body.addClass('is-locked');
     }
   });
-});
+}(jQuery, Drupal));

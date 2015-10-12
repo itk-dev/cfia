@@ -34,4 +34,4 @@
   // Run function when the user scrolls.
   $(window).on('scroll', headerScrolling);
 
-})(jQuery);
+})(jQuery, Drupal);
