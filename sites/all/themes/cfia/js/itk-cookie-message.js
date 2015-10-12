@@ -23,3 +23,4 @@
     $(el).remove();
   }
 }(jQuery));
+
