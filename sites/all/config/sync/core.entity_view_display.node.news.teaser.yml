@@ -6,9 +6,9 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.news.body
     - field.field.node.news.field_main_image
+    - field.field.node.news.field_pages
     - field.field.node.news.field_related_page_image
     - field.field.node.news.field_related_page_teaser
-    - field.field.node.news.field_related_pages
     - node.type.news
   module:
     - image
@@ -20,15 +20,15 @@ mode: teaser
 content:
   field_related_page_image:
     type: image
-    weight: 1
+    weight: 0
     label: hidden
     settings:
-      image_style: ''
-      image_link: ''
+      image_style: related_page_image
+      image_link: content
     third_party_settings: {  }
   field_related_page_teaser:
     type: string
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
@@ -36,6 +36,6 @@ content:
 hidden:
   body: true
   field_main_image: true
-  field_related_pages: true
+  field_pages: true
   langcode: true
   links: true

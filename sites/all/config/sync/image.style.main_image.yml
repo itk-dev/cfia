@@ -13,3 +13,10 @@ effects:
       width: 1216
       height: null
       upscale: false
+  e7790bea-ac6b-49f4-b400-f06029f5ac01:
+    uuid: e7790bea-ac6b-49f4-b400-f06029f5ac01
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 1216
+      height: 380

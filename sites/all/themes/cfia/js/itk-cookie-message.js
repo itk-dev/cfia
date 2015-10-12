@@ -22,4 +22,4 @@
   else {
     $(el).remove();
   }
-}(jQuery, Drupal));
+}(jQuery));

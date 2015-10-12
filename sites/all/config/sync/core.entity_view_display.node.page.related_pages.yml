@@ -33,12 +33,9 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  links:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   body: true
   field_main_image: true
   field_related_pages: true
   langcode: true
+  links: true

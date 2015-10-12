@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.related_pages
+    - node.type.news
     - node.type.overview_page
     - node.type.page
   module:
@@ -48,6 +49,7 @@ display:
           admin_label: ''
           operator: in
           value:
+            news: news
             overview_page: overview_page
             page: page
           group: 1
