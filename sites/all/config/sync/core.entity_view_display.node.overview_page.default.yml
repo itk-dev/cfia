@@ -6,6 +6,8 @@ dependencies:
     - field.field.node.overview_page.body
     - field.field.node.overview_page.field_main_image
     - field.field.node.overview_page.field_pages
+    - field.field.node.overview_page.field_related_page_image
+    - field.field.node.overview_page.field_related_page_teaser
     - node.type.overview_page
   module:
     - image
@@ -38,6 +40,14 @@ content:
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
+  field_related_page_teaser:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
 hidden:
+  field_related_page_image: true
   langcode: true
   links: true

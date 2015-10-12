@@ -6,43 +6,36 @@ dependencies:
     - core.entity_view_mode.node.related_pages
     - field.field.node.news.body
     - field.field.node.news.field_main_image
+    - field.field.node.news.field_related_page_image
+    - field.field.node.news.field_related_page_teaser
     - field.field.node.news.field_related_pages
-    - field.field.node.news.field_summary
     - node.type.news
   module:
     - image
-    - text
     - user
 id: node.news.related_pages
 targetEntityType: node
 bundle: news
 mode: related_pages
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-  field_main_image:
+  field_related_page_image:
     type: image
-    weight: 1
+    weight: 0
     label: hidden
     settings:
-      image_style: related_page_image
-      image_link: content
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
-  field_summary:
+  field_related_page_teaser:
     type: string
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  links:
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
 hidden:
+  body: true
+  field_main_image: true
   field_related_pages: true
   langcode: true
+  links: true

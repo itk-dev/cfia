@@ -1,21 +1,21 @@
-uuid: 635ca691-f8d5-44b2-b760-96c15e2dbc84
+uuid: d52ef09f-6f9d-422c-9d2e-46087c4d3117
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.related_pages
-    - field.field.node.page.body
-    - field.field.node.page.field_main_image
-    - field.field.node.page.field_related_page_image
-    - field.field.node.page.field_related_page_teaser
-    - field.field.node.page.field_related_pages
-    - node.type.page
+    - field.field.node.overview_page.body
+    - field.field.node.overview_page.field_main_image
+    - field.field.node.overview_page.field_pages
+    - field.field.node.overview_page.field_related_page_image
+    - field.field.node.overview_page.field_related_page_teaser
+    - node.type.overview_page
   module:
     - image
     - user
-id: node.page.related_pages
+id: node.overview_page.related_pages
 targetEntityType: node
-bundle: page
+bundle: overview_page
 mode: related_pages
 content:
   field_related_page_image:
@@ -33,12 +33,9 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  links:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   body: true
   field_main_image: true
-  field_related_pages: true
+  field_pages: true
   langcode: true
+  links: true

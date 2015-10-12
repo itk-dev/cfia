@@ -6,8 +6,8 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_main_image
     - field.field.node.page.field_related_page_image
+    - field.field.node.page.field_related_page_teaser
     - field.field.node.page.field_related_pages
-    - field.field.node.page.field_summary
     - node.type.page
   module:
     - image
@@ -42,6 +42,6 @@ content:
     type: entity_reference_entity_view
 hidden:
   field_related_page_image: true
-  field_summary: true
+  field_related_page_teaser: true
   langcode: true
   links: true
