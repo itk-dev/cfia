@@ -91,7 +91,7 @@
 <footer class="footer">
   <div class="footer--content">
     <div class="footer--mail">
-      Dokk1, Hack Kampmanns Plads 2 8000 Aarhus C - <a href="mailto:cfi@aarhus.dk">cfi@aarhus.dk</a>
+      {{ footer_text | striptags('<a>') | raw  }}
     </div>
     <div class="footer--social">
       <a href="{{ footer_twitter }}"><figure class="footer--icons"><img src="/sites/all/themes/cfia/images/twitter.png"></figure></a>
