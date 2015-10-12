@@ -22,10 +22,10 @@ display:
             items_per_page_options_all_label: '- All -'
             offset_label: Offset
           tags:
-            previous: '‹ previous'
-            next: 'next ›'
-            first: '« first'
-            last: 'last »'
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
     display_title: Master
   feed_1:
     display_title: Feed

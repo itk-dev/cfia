@@ -34,4 +34,3 @@ permissions:
   - 'administer users'
   - 'access user profiles'
   - 'access cfia settings'
-  - 'administer google analytics'
