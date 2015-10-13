@@ -1,0 +1,17 @@
+patterns:
+  node:
+    default: '/content/[node:title]'
+    bundles:
+      news:
+        default: '/nyhed/[node:title]'
+      overview_page:
+        default: ''
+      page:
+        default: ''
+  taxonomy_term:
+    default: '/[term:vocabulary]/[term:name]'
+  forum:
+    default: '/[term:vocabulary]/[term:name]'
+  user:
+    default: '/users/[user:name]'
+langcode: da
