@@ -35,10 +35,7 @@
   {% import _self as menus %}
   {% if items %}
     {% for item in items %}
-      <span class="nav--link">{{ link(item.title, item.url) }}</span>
-      {% if item.below %}
-        {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-      {% endif %}
+      {{ link(item.title, item.url.setOptions({'set_active_class' : TRUE, 'attributes' : {'class' : 'nav--link'}})) }}
     {% endfor %}
   {% endif %}
 {% endmacro %}
