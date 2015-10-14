@@ -67,5 +67,6 @@
  * @ingroup themeable
  */
 #}
+{{ content.field_main_image }}
 <h1 class="content--header">{{ label }}</h1>
-{{ content|without('comment', 'links') }}
+{{ content|without('field_main_image', 'comment', 'links') }}
