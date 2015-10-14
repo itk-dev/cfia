@@ -36,6 +36,9 @@
   {% if items %}
     {% for item in items %}
       {{ link(item.title, item.url.setOptions({'set_active_class' : TRUE, 'attributes' : {'class' : 'nav--link'}})) }}
+      {% if item.below %}
+        {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+      {% endif %}
     {% endfor %}
   {% endif %}
 {% endmacro %}
