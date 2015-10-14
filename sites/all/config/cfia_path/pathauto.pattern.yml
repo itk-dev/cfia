@@ -1,13 +1,13 @@
 patterns:
   node:
-    default: '/content/[node:title]'
+    default: '/[node:title]'
     bundles:
       news:
-        default: '/nyhed/[node:title]'
+        default: '/nyheder/[node:title]'
       overview_page:
-        default: ''
+        default: '/[node:menu-link:parent:title]/[node:title]'
       page:
-        default: ''
+        default: '/[node:menu-link:parent:title]/[node:title]'
   taxonomy_term:
     default: '/[term:vocabulary]/[term:name]'
   forum:
