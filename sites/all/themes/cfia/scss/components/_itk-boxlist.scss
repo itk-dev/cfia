@@ -122,9 +122,9 @@ $boxlist-padding:                       1em;
   margin-right: -6em;
   margin-bottom: 3em;
   margin-left: -6em;
-  padding-right: 7.8em;
+  padding-right: 6em;
   padding-bottom: 3em;
-  padding-left: 7.8em;
+  padding-left: 6em;
 
   &--header-text {
     margin-bottom: 1em;
@@ -232,18 +232,12 @@ $boxlist-padding:                       1em;
 
     @include breakpoint($breakpoint-desk) {
       box-sizing: border-box;
+      margin-right: -1.5em;
+      margin-left: -1.5em;
+      padding-right: 1.5em;
+      padding-left: 1.5em;
 
       @include flex-basis(33%);
-
-      // Add padding left to all elements except the 1st and 4th
-      &:not(:nth-child(3n+1)) {
-        padding-left: 3em;
-      }
-
-      // Add padding right to all elements except the 3rd
-      &:not(:nth-child(3n)) {
-        padding-right: 3em;
-      }
     }
   }
 }

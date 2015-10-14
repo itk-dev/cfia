@@ -13,10 +13,11 @@
 
     color: $gray-darker;
     font-size: 3em;
-    text-align: center;
+    font-weight: 300;
   }
 
   &--image-wrapper {
+    margin-top: -2.5em;
     margin-right: -6em;
     margin-bottom: 2.5em;
     margin-left: -6em;
@@ -35,7 +36,17 @@
 
   @include breakpoint($breakpoint-desk) {
     &--header {
-      font-size: 5em;
+      font-size: 4em;
+    }
+
+    &--image-wrapper {
+      margin-top: -3.25em;
+    }
+  }
+
+  @include breakpoint($breakpoint-bigscreen) {
+    &--image-wrapper {
+      margin-top: 0;
     }
   }
 }
