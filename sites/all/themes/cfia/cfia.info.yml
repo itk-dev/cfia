@@ -1,0 +1,21 @@
+name: cfia
+type: theme
+description: 'The CFIA theme.'
+package: CFIA
+base theme: false
+
+libraries:
+  - cfia/global-styling
+  - cfia/global-js
+
+stylesheets-remove:
+  - normalize.css
+
+regions:
+  hamburger: Hamburger menu
+  nav_menu: Nav menu
+  content: Content
+
+version: '0.6'
+core: '8.x'
+datestamp: 1418825451
