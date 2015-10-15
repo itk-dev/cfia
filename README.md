@@ -1,7 +1,19 @@
+Important Git notes
+===================
+
+Before running any `git checkout` or `git pull` commands, make sure to set permissions on sites/default and sites/default/default.services.yml and sites/default/default.settings.php:
+
+```
+chmod a+w sites/default/default.services.yml sites/default/default.*
+```
+
+Otherwise `git` cannot update this directory and the default settings files inside it.
+
+
 Setup guidelines
 ================
 
-### CFIA 
+### CFIA
 
 ```
 vagrant up
