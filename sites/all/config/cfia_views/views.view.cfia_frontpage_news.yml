@@ -577,7 +577,7 @@ display:
     position: 3
     display_options:
       display_extenders: {  }
-      path: news
+      path: nyheder
       use_more: false
       defaults:
         use_more: false
