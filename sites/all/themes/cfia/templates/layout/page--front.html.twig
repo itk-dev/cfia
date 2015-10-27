@@ -86,15 +86,21 @@
 <div class="header" role="banner" id="home" style="background-image: url({{ front_image }})">
   <div class="header--inner">
     <h1 class="header--big">{{ front_title }}</h1>
-    <p class="header--lead">
-      {{ front_lead }}
-    </p>
-    <p class="header--sub">
-      {{ front_sub }}
-    </p>
-    <div class="header--button-wrapper">
-      <a href="{{ front_button_link }}" class="header--button-link is-primary">{{ front_button_text }}</a>
-    </div>
+    {% if front_lead %}
+      <p class="header--lead">
+        {{ front_lead }}
+      </p>
+    {% endif %}
+    {% if front_sub %}
+      <p class="header--sub">
+        {{ front_sub }}
+      </p>
+    {% endif %}
+    {% if front_button_text and front_button_link %}
+      <div class="header--button-wrapper">
+        <a href="{{ front_button_link }}" class="header--button-link is-primary">{{ front_button_text }}</a>
+      </div>
+    {% endif %}
   </div>
 </div>
 
@@ -108,9 +114,15 @@
       {{ footer_text | striptags('<a>') | raw  }}
     </div>
     <div class="footer--social">
-      <a href="{{ footer_twitter }}"><figure class="footer--icons"><img src="/sites/all/themes/cfia/images/twitter.png"></figure></a>
-      <a href="{{ footer_instagram }}"><figure class="footer--icons"><img src="/sites/all/themes/cfia/images/instagram.png"></figure></a>
-      <a href="{{ footer_linkedin }}"><figure class="footer--icons"><img src="/sites/all/themes/cfia/images/linkedin.png"></figure></a>
+      {% if footer_twitter %}
+        <a href="{{ footer_twitter }}"><figure class="footer--icons"><img src="/sites/all/themes/cfia/images/twitter.png"></figure></a>
+      {% endif %}
+      {% if footer_instagram %}
+        <a href="{{ footer_instagram }}"><figure class="footer--icons"><img src="/sites/all/themes/cfia/images/instagram.png"></figure></a>
+      {% endif %}
+      {% if footer_linkedin %}
+        <a href="{{ footer_linkedin }}"><figure class="footer--icons"><img src="/sites/all/themes/cfia/images/linkedin.png"></figure></a>
+      {% endif %}
     </div>
   </div>
 </footer>

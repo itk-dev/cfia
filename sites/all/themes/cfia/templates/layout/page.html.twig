@@ -96,9 +96,15 @@
       {{ footer_text | striptags('<a>') | raw  }}
     </div>
     <div class="footer--social">
-      <a href="{{ footer_twitter }}"><figure class="footer--icons"><img src="/sites/all/themes/cfia/images/twitter.png"></figure></a>
-      <a href="{{ footer_instagram }}"><figure class="footer--icons"><img src="/sites/all/themes/cfia/images/instagram.png"></figure></a>
-      <a href="{{ footer_linkedin }}"><figure class="footer--icons"><img src="/sites/all/themes/cfia/images/linkedin.png"></figure></a>
+      {% if footer_twitter %}
+        <a href="{{ footer_twitter }}"><figure class="footer--icons"><img src="/sites/all/themes/cfia/images/twitter.png"></figure></a>
+      {% endif %}
+      {% if footer_instagram %}
+        <a href="{{ footer_instagram }}"><figure class="footer--icons"><img src="/sites/all/themes/cfia/images/instagram.png"></figure></a>
+      {% endif %}
+      {% if footer_linkedin %}
+        <a href="{{ footer_linkedin }}"><figure class="footer--icons"><img src="/sites/all/themes/cfia/images/linkedin.png"></figure></a>
+      {% endif %}
     </div>
   </div>
 </footer>
