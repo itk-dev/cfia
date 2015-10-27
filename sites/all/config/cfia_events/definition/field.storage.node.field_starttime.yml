@@ -1,0 +1,20 @@
+uuid: fda4ecdc-15b3-40c2-ab15-21ede3316a91
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_starttime
+field_name: field_starttime
+entity_type: node
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
