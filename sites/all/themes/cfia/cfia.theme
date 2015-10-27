@@ -34,7 +34,7 @@ function cfia_preprocess_page (&$variables) {
     $variables['footer_instagram'] = $config->get('cfia_footer.footer_instagram');
     $variables['footer_linkedin'] = $config->get('cfia_footer.footer_linkedin');
   }
-}
+} 
 
 
 /**
