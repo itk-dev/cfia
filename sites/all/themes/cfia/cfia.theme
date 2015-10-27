@@ -35,3 +35,13 @@ function cfia_preprocess_page (&$variables) {
     $variables['footer_linkedin'] = $config->get('cfia_footer.footer_linkedin');
   }
 }
+
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function cfia_preprocess_node(&$variables) {
+  $variables['eventdate'] = \Drupal::service('date.formatter')->format(date('U', strtotime($variables['node']->field_starttime->value)), 'custom', 'l j. F Y');
+  $variables['eventstarttime'] = \Drupal::service('date.formatter')->format(date('U', strtotime($variables['node']->field_starttime->value)), 'custom', 'G:i');
+  $variables['eventendtime'] = \Drupal::service('date.formatter')->format(date('U', strtotime($variables['node']->field_endtime->value)), 'custom', 'G:i');
+}
