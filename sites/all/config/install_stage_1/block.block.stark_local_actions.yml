@@ -1,0 +1,18 @@
+uuid: 593af095-433e-4216-9400-e9d65c6e9c2e
+langcode: da
+status: true
+dependencies:
+  theme:
+    - stark
+id: stark_local_actions
+theme: stark
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }
