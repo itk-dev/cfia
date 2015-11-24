@@ -1,0 +1,10 @@
+uuid: 482cd93c-d159-47d6-bd14-2050994f0041
+langcode: da
+status: true
+dependencies: {  }
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'

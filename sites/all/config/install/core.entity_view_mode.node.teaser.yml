@@ -1,0 +1,10 @@
+uuid: f80a7de4-87e3-4847-9f0a-107f3444222d
+langcode: da
+status: true
+dependencies:
+  module:
+    - node
+id: node.teaser
+label: Smagsprøve
+targetEntityType: node
+cache: true
