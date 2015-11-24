@@ -1,0 +1,64 @@
+uuid: 784d9e98-e0a6-4cf6-a60a-10906197a1b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.news_teaser
+    - field.field.node.event.body
+    - field.field.node.event.field_endtime
+    - field.field.node.event.field_instagram
+    - field.field.node.event.field_location
+    - field.field.node.event.field_main_image
+    - field.field.node.event.field_pages
+    - field.field.node.event.field_related_page_image
+    - field.field.node.event.field_related_page_teaser
+    - field.field.node.event.field_starttime
+    - node.type.event
+  module:
+    - datetime
+    - image
+    - user
+id: node.event.news_teaser
+targetEntityType: node
+bundle: event
+mode: news_teaser
+content:
+  field_endtime:
+    type: datetime_custom
+    weight: 3
+    label: hidden
+    settings:
+      date_format: 'Y-m-d\TH:i:s'
+      timezone_override: ''
+    third_party_settings: {  }
+  field_related_page_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: news_teaser_image
+      image_link: content
+    third_party_settings: {  }
+    type: image
+  field_related_page_teaser:
+    type: string
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_starttime:
+    type: datetime_custom
+    weight: 2
+    label: hidden
+    settings:
+      date_format: 'Y-m-d\TH:i:s'
+      timezone_override: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_instagram: true
+  field_location: true
+  field_main_image: true
+  field_pages: true
+  langcode: true
+  links: true

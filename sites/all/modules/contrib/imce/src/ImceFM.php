@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Drupal\Component\Serialization\Json;
-use Drupal\Component\Utility\SafeMarkup;
+use Drupal\Component\Render\MarkupInterface;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\imce\Imce;
@@ -477,7 +477,7 @@ class ImceFM {
     $messages = drupal_get_messages();
     foreach ($messages as &$group) {
       foreach ($group as &$message) {
-        $message = SafeMarkup::isSafe($message) ? $message . '' : Html::escape($message);
+        $message = $message instanceof MarkupInterface ? $message . '' : Html::escape($message);
       }
     }
     // Merge with file manager messages.
@@ -606,6 +606,8 @@ class ImceFM {
       ),
     );
     $page['#attached']['html_head'][] = array($robots, 'robots');
+    // Disable cache
+    $page['#cache']['max-age'] = 0;
     // Run builders of available plugins
     \Drupal::service('plugin.manager.imce.plugin')->buildPage($page, $this);
     // Add active path to the conf.

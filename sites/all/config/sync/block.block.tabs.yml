@@ -1,0 +1,20 @@
+uuid: d2a9c246-9718-4fd4-8400-a9453c138f5a
+langcode: en
+status: false
+dependencies:
+  theme:
+    - cfia
+id: tabs
+theme: cfia
+region: '-1'
+weight: -1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

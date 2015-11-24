@@ -38,7 +38,10 @@ class GoogleAnalyticsStatusMessagesTest extends WebTestBase {
     $this->admin_user = $this->drupalCreateUser($permissions);
   }
 
-  function testGoogleAnalyticsStatusMessages() {
+  /**
+   * Tests if status messages tracking is properly added to the page.
+   */
+  public function testGoogleAnalyticsStatusMessages() {
     $ua_code = 'UA-123456-4';
     $this->config('google_analytics.settings')->set('account', $ua_code)->save();
 
@@ -60,4 +63,5 @@ class GoogleAnalyticsStatusMessagesTest extends WebTestBase {
     //$this->assertRaw('ga("send", "event", "Messages", "Error message", "Example error message.");', '[testGoogleAnalyticsStatusMessages]: Example error message is shown.');
     //$this->assertRaw('ga("send", "event", "Messages", "Error message", "Example error message with html tags and link.");', '[testGoogleAnalyticsStatusMessages]: HTML has been stripped successful from Example error message with html tags and link.');
   }
+
 }

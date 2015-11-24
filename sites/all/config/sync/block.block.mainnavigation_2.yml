@@ -1,0 +1,24 @@
+uuid: 049e4dd2-0bd6-4b2e-bb00-e8eb8714f5b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - cfia
+id: mainnavigation_2
+theme: cfia
+region: nav_menu
+weight: -1
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

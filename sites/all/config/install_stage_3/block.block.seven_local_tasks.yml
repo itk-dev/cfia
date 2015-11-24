@@ -1,0 +1,20 @@
+uuid: 4c035547-c300-4230-8700-c6d4dc1c5c79
+langcode: da
+status: true
+dependencies:
+  theme:
+    - seven
+id: seven_local_tasks
+theme: seven
+region: content
+weight: -20
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Faner
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

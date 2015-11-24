@@ -11,11 +11,11 @@ source:
     - googleanalytics_codesnippet_before
     - googleanalytics_codesnippet_create
     - googleanalytics_cross_domains
+    - googleanalytics_custom
     - googleanalytics_custom_dimension
     - googleanalytics_custom_metric
     - googleanalytics_domain_mode
     - googleanalytics_pages
-    - googleanalytics_privacy_donottrack
     - googleanalytics_roles
     - googleanalytics_site_search
     - googleanalytics_trackadsense
@@ -43,7 +43,6 @@ process:
   'custom/metric': googleanalytics_custom_metric
   domain_mode: googleanalytics_domain_mode
   'privacy/anonymizeip': googleanalytics_tracker_anonymizeip
-  'privacy/donottrack': googleanalytics_privacy_donottrack
   'track/adsense': googleanalytics_trackadsense
   'track/displayfeatures': googleanalytics_trackdoubleclick
   'track/files': googleanalytics_trackfiles
@@ -56,14 +55,24 @@ process:
   'track/userid': googleanalytics_trackuserid
   'track/outbound': googleanalytics_trackoutgoing
   'translation_set': googleanalytics_translation_set
-  'visibility/pages': googleanalytics_pages
-  'visibility/pages_enabled': googleanalytics_visibility
-  'visibility/roles': googleanalytics_roles
-  'visibility/roles_enabled': googleanalytics_visibility_roles
+  'visibility/user_account_mode': googleanalytics_custom
+  'visibility/request_path_mode': googleanalytics_visibility
+  'visibility/request_path_pages':
+    plugin: google_analytics_visibility_pages
+    source:
+      - googleanalytics_visibility
+      - googleanalytics_pages
+    # If Google Analytics uses PHP visibility, don't migrate it unless the PHP
+    # module is enabled.
+    skip_php: true
+  'visibility/user_role_mode': googleanalytics_visibility_roles
+  'visibility/user_role_roles':
+    plugin: google_analytics_visibility_roles
+    source:
+      - googleanalytics_roles
 destination:
   plugin: config
   config_name: google_analytics.settings
-dependencies:
-  module:
-    - google_analytics
-    - migrate_drupal
+migration_dependencies:
+  optional:
+    - d6_user_role
