@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains \Drupal\google_analytics\Tests\GoogleAnalyticsBasicTest.
+ * Contains \Drupal\google_analytics\Tests\GoogleAnalyticsSearchTest.
  */
 
 namespace Drupal\google_analytics\Tests;
@@ -44,7 +44,10 @@ class GoogleAnalyticsSearchTest extends WebTestBase {
     $this->drupalLogin($this->admin_user);
   }
 
-  function testGoogleAnalyticsSearchTracking() {
+  /**
+   * Tests if search tracking is properly added to the page.
+   */
+  public function testGoogleAnalyticsSearchTracking() {
     $ua_code = 'UA-123456-1';
     $this->config('google_analytics.settings')->set('account', $ua_code)->save();
 
@@ -75,7 +78,7 @@ class GoogleAnalyticsSearchTest extends WebTestBase {
 
     // Save the node.
     $this->drupalPostForm('node/add/page', $edit, t('Save'));
-    $this->assertRaw(t('!post %title has been created.', ['!post' => 'Basic page', '%title' => $edit['title[0][value]']]), 'Basic page created.');
+    $this->assertRaw(t('@type %title has been created.', ['@type' => 'Basic page', '%title' => $edit['title[0][value]']]), 'Basic page created.');
 
     // Index the node or it cannot found.
     $this->cronRun();
@@ -85,7 +88,7 @@ class GoogleAnalyticsSearchTest extends WebTestBase {
     $this->assertRaw('window.google_analytics_search_results = 1;', '[testGoogleAnalyticsSearch]: One search result found.');
 
     $this->drupalPostForm('node/add/page', $edit, t('Save'));
-    $this->assertRaw(t('!post %title has been created.', ['!post' => 'Basic page', '%title' => $edit['title[0][value]']]), 'Basic page created.');
+    $this->assertRaw(t('@type %title has been created.', ['@type' => 'Basic page', '%title' => $edit['title[0][value]']]), 'Basic page created.');
 
     // Index the node or it cannot found.
     $this->cronRun();
@@ -94,4 +97,5 @@ class GoogleAnalyticsSearchTest extends WebTestBase {
     $this->assertRaw('ga("set", "page", (window.google_analytics_search_results) ?', '[testGoogleAnalyticsSearch]: Search results tracker is displayed.');
     $this->assertRaw('window.google_analytics_search_results = 2;', '[testGoogleAnalyticsSearch]: Two search results found.');
   }
+
 }
