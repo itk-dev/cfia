@@ -1,0 +1,21 @@
+uuid: 166fa78a-9b83-49d9-8200-c4329e16023f
+langcode: en
+status: true
+dependencies: {  }
+id: member
+label: 'Member profile'
+description: 'Configuration for site members'
+conf:
+  extensions: 'jpg png gif'
+  maxsize: 2
+  quota: 50
+  maxwidth: 1024
+  maxheight: 1024
+  replace: 0
+  folders:
+    -
+      path: 'users/user[user:uid]'
+      permissions:
+        browse_files: true
+        upload_files: true
+        delete_files: true
