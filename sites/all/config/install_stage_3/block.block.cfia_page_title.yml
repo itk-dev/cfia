@@ -1,0 +1,18 @@
+uuid: 6379496c-6914-4b61-b800-a80344fa6026
+langcode: da
+status: true
+dependencies:
+  theme:
+    - cfia
+id: cfia_page_title
+theme: cfia
+region: content
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: Sidetitel
+  provider: core
+  label_display: '0'
+visibility: {  }

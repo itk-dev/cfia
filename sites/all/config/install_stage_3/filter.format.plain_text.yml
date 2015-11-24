@@ -1,0 +1,27 @@
+uuid: bc24ffa7-e039-4a48-bc04-4dab6eb4dc7b
+langcode: da
+status: true
+dependencies: {  }
+name: 'Ren tekst'
+format: plain_text
+weight: 10
+filters:
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: true
+    weight: -10
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }

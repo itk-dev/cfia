@@ -1,0 +1,24 @@
+uuid: 91393c2a-6cab-4a93-af3c-6090eae942fb
+langcode: da
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - seven
+id: seven_tools
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Værktøjer
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

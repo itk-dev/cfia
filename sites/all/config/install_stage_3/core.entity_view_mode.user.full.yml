@@ -1,0 +1,10 @@
+uuid: 04edb453-e9d5-4d86-a100-0030be93195d
+langcode: da
+status: false
+dependencies:
+  module:
+    - user
+id: user.full
+label: Brugerkonto
+targetEntityType: user
+cache: true

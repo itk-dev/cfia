@@ -1,0 +1,11 @@
+uuid: f3a6162a-b055-471c-8b00-c0fe51ea0915
+langcode: da
+status: true
+dependencies:
+  module:
+    - node
+id: node_save_action
+label: 'Gem indhold'
+type: node
+plugin: node_save_action
+configuration: {  }

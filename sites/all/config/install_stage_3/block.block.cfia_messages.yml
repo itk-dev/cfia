@@ -1,0 +1,20 @@
+uuid: bfd9a4cd-58bd-4f65-b601-1ee1563f5c8f
+langcode: da
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cfia
+id: cfia_messages
+theme: cfia
+region: hamburger
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,24 @@
+uuid: 97873bc3-ae45-4935-8209-9f41110019a8
+langcode: da
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - classy
+id: classy_tools
+theme: classy
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Værktøjer
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }
