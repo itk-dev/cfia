@@ -1,8 +1,8 @@
-uuid: bad461ce-124c-4532-8637-5575359b0e37
+uuid: 787b2f19-ee24-48eb-b152-822c7099a3e4
 langcode: da
 status: true
 dependencies: {  }
 id: account
 label: 'User account menu'
-description: 'Links related to the user account.'
+description: 'Links related to the active user account'
 locked: true

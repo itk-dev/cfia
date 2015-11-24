@@ -1,11 +1,11 @@
-uuid: 8904188b-e60a-415b-b200-c8ea70e32bdf
+uuid: 6379496c-6914-4b61-b800-a80344fa6026
 langcode: da
 status: true
 dependencies:
   theme:
-    - seven
-id: seven_page_title
-theme: seven
+    - cfia
+id: cfia_page_title
+theme: cfia
 region: content
 weight: -30
 provider: null

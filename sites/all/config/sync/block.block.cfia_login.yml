@@ -1,14 +1,14 @@
-uuid: 92fe8a84-0de5-4821-ab07-07b11fa6fa99
+uuid: 943daa6d-e579-4a7a-b20d-13416d8845e0
 langcode: da
 status: true
 dependencies:
   module:
     - user
   theme:
-    - seven
-id: seven_login
-theme: seven
-region: header
+    - cfia
+id: cfia_login
+theme: cfia
+region: hamburger
 weight: 0
 provider: null
 plugin: user_login_block

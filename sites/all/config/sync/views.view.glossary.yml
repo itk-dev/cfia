@@ -1,4 +1,4 @@
-uuid: ac3b69ae-04ae-4dfe-bf26-380cced0e851
+uuid: 3a1a6c75-7993-43f4-a400-c7d28b07d056
 langcode: da
 status: false
 dependencies:
@@ -175,8 +175,12 @@ display:
           table: node_field_data
           field: changed
           label: 'Last update'
-          date_format: long
-          plugin_id: date
+          type: timestamp
+          settings:
+            date_format: long
+            custom_date_format: ''
+            timezone: ''
+          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
@@ -220,8 +224,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          custom_date_format: ''
-          timezone: ''
           entity_type: node
           entity_field: changed
       arguments:
@@ -349,7 +351,6 @@ display:
           entity_field: langcode
       display_extenders: {  }
     cache_metadata:
-      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -357,6 +358,7 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
+      max-age: 0
       tags: {  }
   attachment_1:
     id: attachment_1
@@ -417,7 +419,6 @@ display:
       inherit_arguments: false
       display_extenders: {  }
     cache_metadata:
-      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -425,6 +426,7 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
+      max-age: 0
       tags: {  }
   page_1:
     id: page_1
@@ -444,7 +446,6 @@ display:
         parent: ''
       display_extenders: {  }
     cache_metadata:
-      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -452,4 +453,5 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
+      max-age: 0
       tags: {  }

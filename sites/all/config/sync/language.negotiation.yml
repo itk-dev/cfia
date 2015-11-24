@@ -3,11 +3,8 @@ session:
 url:
   source: path_prefix
   prefixes:
-    da: ''
-    en: en
-    '': null
+    da: da
   domains:
     da: ''
-    en: ''
 selected_langcode: site_default
 langcode: da

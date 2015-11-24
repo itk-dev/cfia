@@ -1,6 +1,6 @@
-uuid: f5ae570d-6124-4fb2-931c-2887fb633f5e
+uuid: 202c82c0-ed14-49b1-9600-a1d47cf0fd66
 langcode: da
-status: false
+status: true
 dependencies:
   module:
     - node
@@ -15,4 +15,5 @@ locked: false
 cardinality: 1
 translatable: true
 indexes: {  }
-persist_with_no_fields: false
+persist_with_no_fields: true
+custom_storage: false

@@ -1,6 +1,6 @@
-uuid: 1d03aaf1-921c-4215-b400-f61f36029e15
+uuid: 09cee838-e7d5-4241-8c5c-92831324a627
 langcode: da
-status: false
+status: true
 dependencies:
   module:
     - user
@@ -8,7 +8,7 @@ dependencies:
     - stark
 id: stark_login
 theme: stark
-region: '-1'
+region: sidebar_first
 weight: 0
 provider: null
 plugin: user_login_block
@@ -17,6 +17,4 @@ settings:
   label: 'Log ind'
   provider: user
   label_display: visible
-  cache:
-    max_age: -1
 visibility: {  }

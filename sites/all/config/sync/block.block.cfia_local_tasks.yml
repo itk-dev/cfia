@@ -1,11 +1,11 @@
-uuid: 7df0ed46-e747-45ec-af00-d323e7f23e07
+uuid: aa465530-d2ed-4cdf-9b00-c98ceec9b089
 langcode: da
 status: true
 dependencies:
   theme:
-    - stark
-id: stark_local_tasks
-theme: stark
+    - cfia
+id: cfia_local_tasks
+theme: cfia
 region: content
 weight: -20
 provider: null

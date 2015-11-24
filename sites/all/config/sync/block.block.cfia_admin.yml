@@ -1,4 +1,4 @@
-uuid: 68437ee9-49ae-4bf3-8006-6af16780a9f9
+uuid: 0a02f1d3-3c6f-46fd-8900-de517a809e32
 langcode: da
 status: true
 dependencies:
@@ -7,10 +7,10 @@ dependencies:
   module:
     - system
   theme:
-    - stark
-id: stark_admin
-theme: stark
-region: sidebar_first
+    - cfia
+id: cfia_admin
+theme: cfia
+region: hamburger
 weight: 1
 provider: null
 plugin: 'system_menu_block:admin'

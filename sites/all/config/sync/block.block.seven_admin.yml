@@ -1,6 +1,6 @@
-uuid: 946424e7-5b6a-48bd-8227-39a6b9cb8379
-langcode: en
-status: false
+uuid: 06426ac3-b97b-4654-be1d-296b9070bca2
+langcode: da
+status: true
 dependencies:
   config:
     - system.menu.admin
@@ -10,8 +10,8 @@ dependencies:
     - seven
 id: seven_admin
 theme: seven
-region: '-1'
-weight: 0
+region: header
+weight: 1
 provider: null
 plugin: 'system_menu_block:admin'
 settings:
@@ -21,6 +21,4 @@ settings:
   label_display: visible
   level: 1
   depth: 0
-  cache:
-    max_age: -1
 visibility: {  }

@@ -1,6 +1,6 @@
-uuid: e54fabda-37c5-4945-b90a-100504b3c74f
+uuid: 7dfd5aac-7e4b-4d3c-9805-5e6903b02c50
 langcode: da
-status: false
+status: true
 dependencies:
   module:
     - user
@@ -166,11 +166,11 @@ display:
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
-      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - user.permissions
+      max-age: -1
       tags: {  }
   block_1:
     display_plugin: block
@@ -183,9 +183,9 @@ display:
       block_category: User
       display_extenders: {  }
     cache_metadata:
-      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - user.permissions
+      max-age: -1
       tags: {  }

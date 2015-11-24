@@ -1,4 +1,4 @@
-uuid: 91393c2a-6cab-4a93-af3c-6090eae942fb
+uuid: 2b5f73ed-29af-4d77-ab06-6d5fae8c09b7
 langcode: da
 status: true
 dependencies:
@@ -7,10 +7,10 @@ dependencies:
   module:
     - system
   theme:
-    - seven
-id: seven_tools
-theme: seven
-region: header
+    - cfia
+id: cfia_tools
+theme: cfia
+region: hamburger
 weight: 0
 provider: null
 plugin: 'system_menu_block:tools'

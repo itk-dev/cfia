@@ -1,4 +1,4 @@
-uuid: e2f17246-9ba0-4ee4-8500-cc554aeb987b
+uuid: ef857b44-9ed4-419f-870d-1358c7ad1fc9
 langcode: da
 status: true
 dependencies:
@@ -39,10 +39,10 @@ display:
         options:
           items_per_page: 50
           tags:
-            previous: '‹ previous'
-            next: 'next ›'
-            first: '« first'
-            last: 'last »'
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
       style:
         type: table
         options:
@@ -295,10 +295,12 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          date_format: short
-          custom_date_format: ''
-          timezone: ''
-          plugin_id: date
+          type: timestamp
+          settings:
+            date_format: short
+            custom_date_format: ''
+            timezone: ''
+          plugin_id: field
           entity_type: node
           entity_field: changed
         operations:
@@ -559,7 +561,6 @@ display:
     id: default
     position: 0
     cache_metadata:
-      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -568,6 +569,7 @@ display:
         - user
         - 'user.node_grants:view'
         - user.permissions
+      max-age: 0
       tags: {  }
   page_1:
     display_options:
@@ -591,7 +593,6 @@ display:
     id: page_1
     position: 1
     cache_metadata:
-      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -600,4 +601,5 @@ display:
         - user
         - 'user.node_grants:view'
         - user.permissions
+      max-age: 0
       tags: {  }
