@@ -16,16 +16,24 @@ dependencies:
   - field_ui
   - file
   - filter
+  - google_analytics
   - image
+  - imce
+  - itk_instagram_hashtag
+  - itkore_user_theme
   - link
   - locale
   - menu_link_content
   - menu_ui
   - node
   - path
+  - pathauto
   - quickedit
+  - redirect
   - system
+  - taxonomy
   - text
+  - token
   - toolbar
   - views
   - views_ui
