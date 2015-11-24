@@ -1,0 +1,30 @@
+uuid: f5a7c16e-d4f1-4517-8400-fbee1930adfd
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.cfia_frontpage_events
+  module:
+    - system
+    - views
+  theme:
+    - cfia
+id: views_block__cfia_frontpage_events_block_1
+theme: cfia
+region: content
+weight: 1
+provider: null
+plugin: 'views_block:cfia_frontpage_events-block_1'
+settings:
+  id: 'views_block:cfia_frontpage_events-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

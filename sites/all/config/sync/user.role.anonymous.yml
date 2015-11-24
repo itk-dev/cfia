@@ -1,4 +1,4 @@
-uuid: 861b5ef1-7b47-496f-bf00-bf103906c2ee
+uuid: 0d3cb8d2-13fa-4986-a21f-31689e294ea9
 langcode: da
 status: true
 dependencies: {  }
@@ -7,4 +7,6 @@ label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
+  - 'use text format plain_text'
   - 'access content'
+  - 'view the administration theme'

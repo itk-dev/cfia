@@ -1,5 +1,5 @@
-uuid: c73c0e81-1926-4c3c-8f1a-26b6478d3bd8
-langcode: da
+uuid: 05cca0b0-5c7b-49fc-8509-9cda310c51b6
+langcode: en
 status: true
 dependencies:
   module:
@@ -17,4 +17,6 @@ settings:
   label: 'Status messages'
   provider: system
   label_display: '0'
+  cache:
+    max_age: -1
 visibility: {  }

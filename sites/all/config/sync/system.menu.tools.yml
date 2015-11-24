@@ -1,8 +1,8 @@
-uuid: 16967da1-3ae9-43e0-ba00-e1ad7bfb17bc
+uuid: 51dbe49f-d2c7-470b-a500-c6d4273ee147
 langcode: da
 status: true
 dependencies: {  }
 id: tools
 label: Værktøjer
-description: 'User tool links, often added by modules'
+description: 'Contains links for site visitors. Some modules add their links here.'
 locked: true

@@ -1,13 +1,13 @@
-uuid: 6e25647e-17d2-433c-a546-7033f768eb02
+uuid: 5e4d5579-8ad2-4a04-a500-d1c016d629d1
 langcode: da
-status: true
+status: false
 dependencies:
   theme:
     - seven
 id: seven_local_actions
 theme: seven
-region: content
-weight: -10
+region: '-1'
+weight: -2
 provider: null
 plugin: local_actions_block
 settings:

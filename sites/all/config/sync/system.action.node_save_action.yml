@@ -1,11 +1,11 @@
-uuid: f3a6162a-b055-471c-8b00-c0fe51ea0915
+uuid: bfc2bedd-fdd2-4d1b-a816-22adcedd954a
 langcode: da
 status: true
 dependencies:
   module:
     - node
 id: node_save_action
-label: 'Gem indhold'
+label: 'Save content'
 type: node
 plugin: node_save_action
 configuration: {  }

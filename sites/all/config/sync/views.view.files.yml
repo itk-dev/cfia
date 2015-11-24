@@ -1,4 +1,4 @@
-uuid: 6bb6d984-e568-45bd-aa00-a1d3697cbb79
+uuid: 8d922780-5712-4242-ba3c-60d6e3b1dc4a
 langcode: da
 status: true
 dependencies:
@@ -53,8 +53,8 @@ display:
           id: 0
           total_pages: 0
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
+            previous: '‹ previous'
+            next: 'next ›'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -449,12 +449,10 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          type: timestamp
-          settings:
-            date_format: medium
-            custom_date_format: ''
-            timezone: ''
-          plugin_id: field
+          date_format: medium
+          custom_date_format: ''
+          timezone: ''
+          plugin_id: date
           entity_type: file
           entity_field: created
         changed:
@@ -505,12 +503,10 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          type: timestamp
-          settings:
-            date_format: medium
-            custom_date_format: ''
-            timezone: ''
-          plugin_id: field
+          date_format: medium
+          custom_date_format: ''
+          timezone: ''
+          plugin_id: date
           entity_type: file
           entity_field: changed
         count:
@@ -718,13 +714,13 @@ display:
       show_admin_links: true
       display_extenders: {  }
     cache_metadata:
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
         - user.permissions
-      max-age: 0
       tags: {  }
   page_1:
     display_plugin: page
@@ -755,13 +751,13 @@ display:
           required: false
       display_extenders: {  }
     cache_metadata:
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
         - user.permissions
-      max-age: 0
       tags: {  }
   page_2:
     display_plugin: page
@@ -792,8 +788,8 @@ display:
           id: 0
           total_pages: 0
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
+            previous: '‹ previous'
+            next: 'next ›'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -1028,7 +1024,7 @@ display:
             title_enable: false
             title: All
           title_enable: true
-          title: 'File usage information for {{ arguments.fid }}'
+          title: 'File usage information for %1'
           default_argument_type: fixed
           default_argument_options:
             argument: ''
@@ -1113,10 +1109,10 @@ display:
           required: true
       display_extenders: {  }
     cache_metadata:
+      max-age: 0
       contexts:
         - 'languages:language_interface'
         - url
         - url.query_args
         - user.permissions
-      max-age: 0
       tags: {  }

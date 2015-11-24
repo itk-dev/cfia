@@ -1,4 +1,4 @@
-uuid: 2f484e6b-d30e-404a-9300-ec31c8b718da
+uuid: 69618054-fe59-414a-9b3e-62618fe3176f
 langcode: da
 status: false
 dependencies:
@@ -91,7 +91,7 @@ display:
           exception:
             title_enable: true
           title_enable: true
-          title: '{{ arguments.created_year_month }}'
+          title: '%1'
           default_argument_type: fixed
           summary:
             sort_order: desc
@@ -172,13 +172,13 @@ display:
       fields: {  }
       display_extenders: {  }
     cache_metadata:
+      max-age: -1
       contexts:
         - 'languages:language_interface'
         - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      max-age: -1
       tags: {  }
   block_1:
     id: block_1
@@ -200,7 +200,7 @@ display:
           exception:
             title_enable: true
           title_enable: true
-          title: '{{ arguments.created_year_month }}'
+          title: '%1'
           default_argument_type: fixed
           summary:
             format: default_summary
@@ -211,13 +211,13 @@ display:
           entity_type: node
       display_extenders: {  }
     cache_metadata:
+      max-age: -1
       contexts:
         - 'languages:language_interface'
         - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      max-age: -1
       tags: {  }
   page_1:
     id: page_1
@@ -231,11 +231,11 @@ display:
       path: archive
       display_extenders: {  }
     cache_metadata:
+      max-age: -1
       contexts:
         - 'languages:language_interface'
         - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      max-age: -1
       tags: {  }

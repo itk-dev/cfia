@@ -1,6 +1,6 @@
-uuid: 82ed8c92-6bf3-402a-8800-ccc94ac46b9b
+uuid: e7784e84-3743-4251-b401-01647e62c33a
 langcode: da
-status: true
+status: false
 dependencies:
   config:
     - system.menu.tools
@@ -10,7 +10,7 @@ dependencies:
     - stark
 id: stark_tools
 theme: stark
-region: sidebar_first
+region: '-1'
 weight: 0
 provider: null
 plugin: 'system_menu_block:tools'
@@ -21,4 +21,6 @@ settings:
   label_display: visible
   level: 1
   depth: 0
+  cache:
+    max_age: -1
 visibility: {  }

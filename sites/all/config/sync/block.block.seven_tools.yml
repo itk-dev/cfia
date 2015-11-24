@@ -1,6 +1,6 @@
-uuid: 91393c2a-6cab-4a93-af3c-6090eae942fb
-langcode: da
-status: true
+uuid: c7ebe77f-e64f-4747-b541-6588413896a5
+langcode: en
+status: false
 dependencies:
   config:
     - system.menu.tools
@@ -10,15 +10,17 @@ dependencies:
     - seven
 id: seven_tools
 theme: seven
-region: header
-weight: 0
+region: '-1'
+weight: 1
 provider: null
 plugin: 'system_menu_block:tools'
 settings:
   id: 'system_menu_block:tools'
-  label: Værktøjer
+  label: Tools
   provider: system
   label_display: visible
   level: 1
   depth: 0
+  cache:
+    max_age: -1
 visibility: {  }

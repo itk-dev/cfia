@@ -1,13 +1,13 @@
-uuid: 8904188b-e60a-415b-b200-c8ea70e32bdf
+uuid: 075ef4be-8369-49eb-b757-87635862bbd3
 langcode: da
-status: true
+status: false
 dependencies:
   theme:
     - seven
 id: seven_page_title
 theme: seven
-region: content
-weight: -30
+region: '-1'
+weight: -3
 provider: null
 plugin: page_title_block
 settings:

@@ -1,8 +1,8 @@
-uuid: 3cbea1e3-893b-4644-b803-3c624d06b326
+uuid: 55c05c02-0990-4d6e-b606-06b05f3f4354
 langcode: da
 status: true
 dependencies: {  }
 id: footer
 label: Sidefod
-description: 'Site information links'
+description: 'Use this for linking to site information.'
 locked: true

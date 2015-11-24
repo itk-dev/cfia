@@ -1,4 +1,4 @@
-uuid: 482cd93c-d159-47d6-bd14-2050994f0041
+uuid: 88a438a3-707b-4109-8c00-d6dc93deff1e
 langcode: da
 status: true
 dependencies: {  }
@@ -7,4 +7,6 @@ label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
+  - 'use text format plain_text'
   - 'access content'
+  - 'view the administration theme'

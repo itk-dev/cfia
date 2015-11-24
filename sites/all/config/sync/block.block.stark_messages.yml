@@ -1,6 +1,6 @@
-uuid: 7aef69a3-757a-4ffa-b756-86aa60fc8e7a
+uuid: 6a8c511d-9284-42ae-8e16-22a4db8c9163
 langcode: da
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -8,7 +8,7 @@ dependencies:
     - stark
 id: stark_messages
 theme: stark
-region: highlighted
+region: '-1'
 weight: 0
 provider: null
 plugin: system_messages_block
@@ -17,4 +17,6 @@ settings:
   label: 'Status messages'
   provider: system
   label_display: '0'
+  cache:
+    max_age: -1
 visibility: {  }
