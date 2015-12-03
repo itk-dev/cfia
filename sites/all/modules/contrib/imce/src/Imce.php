@@ -110,9 +110,10 @@ class Imce {
   public static function processUserFolders(array $folders, AccountProxyInterface $user) {
     $ret = array();
     $token_service = \Drupal::token();
+    $meta = new \Drupal\Core\Render\BubbleableMetadata();
     $token_data = array('user' => $user);
     foreach ($folders as $folder) {
-      $path = $token_service->replace($folder['path'], $token_data);
+      $path = $token_service->replace($folder['path'], $token_data, array(), $meta);
       if (static::regularPath($path)) {
         $ret[$path] = $folder;
         unset($ret[$path]['path']);
@@ -275,7 +276,7 @@ class Imce {
    */
   public static function getFileEntity($uri, $create = FALSE, $save = FALSE) {
     $file = FALSE;
-    if ($files = entity_load_multiple_by_properties('file', array('uri' => $uri))) {
+    if ($files = \Drupal::entityManager()->getStorage('file')->loadByProperties(array('uri' => $uri))) {
       $file = reset($files);
     }
     elseif ($create) {

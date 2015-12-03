@@ -9,8 +9,8 @@ test_dependencies:
   - php:php
   - token:token
 
-# Information added by Drupal.org packaging script on 2015-09-23
-version: '8.x-2.x-dev'
+# Information added by Drupal.org packaging script on 2015-11-22
+version: '8.x-2.0-rc1'
 core: '8.x'
 project: 'google_analytics'
-datestamp: 1443005261
+datestamp: 1448200451

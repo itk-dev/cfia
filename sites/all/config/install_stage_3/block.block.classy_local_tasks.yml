@@ -1,0 +1,20 @@
+uuid: 4721e156-bdb7-48f6-8d00-ba399accbc9e
+langcode: da
+status: true
+dependencies:
+  theme:
+    - classy
+id: classy_local_tasks
+theme: classy
+region: content
+weight: -20
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Faner
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

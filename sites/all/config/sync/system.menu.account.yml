@@ -1,0 +1,8 @@
+uuid: bad461ce-124c-4532-8637-5575359b0e37
+langcode: da
+status: true
+dependencies: {  }
+id: account
+label: 'User account menu'
+description: 'Links related to the user account.'
+locked: true

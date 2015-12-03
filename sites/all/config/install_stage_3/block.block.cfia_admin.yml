@@ -1,0 +1,24 @@
+uuid: 2800f4bc-54eb-454c-8250-809bd5a58a0e
+langcode: da
+status: true
+dependencies:
+  config:
+    - system.menu.admin
+  module:
+    - system
+  theme:
+    - cfia
+id: cfia_admin
+theme: cfia
+region: hamburger
+weight: 1
+provider: null
+plugin: 'system_menu_block:admin'
+settings:
+  id: 'system_menu_block:admin'
+  label: Administration
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

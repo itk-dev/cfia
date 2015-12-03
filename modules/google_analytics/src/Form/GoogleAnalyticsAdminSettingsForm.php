@@ -89,7 +89,7 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
       if (count(explode('.', $host)) > 2 && !is_numeric(str_replace('.', '', $host))) {
         $multiple_toplevel_domains[] = $domain . $tldomain;
       }
-      // IP addresses or localhost
+      // IP addresses or localhost.
       else {
         $multiple_toplevel_domains[] = 'www.example' . $tldomain;
       }
@@ -132,21 +132,20 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
     // Page specific visibility configurations.
     $account = \Drupal::currentUser();
     $php_access = $account->hasPermission('use PHP for tracking visibility');
-    $visibility_pages = $config->get('visibility.pages');
+    $visibility_request_path_pages = $config->get('visibility.request_path_pages');
 
-    $form['tracking']['page_vis_settings'] = [
+    $form['tracking']['page_visibility_settings'] = [
       '#type' => 'details',
       '#title' => t('Pages'),
       '#group' => 'tracking_scope',
     ];
 
-    if ($config->get('visibility.pages_enabled') == 2 && !$php_access) {
-      $form['tracking']['page_vis_settings'] = [];
-      $form['tracking']['page_vis_settings']['google_analytics_visibility_pages'] = ['#type' => 'value', '#value' => 2];
-      $form['tracking']['page_vis_settings']['google_analytics_pages'] = ['#type' => 'value', '#value' => $visibility_pages];
+    if ($config->get('visibility.request_path_mode') == 2 && !$php_access) {
+      $form['tracking']['page_visibility_settings'] = [];
+      $form['tracking']['page_visibility_settings']['google_analytics_visibility_request_path_mode'] = ['#type' => 'value', '#value' => 2];
+      $form['tracking']['page_visibility_settings']['google_analytics_visibility_request_path_pages'] = ['#type' => 'value', '#value' => $visibility_request_path_pages];
     }
     else {
-      // @TODO: see BlockBase.php for upgrade
       $options = [
         t('Every page except the listed pages'),
         t('The listed pages only'),
@@ -161,58 +160,58 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
       else {
         $title = t('Pages');
       }
-      $form['tracking']['page_vis_settings']['google_analytics_visibility_pages'] = [
+      $form['tracking']['page_visibility_settings']['google_analytics_visibility_request_path_mode'] = [
         '#type' => 'radios',
         '#title' => t('Add tracking to specific pages'),
         '#options' => $options,
-        '#default_value' => $config->get('visibility.pages_enabled'),
+        '#default_value' => $config->get('visibility.request_path_mode'),
       ];
-      $form['tracking']['page_vis_settings']['google_analytics_pages'] = [
+      $form['tracking']['page_visibility_settings']['google_analytics_visibility_request_path_pages'] = [
         '#type' => 'textarea',
         '#title' => $title,
         '#title_display' => 'invisible',
-        '#default_value' => !empty($visibility_pages) ? $visibility_pages : '',
+        '#default_value' => !empty($visibility_request_path_pages) ? $visibility_request_path_pages : '',
         '#description' => $description,
         '#rows' => 10,
       ];
     }
 
     // Render the role overview.
-    $visibility_roles = $config->get('visibility.roles');
+    $visibility_user_role_roles = $config->get('visibility.user_role_roles');
 
-    $form['tracking']['role_vis_settings'] = [
+    $form['tracking']['role_visibility_settings'] = [
       '#type' => 'details',
       '#title' => t('Roles'),
       '#group' => 'tracking_scope',
     ];
 
-    $form['tracking']['role_vis_settings']['google_analytics_visibility_roles'] = [
+    $form['tracking']['role_visibility_settings']['google_analytics_visibility_user_role_mode'] = [
       '#type' => 'radios',
       '#title' => t('Add tracking for specific roles'),
       '#options' => [
         t('Add to the selected roles only'),
         t('Add to every role except the selected ones'),
       ],
-      '#default_value' => $config->get('visibility.roles_enabled'), // @FIXME rename variable
+      '#default_value' => $config->get('visibility.user_role_mode'),
     ];
-    $form['tracking']['role_vis_settings']['google_analytics_roles'] = [
+    $form['tracking']['role_visibility_settings']['google_analytics_visibility_user_role_roles'] = [
       '#type' => 'checkboxes',
       '#title' => t('Roles'),
-      '#default_value' => !empty($visibility_roles) ? $visibility_roles : [],
+      '#default_value' => !empty($visibility_user_role_roles) ? $visibility_user_role_roles : [],
       '#options' => array_map('\Drupal\Component\Utility\Html::escape', user_role_names()),
       '#description' => t('If none of the roles are selected, all users will be tracked. If a user has any of the roles checked, that user will be tracked (or excluded, depending on the setting above).'),
     ];
 
     // Standard tracking configurations.
-    $visibility_custom = $config->get('visibility.custom');
+    $visibility_user_account_mode = $config->get('visibility.user_account_mode');
 
-    $form['tracking']['user_vis_settings'] = [
+    $form['tracking']['user_visibility_settings'] = [
       '#type' => 'details',
       '#title' => t('Users'),
       '#group' => 'tracking_scope',
     ];
     $t_permission = ['%permission' => t('opt-in or out of tracking')];
-    $form['tracking']['user_vis_settings']['google_analytics_custom'] = [
+    $form['tracking']['user_visibility_settings']['google_analytics_visibility_user_account_mode'] = [
       '#type' => 'radios',
       '#title' => t('Allow users to customize tracking on their account page'),
       '#options' => [
@@ -220,9 +219,9 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
         t('Tracking on by default, users with %permission permission can opt out', $t_permission),
         t('Tracking off by default, users with %permission permission can opt in', $t_permission),
       ],
-      '#default_value' => !empty($visibility_custom) ? $visibility_custom : 0,
+      '#default_value' => !empty($visibility_user_account_mode) ? $visibility_user_account_mode : 0,
     ];
-    $form['tracking']['user_vis_settings']['google_analytics_trackuserid'] = [
+    $form['tracking']['user_visibility_settings']['google_analytics_trackuserid'] = [
       '#type' => 'checkbox',
       '#title' => t('Track User ID'),
       '#default_value' => $config->get('track.userid'),
@@ -255,7 +254,7 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
       '#title_display' => 'invisible',
       '#type' => 'textfield',
       '#default_value' => $config->get('track.files_extensions'),
-      '#description' => t('A file extension list separated by the | character that will be tracked as download when clicked. Regular expressions are supported. For example: !extensions', ['!extensions' => GOOGLE_ANALYTICS_TRACKFILES_EXTENSIONS]),
+      '#description' => t('A file extension list separated by the | character that will be tracked as download when clicked. Regular expressions are supported. For example: @extensions', ['@extensions' => GOOGLE_ANALYTICS_TRACKFILES_EXTENSIONS]),
       '#maxlength' => 500,
       '#states' => [
         'enabled' => [
@@ -269,7 +268,7 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
     ];
 
     $colorbox_dependencies = '<div class="admin-requirements">';
-    $colorbox_dependencies .= t('Requires: !module-list', ['!module-list' => (\Drupal::moduleHandler()->moduleExists('colorbox') ? t('@module (<span class="admin-enabled">enabled</span>)', ['@module' => 'Colorbox']) : t('@module (<span class="admin-missing">disabled</span>)', ['@module' => 'Colorbox']))]);
+    $colorbox_dependencies .= t('Requires: @module-list', ['@module-list' => (\Drupal::moduleHandler()->moduleExists('colorbox') ? t('@module (<span class="admin-enabled">enabled</span>)', ['@module' => 'Colorbox']) : t('@module (<span class="admin-missing">disabled</span>)', ['@module' => 'Colorbox']))]);
     $colorbox_dependencies .= '</div>';
 
     $form['tracking']['linktracking']['google_analytics_trackcolorbox'] = array(
@@ -319,7 +318,7 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
     ];
 
     $site_search_dependencies = '<div class="admin-requirements">';
-    $site_search_dependencies .= t('Requires: !module-list', ['!module-list' => (\Drupal::moduleHandler()->moduleExists('search') ? t('@module (<span class="admin-enabled">enabled</span>)', ['@module' => 'Search']) : t('@module (<span class="admin-missing">disabled</span>)', ['@module' => 'Search']))]);
+    $site_search_dependencies .= t('Requires: @module-list', ['@module-list' => (\Drupal::moduleHandler()->moduleExists('search') ? t('@module (<span class="admin-enabled">enabled</span>)', ['@module' => 'Search']) : t('@module (<span class="admin-missing">disabled</span>)', ['@module' => 'Search']))]);
     $site_search_dependencies .= '</div>';
 
     $form['tracking']['search_and_advertising']['google_analytics_site_search'] = [
@@ -353,12 +352,6 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
       '#title' => t('Anonymize visitors IP address'),
       '#description' => t('Tell Google Analytics to anonymize the information sent by the tracker objects by removing the last octet of the IP address prior to its storage. Note that this will slightly reduce the accuracy of geographic reporting. In some countries it is not allowed to collect personally identifying information for privacy reasons and this setting may help you to comply with the local laws.'),
       '#default_value' => $config->get('privacy.anonymizeip'),
-    ];
-    $form['tracking']['privacy']['google_analytics_privacy_donottrack'] = [
-      '#type' => 'checkbox',
-      '#title' => t('Universal web tracking opt-out'),
-      '#description' => t('If enabled and your server receives the <a href=":donottrack">Do-Not-Track</a> header from the client browser, the Google Analytics module will not embed any tracking code into your site. Compliance with Do Not Track could be purely voluntary, enforced by industry self-regulation, or mandated by state or federal law. Please accept your visitors privacy. If they have opt-out from tracking and advertising, you should accept their personal decision. This feature is currently limited to logged in users and disabled page caching.', [':donottrack' => 'http://donottrack.us/']),
-      '#default_value' => $config->get('privacy.donottrack'),
     ];
 
     // Custom Dimensions.
@@ -401,7 +394,6 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
         '#token_types' => ['node'],
       ];
       if (\Drupal::moduleHandler()->moduleExists('token')) {
-        // @ FIXME: token module is not available, cannot implement/test validation.
         $form['google_analytics_custom_dimension']['indexes'][$i]['value']['#element_validate'][] = 'token_element_validate';
       }
     }
@@ -458,7 +450,6 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
         '#token_types' => ['node'],
       ];
       if (\Drupal::moduleHandler()->moduleExists('token')) {
-        // @ FIXME: token module is not available, cannot implement/test validation.
         $form['google_analytics_custom_metric']['indexes'][$i]['value']['#element_validate'][] = 'token_element_validate';
       }
     }
@@ -565,21 +556,22 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
 
     // Trim some text values.
     $form_state->setValue('google_analytics_account', trim($form_state->getValue('google_analytics_account')));
-    $form_state->setValue('google_analytics_pages', trim($form_state->getValue('google_analytics_pages')));
+    $form_state->setValue('google_analytics_visibility_request_path_pages', trim($form_state->getValue('google_analytics_visibility_request_path_pages')));
     $form_state->setValue('google_analytics_cross_domains', trim($form_state->getValue('google_analytics_cross_domains')));
     $form_state->setValue('google_analytics_codesnippet_before', trim($form_state->getValue('google_analytics_codesnippet_before')));
     $form_state->setValue('google_analytics_codesnippet_after', trim($form_state->getValue('google_analytics_codesnippet_after')));
-    $form_state->setValue('google_analytics_roles', array_filter($form_state->getValue('google_analytics_roles')));
+    $form_state->setValue('google_analytics_visibility_user_role_roles', array_filter($form_state->getValue('google_analytics_visibility_user_role_roles')));
     $form_state->setValue('google_analytics_trackmessages', array_filter($form_state->getValue('google_analytics_trackmessages')));
 
-    // Replace all type of dashes (n-dash, m-dash, minus) with the normal dashes.
+    // Replace all type of dashes (n-dash, m-dash, minus) with normal dashes.
     $form_state->setValue('google_analytics_account', str_replace(['–', '—', '−'], '-', $form_state->getValue('google_analytics_account')));
 
     if (!preg_match('/^UA-\d+-\d+$/', $form_state->getValue('google_analytics_account'))) {
       $form_state->setErrorByName('google_analytics_account', t('A valid Google Analytics Web Property ID is case sensitive and formatted like UA-xxxxxxx-yy.'));
     }
 
-    // If multiple top-level domains has been selected, a domain names list is required.
+    // If multiple top-level domains has been selected, a domain names list is
+    // required.
     if ($form_state->getValue('google_analytics_domain_mode') == 2 && $form_state->isValueEmpty('google_analytics_cross_domains')) {
       $form_state->setErrorByName('google_analytics_cross_domains', t('A list of top-level domains is required if <em>Multiple top-level domains</em> has been selected.'));
     }
@@ -588,12 +580,13 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
       $form_state->setValue('google_analytics_cross_domains', '');
     }
 
-    // Verify that every path is prefixed with a slash, but don't check PHP code snippets.
-    if ($form_state->getValue('google_analytics_visibility_pages') != 2) {
-      $pages = preg_split('/(\r\n?|\n)/', $form_state->getValue('google_analytics_pages'));
+    // Verify that every path is prefixed with a slash, but don't check PHP
+    // code snippets.
+    if ($form_state->getValue('google_analytics_visibility_request_path_mode') != 2) {
+      $pages = preg_split('/(\r\n?|\n)/', $form_state->getValue('google_analytics_visibility_request_path_pages'));
       foreach ($pages as $page) {
         if (strpos($page, '/') !== 0 && $page !== '<front>') {
-          $form_state->setErrorByName('google_analytics_pages', t('Path "@page" not prefixed with slash.', ['@page' => $page]));
+          $form_state->setErrorByName('google_analytics_visibility_request_path_pages', t('Path "@page" not prefixed with slash.', ['@page' => $page]));
           // Drupal forms show one error only.
           break;
         }
@@ -650,14 +643,13 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
       ->set('track.adsense', $form_state->getValue('google_analytics_trackadsense'))
       ->set('track.displayfeatures', $form_state->getValue('google_analytics_trackdisplayfeatures'))
       ->set('privacy.anonymizeip', $form_state->getValue('google_analytics_tracker_anonymizeip'))
-      ->set('privacy.donottrack', $form_state->getValue('google_analytics_privacy_donottrack'))
       ->set('cache', $form_state->getValue('google_analytics_cache'))
       ->set('debug', $form_state->getValue('google_analytics_debug'))
-      ->set('visibility.pages_enabled', $form_state->getValue('google_analytics_visibility_pages'))
-      ->set('visibility.pages', $form_state->getValue('google_analytics_pages'))
-      ->set('visibility.roles_enabled', $form_state->getValue('google_analytics_visibility_roles'))
-      ->set('visibility.roles', $form_state->getValue('google_analytics_roles'))
-      ->set('visibility.custom', $form_state->getValue('google_analytics_custom'))
+      ->set('visibility.request_path_mode', $form_state->getValue('google_analytics_visibility_request_path_mode'))
+      ->set('visibility.request_path_pages', $form_state->getValue('google_analytics_visibility_request_path_pages'))
+      ->set('visibility.user_role_mode', $form_state->getValue('google_analytics_visibility_user_role_mode'))
+      ->set('visibility.user_role_roles', $form_state->getValue('google_analytics_visibility_user_role_roles'))
+      ->set('visibility.user_account_mode', $form_state->getValue('google_analytics_visibility_user_account_mode'))
       ->save();
 
     if ($form_state->hasValue('google_analytics_translation_set')) {
@@ -698,7 +690,16 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
     return $element;
   }
 
-  protected static function getForbiddenTokens($value) {
+  /**
+   * Get an array of all forbidden tokens.
+   *
+   * @param array $value
+   *   An array of token values.
+   *
+   * @return array
+   *   A unique array of invalid tokens.
+   */
+  protected static function getForbiddenTokens(array $value) {
     $invalid_tokens = [];
     $value_tokens = is_string($value) ? \Drupal::token()->scan($value) : $value;
 
@@ -715,30 +716,34 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
   /**
    * Validate if a string contains forbidden tokens not allowed by privacy rules.
    *
-   * @param $token_string
+   * @param string $token_string
    *   A string with one or more tokens to be validated.
-   * @return boolean
+   *
+   * @return bool
    *   TRUE if blacklisted token has been found, otherwise FALSE.
    */
   protected static function containsForbiddenToken($token_string) {
-    // List of strings in tokens with personal identifying information not allowed
-    // for privacy reasons. See section 8.1 of the Google Analytics terms of use
-    // for more detailed information.
+    // List of strings in tokens with personal identifying information not
+    // allowed for privacy reasons. See section 8.1 of the Google Analytics
+    // terms of use for more detailed information.
     //
     // This list can never ever be complete. For this reason it tries to use a
     // regex and may kill a few other valid tokens, but it's the only way to
     // protect users as much as possible from admins with illegal ideas.
     //
-    // User tokens are not prefixed with colon to catch 'current-user' and 'user'.
+    // User tokens are not prefixed with colon to catch 'current-user' and
+    // 'user'.
     //
     // TODO: If someone have better ideas, share them, please!
     $token_blacklist = [
+      ':account-name]',
       ':author]',
       ':author:edit-url]',
       ':author:url]',
       ':author:path]',
       ':current-user]',
       ':current-user:original]',
+      ':display-name]',
       ':fid]',
       ':mail]',
       ':name]',
@@ -771,17 +776,17 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
   }
 
   /**
-   * #element_validate callback for create only fields.
+   * The #element_validate callback for create only fields.
    *
-   * @param $element
+   * @param array $element
    *   An associative array containing the properties and children of the
    *   generic form element.
-   * @param $form_state
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The $form_state array for the form this element belongs to.
    *
    * @see form_process_pattern()
    */
-  public static function validateCreateFieldValues($element, FormStateInterface $form_state) {
+  public static function validateCreateFieldValues(array $element, FormStateInterface $form_state) {
     $values = static::extractCreateFieldValues($element['#value']);
 
     if (!is_array($values)) {
@@ -846,7 +851,7 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
    * @param string $name
    *   The option value entered by the user.
    *
-   * @return string
+   * @return string|null
    *   The error message if the specified value is invalid, NULL otherwise.
    */
   protected static function validateCreateFieldName($name) {
@@ -882,7 +887,7 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
    * @param string $value
    *   The option value entered by the user.
    *
-   * @return string
+   * @return string|null
    *   The error message if the specified value is invalid, NULL otherwise.
    */
   protected static function validateCreateFieldValue($value) {
@@ -908,11 +913,10 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
    *    - Values are separated by a carriage return.
    *    - Each value is in the format "name|value" or "value".
    */
-  protected function getNameValueString($values) {
+  protected function getNameValueString(array $values) {
     $lines = [];
     foreach ($values as $name => $value) {
       // Convert data types.
-      // @todo: #2251377: Json utility class serializes boolean values to incorrect data type
       if (is_bool($value)) {
         $value = ($value) ? 'true' : 'false';
       }
@@ -926,16 +930,15 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
    * Prepare form data types for Json conversion.
    *
    * @param array $values
-   *   Array .
+   *   Array of values.
    *
    * @return string
    *   Value with casted data type.
    */
-  protected static function convertFormValueDataTypes($values) {
+  protected static function convertFormValueDataTypes(array $values) {
 
     foreach ($values as $name => $value) {
       // Convert data types.
-      // @todo: #2251377: Json utility class serializes boolean values to incorrect data type
       $match = Unicode::strtolower($value);
       if ($match == 'true') {
         $value = TRUE;
@@ -945,16 +948,15 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
       }
 
       // Convert other known fields.
-      // @todo: #2251343: Json utility class serializes numeric values to incorrect data type
       switch ($name) {
         case 'sampleRate':
-          // Float
+          // Float types.
           settype($value, 'float');
           break;
 
         case 'siteSpeedSampleRate':
         case 'cookieExpires':
-          // Integer
+          // Integer types.
           settype($value, 'integer');
           break;
       }

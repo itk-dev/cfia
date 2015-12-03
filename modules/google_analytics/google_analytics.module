@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Drupal Module: Google Analytics
+ * Drupal Module: Google Analytics.
  *
  * Adds the required Javascript to all your Drupal pages to allow tracking by
  * the Google Analytics statistics package.
@@ -23,7 +23,6 @@ use Drupal\node\NodeInterface;
 use GuzzleHttp\Exception\RequestException;
 
 /**
- * @TODO: remove after admin.inc is upgraded.
  * Define the default file extension list that should be tracked as download.
  */
 define('GOOGLE_ANALYTICS_TRACKFILES_EXTENSIONS', '7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip');
@@ -44,12 +43,13 @@ function google_analytics_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
     case 'google_analytics.admin_settings_form':
       return t('<a href=":ga_url">Google Analytics</a> is a free (registration required) website traffic and marketing effectiveness service.', [':ga_url' => 'http://www.google.com/analytics/']);
-      break;
   }
 }
 
 /**
- * Implements hook_page_attachments() to insert JavaScript to the appropriate scope/region of the page.
+ * Implements hook_page_attachments().
+ *
+ * Insert JavaScript to the appropriate scope/region of the page.
  */
 function google_analytics_page_attachments(array &$page) {
   $account = \Drupal::currentUser();
@@ -253,7 +253,8 @@ function google_analytics_page_attachments(array &$page) {
     $googleanalytics_adsense_script = '';
 
     // Per RFC 2109, cookie domains must contain at least one dot other than the
-    // first. For hosts such as 'localhost' or IP Addresses we don't set a cookie domain.
+    // first. For hosts such as 'localhost' or IP Addresses we don't set a
+    // cookie domain.
     if ($domain_mode == 1 && count(explode('.', $cookie_domain)) > 2 && !is_numeric(str_replace('.', '', $cookie_domain))) {
       $create_only_fields = array_merge($create_only_fields, ['cookieDomain' => $cookie_domain]);
       $googleanalytics_adsense_script .= 'window.google_analytics_domain_name = ' . Json::encode($cookie_domain) . ';';
@@ -273,7 +274,7 @@ function google_analytics_page_attachments(array &$page) {
     }
 
     // Create a tracker.
-    $script .= 'ga("create", ' . Json::encode($id) . ', ' . Json::encode($create_only_fields) .');';
+    $script .= 'ga("create", ' . Json::encode($id) . ', ' . Json::encode($create_only_fields) . ');';
 
     // Prepare Adsense tracking.
     $googleanalytics_adsense_script .= 'window.google_analytics_uacct = ' . Json::encode($id) . ';';
@@ -357,7 +358,7 @@ function google_analytics_form_user_form_alter(&$form, FormStateInterface $form_
   $config = \Drupal::config('google_analytics.settings');
   $account = $form_state->getFormObject()->getEntity();
 
-  if ($account->hasPermission('opt-in or out of tracking') && ($custom = $config->get('visibility.custom')) != 0 && _google_analytics_visibility_roles($account)) {
+  if ($account->hasPermission('opt-in or out of tracking') && ($visibility_user_account_mode = $config->get('visibility.user_account_mode')) != 0 && _google_analytics_visibility_roles($account)) {
     $account_data_google_analytics = \Drupal::service('user.data')->get('google_analytics', $account->id());
 
     $form['google_analytics'] = [
@@ -365,10 +366,9 @@ function google_analytics_form_user_form_alter(&$form, FormStateInterface $form_
       '#title' => t('Google Analytics settings'),
       '#weight' => 3,
       '#open' => TRUE,
-      '#tree' => TRUE
     ];
 
-    switch ($custom) {
+    switch ($visibility_user_account_mode) {
       case 1:
         $description = t('Users are tracked by default, but you are able to opt out.');
         break;
@@ -378,35 +378,25 @@ function google_analytics_form_user_form_alter(&$form, FormStateInterface $form_
         break;
     }
 
-    // Disable tracking for visitors who have opted out from tracking via DNT (Do-Not-Track) header.
-    $disabled = FALSE;
-    if ($config->get('privacy.donottrack') && !empty($_SERVER['HTTP_DNT'])) {
-      $disabled = TRUE;
-
-      // Override settings value.
-      $account_data_google_analytics['custom'] = FALSE;
-
-      $description .= '<span class="admin-missing">';
-      $description .= ' ' . t('You have opted out from tracking via browser privacy settings.');
-      $description .= '</span>';
-    }
-
-    $form['google_analytics']['custom'] = [
+    $form['google_analytics']['user_account_users'] = [
       '#type' => 'checkbox',
       '#title' => t('Enable user tracking'),
       '#description' => $description,
-      '#default_value' => isset($account_data_google_analytics['custom']) ? $account_data_google_analytics['custom'] : ($custom == 1),
-      '#disabled' => $disabled,
+      '#default_value' => isset($account_data_google_analytics['user_account_users']) ? $account_data_google_analytics['user_account_users'] : ($visibility_user_account_mode == 1),
     ];
+
+    // hook_user_update() is missing in D8, add custom submit handler.
+    $form['actions']['submit']['#submit'][] = 'google_analytics_user_profile_form_submit';
   }
 }
 
 /**
- * Implements hook_user_update().
+ * Submit callback for user profile form to save the Google Analytics setting.
  */
-function google_analytics_user_update($account) {
-  if (isset($account->google_analytics['custom'])) {
-    \Drupal::service('user.data')->set('google_analytics', $account->id(), 'custom', (int) $account->google_analytics['custom']);
+function google_analytics_user_profile_form_submit($form, FormStateInterface $form_state) {
+  $account = $form_state->getFormObject()->getEntity();
+  if ($account->id() && $form_state->hasValue('user_account_users')) {
+    \Drupal::service('user.data')->set('google_analytics', $account->id(), 'user_account_users', (int) $form_state->getValue('user_account_users'));
   }
 }
 
@@ -433,16 +423,16 @@ function google_analytics_preprocess_item_list__search_results(&$variables) {
 
   // Only run on search results list.
   if ($config->get('track.site_search')) {
-    // There is no search result $variable available that hold the number of items
-    // found. The variable $variables['items'] has the current page items only.
-    // But the pager item mumber can tell the number of search results.
+    // There is no search result $variable available that hold the number of
+    // items found. The variable $variables['items'] has the current page items
+    // only. But the pager item mumber can tell the number of search results.
     global $pager_total_items;
 
     $variables['#attached']['html_head'][] = [
       [
         '#tag' => 'script',
         '#value' => 'window.google_analytics_search_results = ' . intval($pager_total_items[0]) . ';',
-        '#weight' => JS_LIBRARY-1,
+        '#weight' => JS_LIBRARY - 1,
       ],
       'google_analytics_search_script'
     ];
@@ -474,10 +464,11 @@ function google_analytics_search_get_keys() {
 /**
  * Download/Synchronize/Cache tracking code file locally.
  *
- * @param $location
+ * @param string $location
  *   The full URL to the external javascript file.
- * @param $synchronize
+ * @param bool $synchronize
  *   Synchronize to local cache if remote file has changed.
+ *
  * @return mixed
  *   The path to the local javascript file on success, boolean FALSE on failure.
  */
@@ -502,7 +493,8 @@ function _google_analytics_cache($location, $synchronize = FALSE) {
           file_unmanaged_save_data($data, $file_destination, FILE_EXISTS_REPLACE);
           \Drupal::logger('google_analytics')->info('Locally cached tracking code file has been updated.');
 
-          // Change query-strings on css/js files to enforce reload for all users.
+          // Change query-strings on css/js files to enforce reload for all
+          // users.
           _drupal_flush_css_js();
         }
       }
@@ -548,26 +540,28 @@ function google_analytics_clear_js_cache() {
 /**
  * Tracking visibility check for an user object.
  *
- * @param $account
+ * @param object $account
  *   A user object containing an array of roles to check.
- * @return boolean
- *   A decision on if the current user is being tracked by Google Analytics.
+ *
+ * @return bool
+ *   TRUE if the current user is being tracked by Google Analytics,
+ *   otherwise FALSE.
  */
 function _google_analytics_visibility_user($account) {
   $config = \Drupal::config('google_analytics.settings');
   $enabled = FALSE;
 
   // Is current user a member of a role that should be tracked?
-  if (_google_analytics_visibility_header($account) && _google_analytics_visibility_roles($account)) {
+  if (_google_analytics_visibility_roles($account)) {
 
     // Use the user's block visibility setting, if necessary.
-    if (($custom = $config->get('visibility.custom')) != 0) {
-      $user_data = \Drupal::service('user.data')->get('google_analytics', $account->id());
-      if ($account->id() && isset($user_data['custom'])) {
-        $enabled = $user_data['custom'];
+    if (($visibility_user_account_mode = $config->get('visibility.user_account_mode')) != 0) {
+      $user_data_google_analytics = \Drupal::service('user.data')->get('google_analytics', $account->id());
+      if ($account->id() && isset($user_data_google_analytics['user_account_users'])) {
+        $enabled = $user_data_google_analytics['user_account_users'];
       }
       else {
-        $enabled = ($custom == 1);
+        $enabled = ($visibility_user_account_mode == 1);
       }
     }
     else {
@@ -580,21 +574,30 @@ function _google_analytics_visibility_user($account) {
 }
 
 /**
- * Based on visibility setting this function returns TRUE if GA code should
+ * Tracking visibility check for user roles.
+ *
+ * Based on visibility setting this function returns TRUE if JS code should
  * be added for the current role and otherwise FALSE.
+ *
+ * @param object $account
+ *   A user object containing an array of roles to check.
+ *
+ * @return bool
+ *   TRUE if JS code should be added for the current role and otherwise FALSE.
  */
 function _google_analytics_visibility_roles($account) {
   $config = \Drupal::config('google_analytics.settings');
-  $enabled = $visibility = $config->get('visibility.roles_enabled');
-  $roles = $config->get('visibility.roles');
+  $enabled = $visibility_user_role_mode = $config->get('visibility.user_role_mode');
+  $visibility_user_role_roles = $config->get('visibility.user_role_roles');
 
-  if (count($roles) > 0) {
+  if (count($visibility_user_role_roles) > 0) {
     // One or more roles are selected.
     foreach (array_values($account->getRoles()) as $user_role) {
       // Is the current user a member of one of these roles?
-      if (in_array($user_role, $roles)) {
-        // Current user is a member of a role that should be tracked/excluded from tracking.
-        $enabled = !$visibility;
+      if (in_array($user_role, $visibility_user_role_roles)) {
+        // Current user is a member of a role that should be tracked/excluded
+        // from tracking.
+        $enabled = !$visibility_user_role_mode;
         break;
       }
     }
@@ -608,10 +611,10 @@ function _google_analytics_visibility_roles($account) {
 }
 
 /**
- * Based on visibility setting this function returns TRUE if GA code should
- * be added to the current page and otherwise FALSE.
+ * Tracking visibility check for pages.
  *
- * @FIXME see BlockBase.php::access for upgrade
+ * Based on visibility setting this function returns TRUE if JS code should
+ * be added to the current page and otherwise FALSE.
  */
 function _google_analytics_visibility_pages() {
   static $page_match;
@@ -619,26 +622,26 @@ function _google_analytics_visibility_pages() {
   // Cache visibility result if function is called more than once.
   if (!isset($page_match)) {
     $config = \Drupal::config('google_analytics.settings');
-    $visibility = $config->get('visibility.pages_enabled');
-    $setting_pages = $config->get('visibility.pages');
+    $visibility_request_path_mode = $config->get('visibility.request_path_mode');
+    $visibility_request_path_pages = $config->get('visibility.request_path_pages');
 
     // Match path if necessary.
-    if (!empty($setting_pages)) {
+    if (!empty($visibility_request_path_pages)) {
       // Convert path to lowercase. This allows comparison of the same path
       // with different case. Ex: /Page, /page, /PAGE.
-      $pages = Unicode::strtolower($setting_pages);
-      if ($visibility < 2) {
+      $pages = Unicode::strtolower($visibility_request_path_pages);
+      if ($visibility_request_path_mode < 2) {
         // Compare the lowercase path alias (if any) and internal path.
         $path = \Drupal::service('path.current')->getPath();
         $path_alias = Unicode::strtolower(\Drupal::service('path.alias_manager')->getAliasByPath($path));
         $page_match = \Drupal::service('path.matcher')->matchPath($path_alias, $pages) || (($path != $path_alias) && \Drupal::service('path.matcher')->matchPath($path, $pages));
-        // When $visibility has a value of 0, the tracking code is displayed on
-        // all pages except those listed in $pages. When set to 1, it
-        // is displayed only on those pages listed in $pages.
-        $page_match = !($visibility xor $page_match);
+        // When $visibility_request_path_mode has a value of 0, the tracking
+        // code is displayed on all pages except those listed in $pages. When
+        // set to 1, it is displayed only on those pages listed in $pages.
+        $page_match = !($visibility_request_path_mode xor $page_match);
       }
       elseif (\Drupal::moduleHandler()->moduleExists('php')) {
-        $page_match = php_eval($setting_pages);
+        $page_match = php_eval($visibility_request_path_pages);
       }
       else {
         $page_match = FALSE;
@@ -650,22 +653,4 @@ function _google_analytics_visibility_pages() {
 
   }
   return $page_match;
-}
-
-/**
- * Based on headers send by clients this function returns TRUE if GA code should
- * be added to the current page and otherwise FALSE.
- */
-function _google_analytics_visibility_header($account) {
-  $config = \Drupal::config('google_analytics.settings');
-
-  // @FIXME: This is not reliable method to check if page cache is enabled. Look
-  //   for different solution.
-  if (($account->id() || !\Drupal::moduleHandler()->moduleExists('page_cache')) && $config->get('privacy.donottrack') && !empty($_SERVER['HTTP_DNT'])) {
-    // Disable tracking if caching is disabled or a visitors is logged in and
-    // have opted out from tracking via DNT (Do-Not-Track) header.
-    return FALSE;
-  }
-
-  return TRUE;
 }
