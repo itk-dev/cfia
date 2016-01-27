@@ -793,7 +793,7 @@ display:
         title: Begivenheder
         description: ''
         parent: ''
-        weight: 3
+        weight: -47
         context: '0'
         menu_name: main
       header:
