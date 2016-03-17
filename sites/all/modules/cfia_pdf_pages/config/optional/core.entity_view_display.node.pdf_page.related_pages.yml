@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.related_pages
+    - field.field.node.pdf_page.body
+    - field.field.node.pdf_page.field_instagram
+    - field.field.node.pdf_page.field_main_image
+    - field.field.node.pdf_page.field_related_page_image
+    - field.field.node.pdf_page.field_related_page_teaser
+    - field.field.node.pdf_page.field_related_pages
+    - node.type.pdf_page
+  module:
+    - image
+    - user
+id: node.pdf_page.related_pages
+targetEntityType: node
+bundle: pdf_page
+mode: related_pages
+content:
+  field_related_page_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: related_page_image
+      image_link: content
+    third_party_settings: {  }
+    type: image
+  field_related_page_teaser:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  body: true
+  field_instagram: true
+  field_main_image: true
+  field_related_pages: true
+  langcode: true
+  links: true
