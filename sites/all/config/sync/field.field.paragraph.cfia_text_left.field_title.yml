@@ -1,0 +1,19 @@
+uuid: f6119456-b558-43b0-ba00-eb786ed8f6aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.cfia_text_left
+id: paragraph.cfia_text_left.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: cfia_text_left
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

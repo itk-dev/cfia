@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_instagram
     - field.field.node.page.field_main_image
+    - field.field.node.page.field_paragraphs
     - field.field.node.page.field_related_page_image
     - field.field.node.page.field_related_page_teaser
     - field.field.node.page.field_related_pages
@@ -14,6 +15,7 @@ dependencies:
     - image
     - imce
     - itk_instagram_hashtag
+    - paragraphs
     - path
     - text
 id: node.page.default
@@ -48,6 +50,16 @@ content:
       imce:
         enabled: 1
     type: image_image
+  field_paragraphs:
+    weight: 27
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
   field_related_page_image:
     weight: 10
     settings:

@@ -1,0 +1,6 @@
+uuid: 2b27f742-d95d-4292-b500-adb1b6585cc5
+langcode: en
+status: true
+dependencies: {  }
+id: cfia_title_paragraph
+label: 'Title paragraph'

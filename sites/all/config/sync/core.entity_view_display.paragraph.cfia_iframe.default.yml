@@ -1,0 +1,29 @@
+uuid: aef0c2bc-4795-4fc1-a157-873ebb0942ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cfia_iframe.field_iframe
+    - field.field.paragraph.cfia_iframe.field_title
+    - paragraphs.paragraphs_type.cfia_iframe
+id: paragraph.cfia_iframe.default
+targetEntityType: paragraph
+bundle: cfia_iframe
+mode: default
+content:
+  field_iframe:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  uid: true

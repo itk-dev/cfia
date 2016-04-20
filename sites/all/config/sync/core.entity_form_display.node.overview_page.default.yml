@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.overview_page.field_instagram
     - field.field.node.overview_page.field_main_image
     - field.field.node.overview_page.field_pages
+    - field.field.node.overview_page.field_paragraphs
     - field.field.node.overview_page.field_related_page_image
     - field.field.node.overview_page.field_related_page_teaser
     - node.type.overview_page
@@ -14,6 +15,7 @@ dependencies:
     - image
     - imce
     - itk_instagram_hashtag
+    - paragraphs
     - path
     - text
 id: node.overview_page.default
@@ -56,6 +58,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+  field_paragraphs:
+    weight: 27
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
   field_related_page_image:
     weight: 10
     settings:

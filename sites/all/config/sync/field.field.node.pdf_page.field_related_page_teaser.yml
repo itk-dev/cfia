@@ -1,0 +1,19 @@
+uuid: e23289a6-1f1f-4709-ae02-2e412d7a2569
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_page_teaser
+    - node.type.pdf_page
+id: node.pdf_page.field_related_page_teaser
+field_name: field_related_page_teaser
+entity_type: node
+bundle: pdf_page
+label: 'Related Page Teaser'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

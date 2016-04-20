@@ -9,12 +9,14 @@ dependencies:
     - field.field.node.event.field_location
     - field.field.node.event.field_main_image
     - field.field.node.event.field_pages
+    - field.field.node.event.field_paragraphs
     - field.field.node.event.field_related_page_image
     - field.field.node.event.field_related_page_teaser
     - field.field.node.event.field_starttime
     - node.type.event
   module:
     - datetime
+    - entity_reference_revisions
     - image
     - itk_instagram_hashtag
     - text
@@ -67,6 +69,14 @@ content:
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 7
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
   field_starttime:
     weight: 1
     label: hidden

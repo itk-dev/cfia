@@ -1,0 +1,19 @@
+uuid: fa82dbdd-2267-444d-af16-22c478825cd4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_text
+    - paragraphs.paragraphs_type.cfia_internal_link
+id: paragraph.cfia_internal_link.field_link_text
+field_name: field_link_text
+entity_type: paragraph
+bundle: cfia_internal_link
+label: 'Link text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

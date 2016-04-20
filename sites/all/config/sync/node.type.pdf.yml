@@ -1,0 +1,18 @@
+uuid: c2faf53f-b2b2-4ad8-890f-154c4605e6c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: PDF
+type: pdf
+description: 'Med denne kan man oprette pdf-filer'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,6 @@
+uuid: da5f2e26-2b27-437e-8800-a9d926560a29
+langcode: en
+status: true
+dependencies: {  }
+id: cfia_youtube
+label: 'Youtube video'

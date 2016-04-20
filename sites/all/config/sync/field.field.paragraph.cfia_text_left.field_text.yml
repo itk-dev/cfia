@@ -1,0 +1,21 @@
+uuid: 2f9e2221-4cd4-4397-b02d-453320a22e0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.cfia_text_left
+  module:
+    - text
+id: paragraph.cfia_text_left.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: cfia_text_left
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

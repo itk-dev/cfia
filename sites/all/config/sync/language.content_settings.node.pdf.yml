@@ -1,0 +1,11 @@
+uuid: 4a8e5c2c-40ef-486f-ae5a-903af66c3ff4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.pdf
+id: node.pdf
+target_entity_type_id: node
+target_bundle: pdf
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,30 @@
+uuid: 4588c412-1333-4c86-9700-ec995ce1b312
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cfia_youtube.field_title
+    - field.field.paragraph.cfia_youtube.field_youtube
+    - paragraphs.paragraphs_type.cfia_youtube
+  module:
+    - youtube
+id: paragraph.cfia_youtube.default
+targetEntityType: paragraph
+bundle: cfia_youtube
+mode: default
+content:
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_youtube:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: youtube
+hidden:
+  created: true
+  uid: true

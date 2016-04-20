@@ -1,0 +1,11 @@
+uuid: 557a975c-0e07-43b5-b51c-28dd9900d507
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.pdf_page
+id: node.pdf_page
+target_entity_type_id: node
+target_bundle: pdf_page
+default_langcode: site_default
+language_alterable: false
