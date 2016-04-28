@@ -1,10 +1,12 @@
-uuid: 58f84777-6838-4c12-8000-e5b647a926a4
-langcode: en
+uuid: be46c681-7852-4d5d-9a00-f0f280f31b0b
+langcode: da
 status: true
 dependencies:
   config:
     - field.storage.node.field_related_page_teaser
     - node.type.pdf
+_core:
+  default_config_hash: cQ8blG7UckYaJ4isv0hi5_6fmYhpqAgmOGzaDF5JakE
 id: node.pdf.field_related_page_teaser
 field_name: field_related_page_teaser
 entity_type: node

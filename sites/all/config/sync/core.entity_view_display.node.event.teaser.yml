@@ -10,10 +10,10 @@ dependencies:
     - field.field.node.event.field_location
     - field.field.node.event.field_main_image
     - field.field.node.event.field_pages
-    - field.field.node.event.field_paragraphs
     - field.field.node.event.field_related_page_image
     - field.field.node.event.field_related_page_teaser
     - field.field.node.event.field_starttime
+    - image.style.related_page_image
     - node.type.event
   module:
     - image
@@ -45,7 +45,6 @@ hidden:
   field_location: true
   field_main_image: true
   field_pages: true
-  field_paragraphs: true
   field_starttime: true
   langcode: true
   links: true

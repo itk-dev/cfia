@@ -1,5 +1,5 @@
-uuid: 16848bcc-7952-463c-b85b-91740fc6e8ee
-langcode: en
+uuid: 3a68ce9c-24ef-4dc1-8e3a-586b8c8eb227
+langcode: da
 status: true
 dependencies:
   config:
@@ -7,14 +7,16 @@ dependencies:
     - field.field.node.pdf_page.body
     - field.field.node.pdf_page.field_instagram
     - field.field.node.pdf_page.field_main_image
-    - field.field.node.pdf_page.field_paragraphs
     - field.field.node.pdf_page.field_related_page_image
     - field.field.node.pdf_page.field_related_page_teaser
     - field.field.node.pdf_page.field_related_pages
+    - image.style.related_page_image
     - node.type.pdf_page
   module:
     - image
     - user
+_core:
+  default_config_hash: HTTz25L5wXc4iVSunUEIXBzlEttaH64VimB76zWOrog
 id: node.pdf_page.related_pages
 targetEntityType: node
 bundle: pdf_page
@@ -39,7 +41,6 @@ hidden:
   body: true
   field_instagram: true
   field_main_image: true
-  field_paragraphs: true
   field_related_pages: true
   langcode: true
   links: true

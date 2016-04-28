@@ -1,5 +1,5 @@
-uuid: 3ecb8dc0-2418-4875-9900-d380f3a4612e
-langcode: en
+uuid: 13f05707-c5bc-454c-8f06-6baac7e13524
+langcode: da
 status: true
 dependencies:
   config:
@@ -12,6 +12,8 @@ dependencies:
     - file
     - image
     - user
+_core:
+  default_config_hash: soTAMrVJZ06xHcn4TOcbA0Td8eBvlCPUB4occmn5eik
 id: node.pdf.default
 targetEntityType: node
 bundle: pdf

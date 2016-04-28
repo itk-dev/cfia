@@ -1,5 +1,5 @@
-uuid: 8c89aa3a-713e-49e1-9c00-c8b1244b3949
-langcode: en
+uuid: 0e4a3329-d0aa-411c-ac00-fbb67f9caedc
+langcode: da
 status: true
 dependencies:
   config:
@@ -7,6 +7,8 @@ dependencies:
     - node.type.pdf
   module:
     - file
+_core:
+  default_config_hash: PylSCRWgtpGSoEBx6wvaHTpR44_1mIHGPlGcRz3jxE0
 id: node.pdf.field_pdf
 field_name: field_pdf
 entity_type: node

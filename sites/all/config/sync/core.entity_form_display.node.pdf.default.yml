@@ -1,5 +1,5 @@
 uuid: 7e4e441f-a649-4f2b-8200-bce35e88fde3
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -14,6 +14,8 @@ dependencies:
     - image
     - imce
     - pathauto
+_core:
+  default_config_hash: k4GvYOBfzz4711UCQ2wYZwx8Eel7O6whKFmh4LmXq9A
 id: node.pdf.default
 targetEntityType: node
 bundle: pdf

@@ -8,9 +8,9 @@ dependencies:
     - field.field.node.news.field_instagram
     - field.field.node.news.field_main_image
     - field.field.node.news.field_pages
-    - field.field.node.news.field_paragraphs
     - field.field.node.news.field_related_page_image
     - field.field.node.news.field_related_page_teaser
+    - image.style.related_page_image
     - node.type.news
   module:
     - image
@@ -40,6 +40,5 @@ hidden:
   field_instagram: true
   field_main_image: true
   field_pages: true
-  field_paragraphs: true
   langcode: true
   links: true

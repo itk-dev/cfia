@@ -1,22 +1,24 @@
-uuid: 02f21a53-b023-479b-8000-ab62f8438fff
-langcode: en
+uuid: 0df5741e-ca13-4963-8600-cbaa2ee4325a
+langcode: da
 status: true
 dependencies:
   config:
     - field.field.node.pdf_page.body
     - field.field.node.pdf_page.field_instagram
     - field.field.node.pdf_page.field_main_image
-    - field.field.node.pdf_page.field_paragraphs
     - field.field.node.pdf_page.field_related_page_image
     - field.field.node.pdf_page.field_related_page_teaser
     - field.field.node.pdf_page.field_related_pages
+    - image.style.thumbnail
     - node.type.pdf_page
   module:
     - image
+    - imce
     - itk_instagram_hashtag
-    - paragraphs
     - path
     - text
+_core:
+  default_config_hash: 7SNNdXr607jiOVKZ9H9Qwgqdh1ScnF9pMOQjEMFhFaE
 id: node.pdf_page.default
 targetEntityType: node
 bundle: pdf_page
@@ -43,26 +45,20 @@ content:
   field_main_image:
     weight: 8
     settings:
-      progress_indicator: throbber
       preview_image_style: thumbnail
-    third_party_settings: {  }
+      progress_indicator: throbber
+    third_party_settings:
+      imce:
+        enabled: '1'
     type: image_image
-  field_paragraphs:
-    weight: 26
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-    third_party_settings: {  }
-    type: entity_reference_paragraphs
   field_related_page_image:
     weight: 10
     settings:
-      progress_indicator: throbber
       preview_image_style: thumbnail
-    third_party_settings: {  }
+      progress_indicator: throbber
+    third_party_settings:
+      imce:
+        enabled: '1'
     type: image_image
   field_related_page_teaser:
     weight: 9

@@ -1,9 +1,11 @@
-uuid: 4a8e5c2c-40ef-486f-ae5a-903af66c3ff4
-langcode: en
+uuid: 6fd22670-5aef-4a15-9500-ddebb0595bd2
+langcode: da
 status: true
 dependencies:
   config:
     - node.type.pdf
+_core:
+  default_config_hash: MlMmqqA-ITkDc_3kg7qIiMUL4FvwTEUpaTbhIUc6OWQ
 id: node.pdf
 target_entity_type_id: node
 target_bundle: pdf

@@ -7,10 +7,10 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_instagram
     - field.field.node.page.field_main_image
-    - field.field.node.page.field_paragraphs
     - field.field.node.page.field_related_page_image
     - field.field.node.page.field_related_page_teaser
     - field.field.node.page.field_related_pages
+    - image.style.related_page_image
     - node.type.page
   module:
     - image
@@ -39,7 +39,6 @@ hidden:
   body: true
   field_instagram: true
   field_main_image: true
-  field_paragraphs: true
   field_related_pages: true
   langcode: true
   links: true

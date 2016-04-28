@@ -1,10 +1,12 @@
-uuid: bc026034-2458-4819-9e43-67f2af113529
-langcode: en
+uuid: 304a1883-1f0c-4bb5-9b00-a035411a1064
+langcode: da
 status: true
 dependencies:
   config:
     - field.storage.node.field_link_title
     - node.type.pdf
+_core:
+  default_config_hash: RxMBPGD7SogjfDTYabo8nd4ZwjwLIrDFKCfIv71TZqU
 id: node.pdf.field_link_title
 field_name: field_link_title
 entity_type: node

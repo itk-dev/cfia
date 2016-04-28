@@ -1,5 +1,5 @@
-uuid: fc60077f-c326-4d01-8000-f5e4cf5311a7
-langcode: en
+uuid: a1d9d780-f7b3-487e-b500-b2021984c223
+langcode: da
 status: true
 dependencies:
   module:
@@ -9,6 +9,8 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
+_core:
+  default_config_hash: NKsRJMJ9ZdTl9IgX49yhP9-QvhAXrUO-yjtS8l_W7J0
 name: 'PDF Page'
 type: pdf_page
 description: ''

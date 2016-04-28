@@ -1,22 +1,22 @@
-uuid: cb071d1e-1fae-4622-a602-2dc21a8f5b16
-langcode: en
+uuid: b52d85f6-00c7-4cb1-a64c-76cb64bcaf91
+langcode: da
 status: true
 dependencies:
   config:
     - field.field.node.pdf_page.body
     - field.field.node.pdf_page.field_instagram
     - field.field.node.pdf_page.field_main_image
-    - field.field.node.pdf_page.field_paragraphs
     - field.field.node.pdf_page.field_related_page_image
     - field.field.node.pdf_page.field_related_page_teaser
     - field.field.node.pdf_page.field_related_pages
     - node.type.pdf_page
   module:
-    - entity_reference_revisions
     - image
     - itk_instagram_hashtag
     - text
     - user
+_core:
+  default_config_hash: zOr0vVgnbHhrw7Sjs-WWrFcyVg-o8OejXp_dSFZwN30
 id: node.pdf_page.default
 targetEntityType: node
 bundle: pdf_page
@@ -43,14 +43,6 @@ content:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
-  field_paragraphs:
-    weight: 4
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
   field_related_pages:
     type: entity_reference_entity_view
     weight: 2

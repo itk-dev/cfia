@@ -1,5 +1,5 @@
-uuid: f55922ed-2f58-4c15-8324-36c554b5935f
-langcode: en
+uuid: 0ce1884d-7ee0-479e-ae4a-74476439f019
+langcode: da
 status: true
 dependencies:
   config:
@@ -7,6 +7,8 @@ dependencies:
     - node.type.pdf
   module:
     - image
+_core:
+  default_config_hash: iuwPRmnOeGhvqZPR2FRJjwsCEmbxYTw6bLrsXavCyW0
 id: node.pdf.field_related_page_image
 field_name: field_related_page_image
 entity_type: node

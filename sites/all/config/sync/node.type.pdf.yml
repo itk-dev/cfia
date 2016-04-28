@@ -1,5 +1,5 @@
-uuid: c2faf53f-b2b2-4ad8-890f-154c4605e6c6
-langcode: en
+uuid: d17d4962-67a9-4300-b640-6498710f23b7
+langcode: da
 status: true
 dependencies:
   module:
@@ -9,6 +9,8 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
+_core:
+  default_config_hash: JB1-ExXDE9I0eXz_7u-ODRONM3qqpWTyuEgd35qCiog
 name: PDF
 type: pdf
 description: 'Med denne kan man oprette pdf-filer'
