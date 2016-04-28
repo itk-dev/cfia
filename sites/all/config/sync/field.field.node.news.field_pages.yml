@@ -8,6 +8,7 @@ dependencies:
     - node.type.news
     - node.type.overview_page
     - node.type.page
+    - node.type.pdf_page
 id: node.news.field_pages
 field_name: field_pages
 entity_type: node
@@ -26,6 +27,7 @@ settings:
       news: news
       overview_page: overview_page
       page: page
+      pdf_page: pdf_page
     sort:
       field: _none
 field_type: entity_reference

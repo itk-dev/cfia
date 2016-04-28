@@ -2,6 +2,7 @@ module:
   block: 0
   breakpoint: 0
   cfia_base: 0
+  cfia_pdf_pages: 0
   ckeditor: 0
   config: 0
   config_translation: 0

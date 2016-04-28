@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.news.field_pages
     - field.field.node.news.field_related_page_image
     - field.field.node.news.field_related_page_teaser
+    - image.style.thumbnail
     - node.type.news
   module:
     - image
