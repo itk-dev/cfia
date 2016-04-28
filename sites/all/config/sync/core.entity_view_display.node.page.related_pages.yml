@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.page.field_related_page_image
     - field.field.node.page.field_related_page_teaser
     - field.field.node.page.field_related_pages
+    - image.style.related_page_image
     - node.type.page
   module:
     - image

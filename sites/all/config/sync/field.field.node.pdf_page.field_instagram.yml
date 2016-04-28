@@ -1,0 +1,23 @@
+uuid: f27180a3-2b28-4ad4-900d-13afbc6ba28d
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_instagram
+    - node.type.pdf_page
+  module:
+    - itk_instagram_hashtag
+_core:
+  default_config_hash: pTLoEBkCD3M5piLVWFTotDciK38CVvxEHnSIe7B7exY
+id: node.pdf_page.field_instagram
+field_name: field_instagram
+entity_type: node
+bundle: pdf_page
+label: Instagram
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_instagram_hashtag

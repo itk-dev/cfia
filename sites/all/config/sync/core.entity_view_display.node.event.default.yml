@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.event.field_related_page_image
     - field.field.node.event.field_related_page_teaser
     - field.field.node.event.field_starttime
+    - image.style.main_image
     - node.type.event
   module:
     - datetime

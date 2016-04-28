@@ -1,0 +1,54 @@
+uuid: 38fcd6af-7b45-4483-8400-a15ae399cd0b
+langcode: da
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.pdf.field_link_title
+    - field.field.node.pdf.field_pdf
+    - field.field.node.pdf.field_related_page_image
+    - field.field.node.pdf.field_related_page_teaser
+    - image.style.related_page_image
+    - node.type.pdf
+  module:
+    - file
+    - image
+    - user
+_core:
+  default_config_hash: AdceSIFPXCMyDWmLa5dLzRaMQYZmxKarvR90BLIbjz4
+id: node.pdf.teaser
+targetEntityType: node
+bundle: pdf
+mode: teaser
+content:
+  field_link_title:
+    type: string
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_pdf:
+    type: file_url_plain
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_related_page_image:
+    type: image
+    weight: 3
+    label: hidden
+    settings:
+      image_style: related_page_image
+      image_link: file
+    third_party_settings: {  }
+  field_related_page_teaser:
+    type: string
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  links: true

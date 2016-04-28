@@ -1,0 +1,28 @@
+uuid: dccd283b-4d1d-49e9-b53c-6057040157e9
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_pages
+    - node.type.pdf
+    - node.type.pdf_page
+_core:
+  default_config_hash: 6l0pC60bI0jExDA5NwiCwrH_Qd0qaqZ1rBPjGcAtvMQ
+id: node.pdf_page.field_related_pages
+field_name: field_related_pages
+entity_type: node
+bundle: pdf_page
+label: 'Related Pages'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      pdf: pdf
+    sort:
+      field: _none
+field_type: entity_reference

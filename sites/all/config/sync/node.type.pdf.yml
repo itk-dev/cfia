@@ -1,0 +1,20 @@
+uuid: d17d4962-67a9-4300-b640-6498710f23b7
+langcode: da
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: JB1-ExXDE9I0eXz_7u-ODRONM3qqpWTyuEgd35qCiog
+name: PDF
+type: pdf
+description: 'Med denne kan man oprette pdf-filer'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true
