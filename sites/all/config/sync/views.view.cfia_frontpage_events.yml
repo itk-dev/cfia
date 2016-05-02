@@ -1,12 +1,13 @@
 uuid: 2343fc69-fe59-4172-8700-ce1e24c8df82
 langcode: da
-status: true
+status: false
 dependencies:
   config:
     - field.storage.node.field_endtime
     - field.storage.node.field_main_image
     - field.storage.node.field_related_page_teaser
     - field.storage.node.field_starttime
+    - image.style.news_teaser_image
     - node.type.event
     - system.menu.main
   module:
