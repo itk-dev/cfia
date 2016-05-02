@@ -95,8 +95,6 @@ function cfia_preprocess_node_event(&$variables) {
   $variables['eventendtime'] = \Drupal::service('date.formatter')->format(date('U', $endDateTime->getTimestamp()), 'custom', 'G:i');
 
 }
-<<<<<<< HEAD
-=======
 
 /**
  * Implements hook_preprocess_node__type().
@@ -110,4 +108,3 @@ function cfia_preprocess_node_pdf(&$variables) {
   $file = File::load($image_id['target_id']);
   $variables['image_url'] = ImageStyle::load('related_page_image')->buildUrl($file->getFileUri());
 }
->>>>>>> feature/core-update

@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_instagram
     - field.field.node.page.field_main_image
+    - field.field.node.page.field_paragraphs
     - field.field.node.page.field_related_page_image
     - field.field.node.page.field_related_page_teaser
     - field.field.node.page.field_related_pages
@@ -15,6 +16,7 @@ dependencies:
     - image
     - imce
     - itk_instagram_hashtag
+    - paragraphs
     - path
     - text
 id: node.page.default
@@ -36,7 +38,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_instagram:
-    weight: 26
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: field_instagram_hashtag_default_widget
@@ -47,8 +49,18 @@ content:
       preview_image_style: thumbnail
     third_party_settings:
       imce:
-        enabled: 1
+        enabled: true
     type: image_image
+  field_paragraphs:
+    type: entity_reference_paragraphs
+    weight: 13
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
   field_related_page_image:
     weight: 10
     settings:
@@ -56,7 +68,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings:
       imce:
-        enabled: 1
+        enabled: true
     type: image_image
   field_related_page_teaser:
     weight: 9

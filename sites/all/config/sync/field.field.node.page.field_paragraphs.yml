@@ -1,0 +1,47 @@
+uuid: f26caaf9-dbd3-49be-8e36-2132a2aeba5b
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.page
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: j51YMPtKoJbEiH8PafZY8yF9eJOD8q_EMXKPAUQpiKM
+id: node.page.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: page
+label: Paragraphs
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      cfia_text_left: cfia_text_left
+      cfia_iframe: cfia_iframe
+      cfia_internal_link: cfia_internal_link
+      cfia_title_paragraph: cfia_title_paragraph
+      cfia_youtube: cfia_youtube
+    target_bundles_drag_drop:
+      cfia_text_left:
+        enabled: true
+        weight: -11
+      cfia_iframe:
+        enabled: true
+        weight: -10
+      cfia_internal_link:
+        enabled: true
+        weight: -9
+      cfia_title_paragraph:
+        enabled: true
+        weight: -8
+      cfia_youtube:
+        enabled: true
+        weight: -7
+field_type: entity_reference_revisions

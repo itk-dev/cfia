@@ -1,0 +1,21 @@
+uuid: b6b6cfd4-c5a4-48d1-919c-bd1793339305
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.cfia_title_paragraph
+_core:
+  default_config_hash: nt-YzzGkvhfLWcgfmqYdNHg5Lk6UtRyqx62Kcp6kOJs
+id: paragraph.cfia_title_paragraph.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: cfia_title_paragraph
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

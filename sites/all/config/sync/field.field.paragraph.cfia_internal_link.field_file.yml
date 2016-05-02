@@ -1,0 +1,29 @@
+uuid: dcaff521-5d55-42be-90bb-bb05d2df18fa
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_file
+    - paragraphs.paragraphs_type.cfia_internal_link
+  module:
+    - file
+_core:
+  default_config_hash: z6o_j0Vr3WAunJxdJILyPHphIRWY_rSW69AM2KytZ8I
+id: paragraph.cfia_internal_link.field_file
+field_name: field_file
+entity_type: paragraph
+bundle: cfia_internal_link
+label: File
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: uploaded_files
+  file_extensions: 'txt pdf jpeg jpg png rar zip'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

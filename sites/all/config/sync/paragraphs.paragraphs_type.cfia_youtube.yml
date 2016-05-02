@@ -1,0 +1,8 @@
+uuid: 22135ee3-91d4-4191-8e7b-16c982f7f18c
+langcode: da
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 5DgaIWbm4uZrpVnnPnfrbCTKkzmxJ7VbN3lrt_g_4ME
+id: cfia_youtube
+label: 'Youtube video'
