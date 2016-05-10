@@ -1,0 +1,21 @@
+uuid: a7c4ec4c-8aa3-4a0b-b0c5-953d3a1c37a2
+langcode: da
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - youtube
+_core:
+  default_config_hash: 3JU_epfgndkClGyygbN3eBIjFEFVb4OhOqUapeJcPd4
+id: paragraph.field_youtube
+field_name: field_youtube
+entity_type: paragraph
+type: youtube
+settings: {  }
+module: youtube
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

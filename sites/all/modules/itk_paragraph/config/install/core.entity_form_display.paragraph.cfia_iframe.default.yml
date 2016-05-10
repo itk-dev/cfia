@@ -1,0 +1,28 @@
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cfia_iframe.field_iframe
+    - field.field.paragraph.cfia_iframe.field_title
+    - paragraphs.paragraphs_type.cfia_iframe
+id: paragraph.cfia_iframe.default
+targetEntityType: paragraph
+bundle: cfia_iframe
+mode: default
+content:
+  field_iframe:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+hidden:
+  created: true
+  uid: true

@@ -1,0 +1,8 @@
+uuid: 0350e555-f09d-414a-98bd-6e3e2815c270
+langcode: da
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: w786loH_okR3FMlIKqToVqwf0GP9g7pRCLXfo3Aj0n8
+id: cfia_title_paragraph
+label: 'Title paragraph'

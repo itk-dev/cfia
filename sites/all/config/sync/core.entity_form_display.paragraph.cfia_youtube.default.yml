@@ -1,0 +1,32 @@
+uuid: aa678a87-5505-4dfd-9860-99c69f73d105
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cfia_youtube.field_title
+    - field.field.paragraph.cfia_youtube.field_youtube
+    - paragraphs.paragraphs_type.cfia_youtube
+  module:
+    - youtube
+_core:
+  default_config_hash: FTHTBn10QkV70JjclpCfYJiak57gmLT_iE92PcdqqOM
+id: paragraph.cfia_youtube.default
+targetEntityType: paragraph
+bundle: cfia_youtube
+mode: default
+content:
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_youtube:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: youtube
+hidden:
+  created: true
+  uid: true

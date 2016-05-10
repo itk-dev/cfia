@@ -1,0 +1,21 @@
+uuid: 304a1883-1f0c-4bb5-9b00-a035411a1064
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_title
+    - node.type.pdf
+_core:
+  default_config_hash: RxMBPGD7SogjfDTYabo8nd4ZwjwLIrDFKCfIv71TZqU
+id: node.pdf.field_link_title
+field_name: field_link_title
+entity_type: node
+bundle: pdf
+label: 'Link title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

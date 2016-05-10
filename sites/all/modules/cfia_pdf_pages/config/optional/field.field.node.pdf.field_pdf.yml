@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pdf
+    - node.type.pdf
+  module:
+    - file
+id: node.pdf.field_pdf
+field_name: field_pdf
+entity_type: node
+bundle: pdf
+label: PDF
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: pdf
+  file_extensions: pdf
+  max_filesize: '25 MB'
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

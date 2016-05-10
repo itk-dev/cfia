@@ -7,10 +7,13 @@ dependencies:
     - field.field.node.overview_page.field_instagram
     - field.field.node.overview_page.field_main_image
     - field.field.node.overview_page.field_pages
+    - field.field.node.overview_page.field_paragraphs
     - field.field.node.overview_page.field_related_page_image
     - field.field.node.overview_page.field_related_page_teaser
+    - image.style.main_image
     - node.type.overview_page
   module:
+    - entity_reference_revisions
     - image
     - itk_instagram_hashtag
     - text
@@ -48,6 +51,14 @@ content:
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
 hidden:
   field_related_page_image: true
   field_related_page_teaser: true

@@ -1,0 +1,8 @@
+uuid: e1ce8fd6-7175-4f13-89c8-6d994e1e4fa8
+langcode: da
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: H5z2pu5-8WaI3QvHP621aIhosnpwzn2r4J2O1aGEN3c
+id: cfia_text_left
+label: 'Text left'

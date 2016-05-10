@@ -7,13 +7,16 @@ dependencies:
     - field.field.node.news.field_instagram
     - field.field.node.news.field_main_image
     - field.field.node.news.field_pages
+    - field.field.node.news.field_paragraphs
     - field.field.node.news.field_related_page_image
     - field.field.node.news.field_related_page_teaser
+    - image.style.thumbnail
     - node.type.news
   module:
     - image
     - imce
     - itk_instagram_hashtag
+    - paragraphs
     - path
     - text
 id: node.news.default
@@ -35,7 +38,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_instagram:
-    weight: 26
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: field_instagram_hashtag_default_widget
@@ -46,7 +49,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings:
       imce:
-        enabled: 1
+        enabled: true
     type: image_image
   field_pages:
     weight: 11
@@ -56,6 +59,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+  field_paragraphs:
+    type: entity_reference_paragraphs
+    weight: 13
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
   field_related_page_image:
     weight: 10
     settings:
@@ -63,7 +76,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings:
       imce:
-        enabled: 1
+        enabled: true
     type: image_image
   field_related_page_teaser:
     weight: 9

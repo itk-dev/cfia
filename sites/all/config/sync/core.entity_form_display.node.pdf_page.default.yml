@@ -1,0 +1,115 @@
+uuid: 0df5741e-ca13-4963-8600-cbaa2ee4325a
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.node.pdf_page.body
+    - field.field.node.pdf_page.field_instagram
+    - field.field.node.pdf_page.field_main_image
+    - field.field.node.pdf_page.field_related_page_image
+    - field.field.node.pdf_page.field_related_page_teaser
+    - field.field.node.pdf_page.field_related_pages
+    - image.style.thumbnail
+    - node.type.pdf_page
+  module:
+    - image
+    - imce
+    - itk_instagram_hashtag
+    - path
+    - text
+_core:
+  default_config_hash: 7SNNdXr607jiOVKZ9H9Qwgqdh1ScnF9pMOQjEMFhFaE
+id: node.pdf_page.default
+targetEntityType: node
+bundle: pdf_page
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 7
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  field_instagram:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: field_instagram_hashtag_default_widget
+  field_main_image:
+    weight: 8
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings:
+      imce:
+        enabled: '1'
+    type: image_image
+  field_related_page_image:
+    weight: 10
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings:
+      imce:
+        enabled: '1'
+    type: image_image
+  field_related_page_teaser:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_related_pages:
+    weight: 11
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  langcode:
+    type: language_select
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

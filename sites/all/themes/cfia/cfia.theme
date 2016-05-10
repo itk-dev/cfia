@@ -2,6 +2,9 @@
 
 use Drupal\file\Entity\File;
 use Drupal\Core\Config;
+use Drupal\image\Entity\ImageStyle;
+
+
 
 /**
  * Implements hook_preprocess_page()
@@ -54,6 +57,28 @@ function cfia_preprocess_node(&$variables) {
 }
 
 /**
+ * Implements hook_preprocess_field().
+ *
+ * Enable preprocess function for specific fields.
+ */
+function cfia_preprocess_field(&$variables) {
+  $function = __FUNCTION__ . '__' . $variables['element']['#field_name'];
+
+  if (function_exists($function)) {
+    $function($variables);
+  }
+}
+
+/**
+ * Implements hook_preprocess_field__().
+ *
+ * Enable preprocess function for specific fields.
+ */
+function cfia_preprocess_field__field_iframe(&$variables) {
+  $variables['unformatted_iframe'] = strip_tags($variables['items']['0']['content']['#context']['value'], '<iframe>');
+}
+
+/**
  * Implements hook_preprocess_node__type().
  */
 function cfia_preprocess_node_event(&$variables) {
@@ -69,4 +94,17 @@ function cfia_preprocess_node_event(&$variables) {
   $variables['eventstarttime'] = \Drupal::service('date.formatter')->format(date('U', $startDateTime->getTimestamp()), 'custom', 'G:i');
   $variables['eventendtime'] = \Drupal::service('date.formatter')->format(date('U', $endDateTime->getTimestamp()), 'custom', 'G:i');
 
+}
+
+/**
+ * Implements hook_preprocess_node__type().
+ */
+function cfia_preprocess_node_pdf(&$variables) {
+  // Get pdf path.
+  $variables['pdfpath'] = $variables['elements']['field_pdf']['0']['#file']->url();
+
+  // Get image url
+  $image_id = $variables['elements']['field_related_page_image']['0']['#item']->getValue();
+  $file = File::load($image_id['target_id']);
+  $variables['image_url'] = ImageStyle::load('related_page_image')->buildUrl($file->getFileUri());
 }

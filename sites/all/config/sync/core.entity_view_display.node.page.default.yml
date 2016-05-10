@@ -6,11 +6,14 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_instagram
     - field.field.node.page.field_main_image
+    - field.field.node.page.field_paragraphs
     - field.field.node.page.field_related_page_image
     - field.field.node.page.field_related_page_teaser
     - field.field.node.page.field_related_pages
+    - image.style.main_image
     - node.type.page
   module:
+    - entity_reference_revisions
     - image
     - itk_instagram_hashtag
     - text
@@ -40,6 +43,14 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
   field_related_pages:
     weight: 2
     label: hidden

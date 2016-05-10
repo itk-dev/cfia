@@ -1,0 +1,47 @@
+uuid: 80529b85-601e-4318-9fb0-12a2d0917cd8
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.news
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: rMIFLAfnEf1FTqP0sDln_iJ_DrMyzoIM2SrSETyyQxU
+id: node.news.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: news
+label: Paragraphs
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      cfia_text_left: cfia_text_left
+      cfia_iframe: cfia_iframe
+      cfia_internal_link: cfia_internal_link
+      cfia_title_paragraph: cfia_title_paragraph
+      cfia_youtube: cfia_youtube
+    target_bundles_drag_drop:
+      cfia_text_left:
+        enabled: true
+        weight: -11
+      cfia_iframe:
+        enabled: true
+        weight: -10
+      cfia_internal_link:
+        enabled: true
+        weight: -9
+      cfia_title_paragraph:
+        enabled: true
+        weight: -8
+      cfia_youtube:
+        enabled: true
+        weight: -7
+field_type: entity_reference_revisions
