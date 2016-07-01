@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_main_image
     - field.storage.node.field_related_page_teaser
+    - image.style.news_teaser_image
     - node.type.news
   module:
     - image
@@ -651,7 +652,7 @@ display:
       use_more_always: true
       use_more_text: 'All news'
       pager:
-        type: mini
+        type: full
         options:
           items_per_page: 12
           offset: 0
@@ -660,6 +661,8 @@ display:
           tags:
             previous: ‹‹
             next: ››
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -668,6 +671,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          quantity: 9
       header:
         area_text_custom:
           id: area_text_custom

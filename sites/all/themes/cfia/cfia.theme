@@ -57,6 +57,28 @@ function cfia_preprocess_node(&$variables) {
 }
 
 /**
+ * Implements hook_preprocess_field().
+ *
+ * Enable preprocess function for specific fields.
+ */
+function cfia_preprocess_field(&$variables) {
+  $function = __FUNCTION__ . '__' . $variables['element']['#field_name'];
+
+  if (function_exists($function)) {
+    $function($variables);
+  }
+}
+
+/**
+ * Implements hook_preprocess_field__().
+ *
+ * Enable preprocess function for specific fields.
+ */
+function cfia_preprocess_field__field_iframe(&$variables) {
+  $variables['unformatted_iframe'] = strip_tags($variables['items']['0']['content']['#context']['value'], '<iframe>');
+}
+
+/**
  * Implements hook_preprocess_node__type().
  */
 function cfia_preprocess_node_event(&$variables) {

@@ -1,0 +1,44 @@
+uuid: a1dfbc29-ae69-4ad6-a371-f197b4e21640
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cfia_text_left.field_image
+    - field.field.paragraph.cfia_text_left.field_text
+    - field.field.paragraph.cfia_text_left.field_title
+    - image.style.paragraphs_content_image
+    - paragraphs.paragraphs_type.cfia_text_left
+  module:
+    - image
+    - text
+_core:
+  default_config_hash: IOvZAJ2T4a46cZbHq-yfOBD3-Cg7G-6zXnqrsgFqYC4
+id: paragraph.cfia_text_left.default
+targetEntityType: paragraph
+bundle: cfia_text_left
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: paragraphs_content_image
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  uid: true
