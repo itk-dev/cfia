@@ -797,6 +797,8 @@ display:
         weight: -47
         context: '0'
         menu_name: main
+        enabled: true
+        expanded: false
       header:
         area_text_custom:
           id: area_text_custom

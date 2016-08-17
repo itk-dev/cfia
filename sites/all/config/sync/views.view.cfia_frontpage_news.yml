@@ -684,6 +684,9 @@ display:
           tokenize: false
           content: '<h1 class="content--header">Nyheder</h1>'
           plugin_id: text_custom
+      menu:
+        enabled: true
+        expanded: false
     cache_metadata:
       contexts:
         - 'languages:language_content'
