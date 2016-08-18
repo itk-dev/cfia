@@ -81,6 +81,13 @@ $internal-link-image-width: 112px;
   }
 
   &--text-right {
+    border-bottom: 1px solid $gray-lighter;
+    padding-bottom: 2.5em;
+
+    &:last-child {
+      border: 0;
+    }
+
     figure {
       margin-top: .25em;
       margin-right: 1.5em;
