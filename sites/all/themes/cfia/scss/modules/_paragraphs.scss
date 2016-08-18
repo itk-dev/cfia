@@ -118,10 +118,7 @@ $internal-link-image-width: 112px;
     }
 
     a:first-child {
-
-        @include strip-link-styles();
-
-
+      @include strip-link-styles();
     }
 
     .paragraphs--text > p:last-child {
@@ -143,5 +140,38 @@ $internal-link-image-width: 112px;
   &--title-only {
     font-size: 1.25em;
     margin-bottom: -1.25em;
+  }
+
+
+  // Vertical paragraphs.
+  &--vertical {
+    @include flexbox;
+    @include flex-flow(row wrap);
+    @include justify-content(space-between);
+
+    figure {
+      margin-bottom: 1em;
+    }
+
+    .paragraphs--title {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+    }
+  }
+
+  &--vertical-item {
+    @include flex(0, 0, 100%);
+
+    display: block;
+    margin: 0 auto; // Center items when rows are not full.
+    margin-bottom: $paragraph-margin-top;
+
+    @include breakpoint($breakpoint-lap) {
+      @include flex(0, 0, 45%);
+    }
+
+    @include breakpoint($breakpoint-desk) {
+      @include flex(0, 0, 30%);
+    }
   }
 }
