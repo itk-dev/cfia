@@ -3,7 +3,7 @@ langcode: da
 status: true
 dependencies: {  }
 name: large
-label: 'Large (480×480)'
+label: 'Large (480×400)'
 effects:
   4f44126b-803e-4d17-970b-74c67a8ab8a2:
     uuid: 4f44126b-803e-4d17-970b-74c67a8ab8a2
@@ -11,4 +11,4 @@ effects:
     weight: 2
     data:
       width: 480
-      height: 480
+      height: 400
