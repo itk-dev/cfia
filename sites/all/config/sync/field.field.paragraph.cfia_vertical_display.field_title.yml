@@ -1,0 +1,19 @@
+uuid: bb856d35-fd73-4ff7-ba81-1d613a4158af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.cfia_vertical_display
+id: paragraph.cfia_vertical_display.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: cfia_vertical_display
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,47 @@
+uuid: 785e475e-9f7b-405b-954c-534bc98fe60d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs_side_by_side
+    - node.type.page
+  module:
+    - entity_reference_revisions
+id: node.page.field_paragraphs_side_by_side
+field_name: field_paragraphs_side_by_side
+entity_type: node
+bundle: page
+label: 'Paragraphs - Side by side'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      cfia_vertical_display: cfia_vertical_display
+    target_bundles_drag_drop:
+      cfia_iframe:
+        weight: 7
+        enabled: false
+      cfia_internal_link:
+        weight: 8
+        enabled: false
+      cfia_vertical_display:
+        enabled: true
+        weight: 8
+      cfia_quote:
+        weight: 9
+        enabled: false
+      cfia_text_left:
+        weight: 10
+        enabled: false
+      cfia_title_paragraph:
+        weight: 11
+        enabled: false
+      cfia_youtube:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.page.field_instagram
     - field.field.node.page.field_main_image
     - field.field.node.page.field_paragraphs
+    - field.field.node.page.field_paragraphs_side_by_side
     - field.field.node.page.field_related_page_image
     - field.field.node.page.field_related_page_teaser
     - field.field.node.page.field_related_pages
@@ -54,6 +55,16 @@ content:
   field_paragraphs:
     type: entity_reference_paragraphs
     weight: 13
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+  field_paragraphs_side_by_side:
+    type: entity_reference_paragraphs
+    weight: 26
     settings:
       title: Paragraph
       title_plural: Paragraphs

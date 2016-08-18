@@ -1,0 +1,42 @@
+uuid: 8448fc81-05cf-4331-9f8f-335b77c769a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cfia_vertical_display.field_image
+    - field.field.paragraph.cfia_vertical_display.field_text
+    - field.field.paragraph.cfia_vertical_display.field_title
+    - image.style.large
+    - paragraphs.paragraphs_type.cfia_vertical_display
+  module:
+    - image
+    - text
+id: paragraph.cfia_vertical_display.default
+targetEntityType: paragraph
+bundle: cfia_vertical_display
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_text:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  uid: true
