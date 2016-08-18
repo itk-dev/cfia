@@ -29,6 +29,7 @@ $internal-link-image-width: 112px;
 
 .paragraphs {
   &--text-left,
+  &--text-right,
   &--internal-link,
   &--title-paragraph,
   &--youtube,
@@ -43,6 +44,10 @@ $internal-link-image-width: 112px;
     margin-bottom: .5em;
   }
 
+  &--title-item {
+    font-size: 1.25em;
+  }
+
   // Text Left
   &--text-inner{
     @include flexbox;
@@ -51,10 +56,9 @@ $internal-link-image-width: 112px;
   }
 
   &--text-left {
-
     figure {
       margin-top: .25em;
-      margin-left: 1em;
+      margin-left: 1.5em;
       min-width: 5em;
 
       @include flex-basis(5em);
@@ -76,17 +80,43 @@ $internal-link-image-width: 112px;
     }
   }
 
+  &--text-right {
+    figure {
+      margin-top: .25em;
+      margin-right: 1.5em;
+      min-width: 5em;
+
+      @include flex-basis(5em);
+      @include flex-grow(1);
+      @include order(1);
+
+      @include breakpoint($breakpoint-lap) {
+        @include flex-basis($image-width-lap);
+
+        min-width: $image-width-lap;
+        max-width: $image-width-lap;
+      }
+
+      @include breakpoint($breakpoint-desk) {
+        @include flex-basis($image-width-desk);
+        min-width: $image-width-desk;
+        max-width: $image-width-desk;
+      }
+    }
+  }
+
   &--text-left-wrapper {
     @include order(1);
     @include flex-shrink(1);
 
-    @include breakpoint($breakpoint-lap) {
-      //@include flex-basis();
+    .paragraphs--text > p:last-child {
+      margin-bottom: 0;
     }
+  }
 
-    @include breakpoint($breakpoint-desk) {
-      //@include flex-basis();
-    }
+  &--text-right-wrapper {
+    @include order(2);
+    @include flex-shrink(1);
 
     .paragraphs--text > p:last-child {
       margin-bottom: 0;
