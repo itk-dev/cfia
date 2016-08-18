@@ -554,7 +554,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<article class=\"itk-boxlist-news--item\">\n  <header>\n    <h2 class=\"itk-boxlist-news--header\"><a href=\"{{ path }}\">{{ title }}</a></h2>\n<div class=\"itk-boxlist-news--meta\">\n      <p class=\"itk-boxlist-news--meta-wrapper\">\n        <span class=\"itk-boxlist-news--icon\"><img src=\"/sites/all/themes/cfia/templates/svgs/calendar.svg\"/></span>{{ created }} \n      </p>\n    </div>\n    <p>{{ field_related_page_teaser }}</p>\n    <a href=\"{{ path }}\">{% trans %}Read news{% endtrans %}</a>\n  </header>\n  <figure>{{ field_main_image }}</figure>\n</article>"
+            text: "<article class=\"itk-boxlist-news--item\">\n  <header>\n    <h2 class=\"itk-boxlist-news--header\"><a href=\"{{ path }}\">{{ title }}</a></h2>\n<div class=\"itk-boxlist-news--meta\">\n      <p class=\"itk-boxlist-news--meta-wrapper\">\n        {{ created }} \n      </p>\n    </div>\n    <p>{{ field_related_page_teaser }}</p>\n    <a href=\"{{ path }}\">{% trans %}Read news{% endtrans %}</a>\n  </header>\n  <figure>{{ field_main_image }}</figure>\n</article>"
             make_link: false
             path: ''
             absolute: false
