@@ -39,6 +39,7 @@
  */
 #}
 
+
 {# Default display of this field. #}
 {% if element['#view_mode'] == 'full' %}
   <div class="fields--image">
@@ -59,6 +60,10 @@
 {% else %}
   {# If this field is displayed in a view through custom content it does not have a view mode. #}
   {% for item in items %}
-    <figure>{{ item.content }}</figure>
+    {% if is_paragraph_field %}
+      <a href="{{ paragraph_link }}"><figure>{{ item.content }}</figure></a>
+    {% else %}
+      <figure>{{ item.content }}</figure>
+    {% endif %}
   {% endfor %}
 {% endif %}

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.cfia_vertical_display.field_image
+    - field.field.paragraph.cfia_vertical_display.field_link
     - field.field.paragraph.cfia_vertical_display.field_text
     - field.field.paragraph.cfia_vertical_display.field_title
     - image.style.large
@@ -21,7 +22,7 @@ content:
     label: hidden
     settings:
       image_style: large
-      image_link: content
+      image_link: ''
     third_party_settings: {  }
     type: image
   field_text:
@@ -39,4 +40,5 @@ content:
     type: string
 hidden:
   created: true
+  field_link: true
   uid: true

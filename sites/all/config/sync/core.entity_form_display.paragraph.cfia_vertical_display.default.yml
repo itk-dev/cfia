@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.cfia_vertical_display.field_image
+    - field.field.paragraph.cfia_vertical_display.field_link
     - field.field.paragraph.cfia_vertical_display.field_text
     - field.field.paragraph.cfia_vertical_display.field_title
     - image.style.thumbnail
@@ -11,6 +12,7 @@ dependencies:
   module:
     - image
     - imce
+    - link
     - text
 id: paragraph.cfia_vertical_display.default
 targetEntityType: paragraph
@@ -26,6 +28,13 @@ content:
       imce:
         enabled: true
     type: image_image
+  field_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
   field_text:
     weight: 2
     settings:

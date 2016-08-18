@@ -69,6 +69,32 @@ function cfia_preprocess_field(&$variables) {
   }
 }
 
+
+/**
+ * Implements hook_preprocess_field__().
+ *
+ * Enable preprocess function for specific fields.
+ */
+function cfia_preprocess_field__field_title(&$variables) {
+  if ($variables['entity_type'] == 'paragraph' && $variables['element']['#object']->hasField('field_link')) {
+    $variables['is_paragraph_field'] = TRUE;
+    $variables['paragraph_link'] = $variables['element']['#object']->get('field_link')->getValue()['0']['uri'];
+  }
+}
+
+
+/**
+ * Implements hook_preprocess_field__().
+ *
+ * Enable preprocess function for specific fields.
+ */
+function cfia_preprocess_field__field_image(&$variables) {
+  if ($variables['entity_type'] == 'paragraph' && $variables['element']['#object']->hasField('field_link')) {
+    $variables['is_paragraph_field'] = TRUE;
+    $variables['paragraph_link'] = $variables['element']['#object']->get('field_link')->getValue()['0']['uri'];
+  }
+}
+
 /**
  * Implements hook_preprocess_field__().
  *
