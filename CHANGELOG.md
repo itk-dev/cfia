@@ -1,6 +1,6 @@
 #CHANGELOG
 
-##1.5.0
+##1.6.0
   - Fixed bug in cfia.theme file
 
 ##1.5.0
