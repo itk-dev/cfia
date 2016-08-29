@@ -104,7 +104,9 @@ function cfia_preprocess_node_pdf(&$variables) {
   $variables['pdfpath'] = $variables['elements']['field_pdf']['0']['#file']->url();
 
   // Get image url
-  $image_id = $variables['elements']['field_related_page_image']['0']['#item']->getValue();
-  $file = File::load($image_id['target_id']);
-  $variables['image_url'] = ImageStyle::load('related_page_image')->buildUrl($file->getFileUri());
+  if (isset($variables['elements']['field_related_page_image']['0'])) {
+    $image_id = $variables['elements']['field_related_page_image']['0']['#item']->getValue();
+    $file = File::load($image_id['target_id']);
+    $variables['image_url'] = ImageStyle::load('related_page_image')->buildUrl($file->getFileUri());
+  }
 }
