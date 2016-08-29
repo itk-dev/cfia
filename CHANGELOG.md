@@ -1,6 +1,9 @@
 #CHANGELOG
 
 ##1.5.0
+  - Fixed bug in cfia.theme file
+
+##1.5.0
   - Upgraded core to 8.1.8
 
 ##1.1.0
