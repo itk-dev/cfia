@@ -1,0 +1,6 @@
+uuid: a50d3d47-ce6e-41f5-8c3c-95dbef46dd18
+langcode: en
+status: true
+dependencies: {  }
+id: cfia_quote
+label: Quote

@@ -28,6 +28,8 @@ settings:
       cfia_internal_link: cfia_internal_link
       cfia_title_paragraph: cfia_title_paragraph
       cfia_youtube: cfia_youtube
+      cfia_quote: cfia_quote
+      cfia_text_right: cfia_text_right
     target_bundles_drag_drop:
       cfia_text_left:
         enabled: true
@@ -44,4 +46,13 @@ settings:
       cfia_youtube:
         enabled: true
         weight: -7
+      cfia_quote:
+        enabled: true
+        weight: 7
+      cfia_text_right:
+        enabled: true
+        weight: 9
+      cfia_vertical_display:
+        weight: 15
+        enabled: false
 field_type: entity_reference_revisions

@@ -1,7 +1,17 @@
 #CHANGELOG
 
+##1.7.0
+  - Added cases display
+  - Added horisontal paragraphs
+  - Added quote
+
 ##1.6.0
   - Fixed bug in cfia.theme file
+
+##1.5.1
+  - Added paragraph text right
+  - Added paragraph blockquote
+  - Added paragraph vertical blocks
 
 ##1.5.0
   - Upgraded core to 8.1.8

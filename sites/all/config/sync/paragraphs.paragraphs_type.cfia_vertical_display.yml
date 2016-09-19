@@ -1,0 +1,6 @@
+uuid: 715858be-2f51-4ef0-8fc7-6cb65a900fa4
+langcode: en
+status: true
+dependencies: {  }
+id: cfia_vertical_display
+label: 'Vertical display'

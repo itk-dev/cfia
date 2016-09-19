@@ -40,13 +40,11 @@
 {# We need the ugly if-hack to prevent redundant output for empty paragraphs #}
 
 {% if content.field_text['#items'] is not empty %}
-
   <div class="paragraphs--text-left">
-{{ content.field_title }}
+    {{ content.field_title }}
   <div class="paragraphs--text-inner">
     {{ content.field_image }}
     <div class="paragraphs--text-left-wrapper">
-
       {{ content.field_text }}
     </div>
     </div>

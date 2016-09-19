@@ -1,0 +1,6 @@
+uuid: b876d356-7d1d-44be-a77b-1cb9a815fb20
+langcode: en
+status: true
+dependencies: {  }
+id: cfia_text_right
+label: 'Text right'

@@ -3,13 +3,12 @@ langcode: da
 status: true
 dependencies: {  }
 name: large
-label: 'Large (480×480)'
+label: 'Large (480×400)'
 effects:
-  ddd73aa7-4bd6-4c85-b600-bdf2b1628d1d:
-    uuid: ddd73aa7-4bd6-4c85-b600-bdf2b1628d1d
-    id: image_scale
-    weight: 0
+  4f44126b-803e-4d17-970b-74c67a8ab8a2:
+    uuid: 4f44126b-803e-4d17-970b-74c67a8ab8a2
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 480
-      height: 480
-      upscale: false
+      height: 400

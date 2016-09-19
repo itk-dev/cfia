@@ -42,7 +42,11 @@
 <div class="paragraphs--title">
   <div class="paragraphs--title-item">
     {% for item in items %}
-      {{ item.content }}
+      {% if is_paragraph_field %}
+        <a href="{{ paragraph_link }}">{{ item.content }}</a>
+      {% else %}
+        {{ item.content }}
+      {% endif %}
     {% endfor %}
   </div>
 </div>

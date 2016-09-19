@@ -1,0 +1,21 @@
+uuid: 953ce2de-4a3e-4f21-b376-cc505845fd5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.cfia_vertical_display
+  module:
+    - text
+id: paragraph.cfia_vertical_display.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: cfia_vertical_display
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
