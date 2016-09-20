@@ -1,5 +1,11 @@
 #CHANGELOG
 
+##1.7.2
+  - Checked for existing variable
+
+##1.7.1
+  - Checked for existing variable
+
 ##1.7.0
   - Added cases display
   - Added horisontal paragraphs
