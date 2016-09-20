@@ -79,7 +79,7 @@ function cfia_preprocess_field(&$variables) {
 function cfia_preprocess_field__field_title(&$variables) {
   if ($variables['entity_type'] == 'paragraph' && $variables['element']['#object']->hasField('field_link')) {
     $variables['is_paragraph_field'] = TRUE;
-    $field_link = Url::fromUri($variables['element']['#object']->get('field_link')->getValue()['0']);
+    $field_link = Url::fromUri($variables['element']['#object']->get('field_link')->getValue());
     if (isset($field_link['0'])) {
       $variables['paragraph_link'] = $field_link['0']['uri'];
     }
@@ -95,7 +95,7 @@ function cfia_preprocess_field__field_title(&$variables) {
 function cfia_preprocess_field__field_image(&$variables) {
   if ($variables['entity_type'] == 'paragraph' && $variables['element']['#object']->hasField('field_link')) {
     $variables['is_paragraph_field'] = TRUE;
-    $field_link = Url::fromUri($variables['element']['#object']->get('field_link')->getValue()['0']);
+    $field_link = Url::fromUri($variables['element']['#object']->get('field_link')->getValue());
     if (isset($field_link['0'])) {
       $variables['paragraph_link'] = $field_link['0']['uri'];
     }
