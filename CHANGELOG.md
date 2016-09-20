@@ -1,5 +1,8 @@
 #CHANGELOG
 
+##1.7.3
+  - Checked for existing variable
+
 ##1.7.2
   - Checked for existing variable
 
