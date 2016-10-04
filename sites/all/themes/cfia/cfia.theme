@@ -79,7 +79,11 @@ function cfia_preprocess_field(&$variables) {
 function cfia_preprocess_field__field_title(&$variables) {
   if ($variables['entity_type'] == 'paragraph' && $variables['element']['#object']->hasField('field_link')) {
     $variables['is_paragraph_field'] = TRUE;
-    $variables['paragraph_link'] = Url::fromUri($variables['element']['#object']->get('field_link')->getValue()['0']['uri']);
+    $field_link = $variables['element']['#object']->get('field_link')->getValue();
+    if (isset($field_link['0'])) {
+      $url = Url::fromUri($variables['element']['#object']->get('field_link')->getValue()['0']['uri']);
+      $variables['paragraph_link'] = $url;
+    }
   }
 }
 
@@ -92,7 +96,11 @@ function cfia_preprocess_field__field_title(&$variables) {
 function cfia_preprocess_field__field_image(&$variables) {
   if ($variables['entity_type'] == 'paragraph' && $variables['element']['#object']->hasField('field_link')) {
     $variables['is_paragraph_field'] = TRUE;
-    $variables['paragraph_link'] = Url::fromUri($variables['element']['#object']->get('field_link')->getValue()['0']['uri']);
+    $field_link = $variables['element']['#object']->get('field_link')->getValue();
+    if (isset($field_link['0'])) {
+      $url = Url::fromUri($variables['element']['#object']->get('field_link')->getValue()['0']['uri']);
+      $variables['paragraph_link'] = $url;
+    }
   }
 }
 
@@ -131,7 +139,9 @@ function cfia_preprocess_node_pdf(&$variables) {
   $variables['pdfpath'] = $variables['elements']['field_pdf']['0']['#file']->url();
 
   // Get image url
-  $image_id = $variables['elements']['field_related_page_image']['0']['#item']->getValue();
-  $file = File::load($image_id['target_id']);
-  $variables['image_url'] = ImageStyle::load('related_page_image')->buildUrl($file->getFileUri());
+  if (isset($variables['elements']['field_related_page_image']['0'])) {
+    $image_id = $variables['elements']['field_related_page_image']['0']['#item']->getValue();
+    $file = File::load($image_id['target_id']);
+    $variables['image_url'] = ImageStyle::load('related_page_image')->buildUrl($file->getFileUri());
+  }
 }
