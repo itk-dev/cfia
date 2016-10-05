@@ -260,11 +260,13 @@ $boxlist-padding:                       1em;
 
     figure {
       display: block;
+      height: 100%; /* IE 11 you can't handle the height! (without this) */
       margin-top: 1.25em;
       margin-right: auto;
       margin-left: auto;
       margin-bottom: 1em;
       max-width: 5em;
+      width: 100%; /* Psst... IE 11 please center the element. Thanks. */
 
       order: 2;
     }
