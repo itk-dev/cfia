@@ -2,6 +2,7 @@
 
 ##1.7.8
   - Added display flex for layout
+  - Removed overflow-x form body and html
 
 ##1.7.7
   - Added word wrap fix
