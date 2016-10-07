@@ -8,12 +8,11 @@ $top-and-button-margin: 2em;
 $left-and-right-padding: 1em;
 
 .footer {
-  position: absolute;
-  bottom: 0;
-
+  align-self: flex-end;
+  background-color: $black;
+  flex: 1 0 auto;
+  flex-direction: row;
   width: 100%;
-
-  background-color: black;
 
   &--content {
     margin-left: auto;

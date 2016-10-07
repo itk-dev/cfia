@@ -1,5 +1,20 @@
 #CHANGELOG
 
+##1.7.8
+  - Added display flex for layout
+
+##1.7.7
+  - Added word wrap fix
+
+##1.7.6
+  - Added IE 11 display table fix
+
+##1.7.5
+  - Added IE 11 fix for height and width bug when using justify content
+
+##1.7.4
+  - Added IE 11 fix for height and width bug when using justify content
+
 ##1.7.3
   - Checked for existing variable
 
