@@ -56,10 +56,9 @@
 
 main[role=main] {
   flex: 1 0 auto;
-  margin-right: auto;
+
   margin-bottom: 19em;
-  margin-left: auto;
-  max-width: $breakpoint-desk;
+
 
   @include breakpoint($breakpoint-tablet) {
     margin-bottom: 9em;
@@ -69,4 +68,12 @@ main[role=main] {
     margin-bottom: 5em;
     padding-bottom: 3em;
   }
+}
+
+
+// We need an extra wrapper to center content on ie11.
+.layout--content-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $breakpoint-desk;
 }
