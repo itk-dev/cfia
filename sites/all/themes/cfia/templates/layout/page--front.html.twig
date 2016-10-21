@@ -105,7 +105,9 @@
 </div>
 
 <main role="main">
-  {{ page.content }}
+  <div class="layout--content-wrapper">
+    {{ page.content }}
+  </div>
 </main>
 
 {% include '@cfia/layout/_footer.html.twig' %}

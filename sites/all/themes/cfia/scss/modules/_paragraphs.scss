@@ -181,9 +181,9 @@ $internal-link-image-width: 112px;
 
   // Vertical paragraphs.
   &--vertical {
+    margin: 0 -1em;
     @include flexbox;
     @include flex-flow(row wrap);
-    @include justify-content(space-between);
 
     figure {
       margin-bottom: 1em;
@@ -202,16 +202,17 @@ $internal-link-image-width: 112px;
   &--vertical-item {
     @include flex(0, 0, 100%);
 
+    box-sizing: border-box;
     display: block;
-    margin: 0 auto; // Center items when rows are not full.
+    padding: 0 1em;
     margin-bottom: $paragraph-margin-top;
 
     @include breakpoint($breakpoint-lap) {
-      @include flex(0, 0, 45%);
+      @include flex(0, 0, 50%);
     }
 
     @include breakpoint($breakpoint-desk) {
-      @include flex(0, 0, 30%);
+      @include flex(0, 0, 33%);
     }
   }
 }
