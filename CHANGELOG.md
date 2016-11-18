@@ -1,5 +1,15 @@
 #CHANGELOG
 
+##1.7.10
+  - Drupal                                                   8.1.8              8.2.3              
+  - Entity Reference Revisions (entity_reference_revisions)  8.x-1.0-rc6        8.x-1.0               
+  - Imce File Manager (imce)                                 8.x-1.1            8.x-1.4               
+  - Paragraphs (paragraphs)                                  8.x-1.0-rc4        8.x-1.0               
+  - Token (token)                                            8.x-1.0-alpha2     8.x-1.0-beta2       
+
+##1.7.9
+  - Fixed alignment of content section
+  
 ##1.7.8
   - Added display flex for layout
   - Removed overflow-x form body and html
