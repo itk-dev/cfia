@@ -49,7 +49,7 @@ content:
       progress_indicator: throbber
     third_party_settings:
       imce:
-        enabled: '1'
+        enabled: true
     type: image_image
   field_related_page_image:
     weight: 10
@@ -58,7 +58,7 @@ content:
       progress_indicator: throbber
     third_party_settings:
       imce:
-        enabled: '1'
+        enabled: true
     type: image_image
   field_related_page_teaser:
     weight: 9
