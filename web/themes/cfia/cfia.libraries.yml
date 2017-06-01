@@ -4,8 +4,6 @@ global-styling:
     theme:
       css/styles.css: { media: screen }
       css/ie9.css: { browsers: { IE: 'lte IE 9', '!IE': false } }
-    component:
-      css/components/toolbar.css: {}
 
 global-js:
   version: VERSION
