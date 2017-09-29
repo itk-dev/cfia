@@ -201,7 +201,7 @@ $internal-link-image-width: 112px;
 
   &--vertical-item {
     @include flex(0, 0, 100%);
-
+    
     box-sizing: border-box;
     display: block;
     padding: 0 1em;
@@ -213,6 +213,8 @@ $internal-link-image-width: 112px;
 
     @include breakpoint($breakpoint-desk) {
       @include flex(0, 0, 33%);
+
+      max-width: 33%;
     }
   }
 }
