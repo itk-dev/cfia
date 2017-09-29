@@ -4,7 +4,7 @@
  *
  */
 
-&.is-frontpage {
+.is-frontpage {
   .logo {
     @include breakpoint($breakpoint-desk) {
       top: 5em;

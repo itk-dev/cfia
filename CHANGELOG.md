@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.12
+
+- Updated core to 8.3.7
+
 ## 1.7.11
 
 - Changed project setup to match: https://github.com/drupal-composer/drupal-project
