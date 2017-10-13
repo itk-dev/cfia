@@ -5,6 +5,14 @@ dependencies:
   config:
     - field.storage.node.field_paragraphs
     - node.type.page
+    - paragraphs.paragraphs_type.cfia_iframe
+    - paragraphs.paragraphs_type.cfia_internal_link
+    - paragraphs.paragraphs_type.cfia_quote
+    - paragraphs.paragraphs_type.cfia_text_left
+    - paragraphs.paragraphs_type.cfia_text_right
+    - paragraphs.paragraphs_type.cfia_title_paragraph
+    - paragraphs.paragraphs_type.cfia_video
+    - paragraphs.paragraphs_type.cfia_youtube
   module:
     - entity_reference_revisions
 _core:
@@ -30,6 +38,7 @@ settings:
       cfia_youtube: cfia_youtube
       cfia_quote: cfia_quote
       cfia_text_right: cfia_text_right
+      cfia_video: cfia_video
     target_bundles_drag_drop:
       cfia_text_left:
         enabled: true
@@ -52,6 +61,9 @@ settings:
       cfia_text_right:
         enabled: true
         weight: 9
+      cfia_video:
+        enabled: true
+        weight: 10
       cfia_vertical_display:
         weight: 15
         enabled: false

@@ -1,0 +1,19 @@
+uuid: d976b85c-a5c0-4ad8-a0f7-ce633954e0cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.cfia_video
+id: paragraph.cfia_video.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: cfia_video
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

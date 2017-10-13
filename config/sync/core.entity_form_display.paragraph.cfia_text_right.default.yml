@@ -26,6 +26,7 @@ content:
       imce:
         enabled: true
     type: image_image
+    region: content
   field_text:
     weight: 2
     settings:
@@ -33,6 +34,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_title:
     weight: 1
     settings:
@@ -40,6 +42,8 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
 hidden:
   created: true
+  status: true
   uid: true

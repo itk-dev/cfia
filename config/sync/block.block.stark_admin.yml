@@ -10,7 +10,7 @@ dependencies:
     - stark
 id: stark_admin
 theme: stark
-region: '-1'
+region: sidebar_first
 weight: 1
 provider: null
 plugin: 'system_menu_block:admin'

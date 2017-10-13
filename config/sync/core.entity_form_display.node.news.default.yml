@@ -32,16 +32,19 @@ content:
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+    region: content
   created:
     type: datetime_timestamp
     weight: 3
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_instagram:
     weight: 12
     settings: {  }
     third_party_settings: {  }
     type: field_instagram_hashtag_default_widget
+    region: content
   field_main_image:
     weight: 8
     settings:
@@ -51,6 +54,7 @@ content:
       imce:
         enabled: true
     type: image_image
+    region: content
   field_pages:
     weight: 11
     settings:
@@ -59,6 +63,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
   field_paragraphs:
     type: entity_reference_paragraphs
     weight: 13
@@ -69,6 +74,7 @@ content:
       add_mode: dropdown
       form_display_mode: default
     third_party_settings: {  }
+    region: content
   field_related_page_image:
     weight: 10
     settings:
@@ -78,6 +84,7 @@ content:
       imce:
         enabled: true
     type: image_image
+    region: content
   field_related_page_teaser:
     weight: 9
     settings:
@@ -85,28 +92,33 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   langcode:
     type: language_select
     weight: 1
     settings: {  }
     third_party_settings: {  }
+    region: content
   path:
     type: path
     weight: 6
     settings: {  }
     third_party_settings: {  }
+    region: content
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 4
     third_party_settings: {  }
+    region: content
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 5
     third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
     weight: 0
@@ -114,6 +126,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 2
@@ -122,4 +135,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
 hidden: {  }

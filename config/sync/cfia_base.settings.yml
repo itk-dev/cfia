@@ -1,7 +1,7 @@
 cfia_frontpage:
-  frontpage_title: 'Fælles mødested og værksted for innovation i Aarhus Kommune'
-  frontpage_lead: 'Center for Innovation i Aarhus indgår som projektpartner med kompetencer inden for design, antropologi og procesfacilitering'
-  frontpage_sub: 'CFIA er en del af en tværgående satsning "INNOVATION i Aarhus - nye veje til velfærd"'
+  frontpage_title: 'Fælles mødested og værksted for innovation i Aarhus'
+  frontpage_lead: 'Center for Innovation i Aarhus er en intern innovationspartner i Aarhus Kommune. Sammen designer vi nye veje til velfærd.'
+  frontpage_sub: 'Vi er en del af en tværgående satsning "Innovation i Aarhus - nye veje til velfærd"'
   frontpage_button: Cases
   frontpage_link: /cases
   frontpage_image: '75'

@@ -1,0 +1,23 @@
+uuid: bd6dbeb6-9e4f-429f-9ec7-bc1960e5b668
+langcode: da
+status: true
+dependencies:
+  module:
+    - ctools
+    - node
+id: node_overview_page
+label: 'Content Overview Page'
+type: 'canonical_entities:node'
+pattern: '/[node:menu-link:parent:title]/[node:title]'
+selection_criteria:
+  57ce3253-5254-41a4-b5e3-bbf03f9a0bf8:
+    id: node_type
+    bundles:
+      overview_page: overview_page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 57ce3253-5254-41a4-b5e3-bbf03f9a0bf8
+selection_logic: and
+weight: -5
+relationships: {  }
