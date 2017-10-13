@@ -1,0 +1,23 @@
+uuid: 45edd718-3286-4637-8a3b-430195042899
+langcode: da
+status: true
+dependencies:
+  module:
+    - ctools
+    - node
+id: node_event
+label: 'Content Begivenhed'
+type: 'canonical_entities:node'
+pattern: '/begivenheder/[node:title]'
+selection_criteria:
+  cd14439c-72a6-4cfb-9288-cc2a5c47b17a:
+    id: node_type
+    bundles:
+      event: event
+    negate: false
+    context_mapping:
+      node: node
+    uuid: cd14439c-72a6-4cfb-9288-cc2a5c47b17a
+selection_logic: and
+weight: -5
+relationships: {  }
