@@ -29,12 +29,14 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
+    region: content
   field_instagram:
     type: field_instagram_hashtag_default_formatter
     weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_main_image:
     type: image
     weight: 0
@@ -43,6 +45,7 @@ content:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
+    region: content
   field_related_pages:
     type: entity_reference_entity_view
     weight: 2
@@ -51,6 +54,7 @@ content:
       view_mode: related_pages
       link: false
     third_party_settings: {  }
+    region: content
 hidden:
   field_related_page_image: true
   field_related_page_teaser: true

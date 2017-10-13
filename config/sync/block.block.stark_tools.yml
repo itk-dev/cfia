@@ -10,7 +10,7 @@ dependencies:
     - stark
 id: stark_tools
 theme: stark
-region: '-1'
+region: sidebar_first
 weight: 0
 provider: null
 plugin: 'system_menu_block:tools'

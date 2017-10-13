@@ -6,7 +6,7 @@ dependencies:
     - cfia
 id: tabs
 theme: cfia
-region: '-1'
+region: hamburger
 weight: -1
 provider: null
 plugin: local_tasks_block
