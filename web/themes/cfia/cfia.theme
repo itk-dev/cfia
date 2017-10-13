@@ -1,4 +1,4 @@
-<?php
+  <?php
 
 use Drupal\file\Entity\File;
 use Drupal\Core\Config;

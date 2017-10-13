@@ -29,6 +29,7 @@
         "drupal/pathauto": "^1.0",
         "drupal/redirect": "^1.0@alpha",
         "drupal/token": "^1.0",
+        "drupal/video_embed_field": "^1.5",
         "drupal/youtube": "^1.0@beta",
         "drush/drush": "~8.0",
         "webflo/drupal-finder": "^0.3.0",
