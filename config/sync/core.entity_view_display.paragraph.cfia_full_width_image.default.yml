@@ -1,0 +1,25 @@
+uuid: 6366946d-d796-4721-ae53-bc3e0783c58c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cfia_full_width_image.field_image
+    - image.style.main_image
+    - paragraphs.paragraphs_type.cfia_full_width_image
+  module:
+    - image
+id: paragraph.cfia_full_width_image.default
+targetEntityType: paragraph
+bundle: cfia_full_width_image
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: main_image
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }
