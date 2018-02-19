@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.7.16
+- Disabled youtube paragraph
+
+## 1.7.15
+- Added vimeo video paragraph
+
 ## 1.7.12
 
 - Updated core to 8.3.7

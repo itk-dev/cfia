@@ -12,7 +12,6 @@ dependencies:
     - paragraphs.paragraphs_type.cfia_text_right
     - paragraphs.paragraphs_type.cfia_title_paragraph
     - paragraphs.paragraphs_type.cfia_video
-    - paragraphs.paragraphs_type.cfia_youtube
   module:
     - entity_reference_revisions
 _core:
@@ -35,7 +34,6 @@ settings:
       cfia_iframe: cfia_iframe
       cfia_internal_link: cfia_internal_link
       cfia_title_paragraph: cfia_title_paragraph
-      cfia_youtube: cfia_youtube
       cfia_quote: cfia_quote
       cfia_text_right: cfia_text_right
       cfia_video: cfia_video
@@ -53,8 +51,8 @@ settings:
         enabled: true
         weight: -8
       cfia_youtube:
-        enabled: true
         weight: -7
+        enabled: false
       cfia_quote:
         enabled: true
         weight: 7
