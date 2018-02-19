@@ -1,13 +1,13 @@
-  <?php
+<?php
 
 use Drupal\file\Entity\File;
 use Drupal\Core\Config;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\Core\Url;
+use Drupal\node\Entity\Node;
 
 
-
-/**
+  /**
  * Implements hook_preprocess_page()
  *
  * @param $variables
@@ -29,6 +29,8 @@ function cfia_preprocess_page (&$variables) {
     $variables['front_button_text'] = $config->get('cfia_frontpage.frontpage_button');
     $variables['front_button_link'] = $config->get('cfia_frontpage.frontpage_link');
     $variables['front_image'] = ($file) ? $file->url() : 'sites/all/themes/cfia/images/header-background.jpg';
+    $frontpage_node = Node::load($config->get('cfia_frontpage.frontpage_node_reference'));
+    $variables['front_node'] = $frontpage_node ? \Drupal::entityTypeManager()->getViewBuilder('node')->view($frontpage_node, 'frontpage_display') : FALSE;
   }
 
   // Footer variables for page template.
@@ -143,5 +145,17 @@ function cfia_preprocess_node_pdf(&$variables) {
     $image_id = $variables['elements']['field_related_page_image']['0']['#item']->getValue();
     $file = File::load($image_id['target_id']);
     $variables['image_url'] = ImageStyle::load('related_page_image')->buildUrl($file->getFileUri());
+  }
+}
+
+
+function cfia_preprocess_views_view_unformatted(&$variables) {
+  // Get view id.
+  $id = $variables['view']->id();
+
+  if ($id == 'cfia_frontpage_news') {
+    // Fetch cfia config settings.
+    $config = \Drupal::config('cfia_base.settings');
+    $variables['news_sub'] = $config->get('cfia_news.news_sub');
   }
 }

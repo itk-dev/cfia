@@ -5,9 +5,12 @@ cfia_frontpage:
   frontpage_button: Cases
   frontpage_link: /cases
   frontpage_image: '75'
+  frontpage_node_reference: '102'
 langcode: da
 cfia_footer:
   footer_text: "<p>Dokk1, Hack Kampmanns Plads 2 8000 Aarhus C -&nbsp;<a href=\"mailto:cfi@aarhus.dk\">cfi@aarhus.dk</a></p>\r\n"
   footer_twitter: 'https://twitter.com/cfiaarhus'
   footer_instagram: 'https://instagram.com/cfiaarhus'
   footer_linkedin: 'https://www.linkedin.com/company/center_for_innovation_i_aarhus'
+cfia_news:
+  news_sub: 'Lorem ipsum'
