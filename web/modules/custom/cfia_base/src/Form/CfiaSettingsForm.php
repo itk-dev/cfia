@@ -119,7 +119,8 @@ class CfiaSettingsForm extends FormBase {
 
     $form['news_wrapper']['news_sub'] = array(
       '#title' => $this->t('News sub text'),
-      '#type' => 'textfield',
+      '#type' => 'text_format',
+      '#format' => 'filtered_html',
       '#default_value' => $config->get('cfia_news.news_sub'),
     );
 
@@ -221,7 +222,7 @@ class CfiaSettingsForm extends FormBase {
       ->set('cfia_footer.footer_instagram', $form_state->getValue('footer_instagram'))
       ->set('cfia_footer.footer_linkedin', $form_state->getValue('footer_linkedin'))
       ->set('cfia_frontpage.frontpage_image', $file ? $file->id() : NULL)
-      ->set('cfia_news.news_sub', $form_state->getValue('news_sub'))
+      ->set('cfia_news.news_sub', $form_state->getValue('news_sub')['value'])
       ->save();
   }
 }
