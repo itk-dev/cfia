@@ -1,6 +1,7 @@
 cache:
   page:
     max_age: 0
+    use_internal: true
 css:
   preprocess: true
   gzip: true
@@ -14,3 +15,5 @@ js:
   gzip: true
 stale_file_threshold: 2592000
 langcode: da
+response:
+  gzip: true

@@ -1,0 +1,23 @@
+uuid: 87f80f66-6a7e-4013-8a9a-5c738bb3683f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_2
+    - paragraphs.paragraphs_type.cfia_3x_side_by_side
+  module:
+    - link
+id: paragraph.cfia_3x_side_by_side.field_link_2
+field_name: field_link_2
+entity_type: paragraph
+bundle: cfia_3x_side_by_side
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

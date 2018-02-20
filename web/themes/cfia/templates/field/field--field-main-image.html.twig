@@ -38,9 +38,9 @@
  * @ingroup themeable
  */
 #}
-  {% if not label_hidden %}
-    {{ label }}
-  {% endif %}
-  {% for item in items %}
-    <figure class="content--image-wrapper">{{ item.content }}</figure>
-  {% endfor %}
+{% if not label_hidden %}
+  {{ label }}
+{% endif %}
+{% for item in items %}
+  <figure class="content--image-wrapper">{{ item.content }}</figure>
+{% endfor %}

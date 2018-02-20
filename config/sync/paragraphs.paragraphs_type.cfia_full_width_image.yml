@@ -1,0 +1,7 @@
+uuid: 9a7cd52e-265d-4b85-91c9-51e5eaad925d
+langcode: en
+status: true
+dependencies: {  }
+id: cfia_full_width_image
+label: Image
+behavior_plugins: {  }

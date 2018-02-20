@@ -9,6 +9,7 @@ namespace Drupal\cfia_base\Form;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
+use Drupal\node\Entity\Node;
 
 
 /**
@@ -30,6 +31,8 @@ class CfiaSettingsForm extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('cfia_base.settings');
+
+    $frontpage_node_reference = Node::load($config->get('cfia_frontpage.frontpage_node_reference'));
 
     // ----------- Frontpage ----------- //
 
@@ -76,6 +79,15 @@ class CfiaSettingsForm extends FormBase {
       '#weight' => '5',
     );
 
+    $form['frontpage_wrapper']['frontpage_node_reference'] = array(
+      '#title' => $this->t('Frontpage content display'),
+      '#type' => 'entity_autocomplete',
+      '#target_type' => 'node',
+      '#default_value' => $frontpage_node_reference,
+      '#description' => t('Choose a page to display on the frontpage'),
+      '#weight' => '6',
+    );
+
     $fids = array();
     if (!empty($input)) {
       if (!empty($input['frontpage_image'])) {
@@ -94,6 +106,21 @@ class CfiaSettingsForm extends FormBase {
       '#weight' => '3',
       '#open' => TRUE,
       '#description' => t('The image used at the top of the frontpage.'),
+    );
+
+    // ----------- Views pages ----------- //
+
+    $form['news_wrapper'] = array(
+      '#title' => $this->t('News settings'),
+      '#type' => 'details',
+      '#weight' => '1',
+      '#open' => TRUE,
+    );
+
+    $form['news_wrapper']['news_sub'] = array(
+      '#title' => $this->t('News sub text'),
+      '#type' => 'textfield',
+      '#default_value' => $config->get('cfia_news.news_sub'),
     );
 
 
@@ -188,11 +215,13 @@ class CfiaSettingsForm extends FormBase {
       ->set('cfia_frontpage.frontpage_sub', $form_state->getValue('frontpage_sub'))
       ->set('cfia_frontpage.frontpage_button', $form_state->getValue('frontpage_button'))
       ->set('cfia_frontpage.frontpage_link', $form_state->getValue('frontpage_link'))
+      ->set('cfia_frontpage.frontpage_node_reference', $form_state->getValue('frontpage_node_reference'))
       ->set('cfia_footer.footer_text', $form_state->getValue('footer_text')['value'])
       ->set('cfia_footer.footer_twitter', $form_state->getValue('footer_twitter'))
       ->set('cfia_footer.footer_instagram', $form_state->getValue('footer_instagram'))
       ->set('cfia_footer.footer_linkedin', $form_state->getValue('footer_linkedin'))
       ->set('cfia_frontpage.frontpage_image', $file ? $file->id() : NULL)
+      ->set('cfia_news.news_sub', $form_state->getValue('news_sub'))
       ->save();
   }
 }
