@@ -148,7 +148,11 @@ function cfia_preprocess_node_pdf(&$variables) {
   }
 }
 
-
+/**
+ * Implements hook_preprocess_views_view_unformatted().
+ *
+ * @param $variables
+ */
 function cfia_preprocess_views_view_unformatted(&$variables) {
   // Get view id.
   $id = $variables['view']->id();
