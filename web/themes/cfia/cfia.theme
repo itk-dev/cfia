@@ -160,6 +160,6 @@ function cfia_preprocess_views_view_unformatted(&$variables) {
   if ($id == 'cfia_frontpage_news') {
     // Fetch cfia config settings.
     $config = \Drupal::config('cfia_base.settings');
-    $variables['news_sub'] = $config->get('cfia_news.news_sub');
+    $variables['news_sub'] = check_markup($config->get('cfia_news.news_sub'), 'filtered_html');
   }
 }
