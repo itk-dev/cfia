@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.7.17
+- DRIFT-91 Added new core 8.4.5
+
 ## 1.7.16
 - Disabled youtube paragraph
 
