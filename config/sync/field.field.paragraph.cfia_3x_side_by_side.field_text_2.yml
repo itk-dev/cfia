@@ -1,0 +1,21 @@
+uuid: 3e4d81df-a434-4da7-a3ee-9cdd0971cfaa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_2
+    - paragraphs.paragraphs_type.cfia_3x_side_by_side
+  module:
+    - text
+id: paragraph.cfia_3x_side_by_side.field_text_2
+field_name: field_text_2
+entity_type: paragraph
+bundle: cfia_3x_side_by_side
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
