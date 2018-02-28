@@ -217,5 +217,9 @@ $internal-link-image-width: 112px;
 
       max-width: 33%;
     }
+
+    &.no-bottom-margin {
+      margin-bottom: 0;
+    }
   }
 }

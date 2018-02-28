@@ -1,0 +1,65 @@
+uuid: 939519fc-f194-4ebf-83e2-856401552e49
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.frontpage_display
+    - field.field.node.page.body
+    - field.field.node.page.field_instagram
+    - field.field.node.page.field_main_image
+    - field.field.node.page.field_paragraphs
+    - field.field.node.page.field_paragraphs_side_by_side
+    - field.field.node.page.field_related_page_image
+    - field.field.node.page.field_related_page_teaser
+    - field.field.node.page.field_related_pages
+    - node.type.page
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.page.frontpage_display
+targetEntityType: node
+bundle: page
+mode: frontpage_display
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_paragraphs_side_by_side:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_related_pages:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: related_pages
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  field_instagram: true
+  field_main_image: true
+  field_related_page_image: true
+  field_related_page_teaser: true
+  langcode: true
+  links: true

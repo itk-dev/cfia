@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_paragraphs
     - node.type.overview_page
+    - paragraphs.paragraphs_type.cfia_3x_side_by_side
+    - paragraphs.paragraphs_type.cfia_full_width_image
     - paragraphs.paragraphs_type.cfia_iframe
     - paragraphs.paragraphs_type.cfia_internal_link
     - paragraphs.paragraphs_type.cfia_quote
@@ -37,6 +39,8 @@ settings:
       cfia_quote: cfia_quote
       cfia_text_right: cfia_text_right
       cfia_video: cfia_video
+      cfia_full_width_image: cfia_full_width_image
+      cfia_3x_side_by_side: cfia_3x_side_by_side
     target_bundles_drag_drop:
       cfia_text_left:
         enabled: true
@@ -62,6 +66,12 @@ settings:
       cfia_video:
         enabled: true
         weight: 10
+      cfia_full_width_image:
+        enabled: true
+        weight: 11
+      cfia_3x_side_by_side:
+        enabled: true
+        weight: 12
       cfia_vertical_display:
         weight: 15
         enabled: false

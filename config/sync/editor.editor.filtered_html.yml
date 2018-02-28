@@ -33,10 +33,10 @@ settings:
           items:
             - Format
   plugins:
-    language:
-      language_list: un
     stylescombo:
       styles: ''
+    language:
+      language_list: un
 image_upload:
   status: false
   scheme: public

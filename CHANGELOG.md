@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.7.18
+- INNOVATION-159: Added image as paragraph
+- INNOVATION-158: Added node to frontpage
+- INNOVATION-160: Added introtext to news page
+- INNOVATION-161: Added _blank in ckeditor
+- INNOVATION-163: Added 3 side by side paragraphs
+
 ## 1.7.17
 - DRIFT-91 Added new core 8.4.5
 
