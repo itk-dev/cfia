@@ -4,4 +4,6 @@ status: true
 dependencies: {  }
 id: cfia_3x_side_by_side
 label: '3x side by side'
+icon_uuid: null
+description: null
 behavior_plugins: {  }

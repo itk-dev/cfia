@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.7.19
+- INNOVATION-172: Made alterations to frontpage
+
 ## 1.7.18
 - INNOVATION-159: Added image as paragraph
 - INNOVATION-158: Added node to frontpage
