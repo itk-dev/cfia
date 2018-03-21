@@ -161,7 +161,7 @@ display:
           grouping: {  }
           row_class: ''
           default_row_class: false
-      title: Nyheder
+      title: Aktuelt
       header: {  }
       footer: {  }
       relationships: {  }
@@ -682,7 +682,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: '<h1 class="content--header">Nyheder</h1>'
+          content: '<h1 class="content--header">Aktuelt</h1>'
           plugin_id: text_custom
       menu:
         enabled: true
