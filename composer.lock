@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e997d980cffb518c0a81d9419dfd3e53",
+    "content-hash": "bb37bd041f1e9754147988ad0ba50c9c",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1930,6 +1930,31 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/imce"
             }
+        },
+        {
+            "name": "drupal/itk_siteimprove",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/itk-dev/siteimprove-d8.git",
+                "reference": "819bbfce0f71fa4d9577227276d2942947d4ae74"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/itk-dev/siteimprove-d8/zipball/819bbfce0f71fa4d9577227276d2942947d4ae74",
+                "reference": "819bbfce0f71fa4d9577227276d2942947d4ae74",
+                "shasum": ""
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.itkdev.dk/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides siteimprove functionality",
+            "keywords": [
+                "Drupal"
+            ],
+            "time": "2018-04-26T09:13:52+00:00"
         },
         {
             "name": "drupal/paragraphs",

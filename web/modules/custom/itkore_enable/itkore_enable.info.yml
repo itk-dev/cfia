@@ -20,6 +20,7 @@ dependencies:
   - image
   - imce
   - itk_instagram_hashtag
+  - itk_siteimprove
   - itkore_user_theme
   - link
   - locale
