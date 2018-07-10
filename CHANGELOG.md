@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## 1.8.0
+- INNOVATION-174: Added siteimprove, removed google analytics
+- Update core & contrib
+```
+ Drupal                                                   8.4.5              8.5.5 
+ Entity Reference Revisions (entity_reference_revisions)  8.x-1.4            8.x-1.5    
+ Paragraphs (paragraphs)                                  8.x-1.2            8.x-1.3    
+ Pathauto (pathauto)                                      8.x-1.0            8.x-1.2    
+ Redirect (redirect)                                      8.x-1.0            8.x-1.2    
+ Token (token)                                            8.x-1.1            8.x-1.3
+```
+
+
 ## 1.7.19
 - INNOVATION-172: Made alterations to frontpage
 
@@ -29,12 +42,14 @@
 - Updated drupal and contrib modules
 
 ## 1.7.10
-
+Update core & contrib
+```
 - Drupal                                                   8.1.8              8.2.3              
 - Entity Reference Revisions (entity_reference_revisions)  8.x-1.0-rc6        8.x-1.0               
 - Imce File Manager (imce)                                 8.x-1.1            8.x-1.4               
 - Paragraphs (paragraphs)                                  8.x-1.0-rc4        8.x-1.0               
-- Token (token)                                            8.x-1.0-alpha2     8.x-1.0-beta2       
+- Token (token)                                            8.x-1.0-alpha2     8.x-1.0-beta2
+```
 
 ## 1.7.9
 
