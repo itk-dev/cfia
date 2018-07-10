@@ -16,7 +16,6 @@ dependencies:
   - field_ui
   - file
   - filter
-  - google_analytics
   - image
   - imce
   - itk_instagram_hashtag
