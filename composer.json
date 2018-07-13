@@ -9,12 +9,16 @@
             "role": ""
         }
     ],
-    "repositories": [
-        {
+    "repositories": {
+        "0": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "itk": {
+            "type": "composer",
+            "url": "https://packagist.itkdev.dk"
         }
-    ],
+    },
     "require": {
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
@@ -27,6 +31,7 @@
         "drupal/field_group": "^1.0",
         "drupal/google_analytics": "^2.1",
         "drupal/imce": "^1.5",
+        "drupal/itk_siteimprove": "^1.0",
         "drupal/paragraphs": "^1.1",
         "drupal/pathauto": "^1.0",
         "drupal/redirect": "^1.0@alpha",
