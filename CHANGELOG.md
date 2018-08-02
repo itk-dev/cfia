@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.8.1
+- SERV-205: Updated drupal core to 8.5.6
+
 ## 1.8.0
 - INNOVATION-174: Added siteimprove, removed google analytics
 - Update core & contrib
