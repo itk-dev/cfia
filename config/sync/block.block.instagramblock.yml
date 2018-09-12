@@ -1,0 +1,32 @@
+uuid: 29f2d019-ea6e-4ca0-9ee5-bb34aace080e
+langcode: en
+status: true
+dependencies:
+  module:
+    - instagram_block
+    - system
+  theme:
+    - cfia
+id: instagramblock
+theme: cfia
+region: content
+weight: 1
+provider: null
+plugin: instagram_block_block
+settings:
+  id: instagram_block_block
+  label: 'Lige nu i CFIA'
+  provider: instagram_block
+  label_display: visible
+  access_token: ''
+  count: 6
+  width: 370
+  height: 370
+  img_resolution: low_resolution
+  cache_time_minutes: 1440
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

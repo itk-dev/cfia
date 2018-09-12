@@ -32,6 +32,7 @@
         "drupal/field_group": "^1.0",
         "drupal/google_analytics": "^2.1",
         "drupal/imce": "^1.5",
+        "drupal/instagram_block": "^2.0",
         "drupal/itk_siteimprove": "^1.0",
         "drupal/paragraphs": "^1.1",
         "drupal/pathauto": "^1.0",

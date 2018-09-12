@@ -3,7 +3,7 @@ langcode: da
 status: true
 dependencies: {  }
 id: zxx
-label: 'Not applicable'
+label: 'ikke relevant'
 direction: ltr
 weight: 3
 locked: true
