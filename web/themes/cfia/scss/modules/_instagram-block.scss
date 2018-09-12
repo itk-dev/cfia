@@ -1,0 +1,35 @@
+/**
+ *
+ * Instagram block
+ *
+ */
+
+
+ #block-instagramblock {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  h2 {
+    display: block;
+    flex: 0 1 100%;
+  }
+  a.group {
+    flex: 0 1 50%;
+    margin-bottom: 2%;
+    border-radius: 5%;
+    overflow: hidden;
+    @include breakpoint($breakpoint-lap) {
+      flex: 0 1 32%;
+    }
+    transition: box-shadow .15s ease-in;
+    &:hover {
+      box-shadow: .3em .5em 2em rgba(0,0,0,0.26);
+      transition: box-shadow .35s ease-out;
+      &:after {
+        content:attr(alt);
+        display: block;
+
+      }
+    }
+  }
+}

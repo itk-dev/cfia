@@ -20,6 +20,7 @@ module:
   filter: 0
   image: 0
   imce: 0
+  instagram_block: 0
   itk_cookie_message: 0
   itk_instagram_hashtag: 0
   itk_paragraph: 0

@@ -1,38 +1,49 @@
 # CHANGELOG
 
+## 1.8.2
+
+- INNOVATION-180: Add instagram block to frontpage
+
 ## 1.8.1
+
 - SERV-205: Updated drupal core to 8.5.6
 
 ## 1.8.0
+
 - INNOVATION-174: Added siteimprove, removed google analytics
 - Update core & contrib
+
 ```
- Drupal                                                   8.4.5              8.5.5 
- Entity Reference Revisions (entity_reference_revisions)  8.x-1.4            8.x-1.5    
- Paragraphs (paragraphs)                                  8.x-1.2            8.x-1.3    
- Pathauto (pathauto)                                      8.x-1.0            8.x-1.2    
- Redirect (redirect)                                      8.x-1.0            8.x-1.2    
+ Drupal                                                   8.4.5              8.5.5
+ Entity Reference Revisions (entity_reference_revisions)  8.x-1.4            8.x-1.5
+ Paragraphs (paragraphs)                                  8.x-1.2            8.x-1.3
+ Pathauto (pathauto)                                      8.x-1.0            8.x-1.2
+ Redirect (redirect)                                      8.x-1.0            8.x-1.2
  Token (token)                                            8.x-1.1            8.x-1.3
 ```
 
-
 ## 1.7.19
+
 - INNOVATION-172: Made alterations to frontpage
 
 ## 1.7.18
+
 - INNOVATION-159: Added image as paragraph
 - INNOVATION-158: Added node to frontpage
 - INNOVATION-160: Added introtext to news page
-- INNOVATION-161: Added _blank in ckeditor
+- INNOVATION-161: Added \_blank in ckeditor
 - INNOVATION-163: Added 3 side by side paragraphs
 
 ## 1.7.17
+
 - DRIFT-91 Added new core 8.4.5
 
 ## 1.7.16
+
 - Disabled youtube paragraph
 
 ## 1.7.15
+
 - Added vimeo video paragraph
 
 ## 1.7.12
@@ -45,19 +56,21 @@
 - Updated drupal and contrib modules
 
 ## 1.7.10
+
 Update core & contrib
+
 ```
-- Drupal                                                   8.1.8              8.2.3              
-- Entity Reference Revisions (entity_reference_revisions)  8.x-1.0-rc6        8.x-1.0               
-- Imce File Manager (imce)                                 8.x-1.1            8.x-1.4               
-- Paragraphs (paragraphs)                                  8.x-1.0-rc4        8.x-1.0               
+- Drupal                                                   8.1.8              8.2.3
+- Entity Reference Revisions (entity_reference_revisions)  8.x-1.0-rc6        8.x-1.0
+- Imce File Manager (imce)                                 8.x-1.1            8.x-1.4
+- Paragraphs (paragraphs)                                  8.x-1.0-rc4        8.x-1.0
 - Token (token)                                            8.x-1.0-alpha2     8.x-1.0-beta2
 ```
 
 ## 1.7.9
 
 - Fixed alignment of content section
-  
+
 ## 1.7.8
 
 - Added display flex for layout
