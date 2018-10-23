@@ -23,7 +23,7 @@ settings:
   width: 370
   height: 370
   img_resolution: low_resolution
-  cache_time_minutes: 1440
+  cache_time_minutes: 30
 visibility:
   request_path:
     id: request_path
