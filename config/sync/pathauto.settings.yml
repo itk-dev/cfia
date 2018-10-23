@@ -43,3 +43,11 @@ update_action: 2
 langcode: da
 enabled_entity_types:
   - user
+safe_tokens:
+  - alias
+  - alias
+  - path
+  - join-path
+  - login-url
+  - url
+  - url-brief
