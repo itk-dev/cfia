@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.3
+
+* Updated drupal to 8.6.2.
+
 ## 1.8.2
 
 - INNOVATION-180: Add instagram block to frontpage
