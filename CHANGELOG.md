@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.4
+
+* Added files to 1.8.3.
+
 ## 1.8.3
 
 * Updated drupal to 8.6.2.
