@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.5
+
+* Updated drupal to 8.6.10.
+* Added system_status.
+
 ## 1.8.4
 
 * Added files to 1.8.3.
