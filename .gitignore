@@ -20,6 +20,6 @@ web/sites/simpletest
 services.local.yml
 settings.local.php
 
-# Pull prod scripts
+# Ignore local sync files
 .env-remote
 .pull-prod
