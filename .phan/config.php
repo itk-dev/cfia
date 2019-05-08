@@ -19,7 +19,7 @@ return [
     'PhanInvalidConstantFQSEN',
   ],
   'directory_list' => [
-    '.',
+    'web',
   ],
   'exclude_analysis_directory_list' => [
     'vendor/'
