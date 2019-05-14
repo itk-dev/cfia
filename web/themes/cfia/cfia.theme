@@ -29,7 +29,11 @@ function cfia_preprocess_page (&$variables) {
     $variables['front_button_text'] = $config->get('cfia_frontpage.frontpage_button');
     $variables['front_button_link'] = $config->get('cfia_frontpage.frontpage_link');
     $variables['front_image'] = ($file) ? $file->url() : 'sites/all/themes/cfia/images/header-background.jpg';
-    $frontpage_node = Node::load($config->get('cfia_frontpage.frontpage_node_reference'));
+
+    $frontpage_node_ref_id = $config->get('cfia_frontpage.frontpage_node_reference');
+    if (!is_null($frontpage_node_ref_id)) {
+      $frontpage_node = Node::load($frontpage_node_ref_id);
+    }
     $variables['front_node'] = $frontpage_node ? \Drupal::entityTypeManager()->getViewBuilder('node')->view($frontpage_node, 'frontpage_display') : FALSE;
   }
 
