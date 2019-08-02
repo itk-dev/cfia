@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.9.2
+
+* Removed video autoplay.
+
 ## 1.8.6
 
 * Updated drupal to 8.6.13.
