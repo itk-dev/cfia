@@ -34,7 +34,7 @@ function cfia_preprocess_page (&$variables) {
     if (!is_null($frontpage_node_ref_id)) {
       $frontpage_node = Node::load($frontpage_node_ref_id);
     }
-    $variables['front_node'] = $frontpage_node ? \Drupal::entityTypeManager()->getViewBuilder('node')->view($frontpage_node, 'frontpage_display') : FALSE;
+    $variables['front_node'] = isset($frontpage_node) ? \Drupal::entityTypeManager()->getViewBuilder('node')->view($frontpage_node, 'frontpage_display') : FALSE;
   }
 
   // Footer variables for page template.
