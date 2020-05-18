@@ -41,6 +41,7 @@ third_party_settings:
         open: false
         required_fields: false
       label: 'Teaser 1'
+      region: content
     group_teaser_2:
       children:
         - field_title_2
@@ -56,6 +57,7 @@ third_party_settings:
         open: false
         required_fields: false
       label: 'Teaser 2'
+      region: content
     group_teaser_3:
       children:
         - field_title_3
@@ -72,6 +74,7 @@ third_party_settings:
         open: false
         required_fields: false
       label: 'Teaser 3'
+      region: content
 id: paragraph.cfia_3x_side_by_side.default
 targetEntityType: paragraph
 bundle: cfia_3x_side_by_side
