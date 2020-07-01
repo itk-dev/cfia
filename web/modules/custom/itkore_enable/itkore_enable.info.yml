@@ -42,6 +42,3 @@ dependencies:
 
 #contrib
 #  - globalredirect [incompatible with beta12]
-  
-#itk modules
-  - itk_cookie_message
