@@ -6,3 +6,7 @@ _core:
   default_config_hash: 086Q3cPpbZVziRsC7K_h1XFGkq0G0Boyu1vEpWEAWYo
 id: cfia_iframe
 label: Iframe
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

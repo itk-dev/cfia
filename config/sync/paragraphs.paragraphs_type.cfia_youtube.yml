@@ -6,3 +6,7 @@ _core:
   default_config_hash: 5DgaIWbm4uZrpVnnPnfrbCTKkzmxJ7VbN3lrt_g_4ME
 id: cfia_youtube
 label: 'Youtube video'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

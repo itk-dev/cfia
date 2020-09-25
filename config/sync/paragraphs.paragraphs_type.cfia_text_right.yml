@@ -4,3 +4,7 @@ status: true
 dependencies: {  }
 id: cfia_text_right
 label: 'Text right'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

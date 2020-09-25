@@ -6,3 +6,7 @@ _core:
   default_config_hash: w786loH_okR3FMlIKqToVqwf0GP9g7pRCLXfo3Aj0n8
 id: cfia_title_paragraph
 label: 'Title paragraph'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

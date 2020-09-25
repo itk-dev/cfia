@@ -6,3 +6,7 @@ _core:
   default_config_hash: H5z2pu5-8WaI3QvHP621aIhosnpwzn2r4J2O1aGEN3c
 id: cfia_text_left
 label: 'Text left'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

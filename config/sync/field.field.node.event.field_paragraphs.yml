@@ -40,34 +40,34 @@ settings:
       cfia_video: cfia_video
       cfia_full_width_image: cfia_full_width_image
     target_bundles_drag_drop:
-      cfia_text_left:
+      cfia_full_width_image:
         enabled: true
-        weight: -11
+        weight: 11
       cfia_iframe:
         enabled: true
         weight: -10
       cfia_internal_link:
         enabled: true
         weight: -9
-      cfia_title_paragraph:
-        enabled: true
-        weight: -8
-      cfia_youtube:
-        weight: -7
-        enabled: false
       cfia_quote:
         enabled: true
         weight: 7
+      cfia_text_left:
+        enabled: true
+        weight: -11
       cfia_text_right:
         enabled: true
         weight: 9
+      cfia_title_paragraph:
+        enabled: true
+        weight: -8
+      cfia_vertical_display:
+        weight: 15
+        enabled: false
       cfia_video:
         enabled: true
         weight: 10
-      cfia_full_width_image:
-        enabled: true
-        weight: 11
-      cfia_vertical_display:
-        weight: 15
+      cfia_youtube:
+        weight: -7
         enabled: false
 field_type: entity_reference_revisions

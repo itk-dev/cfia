@@ -6,3 +6,7 @@ _core:
   default_config_hash: m-6XhBFqGQuj_SCX4X9Aw69hBIPGY49gp_gl0G6bojo
 id: cfia_internal_link
 label: 'Liste element/link'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }
