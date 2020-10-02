@@ -2,6 +2,8 @@
 Site for cfiaarhus.dk
 
 ## Installation instructions for development
+- Requires: https://github.com/aakb/itkdev-docker
+
 Setup Docker environment (Optional):
 ```
 itkdev-docker-compose up -d
