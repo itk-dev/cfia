@@ -208,6 +208,10 @@ $boxlist-padding:                       1em;
       padding-right: 0;
       padding-bottom: 0;
       padding-left: 0;
+
+      &.itk-boxlist-news--passed {
+        opacity: .4;
+      }
     }
 
     header {

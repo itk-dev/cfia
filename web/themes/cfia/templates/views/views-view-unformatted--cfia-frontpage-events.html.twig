@@ -20,6 +20,7 @@
 {% if title %}
   <h3 class="itk-boxlist-news--header-text">{{ title }}</h3>
 {% endif %}
+<p><strong>{{ news_sub }}</strong></p>
 {% for row in rows %}
   {{ row.content }}
 {% endfor %}
