@@ -38,7 +38,7 @@
         "drupal/upgrade_status": "^2.7",
         "drupal/video_embed_field": "^2.0",
         "drupal/youtube": "^1.0@beta",
-        "drush/drush": "~8.0",
+        "drush/drush": "^10.3",
         "itk-dev/itk_siteimprove": "^1.1",
         "itk-dev/web_accessibility_statement": "dev-master",
         "phan/phan": "^1.2",
