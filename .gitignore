@@ -24,3 +24,6 @@ docker.settings.local.php
 # Ignore local sync files
 .env-remote
 .pull-prod
+
+# Ignore local php.ini
+php.ini
