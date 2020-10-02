@@ -772,7 +772,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: '<h1 class="content--header">Begivenheder</h1>'
+          content: '<h1 class="content--header">Events</h1>'
           plugin_id: text_custom
     cache_metadata:
       contexts:

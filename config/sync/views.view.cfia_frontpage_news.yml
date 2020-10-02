@@ -686,7 +686,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: '<h1 class="content--header">Aktuelt</h1>'
+          content: '<h1 class="content--header">Blog</h1>'
           plugin_id: text_custom
       menu:
         enabled: true
