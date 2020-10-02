@@ -164,7 +164,7 @@ display:
           grouping: {  }
           row_class: ''
           default_row_class: false
-      title: Aktuelt
+      title: Blog
       header: {  }
       footer: {  }
       relationships: {  }
@@ -645,7 +645,7 @@ display:
     position: 3
     display_options:
       display_extenders: {  }
-      path: nyheder
+      path: blog
       use_more: false
       defaults:
         use_more: false
