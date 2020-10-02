@@ -166,7 +166,7 @@ display:
           grouping: {  }
           row_class: ''
           default_row_class: false
-      title: Begivenheder
+      title: Events
       header:
         area:
           id: area
@@ -725,7 +725,7 @@ display:
     position: 3
     display_options:
       display_extenders: {  }
-      path: begivenheder
+      path: events
       use_more: false
       defaults:
         use_more: false
@@ -755,14 +755,13 @@ display:
             offset_label: Offset
       menu:
         type: normal
-        title: Begivenheder
+        title: Events
         description: ''
+        expanded: false
         parent: ''
         weight: -47
         context: '0'
         menu_name: main
-        enabled: true
-        expanded: false
       header:
         area_text_custom:
           id: area_text_custom
