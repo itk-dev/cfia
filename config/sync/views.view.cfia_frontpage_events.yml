@@ -725,7 +725,7 @@ display:
     position: 3
     display_options:
       display_extenders: {  }
-      path: events
+      path: det-sker
       use_more: false
       defaults:
         use_more: false
@@ -755,7 +755,7 @@ display:
             offset_label: Offset
       menu:
         type: normal
-        title: Events
+        title: 'Det sker'
         description: ''
         expanded: false
         parent: ''
@@ -772,7 +772,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: '<h1 class="content--header">Events</h1>'
+          content: '<h1 class="content--header">Det sker</h1>'
           plugin_id: text_custom
     cache_metadata:
       contexts:
