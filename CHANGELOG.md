@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.10.9
+* Update Drupal to 8.9.13
+* Update contrib modules to latest versions
+
+## 1.9.3 - 1.10.8
+* @TODO
+
 ## 1.9.2
 
 * Removed video autoplay.
