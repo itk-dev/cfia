@@ -27,3 +27,5 @@ docker.settings.local.php
 
 # Ignore local php.ini
 php.ini
+/.editorconfig
+/.gitattributes
