@@ -161,7 +161,7 @@ function cfia_preprocess_views_view_unformatted(&$variables) {
   // Get view id.
   $id = $variables['view']->id();
 
-  if ($id == 'cfia_frontpage_news') {
+  if ($id == 'cfia_frontpage_news' || $id == 'cfia_frontpage_events') {
     // Fetch cfia config settings.
     $config = \Drupal::config('cfia_base.settings');
     $variables['news_sub'] = check_markup($config->get('cfia_news.news_sub'), 'filtered_html');
