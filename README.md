@@ -15,6 +15,7 @@ itkdev-docker-compose composer install
 Setup local site configuration:
 ```
 cp web/sites/default/_docker.settings.local.php web/sites/default/docker.settings.local.php
+cp web/sites/default/_services.local.yml web/sites/default/services.local.yml
 ```
 Install site:
 ```
