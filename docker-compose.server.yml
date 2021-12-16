@@ -1,4 +1,4 @@
-# itk-version: 1.0.0
+# itk-version: 1.0.1
 version: "3"
 
 networks:
@@ -10,7 +10,7 @@ networks:
 
 services:
   phpfpm:
-    image: itkdev/php7.4-fpm:alpine
+    image: itkdev/php7.2-fpm:alpine
     restart: unless-stopped
     networks:
       - app
@@ -22,7 +22,6 @@ services:
       - memcached
     volumes:
       - .:/app:delegated
-      - drush-cache:/root/.drush
 
   nginx:
     image: nginx:stable-alpine
@@ -45,7 +44,7 @@ services:
       - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-http.middlewares=redirect-to-https"
       - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
       - "traefik.http.routers.${COMPOSE_PROJECT_NAME}.rule=Host(`${COMPOSE_SERVER_DOMAIN}`)"
-      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}.entrypoints=websecure"     
+      - "traefik.http.routers.${COMPOSE_PROJECT_NAME}.entrypoints=websecure"
        #- "traefik.http.routers.${COMPOSE_PROJECT_NAME}.middlewares=ITKBasicAuth@file"
 
   memcached:
@@ -55,17 +54,3 @@ services:
       - app
     environment:
       - MEMCACHED_CACHE_SIZE=64
-
-  drush:
-    image: itkdev/drush6:latest
-    networks:
-      - app
-    entrypoint:
-      - drush
-    volumes:
-      - drush-cache:/root/.drush
-      - ./:/app
-
-# Drush cache volume to persist cache between runs.
-volumes:
-  drush-cache:
