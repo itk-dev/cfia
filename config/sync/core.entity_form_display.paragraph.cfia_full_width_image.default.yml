@@ -15,15 +15,15 @@ bundle: cfia_full_width_image
 mode: default
 content:
   field_image:
+    type: image_image
     weight: 0
+    region: content
     settings:
-      preview_image_style: thumbnail
       progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings:
       imce:
         enabled: true
-    type: image_image
-    region: content
 hidden:
   created: true
   status: true

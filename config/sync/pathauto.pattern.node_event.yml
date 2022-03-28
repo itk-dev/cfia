@@ -12,12 +12,12 @@ pattern: '/begivenheder/[node:title]'
 selection_criteria:
   cd14439c-72a6-4cfb-9288-cc2a5c47b17a:
     id: node_type
-    bundles:
-      event: event
     negate: false
+    uuid: cd14439c-72a6-4cfb-9288-cc2a5c47b17a
     context_mapping:
       node: node
-    uuid: cd14439c-72a6-4cfb-9288-cc2a5c47b17a
+    bundles:
+      event: event
 selection_logic: and
 weight: -5
 relationships: {  }

@@ -1,3 +1,4 @@
+langcode: da
 cache_strings: true
 translate_english: false
 javascript:
@@ -11,4 +12,3 @@ translation:
   update_interval_days: 0
   path: sites/all/translations
   import_enabled: true
-langcode: da

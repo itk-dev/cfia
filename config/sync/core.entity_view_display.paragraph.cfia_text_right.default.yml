@@ -17,28 +17,28 @@ bundle: cfia_text_right
 mode: default
 content:
   field_image:
-    weight: 0
+    type: image
     label: hidden
     settings:
-      image_style: paragraphs_content_image
       image_link: ''
+      image_style: paragraphs_content_image
     third_party_settings: {  }
-    type: image
+    weight: 0
     region: content
   field_text:
-    weight: 1
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 1
     region: content
   field_title:
-    weight: 2
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 2
     region: content
 hidden:
   created: true

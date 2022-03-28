@@ -25,20 +25,20 @@ mode: teaser
 content:
   field_related_page_image:
     type: image
-    weight: 0
     label: hidden
     settings:
-      image_style: related_page_image
       image_link: content
+      image_style: related_page_image
     third_party_settings: {  }
+    weight: 0
     region: content
   field_related_page_teaser:
     type: string
-    weight: 1
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   body: true

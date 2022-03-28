@@ -22,47 +22,47 @@ bundle: page
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 1
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   field_main_image:
     type: image
-    weight: 0
-    region: content
     label: hidden
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
     third_party_settings: {  }
+    weight: 0
+    region: content
   field_paragraphs:
     type: entity_reference_revisions_entity_view
-    weight: 3
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 3
     region: content
   field_paragraphs_side_by_side:
     type: entity_reference_revisions_entity_view
-    weight: 5
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 5
     region: content
   field_related_pages:
-    weight: 2
+    type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: related_pages
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    weight: 2
     region: content
 hidden:
   field_related_page_image: true
