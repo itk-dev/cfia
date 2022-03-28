@@ -7,11 +7,12 @@ use Drupal\Core\Url;
 use Drupal\node\Entity\Node;
 
 
-  /**
+/**
  * Implements hook_preprocess_page()
  *
  * @param $variables
  *
+ * @throws \Drupal\Core\Entity\EntityMalformedException
  */
 function cfia_preprocess_page (&$variables) {
   // Fetch cfia config settings.
@@ -28,7 +29,7 @@ function cfia_preprocess_page (&$variables) {
     $variables['front_sub'] = $config->get('cfia_frontpage.frontpage_sub');
     $variables['front_button_text'] = $config->get('cfia_frontpage.frontpage_button');
     $variables['front_button_link'] = $config->get('cfia_frontpage.frontpage_link');
-    $variables['front_image'] = ($file) ? $file->url() : 'sites/all/themes/cfia/images/header-background.jpg';
+    $variables['front_image'] = ($file) ? Url::fromUri(file_create_url($file->getFileUri()))->toString() : 'sites/all/themes/cfia/images/header-background.jpg';
 
     $frontpage_node_ref_id = $config->get('cfia_frontpage.frontpage_node_reference');
     if (!is_null($frontpage_node_ref_id)) {

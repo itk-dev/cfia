@@ -16,6 +16,4 @@ regions:
   nav_menu: Nav menu
   content: Content
 
-version: '0.6'
-core: '8.x'
-datestamp: 1418825451
+core_version_requirement: ^8.8 || ^9

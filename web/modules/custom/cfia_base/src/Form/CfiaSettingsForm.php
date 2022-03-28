@@ -177,8 +177,7 @@ class CfiaSettingsForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    drupal_set_message('Settings saved');
-
+    \Drupal::messenger()->addMessage('Settings saved');
     // Fetch the file id previously saved.
     $config = $this->config('cfia_base.settings');
     $old_fid = $config->get('cfia_frontpage.frontpage_image', '');
