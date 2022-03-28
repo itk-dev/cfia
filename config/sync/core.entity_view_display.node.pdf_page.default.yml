@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.pdf_page.body
-    - field.field.node.pdf_page.field_instagram
     - field.field.node.pdf_page.field_main_image
     - field.field.node.pdf_page.field_related_page_image
     - field.field.node.pdf_page.field_related_page_teaser
@@ -12,7 +11,6 @@ dependencies:
     - node.type.pdf_page
   module:
     - image
-    - itk_instagram_hashtag
     - text
     - user
 _core:
@@ -28,13 +26,6 @@ content:
     label: hidden
     settings:
       trim_length: 600
-    third_party_settings: {  }
-    region: content
-  field_instagram:
-    type: field_instagram_hashtag_default_formatter
-    weight: 3
-    label: hidden
-    settings: {  }
     third_party_settings: {  }
     region: content
   field_main_image:

@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.field_instagram
     - field.field.node.page.field_main_image
     - field.field.node.page.field_paragraphs
     - field.field.node.page.field_paragraphs_side_by_side
@@ -15,7 +14,6 @@ dependencies:
   module:
     - entity_reference_revisions
     - image
-    - itk_instagram_hashtag
     - text
     - user
 id: node.page.default
@@ -30,13 +28,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_instagram:
-    type: field_instagram_hashtag_default_formatter
-    weight: 4
-    region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
   field_main_image:
     type: image
     weight: 0
