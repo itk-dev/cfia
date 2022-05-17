@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3124c9fa713ea11d0a31294322fe5bcc",
+    "content-hash": "c6659bfa018ea356a9b891029e1e1056",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3176,7 +3176,7 @@
         },
         {
             "name": "itk-dev/web_accessibility_statement",
-            "version": "dev-master",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/itk-dev/web_accessibility_statement.git",
@@ -3191,6 +3191,10 @@
             "type": "drupal-module",
             "notification-url": "https://packagist.org/downloads/",
             "description": "Provides path for accessibility statement",
+            "support": {
+                "issues": "https://github.com/itk-dev/web_accessibility_statement/issues",
+                "source": "https://github.com/itk-dev/web_accessibility_statement/tree/1.0.0"
+            },
             "time": "2021-03-15T09:57:10+00:00"
         },
         {
@@ -7654,14 +7658,12 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "itk-dev/web_accessibility_statement": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^7.4"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.3.0"
 }
