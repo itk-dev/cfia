@@ -2,6 +2,5 @@ name: Instagram Hashtag
 description: Supplies an instagram hashtag field and template for rendering.
 package: Custom
 type: module
-version: 1.0
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 configure: itk_instagram_hashtag.settings

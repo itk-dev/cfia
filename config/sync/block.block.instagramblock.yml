@@ -16,8 +16,8 @@ plugin: instagram_block_block
 settings:
   id: instagram_block_block
   label: 'Lige nu i CFIA'
-  provider: instagram_block
   label_display: visible
+  provider: instagram_block
   access_token: ''
   count: 6
   width: 370
@@ -27,6 +27,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
     context_mapping: {  }
+    pages: '<front>'

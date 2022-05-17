@@ -1,4 +1,4 @@
-# itk-version: 1.0.1
+# itk-version: 2.0.1
 version: "3"
 
 networks:
@@ -10,14 +10,15 @@ networks:
 
 services:
   phpfpm:
-    image: itkdev/php7.2-fpm:alpine
+    image: itkdev/php7.4-fpm:alpine
     restart: unless-stopped
     networks:
       - app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     environment:
       - PHP_MAX_EXECUTION_TIME=30
       - PHP_MEMORY_LIMIT=128M
-      - COMPOSER_VERSION=1
     depends_on:
       - memcached
     volumes:
@@ -52,5 +53,7 @@ services:
     restart: unless-stopped
     networks:
       - app
+    ports:
+      - '11211'
     environment:
       - MEMCACHED_CACHE_SIZE=64

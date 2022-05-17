@@ -18,28 +18,28 @@ bundle: cfia_vertical_display
 mode: default
 content:
   field_image:
-    weight: 0
+    type: image
     label: hidden
     settings:
-      image_style: large
       image_link: ''
+      image_style: large
     third_party_settings: {  }
-    type: image
+    weight: 0
     region: content
   field_text:
-    weight: 2
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 2
     region: content
   field_title:
-    weight: 1
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
 hidden:
   created: true

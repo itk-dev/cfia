@@ -26,38 +26,38 @@ mode: news_teaser
 content:
   field_endtime:
     type: datetime_custom
-    weight: 3
     label: hidden
     settings:
-      date_format: 'Y-m-d\TH:i:s'
       timezone_override: ''
+      date_format: 'Y-m-d\TH:i:s'
     third_party_settings: {  }
+    weight: 3
     region: content
   field_related_page_image:
-    weight: 0
+    type: image
     label: hidden
     settings:
-      image_style: news_teaser_image
       image_link: content
+      image_style: news_teaser_image
     third_party_settings: {  }
-    type: image
+    weight: 0
     region: content
   field_related_page_teaser:
     type: string
-    weight: 1
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 1
     region: content
   field_starttime:
     type: datetime_custom
-    weight: 2
     label: hidden
     settings:
-      date_format: 'Y-m-d\TH:i:s'
       timezone_override: ''
+      date_format: 'Y-m-d\TH:i:s'
     third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   body: true

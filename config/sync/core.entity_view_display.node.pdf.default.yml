@@ -20,41 +20,41 @@ bundle: pdf
 mode: default
 content:
   field_link_title:
-    weight: 105
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 105
     region: content
   field_pdf:
-    weight: 104
+    type: file_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: file_default
+    weight: 104
     region: content
   field_related_page_image:
-    weight: 102
+    type: image
     label: hidden
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
     third_party_settings: {  }
-    type: image
+    weight: 102
     region: content
   field_related_page_teaser:
-    weight: 103
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 103
     region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
 hidden:
   langcode: true

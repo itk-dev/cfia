@@ -29,9 +29,6 @@ settings:
       cfia_internal_link:
         weight: 8
         enabled: false
-      cfia_vertical_display:
-        enabled: true
-        weight: 8
       cfia_quote:
         weight: 9
         enabled: false
@@ -41,6 +38,9 @@ settings:
       cfia_title_paragraph:
         weight: 11
         enabled: false
+      cfia_vertical_display:
+        weight: 8
+        enabled: true
       cfia_youtube:
         weight: 12
         enabled: false

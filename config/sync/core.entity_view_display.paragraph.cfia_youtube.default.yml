@@ -16,15 +16,15 @@ bundle: cfia_youtube
 mode: default
 content:
   field_title:
-    weight: 0
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
     region: content
   field_youtube:
-    weight: 1
+    type: youtube_video
     label: hidden
     settings:
       youtube_size: responsive
@@ -32,12 +32,12 @@ content:
       youtube_height: ''
       youtube_autoplay: false
       youtube_loop: false
-      youtube_showinfo: false
       youtube_controls: false
       youtube_autohide: false
       youtube_iv_load_policy: false
+      youtube_showinfo: false
     third_party_settings: {  }
-    type: youtube_video
+    weight: 1
     region: content
 hidden:
   created: true

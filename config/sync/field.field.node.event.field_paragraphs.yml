@@ -41,32 +41,32 @@ settings:
       cfia_full_width_image: cfia_full_width_image
     target_bundles_drag_drop:
       cfia_full_width_image:
-        enabled: true
         weight: 11
+        enabled: true
       cfia_iframe:
-        enabled: true
         weight: -10
+        enabled: true
       cfia_internal_link:
-        enabled: true
         weight: -9
+        enabled: true
       cfia_quote:
-        enabled: true
         weight: 7
+        enabled: true
       cfia_text_left:
-        enabled: true
         weight: -11
+        enabled: true
       cfia_text_right:
-        enabled: true
         weight: 9
-      cfia_title_paragraph:
         enabled: true
+      cfia_title_paragraph:
         weight: -8
+        enabled: true
       cfia_vertical_display:
         weight: 15
         enabled: false
       cfia_video:
-        enabled: true
         weight: 10
+        enabled: true
       cfia_youtube:
         weight: -7
         enabled: false

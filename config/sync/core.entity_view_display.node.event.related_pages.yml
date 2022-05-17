@@ -24,21 +24,21 @@ bundle: event
 mode: related_pages
 content:
   field_related_page_image:
-    weight: 0
+    type: image
     label: hidden
     settings:
-      image_style: related_page_image
       image_link: content
+      image_style: related_page_image
     third_party_settings: {  }
-    type: image
+    weight: 0
     region: content
   field_related_page_teaser:
-    weight: 1
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
 hidden:
   body: true
