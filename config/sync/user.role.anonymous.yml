@@ -1,12 +1,13 @@
 uuid: 0d3cb8d2-13fa-4986-a21f-31689e294ea9
 langcode: da
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - system
 id: anonymous
 label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
   - 'access content'
-  - 'use text format plain_text'
   - 'view the administration theme'

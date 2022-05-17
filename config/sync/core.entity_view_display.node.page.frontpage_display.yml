@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.frontpage_display
     - field.field.node.page.body
-    - field.field.node.page.field_instagram
     - field.field.node.page.field_main_image
     - field.field.node.page.field_paragraphs
     - field.field.node.page.field_paragraphs_side_by_side
@@ -23,41 +22,40 @@ bundle: page
 mode: frontpage_display
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 0
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
     region: content
   field_paragraphs:
     type: entity_reference_revisions_entity_view
-    weight: 2
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 2
     region: content
   field_paragraphs_side_by_side:
     type: entity_reference_revisions_entity_view
-    weight: 3
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 3
     region: content
   field_related_pages:
-    weight: 1
+    type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: related_pages
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    weight: 1
     region: content
 hidden:
-  field_instagram: true
   field_main_image: true
   field_related_page_image: true
   field_related_page_teaser: true

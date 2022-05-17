@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.news_teaser
     - field.field.node.news.body
-    - field.field.node.news.field_instagram
     - field.field.node.news.field_main_image
     - field.field.node.news.field_pages
     - field.field.node.news.field_paragraphs
@@ -23,24 +22,23 @@ mode: news_teaser
 content:
   field_related_page_image:
     type: image
-    weight: 0
     label: hidden
     settings:
-      image_style: news_teaser_image
       image_link: content
+      image_style: news_teaser_image
     third_party_settings: {  }
+    weight: 0
     region: content
   field_related_page_teaser:
     type: string
-    weight: 1
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   body: true
-  field_instagram: true
   field_main_image: true
   field_pages: true
   field_paragraphs: true

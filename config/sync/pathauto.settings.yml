@@ -1,3 +1,6 @@
+langcode: da
+enabled_entity_types:
+  - user
 punctuation:
   punctuationdouble_quotes: 0
   punctuationquotes: 0
@@ -37,12 +40,9 @@ max_length: 100
 max_component_length: 100
 transliterate: true
 reduce_ascii: true
-ignore_words: 'a, an, as, at, before, but, by, for, from, is, in, into, like, of, off, on, onto, per, since, than, the, this, that, to, up, via, with'
 case: true
+ignore_words: 'a, an, as, at, before, but, by, for, from, is, in, into, like, of, off, on, onto, per, since, than, the, this, that, to, up, via, with'
 update_action: 2
-langcode: da
-enabled_entity_types:
-  - user
 safe_tokens:
   - alias
   - alias

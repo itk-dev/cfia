@@ -2,5 +2,4 @@ name: ITKore user theme
 type: module
 description: 'Sets admin theme for user pages.'
 package: Itkore boilerplate
-core: 8.x
-version: '8.x-1.x-dev'
+core_version_requirement: ^8.8 || ^9

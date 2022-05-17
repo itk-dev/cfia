@@ -1,20 +1,28 @@
 uuid: 79afeed0-348c-404b-b907-07baf9be6fe4
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.filtered_html
+    - taxonomy.vocabulary.location
+  module:
+    - cfia_base
+    - file
+    - filter
+    - locale
+    - node
+    - system
+    - taxonomy
+    - toolbar
 id: editor
 label: Editor
 weight: 2
 is_admin: null
 permissions:
   - 'access administration pages'
-  - 'access all h5p results'
   - 'access cfia settings'
   - 'access content overview'
-  - 'access contextual links'
   - 'access files overview'
-  - 'access in-place editing'
-  - 'access own h5p results'
   - 'access site reports'
   - 'access toolbar'
   - 'access user profiles'
@@ -23,28 +31,8 @@ permissions:
   - 'administer taxonomy'
   - 'administer users'
   - 'bypass node access'
-  - 'copy all h5ps'
-  - 'copy own h5ps'
-  - 'create itkore_event content'
-  - 'create itkore_resource content'
-  - 'create restricted h5p content types'
-  - 'delete any itkore_event content'
-  - 'delete any itkore_resource content'
-  - 'delete itkore_event revisions'
-  - 'delete itkore_resource revisions'
-  - 'delete own itkore_event content'
-  - 'delete own itkore_resource content'
   - 'delete terms in location'
-  - 'download all h5ps'
-  - 'download own h5ps'
-  - 'edit any itkore_event content'
-  - 'edit any itkore_resource content'
-  - 'edit own itkore_event content'
-  - 'edit own itkore_resource content'
   - 'edit terms in location'
-  - 'embed all h5ps'
-  - 'embed own h5ps'
   - 'translate interface'
-  - 'update h5p libraries'
   - 'use text format filtered_html'
   - 'view the administration theme'

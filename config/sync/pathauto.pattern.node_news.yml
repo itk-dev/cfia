@@ -12,12 +12,12 @@ pattern: '/nyheder/[node:title]'
 selection_criteria:
   ce7dde8d-5590-4e39-be10-bf55de347c50:
     id: node_type
-    bundles:
-      news: news
     negate: false
+    uuid: ce7dde8d-5590-4e39-be10-bf55de347c50
     context_mapping:
       node: node
-    uuid: ce7dde8d-5590-4e39-be10-bf55de347c50
+    bundles:
+      news: news
 selection_logic: and
 weight: -5
 relationships: {  }

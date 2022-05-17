@@ -15,13 +15,6 @@ $settings['file_scan_ignore_directories'] = [
   'bower_components',
 ];
 
-// Install with the 'standard' profile for this example.
-//
-// As the settings.php file is not writable during install on Platform.sh (for
-// good reasons), Drupal will refuse to install a profile that is not defined
-// here.
-$settings['install_profile'] = 'minimal';
-
 // The hash_salt should be a unique random value for each application.
 // If left unset, the settings.platformsh.php file will attempt to provide one.
 // You can also provide a specific value here if you prefer and it will be used
@@ -33,7 +26,7 @@ $settings['install_profile'] = 'minimal';
 //
 
 // This is defined inside the read-only "config" directory, deployed via Git.
-$config_directories[CONFIG_SYNC_DIRECTORY] = '../config/sync';
+$settings["config_sync_directory"] = '../config/sync';
 
 if (file_exists($app_root . '/' . $site_path . '/docker.settings.local.php')) {
   include $app_root . '/' . $site_path . '/docker.settings.local.php';

@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.related_pages
     - field.field.node.event.body
     - field.field.node.event.field_endtime
-    - field.field.node.event.field_instagram
     - field.field.node.event.field_location
     - field.field.node.event.field_main_image
     - field.field.node.event.field_pages
@@ -25,26 +24,25 @@ bundle: event
 mode: related_pages
 content:
   field_related_page_image:
-    weight: 0
+    type: image
     label: hidden
     settings:
-      image_style: related_page_image
       image_link: content
+      image_style: related_page_image
     third_party_settings: {  }
-    type: image
+    weight: 0
     region: content
   field_related_page_teaser:
-    weight: 1
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
 hidden:
   body: true
   field_endtime: true
-  field_instagram: true
   field_location: true
   field_main_image: true
   field_pages: true
