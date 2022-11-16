@@ -143,7 +143,7 @@ function cfia_preprocess_node_event(&$variables) {
  */
 function cfia_preprocess_node_pdf(&$variables) {
   // Get pdf path.
-  $variables['pdfpath'] = $variables['elements']['field_pdf']['0']['#file']->url();
+  $variables['pdfpath'] = $variables['elements']['field_pdf']['0']['#file']->getFileUri();
 
   // Get image url
   if (isset($variables['elements']['field_related_page_image']['0'])) {

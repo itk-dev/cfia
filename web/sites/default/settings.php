@@ -28,9 +28,6 @@ $settings['file_scan_ignore_directories'] = [
 // This is defined inside the read-only "config" directory, deployed via Git.
 $settings["config_sync_directory"] = '../config/sync';
 
-if (file_exists($app_root . '/' . $site_path . '/docker.settings.local.php')) {
-  include $app_root . '/' . $site_path . '/docker.settings.local.php';
-}
 
 // Local settings. These come last so that they can override anything.
 if (file_exists(__DIR__ . '/settings.local.php')) {
