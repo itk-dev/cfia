@@ -1,0 +1,7 @@
+services:
+  phpfpm:
+    environment:
+      - PHP_MAX_EXECUTION_TIME=30
+      - PHP_POST_MAX_SIZE=10M
+      - PHP_UPLOAD_MAX_FILESIZE=10M
+      - PHP_OPCACHE_VALIDATE_TIMESTAMPS=0
