@@ -29,3 +29,6 @@ docker.settings.local.php
 php.ini
 /.editorconfig
 /.gitattributes
+
+# Ignore local docker env file
+.env.docker.local
