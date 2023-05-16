@@ -1,0 +1,23 @@
+uuid: 28f70d9a-67db-43ec-94ca-90f5cc176590
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_number
+    - paragraphs.paragraphs_type.achievement
+id: paragraph.achievement.field_number
+field_name: field_number
+entity_type: paragraph
+bundle: achievement
+label: Count
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

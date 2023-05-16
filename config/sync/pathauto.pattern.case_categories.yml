@@ -1,0 +1,22 @@
+uuid: f85b2ebf-70c4-43b3-b9e2-534c16979e19
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: case_categories
+label: 'Case Categories'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'case-category/[term:name]'
+selection_criteria:
+  b6ea607a-cf77-4199-b9ae-b54c8032eee6:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: b6ea607a-cf77-4199-b9ae-b54c8032eee6
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      category_case: category_case
+selection_logic: and
+weight: -5
+relationships: {  }

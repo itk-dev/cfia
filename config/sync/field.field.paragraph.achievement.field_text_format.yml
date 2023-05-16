@@ -1,0 +1,21 @@
+uuid: c92e104f-62fb-4ad6-9f6a-77ab1813d19a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_format
+    - paragraphs.paragraphs_type.achievement
+  module:
+    - text
+id: paragraph.achievement.field_text_format
+field_name: field_text_format
+entity_type: paragraph
+bundle: achievement
+label: Suffix
+description: 'Enter the symbol to show after the count'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

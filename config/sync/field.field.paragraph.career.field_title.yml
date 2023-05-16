@@ -1,0 +1,21 @@
+uuid: 7fafeb50-185d-422c-aaf6-55171d72cd20
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.career
+  module:
+    - text
+id: paragraph.career.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: career
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

@@ -1,0 +1,18 @@
+uuid: ff37c14d-19bc-4a53-ac33-0319ff971aa2
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.category_blog
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.category_blog
+target_entity_type_id: taxonomy_term
+target_bundle: category_blog
+default_langcode: site_default
+language_alterable: false

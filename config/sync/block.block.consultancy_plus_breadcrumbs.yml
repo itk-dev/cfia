@@ -1,0 +1,22 @@
+uuid: 48bc68e4-070f-4520-98b8-f83afb01b2d4
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - consultancy_plus
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: consultancy_plus_breadcrumbs
+theme: consultancy_plus
+region: banner
+weight: -11
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

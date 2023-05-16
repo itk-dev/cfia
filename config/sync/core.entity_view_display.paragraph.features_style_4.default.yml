@@ -1,0 +1,37 @@
+uuid: 16c21b4d-1859-4b93-9ae7-5d89a006e0c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.features_style_4.field_image
+    - field.field.paragraph.features_style_4.field_widget
+    - paragraphs.paragraphs_type.features_style_4
+  module:
+    - entity_reference_revisions
+    - image
+id: paragraph.features_style_4.default
+targetEntityType: paragraph
+bundle: features_style_4
+mode: default
+content:
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_widget:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

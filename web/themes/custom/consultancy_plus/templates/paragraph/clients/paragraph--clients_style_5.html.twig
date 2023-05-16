@@ -1,0 +1,26 @@
+
+
+
+
+
+
+
+
+<section class="carousels clients-style-5">
+     <div class="container">
+        <div class="carousel8 z-sec">
+            <div class="owl-carousel carousels-5 owl-theme">
+                {% for key, value in content.field_images['#items'] %}
+                <div class="item">
+                    <div class="carousel-content-wrapper">
+                        <div class="image-wrapper">
+                            <img src="{{file_url(content.field_images['#items'][key].entity.uri.value)}}" alt="{{content.field_images['#items'][key].alt}}">
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+                

@@ -1,0 +1,60 @@
+{#
+/**
+ * @file
+ * Theme override to present all user data.
+ *
+ * This template is used when viewing a registered user's page,
+ * e.g., example.com/user/123. 123 being the user's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.field_example'. Fields attached to a user
+ *   such as 'user_picture' are available as 'content.user_picture'.
+ * - attributes: HTML attributes for the container element.
+ * - user: A Drupal User entity.
+ *
+ * @see template_preprocess_user()
+ */
+#}
+
+
+{% set base_url = url('<front>')  %}
+<section class="page-banner dt-section" style="background-image:url({{base_url}}/sites/default/files/1.jpeg);background-repeat: no-repeat;background-size: cover;background-position: center;">
+    <div class="container">
+        <div class="heading text-center">
+            <h1>{{ user.displayname }}</h1>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="{{base_url}}">Home</a>
+                </li>
+                <li class="breadcrumb-item active">
+                {{ user.displayname }}
+                </li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section class="users dt-section user-profile-page">
+    <div class="container">
+        <div class="full-width">
+            <div class="profile">
+                {% if content.user_picture[0] %}
+                      <div class="img-wrapper">
+                        {{content.user_picture.0}}
+                      </div>
+                        <h2 class="text-center">Welcome Back "{{ user.displayname }}"</h2>
+                        <a class="text-center read secondary btn-lg btn-custom5" title="Home" href="{{base_url}}">Go Home 
+                        </a>
+                {% else %}
+                    <div class="img-wrapper">
+                      <img src="{{base_url}}/themes/custom/consultancy_plus/assets/theme/img/user.png" alt="{{ user.displayname }}">
+                    </div>
+                    <h2 class="text-center" >Welcome Back "{{ user.displayname }}"</h2>
+                    <a class="text-center read secondary btn-lg btn-custom5" title="Go Home" href="{{base_url}}">Go Home 
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

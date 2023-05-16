@@ -1,0 +1,23 @@
+uuid: efab8cb8-84b2-42f4-8213-21c85561f0a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sidebar.field_view
+    - paragraphs.paragraphs_type.sidebar
+  module:
+    - viewsreference
+id: paragraph.sidebar.default
+targetEntityType: paragraph
+bundle: sidebar
+mode: default
+content:
+  field_view:
+    type: viewsreference_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

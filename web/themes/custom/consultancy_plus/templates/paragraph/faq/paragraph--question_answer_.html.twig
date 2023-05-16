@@ -1,0 +1,23 @@
+
+                <div class="content">
+                    <div class="main-content">
+                        <a class="icon" data-bs-toggle="collapse" href="#accordion2-{{paragraph.id()}}" role="button" aria-expanded="false" aria-controls="accordion2-{{paragraph.id()}}">
+                            <div class="svg-wrapper">
+                                <i>
+                                <svg class="svg-minus  d-none" xmlns="http://www.w3.org/2000/svg" width="150" height="87.5" viewBox="0 0 150 87.5">
+                                    <path  data-name="Path 39777" d="M87.5,15.468,30.715,74.821l56.428,60.43L72.5,150,0,75.539,71.786,0Z" transform="translate(150) rotate(90)" fill="#1f1f1f" fill-rule="evenodd"/>
+                                </svg>
+                                <svg class="svg-plus" xmlns="http://www.w3.org/2000/svg" width="150" height="87.5" viewBox="0 0 150 87.5" class="__web-inspector-hide-shortcut__">
+                                    <path data-name="Path 39776" d="M87.5,134.532,30.715,75.179l56.428-60.43L72.5,0,0,74.461,71.786,150Z" transform="translate(0 87.5) rotate(-90)" fill="#1f1f1f" fill-rule="evenodd"/>
+                                </svg>
+                                </i>
+                            </div>
+                            <h3>{{content.field_question.0}}</h3>
+                        </a>
+                    </div>
+                    <div class="sub-content collapse" id="accordion2-{{paragraph.id()}}">
+                        <div class="card card-body">
+                            <p>{{content.field_answer.0}}</p>
+                        </div>
+                    </div>
+                </div>

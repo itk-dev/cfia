@@ -1,0 +1,31 @@
+uuid: 00997c1e-f0bf-4d5d-bf73-e2b01d88163b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.features_pricing_plan.field_check
+    - field.field.paragraph.features_pricing_plan.field_text
+    - paragraphs.paragraphs_type.features_pricing_plan
+id: paragraph.features_pricing_plan.default
+targetEntityType: paragraph
+bundle: features_pricing_plan
+mode: default
+content:
+  field_check:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_text:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

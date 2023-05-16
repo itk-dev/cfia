@@ -1,0 +1,24 @@
+uuid: cda022d2-ec5a-4cd1-b0a3-e653af643e3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.rss
+    - field.field.node.home_page.field_section
+    - node.type.home_page
+  module:
+    - user
+id: node.home_page.rss
+targetEntityType: node
+bundle: home_page
+mode: rss
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  field_section: true
+  langcode: true

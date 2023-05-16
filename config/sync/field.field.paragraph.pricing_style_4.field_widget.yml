@@ -1,0 +1,82 @@
+uuid: 9986488a-965d-4baf-a059-16338314a32c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_widget
+    - paragraphs.paragraphs_type.pricing_plans
+    - paragraphs.paragraphs_type.pricing_style_4
+  module:
+    - entity_reference_revisions
+id: paragraph.pricing_style_4.field_widget
+field_name: field_widget
+entity_type: paragraph
+bundle: pricing_style_4
+label: 'Pricing Plans'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      pricing_plans: pricing_plans
+    negate: 0
+    target_bundles_drag_drop:
+      about_us_style_1:
+        weight: 19
+        enabled: false
+      achievement:
+        weight: 20
+        enabled: false
+      content:
+        weight: 21
+        enabled: false
+      content_features_:
+        weight: 22
+        enabled: false
+      features_style_1:
+        weight: 23
+        enabled: false
+      get_quote:
+        weight: 24
+        enabled: false
+      home_slider_style_1:
+        weight: 25
+        enabled: false
+      icon_profile_link:
+        weight: 26
+        enabled: false
+      portfolio_style_1:
+        weight: 27
+        enabled: false
+      pricing_plans:
+        weight: 28
+        enabled: true
+      pricing_style_1:
+        weight: 29
+        enabled: false
+      section:
+        weight: 30
+        enabled: false
+      services_style_1:
+        weight: 31
+        enabled: false
+      sidebar:
+        weight: 32
+        enabled: false
+      slide:
+        weight: 33
+        enabled: false
+      social_media:
+        weight: 34
+        enabled: false
+      team_style_1:
+        weight: 35
+        enabled: false
+      testimonials_style_1:
+        weight: 36
+        enabled: false
+field_type: entity_reference_revisions

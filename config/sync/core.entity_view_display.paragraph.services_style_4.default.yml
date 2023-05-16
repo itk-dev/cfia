@@ -1,0 +1,55 @@
+uuid: 4cb7e4a2-bd73-4c71-923d-a20564feb1b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.services_style_4.field_description
+    - field.field.paragraph.services_style_4.field_link
+    - field.field.paragraph.services_style_4.field_title
+    - field.field.paragraph.services_style_4.field_view
+    - paragraphs.paragraphs_type.services_style_4
+  module:
+    - link
+    - text
+    - viewsreference
+id: paragraph.services_style_4.default
+targetEntityType: paragraph
+bundle: services_style_4
+mode: default
+content:
+  field_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_view:
+    type: viewsreference_formatter
+    label: above
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

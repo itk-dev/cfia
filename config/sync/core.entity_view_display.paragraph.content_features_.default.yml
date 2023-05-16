@@ -1,0 +1,49 @@
+uuid: 0c630fc2-317f-42d6-9ed1-748d30194302
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_features_.field_description
+    - field.field.paragraph.content_features_.field_svg_icon
+    - field.field.paragraph.content_features_.field_title
+    - paragraphs.paragraphs_type.content_features_
+  module:
+    - svg_image_field
+    - text
+id: paragraph.content_features_.default
+targetEntityType: paragraph
+bundle: content_features_
+mode: default
+content:
+  field_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_svg_icon:
+    type: svg_image_field_formatter
+    label: above
+    settings:
+      inline: true
+      apply_dimensions: true
+      width: 25
+      height: 25
+      enable_alt: true
+      enable_title: true
+      link: ''
+      force_fill: false
+      sanitize: true
+      sanitize_remote: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

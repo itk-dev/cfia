@@ -1,0 +1,33 @@
+uuid: 8615f574-2ac5-45be-9f73-7a19a2f3324c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.features_style_5.field_title
+    - field.field.paragraph.features_style_5.field_widget
+    - paragraphs.paragraphs_type.features_style_5
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.features_style_5.default
+targetEntityType: paragraph
+bundle: features_style_5
+mode: default
+content:
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_widget:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

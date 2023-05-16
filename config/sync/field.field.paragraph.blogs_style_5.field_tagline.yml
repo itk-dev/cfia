@@ -1,0 +1,19 @@
+uuid: d68d498b-6869-404e-9d30-849b3b642463
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tagline
+    - paragraphs.paragraphs_type.blogs_style_5
+id: paragraph.blogs_style_5.field_tagline
+field_name: field_tagline
+entity_type: paragraph
+bundle: blogs_style_5
+label: Tagline
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

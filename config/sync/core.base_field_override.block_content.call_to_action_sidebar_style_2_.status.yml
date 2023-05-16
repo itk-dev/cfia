@@ -1,0 +1,22 @@
+uuid: c62a0e04-4387-4472-ac3f-fa675738ff7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.call_to_action_sidebar_style_2_
+id: block_content.call_to_action_sidebar_style_2_.status
+field_name: status
+entity_type: block_content
+bundle: call_to_action_sidebar_style_2_
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

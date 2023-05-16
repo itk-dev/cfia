@@ -1,0 +1,114 @@
+uuid: 8b79c576-764f-4202-8b6c-4f1cde3dd1d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.contact_info_style_1.field_address
+    - field.field.paragraph.contact_info_style_1.field_email
+    - field.field.paragraph.contact_info_style_1.field_embed_map
+    - field.field.paragraph.contact_info_style_1.field_form
+    - field.field.paragraph.contact_info_style_1.field_image
+    - field.field.paragraph.contact_info_style_1.field_tagline
+    - field.field.paragraph.contact_info_style_1.field_text_2
+    - field.field.paragraph.contact_info_style_1.field_title
+    - field.field.paragraph.contact_info_style_1.field_title_2
+    - field.field.paragraph.contact_info_style_1.field_title_3
+    - field.field.paragraph.contact_info_style_1.field_title_4
+    - paragraphs.paragraphs_type.contact_info_style_1
+  module:
+    - image
+    - text
+    - webform
+id: paragraph.contact_info_style_1.default
+targetEntityType: paragraph
+bundle: contact_info_style_1
+mode: default
+content:
+  field_address:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_embed_map:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_form:
+    type: webform_entity_reference_entity_view
+    label: above
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_tagline:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_text_2:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title_2:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_title_3:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_title_4:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+hidden: {  }

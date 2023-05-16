@@ -1,0 +1,21 @@
+{# Language Dropdown #}
+{% if links %}
+<ul class="lang-dropdown-menu list-unstyled">
+  <li class="lang-dropdown-item">
+    <a href="#" title="{{links['activeLink'].text['#title']}}" data-bs-toggle="dropdown" aria-expanded="true">{{ links['activeLink'].text }}
+      <svg xmlns="http://www.w3.org/2000/svg" width="47" height="25.2" viewBox="0 0 45 25.2">
+        <path  data-name="Icon ionic-ios-arrow-forward" d="M28.85,28.688,12.172,11.673a3.25,3.25,0,0,1,0-4.542,3.13,3.13,0,0,1,4.462,0l18.9,19.279a3.259,3.259,0,0,1,.092,4.435L16.646,50.258a3.122,3.122,0,0,1-4.462,0,3.25,3.25,0,0,1,0-4.542Z" transform="translate(51.196 -11.246) rotate(90)" fill="#e4a853"></path>
+      </svg>
+    </a>
+    <ul class="dropdown-menu">
+      {%- for key, item in links -%}
+        {% if key is not same as("activeLink") %}
+        <li>
+          {{ item.link }}
+        </li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </li>
+</ul>
+{% endif %}

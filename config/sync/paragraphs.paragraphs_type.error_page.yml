@@ -1,0 +1,10 @@
+uuid: fb23b233-24f1-4a5d-81e1-d4cfddc44da3
+langcode: en
+status: true
+dependencies: {  }
+id: error_page
+label: 'Error Page'
+icon_uuid: null
+icon_default: null
+description: 'Use to add content for error pages like 404 and 403.'
+behavior_plugins: {  }

@@ -1,0 +1,22 @@
+{# <div class="mt-2">
+    
+    {{fields.field_images.content}}
+    {{fields.field_images_1.content}}
+    {{fields.view_node.content}}
+    {{fields.counter.content}}
+    {{fields.body.content}}
+    {{fields.svg_icon.content}}
+    {{fields.nothing.content}}
+</div> #}
+                        
+                            {% if  fields.counter.content == "1" %}
+                            <li>
+                               <button class="nav-link active" id="nav-tab{{fields.counter.content}}-tab" data-bs-toggle="tab" data-bs-target="#nav-tab{{fields.counter.content}}" type="button" role="tab" aria-controls="nav-tab{{fields.counter.content}}" aria-selected="false">{{fields.title.content}}</button>
+                            </li>
+                            {% else %}
+                            <li>
+                               <button class="nav-link " id="nav-tab{{fields.counter.content}}-tab" data-bs-toggle="tab" data-bs-target="#nav-tab{{fields.counter.content}}" type="button" role="tab" aria-controls="nav-tab{{fields.counter.content}}" aria-selected="false">{{fields.title.content}}</button>
+                            </li>
+                            {% endif %}
+                 
+            

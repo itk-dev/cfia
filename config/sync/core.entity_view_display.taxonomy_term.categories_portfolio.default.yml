@@ -1,0 +1,24 @@
+uuid: 506f83f6-a491-44c1-abb2-6e15da0f729a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.categories_portfolio.field_banner_image
+    - taxonomy.vocabulary.categories_portfolio
+  module:
+    - text
+id: taxonomy_term.categories_portfolio.default
+targetEntityType: taxonomy_term
+bundle: categories_portfolio
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_banner_image: true
+  langcode: true

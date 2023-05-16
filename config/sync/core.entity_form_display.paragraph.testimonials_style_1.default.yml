@@ -1,0 +1,40 @@
+uuid: d05cb69f-cc5a-4e5b-b799-6a04d7b09f00
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.browse_files_modal
+    - field.field.paragraph.testimonials_style_1.field_image
+    - field.field.paragraph.testimonials_style_1.field_view
+    - paragraphs.paragraphs_type.testimonials_style_1
+  module:
+    - entity_browser
+    - viewsreference
+id: paragraph.testimonials_style_1.default
+targetEntityType: paragraph
+bundle: testimonials_style_1
+mode: default
+content:
+  field_image:
+    type: entity_browser_file
+    weight: 0
+    region: content
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: true
+      open: false
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_view:
+    type: viewsreference_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

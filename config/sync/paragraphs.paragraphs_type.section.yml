@@ -1,0 +1,10 @@
+uuid: fe61d08a-3c3b-4307-bcae-57b457113de1
+langcode: en
+status: true
+dependencies: {  }
+id: section
+label: 'Section (View)'
+icon_uuid: null
+icon_default: null
+description: 'This section used to list the content (Blog, Cases, Portfolio, Services, Careers, Team, Testimonials) using view block'
+behavior_plugins: {  }

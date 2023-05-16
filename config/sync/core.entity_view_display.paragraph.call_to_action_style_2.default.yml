@@ -1,0 +1,60 @@
+uuid: df2bda60-6e08-4bf6-a9bb-a298d1cf466d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.call_to_action_style_2.field_check
+    - field.field.paragraph.call_to_action_style_2.field_image
+    - field.field.paragraph.call_to_action_style_2.field_link
+    - field.field.paragraph.call_to_action_style_2.field_title
+    - paragraphs.paragraphs_type.call_to_action_style_2
+  module:
+    - image
+    - link
+    - text
+id: paragraph.call_to_action_style_2.default
+targetEntityType: paragraph
+bundle: call_to_action_style_2
+mode: default
+content:
+  field_check:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

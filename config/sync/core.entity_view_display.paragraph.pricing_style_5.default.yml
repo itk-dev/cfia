@@ -1,0 +1,42 @@
+uuid: 396b5d49-6dff-4292-a139-b6c5e2184f3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pricing_style_5.field_tagline
+    - field.field.paragraph.pricing_style_5.field_title
+    - field.field.paragraph.pricing_style_5.field_widget
+    - paragraphs.paragraphs_type.pricing_style_5
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.pricing_style_5.default
+targetEntityType: paragraph
+bundle: pricing_style_5
+mode: default
+content:
+  field_tagline:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_widget:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

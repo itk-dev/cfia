@@ -1,0 +1,20 @@
+
+
+
+<section class="sevices z-sec service-list-full-width">
+    <div class="container">
+        
+        {% for row in rows %}
+            {% if loop.index is odd %}
+                <div class = "odd">
+                    {{ row.content }}
+                </div>
+            {% else %}
+                <div class = "even">
+                    {{ row.content }}
+                </div>
+            {% endif %}
+        {% endfor %}
+        
+    </div>
+</section>  

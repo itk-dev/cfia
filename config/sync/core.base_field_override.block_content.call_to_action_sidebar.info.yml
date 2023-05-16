@@ -1,0 +1,18 @@
+uuid: 57b4267c-1cd3-4bb1-8f17-22e61255ec19
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.call_to_action_sidebar
+id: block_content.call_to_action_sidebar.info
+field_name: info
+entity_type: block_content
+bundle: call_to_action_sidebar
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

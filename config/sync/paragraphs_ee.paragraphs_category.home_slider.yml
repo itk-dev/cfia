@@ -1,0 +1,8 @@
+uuid: 47178276-555a-4c65-b02f-e6b1bbbb7f67
+langcode: en
+status: true
+dependencies: {  }
+id: home_slider
+label: 'Home slider'
+description: ''
+weight: -10

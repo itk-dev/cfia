@@ -1,0 +1,24 @@
+uuid: 6aa267df-e616-4955-bf6f-b4629247db12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.category_blog.field_banner_image
+    - taxonomy.vocabulary.category_blog
+  module:
+    - text
+id: taxonomy_term.category_blog.default
+targetEntityType: taxonomy_term
+bundle: category_blog
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_banner_image: true
+  langcode: true

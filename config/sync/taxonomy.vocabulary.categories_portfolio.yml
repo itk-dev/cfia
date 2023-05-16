@@ -1,0 +1,8 @@
+uuid: 11bd985a-c446-4f24-be54-0300b7e3b76a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Categories - Portfolio'
+vid: categories_portfolio
+description: 'Portfolio categories of the site'
+weight: 0

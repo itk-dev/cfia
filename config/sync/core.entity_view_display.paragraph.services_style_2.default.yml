@@ -1,0 +1,42 @@
+uuid: d47c6a92-b3fe-42e7-8891-018dcb48e40d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.services_style_2.field_tagline
+    - field.field.paragraph.services_style_2.field_title
+    - field.field.paragraph.services_style_2.field_view
+    - paragraphs.paragraphs_type.services_style_2
+  module:
+    - text
+    - viewsreference
+id: paragraph.services_style_2.default
+targetEntityType: paragraph
+bundle: services_style_2
+mode: default
+content:
+  field_tagline:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_view:
+    type: viewsreference_formatter
+    label: above
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

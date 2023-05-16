@@ -1,0 +1,32 @@
+uuid: 41f2e90a-8ddb-4442-947d-3fcdf7b92d81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_form
+    - paragraphs.paragraphs_type.career
+    - webform.webform.application
+  module:
+    - webform
+id: paragraph.career.field_form
+field_name: field_form
+entity_type: paragraph
+bundle: career
+label: Form
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    target_uuid: d2bc4e30-832b-4fbb-9a6b-e0977f6250da
+    default_data: ''
+    status: open
+    open: ''
+    close: ''
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

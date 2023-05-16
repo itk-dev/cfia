@@ -1,0 +1,32 @@
+uuid: 80027509-dead-4ca2-87c6-2dac79057013
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.features_pricing_plan.field_check
+    - field.field.paragraph.features_pricing_plan.field_text
+    - paragraphs.paragraphs_type.features_pricing_plan
+id: paragraph.features_pricing_plan.default
+targetEntityType: paragraph
+bundle: features_pricing_plan
+mode: default
+content:
+  field_check:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

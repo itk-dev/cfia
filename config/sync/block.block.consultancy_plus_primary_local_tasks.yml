@@ -1,0 +1,31 @@
+uuid: d1faa082-9842-44dc-9cd7-948cb16d7802
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - consultancy_plus
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: consultancy_plus_primary_local_tasks
+theme: consultancy_plus
+region: content
+weight: -14
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator

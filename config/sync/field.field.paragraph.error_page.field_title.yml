@@ -1,0 +1,21 @@
+uuid: 9e66e61c-ed21-4a2c-bbc7-6998223fc1c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.error_page
+  module:
+    - text
+id: paragraph.error_page.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: error_page
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

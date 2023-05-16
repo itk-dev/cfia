@@ -1,0 +1,77 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a menu block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: HTML attributes for the containing element.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: HTML attributes for the title element.
+ * - content_attributes: HTML attributes for the content element.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * Headings should be used on navigation menus that consistently appear on
+ * multiple pages. When this menu block's label is configured to not be
+ * displayed, it is automatically made invisible using the 'visually-hidden' CSS
+ * class, which still keeps it visible for screen-readers and assistive
+ * technology. Headings allow screen-reader and keyboard only users to navigate
+ * to or skip the links.
+ * See http://juicystudio.com/article/screen-readers-display-none.php and
+ * http://www.w3.org/TR/WCAG-TECHS/H42.html for more information.
+ *
+ * @ingroup themeable
+ */
+#}
+{% set heading_id = attributes.id ~ '-menu'|clean_id %}
+<nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes|without('role', 'aria-labelledby') }}>
+  {# Label. If not displayed, we still provide it for screen readers. #}
+  {% if not configuration.label_display %}
+    {% set title_attributes = title_attributes.addClass('visually-hidden') %}
+  {% endif %}
+  {{ title_prefix }}
+  <h3 {{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h3>
+  {{ title_suffix }}
+  {# Content #}
+  {% block content %}
+    {{content.body.0}}
+    {% if content.field_logo[0] %}
+    {{file_url(content.field_logo['#items'].entity.uri.value)}}
+    {{content.field_logo['#items'].alt}}
+    {% else %}
+      <div class="footer-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="205" height="28" viewBox="0 0 205 28">
+          <defs>
+            <clipPath>
+              <rect data-name="Rectangle 1" width="205" height="28" transform="translate(284 89)" fill="#fff"/>
+            </clipPath>
+          </defs>
+          <g  data-name="Mask Group 1" transform="translate(-284 -89)" clip-path="url(#clip-path)">
+            <g  data-name="Group 1" transform="translate(16971 6401)">
+              <path  data-name="Subtraction 1" d="M17123,6155h-26a3,3,0,0,1-3-3v-12a3,3,0,0,1,3-3h26a3,3,0,0,1,3,3v12A3,3,0,0,1,17123,6155Zm-5.82-6.434a.45.45,0,0,0-.229.056.421.421,0,0,0-.154.154l-.344.563a2.241,2.241,0,0,0,.418.3,3.177,3.177,0,0,0,.516.242,3.838,3.838,0,0,0,.582.16,3.378,3.378,0,0,0,.621.056,3.457,3.457,0,0,0,1.057-.149,2.25,2.25,0,0,0,.775-.426,1.728,1.728,0,0,0,.469-.648,2.08,2.08,0,0,0,.162-.821,1.461,1.461,0,0,0-.129-.637,1.415,1.415,0,0,0-.344-.451,1.979,1.979,0,0,0-.484-.313c-.182-.083-.363-.156-.547-.22l-.229-.074-.049-.015c-.092-.03-.182-.059-.273-.087a3.294,3.294,0,0,1-.479-.181,1.094,1.094,0,0,1-.346-.241.453.453,0,0,1-.129-.331.577.577,0,0,1,.248-.485,1.126,1.126,0,0,1,.688-.185,1.64,1.64,0,0,1,.484.06,2.139,2.139,0,0,1,.371.132l.182.084.059.027.049.022a.477.477,0,0,0,.225.06.316.316,0,0,0,.17-.039.364.364,0,0,0,.131-.132l.334-.534a2.614,2.614,0,0,0-.873-.554,3.108,3.108,0,0,0-1.158-.21,3.06,3.06,0,0,0-1,.155,2.282,2.282,0,0,0-.727.408,1.663,1.663,0,0,0-.436.6,1.835,1.835,0,0,0-.023,1.417,1.336,1.336,0,0,0,.344.485,1.777,1.777,0,0,0,.486.327,5.066,5.066,0,0,0,.553.229c.176.058.342.108.48.15l.08.025a3.045,3.045,0,0,1,.484.185,1.062,1.062,0,0,1,.342.236.494.494,0,0,1,.131.357.9.9,0,0,1-.057.278.63.63,0,0,1-.18.236,1,1,0,0,1-.312.162,1.415,1.415,0,0,1-.451.064,1.659,1.659,0,0,1-.555-.077,2.471,2.471,0,0,1-.383-.167,3.083,3.083,0,0,1-.283-.171.489.489,0,0,0-.264-.083Zm-7.117-4.72h0v3.911a3.167,3.167,0,0,0,.139.946,2.211,2.211,0,0,0,.4.738,1.758,1.758,0,0,0,.652.48,2.143,2.143,0,0,0,.889.172,2.31,2.31,0,0,0,1.076-.235,3.358,3.358,0,0,0,.832-.619l.1.49a.345.345,0,0,0,.371.271h.9v-6.155h-1.482v4.449a2.416,2.416,0,0,1-.633.473,1.572,1.572,0,0,1-.719.172.963.963,0,0,1-.781-.312,1.31,1.31,0,0,1-.268-.872l0-3.911h-1.482Zm-2.9-2.759h0V6150h1.482v-8.914h-1.482Zm-7.2.236h0V6150h1.611v-3.056h1.209a4.8,4.8,0,0,0,1.479-.208,3.034,3.034,0,0,0,1.055-.588,2.4,2.4,0,0,0,.625-.9,3.219,3.219,0,0,0,.014-2.273,2.328,2.328,0,0,0-.615-.873,2.9,2.9,0,0,0-1.049-.572,4.925,4.925,0,0,0-1.508-.207h-2.82Zm2.82,4.363h-1.209v-3.112h1.209a2.625,2.625,0,0,1,.781.1,1.4,1.4,0,0,1,.541.3,1.241,1.241,0,0,1,.33.478,1.781,1.781,0,0,1,.1.631,1.863,1.863,0,0,1-.1.663,1.29,1.29,0,0,1-.332.5,1.411,1.411,0,0,1-.549.318,2.365,2.365,0,0,1-.768.117Z" transform="translate(-33608 -12448.998)" fill="#3055e8"/>
+              <text id="Consultancy" transform="translate(-16687 -6289)" fill="#1a1a1a" font-size="30" font-family="Lato-Black, Lato" font-weight="800"><tspan x="0" y="0">Consultancy</tspan></text>
+            </g>
+          </g>
+        </svg>
+      </div>  
+    {% endif %}
+    <div class="company-info">
+      {{content.field_address.0}}
+      <div class="mail-ph">
+        <a href="mailto:{{content.field_email.0}}">{{content.field_email.0}}</a>
+        <a href="tel:{{content.field_contact_number.0}}">{{content.field_contact_number.0}}</a>
+      </div>
+      {{content.field_form.0}}
+    </div>  
+  {% endblock %}
+</nav>

@@ -1,0 +1,21 @@
+uuid: ce487b8a-f095-492c-b6ac-a4330e072b04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_embed_map
+    - paragraphs.paragraphs_type.contact_info_style_4
+  module:
+    - text
+id: paragraph.contact_info_style_4.field_embed_map
+field_name: field_embed_map
+entity_type: paragraph
+bundle: contact_info_style_4
+label: 'Embed Map'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

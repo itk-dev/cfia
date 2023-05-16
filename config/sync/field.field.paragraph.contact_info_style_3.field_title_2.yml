@@ -1,0 +1,19 @@
+uuid: f7ba2274-a068-4e2d-870f-8f47c52fd084
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_2
+    - paragraphs.paragraphs_type.contact_info_style_3
+id: paragraph.contact_info_style_3.field_title_2
+field_name: field_title_2
+entity_type: paragraph
+bundle: contact_info_style_3
+label: 'Contact Number Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,8 @@
+uuid: a9903f49-5439-400f-bce5-0cb4a4ffeece
+langcode: en
+status: true
+dependencies: {  }
+name: 'Categoies - Case'
+vid: category_case
+description: 'Categories of case study contents'
+weight: 0

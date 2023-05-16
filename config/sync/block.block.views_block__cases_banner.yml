@@ -1,0 +1,30 @@
+uuid: 89abbe84-e2ed-4a3e-b247-27a0c2aa9d70
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.cases
+  module:
+    - system
+    - views
+  theme:
+    - consultancy_plus
+id: views_block__cases_banner
+theme: consultancy_plus
+region: banner
+weight: 0
+provider: null
+plugin: 'views_block:cases-banner'
+settings:
+  id: 'views_block:cases-banner'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/cases/*\r\n"

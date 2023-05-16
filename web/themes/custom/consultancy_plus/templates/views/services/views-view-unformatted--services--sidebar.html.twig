@@ -1,0 +1,17 @@
+
+{# <ul class="service-sidebar-tag list-unstyled">
+    {% for row in rows %}
+        {{row.content}}
+    {% endfor %}
+</ul>  #}
+<ul class="service-sidebar-tag list-unstyled">
+{% for row in rows %}
+    {% if row.content['#row']._entity.id == row.nid %}
+    <div class="text-primary-active">
+        {{row.content}}
+    </div>
+    {% else %}
+        {{row.content}}
+    {% endif %}
+{% endfor %}
+</ul>

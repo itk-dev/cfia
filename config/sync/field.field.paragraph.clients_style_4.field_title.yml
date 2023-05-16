@@ -1,0 +1,21 @@
+uuid: 31ba5e00-c990-490c-a4b8-48ac8eee5155
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.clients_style_4
+  module:
+    - text
+id: paragraph.clients_style_4.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: clients_style_4
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

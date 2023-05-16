@@ -1,0 +1,47 @@
+uuid: d70d4a62-9218-4538-ad9c-7481803d2e7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.home_slider_style_1.field_widget
+    - paragraphs.paragraphs_type.home_slider_style_1
+  module:
+    - paragraphs
+    - paragraphs_ee
+    - paragraphs_features
+id: paragraph.home_slider_style_1.default
+targetEntityType: paragraph
+bundle: home_slider_style_1
+mode: default
+content:
+  field_widget:
+    type: paragraphs
+    weight: 0
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: slide
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings:
+      paragraphs_features:
+        add_in_between: false
+        add_in_between_link_count: 3
+        delete_confirmation: false
+        show_drag_and_drop: true
+      paragraphs_ee:
+        paragraphs_ee:
+          dialog_off_canvas: false
+          dialog_style: tiles
+hidden:
+  created: true
+  status: true

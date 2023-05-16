@@ -1,0 +1,19 @@
+uuid: c04b7d11-243e-4772-9a39-fb992adc2d09
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.call_to_action_sidebar_style_2_
+    - field.storage.block_content.field_title
+id: block_content.call_to_action_sidebar_style_2_.field_title
+field_name: field_title
+entity_type: block_content
+bundle: call_to_action_sidebar_style_2_
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

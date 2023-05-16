@@ -1,0 +1,40 @@
+{# List - Full Width design #}
+{# <a href="{{ url('entity.node.canonical', { 'node': node.id() })}}" title="{{node.label}}"><h2>{{node.label}}</h2></a>
+{{content.body.0}}
+{{content.field_category.0}}
+<img src="{{file_url(content.field_image['#items'].entity.uri.value)}}" alt="{{content.field_image['#items'].alt}}">
+<a href="{{ url('entity.node.canonical', { 'node': node.id() }) }}" title="Read More">{{ 'Read More'|t }}</a> #}
+
+
+
+
+
+ <div class="col-md-6">
+    <div class="case-items">
+        <div class="img-wrapper"> 
+            <img src="{{file_url(content.field_image['#items'].entity.uri.value)}}" alt="{{content.field_image['#items'].alt}}">
+            <a href="{{ url('entity.node.canonical', { 'node': node.id() })}}" title="{{node.label}}">  
+                <div class="svg-wrapp">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150">
+                        <path data-name="Path 40747" d="M154,79c0,6.912-.6,12.5-7.512,12.5H91.5v54.988c0,6.9-5.587,7.512-12.5,7.512s-12.5-.612-12.5-7.512V91.5H11.512C4.612,91.5,4,85.912,4,79s.612-12.5,7.512-12.5H66.5V11.512C66.5,4.6,72.088,4,79,4s12.5.6,12.5,7.512V66.5h54.988C153.4,66.5,154,72.088,154,79Z" transform="translate(-4 -4)" fill="#1b1f29"/>
+                    </svg>
+                </div>
+            </a>
+        </div>    
+        <div class="designation">
+            <span>{{content.field_category.0}}</span>
+        </div>
+        <div class="cases-title">
+           <a href="{{ url('entity.node.canonical', { 'node': node.id() })}}" title="{{node.label}}"> 
+                <h5 class="blog-title"> {{node.label}}</h5>
+            </a>
+        </div> 
+        <div class="read">
+            <a href="{{ url('entity.node.canonical', { 'node': node.id() })}}" title="{{node.label}}">Read More
+                <svg xmlns="http://www.w3.org/2000/svg" width="150" height="44" viewBox="0 0 150 44">
+                    <path  data-name="Path 40738" d="M44,24.431,23.919,0,0,24.431H19.489V150h7.087V24.431Z" transform="translate(150) rotate(90)" fill="#1b1f29" fill-rule="evenodd"/>
+                </svg>
+            </a>    
+        </div>
+    </div>      
+</div>

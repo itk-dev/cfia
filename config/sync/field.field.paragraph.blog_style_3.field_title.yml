@@ -1,0 +1,21 @@
+uuid: 18579b20-4074-4b95-997a-a3e8e1a4876f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.blog_style_3
+  module:
+    - text
+id: paragraph.blog_style_3.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: blog_style_3
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

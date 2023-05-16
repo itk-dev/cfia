@@ -1,0 +1,34 @@
+uuid: 5128be9f-1810-46d7-bb0f-f0ce602d0f96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_svg_icon
+    - paragraphs.paragraphs_type.content_features_
+  module:
+    - svg_image_field
+id: paragraph.content_features_.field_svg_icon
+field_name: field_svg_icon
+entity_type: paragraph
+bundle: content_features_
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: svg
+  max_filesize: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+field_type: svg_image_field

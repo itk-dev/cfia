@@ -1,0 +1,37 @@
+ 
+
+
+
+{% if content.field_images[0] %}
+    <div class="content-sec case_contents">
+        <div class="row">
+            <div class="col-md-6 case_conts">
+                <h3>{{content.field_title.0}}</h3>
+                <div class="content-descriptions">{{content.field_formatted_description.0}}</div>
+            </div>
+            <div class="col-md-6 cases_content_image">
+                <img src="{{file_url(content.field_images['#items'].entity.uri.value)}}" alt="{{content.field_image['#items'].alt}}">
+            </div>
+        </div>    
+        {#<a href="{{content.field_link.0['#url']}}">
+        {{content.field_link.0['#title']}}</a> #}
+    </div>    
+{% else %}    
+    <div class="content-sec">
+        {% if content.field_title.0 != "" %}<h3>{{content.field_title.0}}</h3>{% endif %}
+        <div class="content-descriptions">{{content.field_formatted_description.0}}</div>
+        {% if content.field_images['#items'] != "" %}
+        <img src="{{file_url(content.field_images['#items'].entity.uri.value)}}" alt="{{content.field_image['#items'].alt}}">
+        {% endif %}
+        {% if content.field_link.0 != 0 %}
+            <div class="quate-btn-rect">
+                <a href="{{content.field_link.0['#url']}}" class="btn-lg">
+                    {{content.field_link.0['#title']}}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="150" height="44" viewBox="0 0 150 44">
+                        <path  data-name="Path 40738" d="M44,24.431,23.919,0,0,24.431H19.489V150h7.087V24.431Z" transform="translate(150) rotate(90)" fill="#1b1f29" fill-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+        {% endif %}    
+    </div>  
+{% endif %}

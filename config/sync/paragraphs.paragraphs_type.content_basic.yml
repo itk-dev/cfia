@@ -1,0 +1,10 @@
+uuid: facd6d89-c0d7-464b-b3b3-ce1c0a68d099
+langcode: en
+status: true
+dependencies: {  }
+id: content_basic
+label: 'Content - Basic'
+icon_uuid: null
+icon_default: null
+description: 'Use to add content in basic content type'
+behavior_plugins: {  }

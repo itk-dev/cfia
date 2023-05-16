@@ -1,0 +1,25 @@
+uuid: edaef8e4-3b14-4424-9628-215af1383963
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_basic.field_formatted_description
+    - paragraphs.paragraphs_type.content_basic
+  module:
+    - text
+id: paragraph.content_basic.default
+targetEntityType: paragraph
+bundle: content_basic
+mode: default
+content:
+  field_formatted_description:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

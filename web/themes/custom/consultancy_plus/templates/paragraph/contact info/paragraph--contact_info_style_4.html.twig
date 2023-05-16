@@ -1,0 +1,26 @@
+{# {{content.field_title.0}}
+{{content.field_embed_map.0}}
+{{content.field_form.0}} #}
+<section class="contact-style-5 contact">
+    <div class="container">
+        <div class="tagline-title home5 mr-60">
+            <span>{{content.field_tagline.0}}</span>
+            <h2>{{content.field_title.0}}</h2>
+        </div> 
+    </div>
+    <div class="contact2-wrapper ">
+        <div class="map">
+            {{content.field_embed_map.0}}
+        </div>
+        <div class="container">   
+            <div class="row">
+                <div class="col-lg-6 cont_form">
+                    <div class="contact3-form" style="background-image:linear-gradient(rgba(27, 31, 41, .75), rgba(27, 31, 41, .75)) , url('{{file_url(content.field_image['#items'].entity.uri.value)}}'); background-repeat: no-repeat;background-size: cover;" >
+                        <h2>{{content.field_title_2.0}}</h2>
+                        {{content.field_form.0}}
+                    </div>    
+                </div>
+            </div>        
+        </div>   
+    </div>    
+</section>

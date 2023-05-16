@@ -1,0 +1,22 @@
+uuid: 17bf1a86-914f-47d3-a5f0-2a611105c073
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.category_blog
+id: taxonomy_term.category_blog.status
+field_name: status
+entity_type: taxonomy_term
+bundle: category_blog
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

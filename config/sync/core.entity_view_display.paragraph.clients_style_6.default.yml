@@ -1,0 +1,26 @@
+uuid: 5e5f0a14-0fe1-4fbd-9aa6-ef5f9b38c0ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.clients_style_6.field_images
+    - paragraphs.paragraphs_type.clients_style_6
+  module:
+    - image
+id: paragraph.clients_style_6.default
+targetEntityType: paragraph
+bundle: clients_style_6
+mode: default
+content:
+  field_images:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

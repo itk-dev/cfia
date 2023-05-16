@@ -1,0 +1,53 @@
+uuid: null
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.services_style_4.field_description
+    - field.field.paragraph.services_style_4.field_link
+    - field.field.paragraph.services_style_4.field_title
+    - field.field.paragraph.services_style_4.field_view
+    - paragraphs.paragraphs_type.services_style_4
+  module:
+    - link
+    - text
+    - viewsreference
+id: paragraph.services_style_4.default
+targetEntityType: paragraph
+bundle: services_style_4
+mode: default
+content:
+  field_link:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_tagline:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_view:
+    type: viewsreference_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_description: true
+  status: true

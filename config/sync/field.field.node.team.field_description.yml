@@ -1,0 +1,21 @@
+uuid: cb824170-c7a9-47e4-b64c-d71cb1ae8c5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.team
+  module:
+    - text
+id: node.team.field_description
+field_name: field_description
+entity_type: node
+bundle: team
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

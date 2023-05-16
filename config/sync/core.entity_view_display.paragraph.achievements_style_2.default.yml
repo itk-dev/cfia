@@ -1,0 +1,24 @@
+uuid: cebb083e-293a-4347-aeee-d172c8d91e91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.achievements_style_2.field_widget
+    - paragraphs.paragraphs_type.achievements_style_2
+  module:
+    - entity_reference_revisions
+id: paragraph.achievements_style_2.default
+targetEntityType: paragraph
+bundle: achievements_style_2
+mode: default
+content:
+  field_widget:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

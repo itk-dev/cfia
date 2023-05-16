@@ -1,0 +1,102 @@
+uuid: 40c642fa-b056-4484-b213-c27641c8c212
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pricing_plans.field_check
+    - field.field.paragraph.pricing_plans.field_link
+    - field.field.paragraph.pricing_plans.field_tagline
+    - field.field.paragraph.pricing_plans.field_text
+    - field.field.paragraph.pricing_plans.field_text_2
+    - field.field.paragraph.pricing_plans.field_text_3
+    - field.field.paragraph.pricing_plans.field_text_format
+    - field.field.paragraph.pricing_plans.field_title
+    - field.field.paragraph.pricing_plans.field_widget
+    - paragraphs.paragraphs_type.pricing_plans
+  module:
+    - entity_reference_revisions
+    - link
+    - text
+id: paragraph.pricing_plans.default
+targetEntityType: paragraph
+bundle: pricing_plans
+mode: default
+content:
+  field_check:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_tagline:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_text_2:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_text_3:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_text_format:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_widget:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+hidden: {  }

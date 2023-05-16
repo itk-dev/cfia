@@ -1,0 +1,30 @@
+uuid: a2bdd1a5-44f0-456f-a6ba-70df550edf55
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:23e57cba-b8b5-44f2-bcb4-cbc5028ac0b7'
+  module:
+    - block_content
+    - system
+  theme:
+    - consultancy_plus
+id: categories
+theme: consultancy_plus
+region: sidebar_second
+weight: -13
+provider: null
+plugin: 'block_content:23e57cba-b8b5-44f2-bcb4-cbc5028ac0b7'
+settings:
+  id: 'block_content:23e57cba-b8b5-44f2-bcb4-cbc5028ac0b7'
+  label: Categories
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/node/35\r\n/node/39"

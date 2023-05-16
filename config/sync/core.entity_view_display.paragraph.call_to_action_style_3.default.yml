@@ -1,0 +1,73 @@
+uuid: bb8bfd44-ba77-4f99-ace5-57bcb9a2aca1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.call_to_action_style_3.field_image
+    - field.field.paragraph.call_to_action_style_3.field_link
+    - field.field.paragraph.call_to_action_style_3.field_link_2
+    - field.field.paragraph.call_to_action_style_3.field_title
+    - field.field.paragraph.call_to_action_style_3.field_view
+    - paragraphs.paragraphs_type.call_to_action_style_3
+  module:
+    - image
+    - link
+    - text
+    - viewsreference
+id: paragraph.call_to_action_style_3.default
+targetEntityType: paragraph
+bundle: call_to_action_style_3
+mode: default
+content:
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_link_2:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_view:
+    type: viewsreference_formatter
+    label: above
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden: {  }

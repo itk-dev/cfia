@@ -1,0 +1,20 @@
+attributes:
+  class:
+    label: ''
+    description: ''
+  target:
+    label: ''
+    description: ''
+    options:
+      _blank: 'New window (_blank)'
+      _self: 'Same window (_self)'
+    default_value: ''
+  link_type:
+    label: 'Link Type'
+    description: ''
+    options:
+      mega_menu: 'Mega Menu Level 0'
+      mega_menu_1: 'Mega Menu Level 1'
+      mega_menu_1_column: 'Mega Menu Level 1 (2 Column)'
+      normal_link: 'Normal Link'
+    default_value: normal_link

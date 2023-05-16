@@ -1,0 +1,10 @@
+uuid: 4ea41f8a-4c27-453d-b603-71639fd7ed12
+langcode: en
+status: true
+dependencies: {  }
+id: team_style_4
+label: 'Team - Style 4'
+icon_uuid: null
+icon_default: null
+description: 'Use to add team section'
+behavior_plugins: {  }

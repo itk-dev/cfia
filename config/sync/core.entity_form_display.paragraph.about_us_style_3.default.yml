@@ -1,0 +1,140 @@
+uuid: null
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.browse_files_modal
+    - field.field.paragraph.about_us_style_3.field_designation
+    - field.field.paragraph.about_us_style_3.field_formatted_description
+    - field.field.paragraph.about_us_style_3.field_image
+    - field.field.paragraph.about_us_style_3.field_image_2
+    - field.field.paragraph.about_us_style_3.field_link
+    - field.field.paragraph.about_us_style_3.field_person_message
+    - field.field.paragraph.about_us_style_3.field_person_name
+    - field.field.paragraph.about_us_style_3.field_svg_icon
+    - field.field.paragraph.about_us_style_3.field_text
+    - field.field.paragraph.about_us_style_3.field_text_2
+    - field.field.paragraph.about_us_style_3.field_title
+    - paragraphs.paragraphs_type.about_us_style_3
+  module:
+    - entity_browser
+    - link
+    - svg_image_field
+    - text
+id: paragraph.about_us_style_3.default
+targetEntityType: paragraph
+bundle: about_us_style_3
+mode: default
+content:
+  field_designation:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_formatted_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    type: entity_browser_file
+    weight: 2
+    region: content
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: true
+      open: false
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_image_2:
+    type: entity_browser_file
+    weight: 7
+    region: content
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: true
+      open: false
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 6
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_person_message:
+    type: string_textarea
+    weight: 10
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_person_name:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_svg_icon:
+    type: svg_image_field_widget
+    weight: 3
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_max_width: 300
+      preview_image_max_height: 300
+    third_party_settings: {  }
+  field_tagline:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_text:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_text_2:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

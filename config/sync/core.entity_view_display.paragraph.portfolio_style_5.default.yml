@@ -1,0 +1,42 @@
+uuid: 525fd1bb-c41e-486e-95a6-119435d639ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.portfolio_style_5.field_tagline
+    - field.field.paragraph.portfolio_style_5.field_title
+    - field.field.paragraph.portfolio_style_5.field_view
+    - paragraphs.paragraphs_type.portfolio_style_5
+  module:
+    - text
+    - viewsreference
+id: paragraph.portfolio_style_5.default
+targetEntityType: paragraph
+bundle: portfolio_style_5
+mode: default
+content:
+  field_tagline:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_view:
+    type: viewsreference_formatter
+    label: above
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

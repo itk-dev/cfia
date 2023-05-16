@@ -1,0 +1,39 @@
+uuid: dcf0708a-5e68-4170-b2cf-6b4cbc7efe29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.list_content_about_style_5.field_description
+    - field.field.paragraph.list_content_about_style_5.field_list
+    - field.field.paragraph.list_content_about_style_5.field_title
+    - paragraphs.paragraphs_type.list_content_about_style_5
+  module:
+    - text
+id: paragraph.list_content_about_style_5.default
+targetEntityType: paragraph
+bundle: list_content_about_style_5
+mode: default
+content:
+  field_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_list:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

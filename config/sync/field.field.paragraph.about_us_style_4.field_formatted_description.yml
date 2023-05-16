@@ -1,0 +1,21 @@
+uuid: b89e081c-7ef9-4383-8548-fb7ef16e62d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_formatted_description
+    - paragraphs.paragraphs_type.about_us_style_4
+  module:
+    - text
+id: paragraph.about_us_style_4.field_formatted_description
+field_name: field_formatted_description
+entity_type: paragraph
+bundle: about_us_style_4
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

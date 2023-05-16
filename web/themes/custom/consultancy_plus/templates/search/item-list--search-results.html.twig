@@ -1,0 +1,37 @@
+{% set base_url = url('<front>') %}
+      {# Search form #}
+<section class="search-result">
+  <div class="container">
+      <div class="search_form">
+        <form action="{{base_url}}/search/node" method="get">
+          <div class="input-wrapper">
+            <input class="form-control" type="search" name="keys" placeholder="Type Something..." aria-label="Search">
+            <button class="btn btn-primary" type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150">
+                  <path  data-name="Path 40737" d="M230.817,152.136,194.072,115.41a63.161,63.161,0,1,0-8.806,8.778l36.714,36.726a6.228,6.228,0,0,0,8.837-8.778ZM195.885,75.586a50.4,50.4,0,1,1-50.4-50.415A50.46,50.46,0,0,1,195.885,75.586Z" transform="translate(-82.631 -12.74)" fill="#1b1f29"/>
+                </svg>
+            </button>
+          </div>
+        </form>
+        {# Result Count #}
+        <h3>Search Result - "{{ keyword }}"</h3>
+        {% if total_items_count != 0 %}
+        <p>We found {{ total_items_count }} Search results for you</p>
+        {% else %}
+        <p>No resullt found</p>
+        {% endif %}
+      </div>
+      {%- if title is not empty -%}
+      {%- endif -%}
+      {%- if items -%}
+        <ol class="search-results node-results pl-0 search-list">
+            {%- for item in items -%}
+                {{ item.value }}
+            {%- endfor -%}
+        </ol>
+      {%- else -%}
+        {{- empty -}}
+      {%- endif -%}
+    </div>
+    </div>
+</section>

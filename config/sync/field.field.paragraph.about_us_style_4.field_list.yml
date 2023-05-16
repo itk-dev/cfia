@@ -1,0 +1,19 @@
+uuid: 906f5f85-043c-42fc-8b99-cccc7d4afea7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_list
+    - paragraphs.paragraphs_type.about_us_style_4
+id: paragraph.about_us_style_4.field_list
+field_name: field_list
+entity_type: paragraph
+bundle: about_us_style_4
+label: List
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

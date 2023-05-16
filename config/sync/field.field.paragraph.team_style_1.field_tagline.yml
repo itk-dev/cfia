@@ -1,0 +1,19 @@
+uuid: 188e32c8-26f0-4beb-b09d-4e5086ccc35f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tagline
+    - paragraphs.paragraphs_type.team_style_1
+id: paragraph.team_style_1.field_tagline
+field_name: field_tagline
+entity_type: paragraph
+bundle: team_style_1
+label: Tagline
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

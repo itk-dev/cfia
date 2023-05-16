@@ -1,0 +1,23 @@
+uuid: 1a80880c-5bbc-45dd-8882-cc0b8d0b2263
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_check
+    - paragraphs.paragraphs_type.call_to_action_style_2
+id: paragraph.call_to_action_style_2.field_check
+field_name: field_check
+entity_type: paragraph
+bundle: call_to_action_style_2
+label: 'Full Width'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

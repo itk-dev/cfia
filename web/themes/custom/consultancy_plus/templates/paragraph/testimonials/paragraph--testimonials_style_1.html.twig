@@ -1,0 +1,20 @@
+<section class="carousels">
+    <div class="container">
+        <div class="carousel2">
+            <div class="row">
+                {{content.field_view.0}}
+                <div class="col-md-5">
+                    <div class="testimonial-wrapper">
+                        <div class="image-wrapper">
+                            <img src="{{file_url(content.field_image['#items'].entity.uri.value)}}" alt="{{file_url(content.field_image['#items'].alt)}}">
+                        </div>
+                    </div>    
+                </div>
+            </div>        
+        </div>
+    </div>
+</section>
+                
+
+
+

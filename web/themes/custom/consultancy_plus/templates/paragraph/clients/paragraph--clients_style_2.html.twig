@@ -1,0 +1,42 @@
+{# {{content.field_title.0}}
+{{content.field_tagline.0}}
+{% for key, value in content.field_images['#items'] %}
+{{file_url(content.field_images['#items'][key].entity.uri.value)}}
+{{content.field_images['#items'][key].alt}}
+{% endfor %} #}
+
+
+
+
+<section class="carousels clients-2 z-sec">
+    <div class="container">
+        <div class="tagline-title af bf">
+                <span>{{content.field_tagline.0}}</span>
+                <h2>{{content.field_title.0}}</h2>
+            </div>
+        <div class="carousel5">
+            <div class="owl-carousel carousels-5 owl-theme">
+                {% for key, value in content.field_images['#items'] %}
+                <div class="item mb-4">
+                    <div class="carousel-content-wrapper">
+                        <div class="image-wrapper">
+                        {% set count =  content.field_images['#items'] | length  %}
+                        <img src="{{file_url(content.field_images['#items'][key].entity.uri.value)}}" alt="{{content.field_images['#items'][key].alt}}">
+                        </div>
+                        {% if key + 1 >= count %}
+                        <div class="image-wrapper client-img">
+                            <img src="{{file_url(content.field_images['#items'][key].entity.uri.value)}}" alt="{{content.field_images['#items'][key].alt}}">
+                        </div>
+                        {% else %}
+                        <div class="image-wrapper client-img">
+                            <img src="{{file_url(content.field_images['#items'][key + 1].entity.uri.value)}}" alt="{{content.field_images['#items'][key].alt}}">
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>  
+   </div>
+</section>
+                

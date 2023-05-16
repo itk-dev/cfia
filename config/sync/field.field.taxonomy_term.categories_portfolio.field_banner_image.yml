@@ -1,0 +1,45 @@
+uuid: 915b2bb7-ca4c-4d8f-b176-e54d1f2dec3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_banner_image
+    - taxonomy.vocabulary.categories_portfolio
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+id: taxonomy_term.categories_portfolio.field_banner_image
+field_name: field_banner_image
+entity_type: taxonomy_term
+bundle: categories_portfolio
+label: 'Banner Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: cfc4d434-8c7c-4175-abff-8baee07c5cf2
+    alt: 'Banner image'
+    title: ''
+    width: 1440
+    height: 320
+field_type: image

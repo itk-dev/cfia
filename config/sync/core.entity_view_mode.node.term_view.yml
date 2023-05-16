@@ -1,0 +1,10 @@
+uuid: 56d95b1b-5e3c-4e05-a924-c6d73a6c2b23
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.term_view
+label: 'Term View'
+targetEntityType: node
+cache: true

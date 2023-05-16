@@ -1,0 +1,42 @@
+uuid: f04fe1ba-ffe0-49fe-988b-a415d2ab7c5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.block_content.field_widget
+    - paragraphs.paragraphs_type.sidebar
+    - paragraphs.paragraphs_type.social_media
+  module:
+    - entity_reference_revisions
+id: block_content.basic.field_widget
+field_name: field_widget
+entity_type: block_content
+bundle: basic
+label: Widget
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      social_media: social_media
+      sidebar: sidebar
+    negate: 0
+    target_bundles_drag_drop:
+      content:
+        weight: 5
+        enabled: false
+      icon_profile_link:
+        weight: 3
+        enabled: false
+      sidebar:
+        weight: 7
+        enabled: true
+      social_media:
+        weight: 4
+        enabled: true
+field_type: entity_reference_revisions

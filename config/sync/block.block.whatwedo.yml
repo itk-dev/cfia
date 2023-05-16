@@ -1,0 +1,25 @@
+uuid: 1719528d-c6ee-4731-a7d1-0ca299630c48
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.what-we-do
+  module:
+    - system
+  theme:
+    - consultancy_plus
+id: whatwedo
+theme: consultancy_plus
+region: footer_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:what-we-do'
+settings:
+  id: 'system_menu_block:what-we-do'
+  label: 'What we do'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,118 @@
+uuid: 1d149c60-d674-4be3-9385-a0b623d06bdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_widget
+    - paragraphs.paragraphs_type.achievement
+    - paragraphs.paragraphs_type.achievements_style_1
+  module:
+    - entity_reference_revisions
+id: paragraph.achievements_style_1.field_widget
+field_name: field_widget
+entity_type: paragraph
+bundle: achievements_style_1
+label: Achievements
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      achievement: achievement
+    negate: 0
+    target_bundles_drag_drop:
+      about_us_style_1:
+        weight: 31
+        enabled: false
+      about_us_style_2:
+        weight: 32
+        enabled: false
+      achievement:
+        weight: 33
+        enabled: true
+      achievements_style_1:
+        weight: 34
+        enabled: false
+      blogs_style_1:
+        weight: 35
+        enabled: false
+      call_to_action_style_1:
+        weight: 36
+        enabled: false
+      clients_style_1:
+        weight: 37
+        enabled: false
+      contact_info_style_1:
+        weight: 38
+        enabled: false
+      content:
+        weight: 39
+        enabled: false
+      content_features_:
+        weight: 40
+        enabled: false
+      features_pricing_plan:
+        weight: 41
+        enabled: false
+      features_style_1:
+        weight: 42
+        enabled: false
+      features_style_2:
+        weight: 43
+        enabled: false
+      get_quote:
+        weight: 44
+        enabled: false
+      home_slider_style_1:
+        weight: 45
+        enabled: false
+      home_slider_style_2:
+        weight: 46
+        enabled: false
+      icon_profile_link:
+        weight: 47
+        enabled: false
+      portfolio_style_1:
+        weight: 48
+        enabled: false
+      portfolio_style_2:
+        weight: 49
+        enabled: false
+      pricing_plans:
+        weight: 50
+        enabled: false
+      pricing_style_1:
+        weight: 51
+        enabled: false
+      section:
+        weight: 52
+        enabled: false
+      services_style_1:
+        weight: 53
+        enabled: false
+      services_style_2:
+        weight: 54
+        enabled: false
+      sidebar:
+        weight: 55
+        enabled: false
+      slide:
+        weight: 56
+        enabled: false
+      social_media:
+        weight: 57
+        enabled: false
+      team_style_1:
+        weight: 58
+        enabled: false
+      testimonials_style_1:
+        weight: 59
+        enabled: false
+      video_style_1:
+        weight: 60
+        enabled: false
+field_type: entity_reference_revisions

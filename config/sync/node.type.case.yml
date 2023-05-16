@@ -1,0 +1,18 @@
+uuid: 894e42fb-c77d-4db1-8196-60e8e0fe9c4e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Case
+type: case
+description: 'Use <em>case</em> to add case study pages'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

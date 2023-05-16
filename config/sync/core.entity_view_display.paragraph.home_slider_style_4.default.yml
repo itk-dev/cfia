@@ -1,0 +1,64 @@
+uuid: eac108cf-727f-4972-a751-f7264ad4cd8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.home_slider_style_4.field_email
+    - field.field.paragraph.home_slider_style_4.field_image
+    - field.field.paragraph.home_slider_style_4.field_text
+    - field.field.paragraph.home_slider_style_4.field_widget
+    - field.field.paragraph.home_slider_style_4.field_widget_2
+    - paragraphs.paragraphs_type.home_slider_style_4
+  module:
+    - entity_reference_revisions
+    - image
+id: paragraph.home_slider_style_4.default
+targetEntityType: paragraph
+bundle: home_slider_style_4
+mode: default
+content:
+  field_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_widget:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_widget_2:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden: {  }

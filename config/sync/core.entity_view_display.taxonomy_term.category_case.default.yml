@@ -1,0 +1,24 @@
+uuid: cda154ee-8ca5-4cf2-967c-8609c24174e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.category_case.field_banner_image
+    - taxonomy.vocabulary.category_case
+  module:
+    - text
+id: taxonomy_term.category_case.default
+targetEntityType: taxonomy_term
+bundle: category_case
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_banner_image: true
+  langcode: true

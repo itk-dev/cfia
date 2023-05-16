@@ -1,0 +1,21 @@
+uuid: aa7fb099-c03f-49ce-9d5d-7343bfeb172f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_format
+    - paragraphs.paragraphs_type.pricing_plans
+  module:
+    - text
+id: paragraph.pricing_plans.field_text_format
+field_name: field_text_format
+entity_type: paragraph
+bundle: pricing_plans
+label: Currency
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

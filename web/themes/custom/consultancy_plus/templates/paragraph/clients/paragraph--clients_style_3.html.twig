@@ -1,0 +1,136 @@
+{# {{content.field_title.0}}
+{{content.field_tagline.0}}
+{{content.field_description.0}}
+{{content.field_text_format.0}} 
+{{content.field_text.0}} 
+{% for key, value in content.field_images['#items'] %}
+{{file_url(content.field_images['#items'][key].entity.uri.value)}}
+{{content.field_images['#items'][key].alt}}
+{% endfor %} #}
+
+
+
+
+<section class="carousels clients-3  clients-style-3">
+    <div class="container">
+        <div class="borders-wrapper z-sec">
+        
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title">
+                        <h2>{{content.field_title.0}}</h2>
+                    </div>
+                    <div class="client-bg" style="background-image: url('./themes/custom/consultancy_plus/assets/theme/img/map.png'); background-repeat: no-repeat;background-size: cover;" >
+                        <div class="client-count-wrapper">
+                            <h4 class="client-count">{{content.field_text_format.0}}</h4>
+                            <h5>{{ content.field_text.0 }}</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="content-descriptions">
+                        <p>{{content.field_description.0}}</p>
+                    </div>
+                    <div class="carousel12">
+                        <div class="owl-carousel carousels-12 owl-theme">
+                            {% for key, value in content.field_images['#items'] %}
+                            
+                            <div class="item mb-4">
+                                <div class="carousel-content-wrapper">
+                                {% set count =  content.field_images['#items'] | length  %}
+                                
+                                    <div class="image-wrapper">
+                                        <img src="{{file_url(content.field_images['#items'][key].entity.uri.value)}}" alt="{{content.field_images['#items'][key].alt}}">
+                                    </div>
+                                    {% if key + 1 >= count %}
+                                    <div class="image-wrapper client-image">
+                                        <img src="{{file_url(content.field_images['#items'][key].entity.uri.value)}}" alt="{{content.field_images['#items'][key].alt}}">
+                                    </div>
+                                    {% else %}
+                                    <div class="image-wrapper client-image">
+                                        <img src="{{file_url(content.field_images['#items'][key + 1].entity.uri.value)}}" alt="{{content.field_images['#items'][key].alt}}">
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>  
+                </div>    
+            </div>    
+        </div>    
+   </div>
+</section>
+           
+
+
+
+
+
+
+
+                {# <div class="item mb-4">
+                    <div class="carousel-content-wrapper">
+                        <div class="image-wrapper">
+                            <img src="../themes/custom/consultancy_plus/assets/theme/img/carousels/Logo-1 .png" alt="client-image">
+                        </div>
+                        <div class="image-wrapper client-image">
+                            <img src="../themes/custom/consultancy_plus/assets/theme/img/carousels/Logo- 6.png" alt="client-image">
+                        </div>
+                    </div>
+                </div>
+                <div class="item mb-4">
+                    <div class="carousel-content-wrapper">
+                        <div class="image-wrapper">
+                            <img src="../themes/custom/consultancy_plus/assets/theme/img/carousels/Logo- 2.png" alt="client-image">
+                        </div>
+                        <div class="image-wrapper client-image">
+                            <img src="../themes/custom/consultancy_plus/assets/theme/img/carousels/Logo- 3.png" alt="client-image">
+                        </div>
+                    </div>
+                </div>
+                <div class="item mb-4">
+                    <div class="carousel-content-wrapper">
+                        <div class="image-wrapper">
+                            <img src="../themes/custom/consultancy_plus/assets/theme/img/carousels/Logo- 5.png" alt="client-image">
+                        </div>
+                        <div class="image-wrapper client-image">
+                            <img src="../themes/custom/consultancy_plus/assets/theme/img/carousels/Mask Group 12.png" alt="client-image">
+                        </div>
+                    </div>
+                </div>
+                <div class="item mb-4">
+                    <div class="carousel-content-wrapper">
+                        <div class="image-wrapper">
+                            <img src="../themes/custom/consultancy_plus/assets/theme/img/carousels/Logo- 4.png" alt="client-image">
+                        </div>
+                        <div class="image-wrapper client-image">
+                            <img src="../themes/custom/consultancy_plus/assets/theme/img/carousels/Logo- 2.png" alt="client-image">
+                        </div>
+                    </div>
+                </div>
+                <div class="item mb-4">
+                    <div class="carousel-content-wrapper">
+                        <div class="image-wrapper">
+                            <img src="../themes/custom/consultancy_plus/assets/theme/img/carousels/Logo- 4.png" alt="client-image">
+                        </div>
+                        <div class="image-wrapper client-image">
+                            <img src="../themes/custom/consultancy_plus/assets/theme/img/carousels/Logo- 2.png" alt="client-image">
+                        </div>
+                    </div>
+                </div>
+                <div class="item mb-4">
+                    <div class="carousel-content-wrapper">
+                        <div class="image-wrapper">
+                            <img src="../themes/custom/consultancy_plus/assets/theme/img/carousels/Logo-1 .png" alt="client-image">
+                        </div>
+                        <div class="image-wrapper client-image">
+                            <img src="../themes/custom/consultancy_plus/assets/theme/img/carousels/Logo- 4.png" alt="client-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</section>
+                 #}

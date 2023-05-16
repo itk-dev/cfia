@@ -1,0 +1,30 @@
+uuid: d5ca2930-19e1-41a9-86a4-03c474a199f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - taxonomy
+id: taxonomy_term.field_banner_image
+field_name: field_banner_image
+entity_type: taxonomy_term
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  default_image:
+    uuid: 75875269-6352-4216-b269-e6b3fe125fe6
+    alt: ''
+    title: ''
+    width: 1440
+    height: 320
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

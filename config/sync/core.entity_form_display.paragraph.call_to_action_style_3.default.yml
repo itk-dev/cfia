@@ -1,0 +1,76 @@
+uuid: null
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.browse_files_modal
+    - field.field.paragraph.call_to_action_style_3.field_image
+    - field.field.paragraph.call_to_action_style_3.field_link
+    - field.field.paragraph.call_to_action_style_3.field_link_2
+    - field.field.paragraph.call_to_action_style_3.field_title
+    - field.field.paragraph.call_to_action_style_3.field_view
+    - paragraphs.paragraphs_type.call_to_action_style_3
+  module:
+    - entity_browser
+    - link
+    - text
+    - viewsreference
+id: paragraph.call_to_action_style_3.default
+targetEntityType: paragraph
+bundle: call_to_action_style_3
+mode: default
+content:
+  field_check:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_image:
+    type: entity_browser_file
+    weight: 0
+    region: content
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: true
+      open: false
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 5
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_link_2:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_title:
+    type: text_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_view:
+    type: viewsreference_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

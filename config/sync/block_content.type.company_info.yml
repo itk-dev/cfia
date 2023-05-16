@@ -1,0 +1,8 @@
+uuid: 75dab6a4-474d-43e5-b78d-6fb3e59dd519
+langcode: en
+status: true
+dependencies: {  }
+id: company_info
+label: 'Company Info'
+revision: 0
+description: 'Information about the company'

@@ -1,0 +1,30 @@
+uuid: 158eec1f-113b-48a1-9f11-973a17ef3394
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3795bbbf-66fb-46c8-ba73-34fbedebeab9'
+  module:
+    - block_content
+    - system
+  theme:
+    - consultancy_plus
+id: services
+theme: consultancy_plus
+region: sidebar_first
+weight: -13
+provider: null
+plugin: 'block_content:3795bbbf-66fb-46c8-ba73-34fbedebeab9'
+settings:
+  id: 'block_content:3795bbbf-66fb-46c8-ba73-34fbedebeab9'
+  label: Services
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/node/57\r\n/node/58"

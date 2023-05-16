@@ -1,0 +1,19 @@
+uuid: deb6c6ea-3289-41b7-b11a-66dd165f4487
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.about_us_style_3
+id: paragraph.about_us_style_3.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: about_us_style_3
+label: 'Card Text 1'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

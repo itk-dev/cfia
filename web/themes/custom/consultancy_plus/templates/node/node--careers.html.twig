@@ -1,0 +1,27 @@
+{{content.field_title.0}} {# Content Title #}
+{{content.body.0}} {# Page content #} 
+{{content.field_title_1.0}} {# Location Title #} 
+{% for key,value in content.field_location['#items'] %}
+    {% set key = key + 1 %}
+    {% set count = key %}
+{% endfor %}
+{% if count > 1 %}
+    {% for key,value in content.field_location['#items'] %}
+    {% if key|last == false %}
+        <span>{{content.field_location.0}}<span>
+    {% else %}
+        <span>{{content.field_location.0}},<span>
+    {% endif %}
+    {% endfor %}
+{% else %}
+    {{content.field_location.0}}
+{% endif %}
+{{content.field_title_2.0}}  {# Job Title #}
+{{content.field_job_type.0}}  
+{{content.field_title_3.0}} {# Salary Title #}
+{{content.field_salary.0}}
+{{content.field_section}}
+{{content.field_vacancy.0}}
+{{content.field_text.0}}  {# Button Title #}
+{{content.field_title_4.0}} {# Form Title #}
+{{content.webform.0}}   

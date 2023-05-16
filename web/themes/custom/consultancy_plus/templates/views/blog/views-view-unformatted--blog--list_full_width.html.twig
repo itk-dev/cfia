@@ -1,0 +1,22 @@
+
+<section class="blogs blog-list-full z-sec">
+    <div class="container">
+        <div class="blog-2">
+            {% for row in rows %}
+                {% if loop.index is odd %}
+                    <div class = "odd">
+                        <div class="row">
+                            {{ row.content }}
+                        </div>       
+                    </div>
+                {% else %}
+                    <div class = "even">
+                        <div class="row">
+                            {{ row.content }}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>  
+    </div>
+</section>

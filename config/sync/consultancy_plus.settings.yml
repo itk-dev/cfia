@@ -1,0 +1,199 @@
+_core:
+  default_config_hash: w2HQYJGLG4-Mmk19eIIKgoXCiXEJm-NVSNhhv-VdpUI
+favicon:
+  mimetype: image/png
+  path: 'public://favicon.png'
+  use_default: false
+features:
+  favicon: true
+logo:
+  path: ''
+  use_default: false
+bootstrap_barrio_library: production
+bootstrap_barrio_fluid_container: 0
+bootstrap_barrio_region_clean_top_header: 0
+bootstrap_barrio_region_class_top_header: row
+bootstrap_barrio_region_clean_top_header_form: 0
+bootstrap_barrio_region_class_top_header_form: row
+bootstrap_barrio_region_clean_header: 1
+bootstrap_barrio_region_class_header: ''
+bootstrap_barrio_region_clean_header_form: 0
+bootstrap_barrio_region_class_header_form: row
+bootstrap_barrio_region_clean_primary_menu: 1
+bootstrap_barrio_region_class_primary_menu: ''
+bootstrap_barrio_region_clean_secondary_menu: 0
+bootstrap_barrio_region_class_secondary_menu: row
+bootstrap_barrio_region_clean_page_top: 0
+bootstrap_barrio_region_class_page_top: row
+bootstrap_barrio_region_clean_page_bottom: 0
+bootstrap_barrio_region_class_page_bottom: row
+bootstrap_barrio_region_clean_highlighted: 1
+bootstrap_barrio_region_class_highlighted: ''
+bootstrap_barrio_region_clean_featured_top: 0
+bootstrap_barrio_region_class_featured_top: row
+bootstrap_barrio_region_clean_breadcrumb: 1
+bootstrap_barrio_region_class_breadcrumb: ''
+bootstrap_barrio_region_clean_content: 1
+bootstrap_barrio_region_class_content: ''
+bootstrap_barrio_region_clean_sidebar_first: 1
+bootstrap_barrio_region_class_sidebar_first: ''
+bootstrap_barrio_region_clean_sidebar_second: 1
+bootstrap_barrio_region_class_sidebar_second: ''
+bootstrap_barrio_region_clean_featured_bottom_first: 0
+bootstrap_barrio_region_class_featured_bottom_first: row
+bootstrap_barrio_region_clean_featured_bottom_second: 0
+bootstrap_barrio_region_class_featured_bottom_second: row
+bootstrap_barrio_region_clean_featured_bottom_third: 0
+bootstrap_barrio_region_class_featured_bottom_third: row
+bootstrap_barrio_region_clean_footer_first: 0
+bootstrap_barrio_region_class_footer_first: row
+bootstrap_barrio_region_clean_footer_second: 0
+bootstrap_barrio_region_class_footer_second: row
+bootstrap_barrio_region_clean_footer_third: 0
+bootstrap_barrio_region_class_footer_third: row
+bootstrap_barrio_region_clean_footer_fourth: 0
+bootstrap_barrio_region_class_footer_fourth: row
+bootstrap_barrio_region_clean_footer_fifth: 0
+bootstrap_barrio_region_class_footer_fifth: row
+bootstrap_barrio_sidebar_position: both
+bootstrap_barrio_content_offset: 0
+bootstrap_barrio_sidebar_collapse: 0
+bootstrap_barrio_sidebar_first_width: 4
+bootstrap_barrio_sidebar_first_offset: 0
+bootstrap_barrio_sidebar_second_width: 3
+bootstrap_barrio_sidebar_second_offset: 0
+bootstrap_barrio_hide_node_label: 0
+bootstrap_barrio_button: 1
+bootstrap_barrio_button_size: ''
+bootstrap_barrio_button_type: primary
+bootstrap_barrio_button_outline: 0
+bootstrap_barrio_navbar_container: '0'
+bootstrap_barrio_navbar_toggle: navbar-toggleable-lg
+bootstrap_barrio_navbar_top_navbar: 0
+bootstrap_barrio_navbar_top_class: ''
+bootstrap_barrio_navbar_class: ''
+bootstrap_barrio_navbar_top_position: ''
+bootstrap_barrio_navbar_top_color: ''
+bootstrap_barrio_navbar_top_background: ''
+bootstrap_barrio_navbar_position: ''
+bootstrap_barrio_navbar_color: ''
+bootstrap_barrio_navbar_background: ''
+bootstrap_barrio_navbar_flyout: false
+bootstrap_barrio_navbar_slide: false
+bootstrap_barrio_navbar_offcanvas: ''
+bootstrap_barrio_messages_widget: alerts
+bootstrap_barrio_float_label: '0'
+bootstrap_barrio_navbar_top_affix: 0
+bootstrap_barrio_navbar_affix: 0
+bootstrap_barrio_sidebar_first_affix: 0
+bootstrap_barrio_sidebar_second_affix: 0
+bootstrap_barrio_scroll_spy: ''
+bootstrap_barrio_google_fonts: ''
+bootstrap_barrio_bootstrap_icons: 0
+bootstrap_barrio_icons: ''
+bootstrap_barrio_system_messages: messages_white
+bootstrap_barrio_table_style: table-striped
+bootstrap_barrio_table_hover: 1
+bootstrap_barrio_table_head: ''
+bootstrap_barrio_image_fluid: false
+bootstrap_barrio_tabs_style: ''
+loader: 1
+pager_prev_text: 'Prev Blog'
+pager_next_text: 'Next Blog'
+pager_prev_text_2: 'Prev Case'
+pager_next_text_2: 'Next Case'
+login_banner_title: Login
+login_banner_image: {  }
+login_title: 'Welcome Back!'
+login_description: ''
+login_image: {  }
+login_name_text: 'Enter your username.'
+login_pass_text: 'Enter the password that accompanies your username.'
+login_content:
+  value: "<p><a href=\"/user/password\" title=\"Forgot Password?\">Forgot Password?</a></p>\r\n"
+  format: basic_html
+register_banner_title: Register
+register_banner_image: {  }
+register_title: 'Let’s Get Started'
+register_description: ''
+register_image: {  }
+register_email_text: 'Enter your valid Email address.'
+register_name_text: 'Several special characters are allowed, including space, period (.), hyphen (-), apostrophe (‘), underscore (_), and the @ sign.'
+register_content:
+  value: '<p>Already have an account? <a href="/user/login" title="Login">Login</a></p>'
+  format: basic_html
+r_pass_banner_title: 'Password Reset'
+r_pass_banner_image: {  }
+r_pass_title: 'Change Password'
+r_pass_description: ''
+r_pass_image: {  }
+r_pass_email_text: 'Password reset instructions will be sent to your registered email.'
+mode_type: '2'
+maintenance_mode_title: 'Under Maintenance'
+maintenance_mode_description: ''
+bg_image_m:
+  - '113'
+comingsoon_title: 'Coming Soon'
+comingsoon_description: ''
+bg_image_c:
+  - '209'
+date: '2025-03-21'
+custom_message: 'The site will go live soon'
+search_banner_title: 'Search Result'
+search_banner_image: {  }
+header_variation: header-2
+sticky: 1
+address_text: ''
+address: ''
+email_text: ''
+email_address: mail@domain.com
+contact_number: (232)-456-7890
+button_text: 'Get Quote'
+button_link: /get-quote
+copyrights:
+  value: '<p>© 2023. All Rights Reserved. Consultancy Plus Theme by <a href="https://www.drupalthemes.io/" target="_blank" title="drupalthemes.io">drupalthemes.io</a></p>'
+  format: basic_html
+styles: ''
+default_color: 1
+primary_color: '#000000'
+secondary_color: '#000000'
+show_pannel: 1
+bootstrap_barrio_region_clean_logo: 0
+bootstrap_barrio_region_class_logo: row
+bootstrap_barrio_region_clean_language_block: 0
+bootstrap_barrio_region_class_language_block: row
+bootstrap_barrio_region_clean_search: 0
+bootstrap_barrio_region_class_search: row
+bootstrap_barrio_region_clean_social_media: 0
+bootstrap_barrio_region_class_social_media: row
+bootstrap_barrio_region_clean_banner: 0
+bootstrap_barrio_region_class_banner: row
+contact_text: 'Call us for a quote'
+footer_bg_image:
+  - '77'
+pager_prev_text_3: 'Prev Case'
+pager_next_text_3: 'Next Case'
+login_content_1:
+  value: '<p>Don''t have an account? <a href="/user/register" title="Register">Sign up</a></p>'
+  format: basic_html
+login_bottom_content:
+  value: '<h2>Let’s discuss about how we can help make your business better</h2>'
+  format: basic_html
+register_bottom_content:
+  value: '<h2>Let’s discuss about how we can help make your business better</h2>'
+  format: basic_html
+r_pass_bottom_content:
+  value: '<h2>Let’s discuss about how we can help make your business better</h2>'
+  format: basic_html
+maintenance_mode_tagline: 'We Are'
+comingsoon_tagline: 'We Are'
+login_button: /contact-us-style-1
+re_button: /contact-us-style-1
+re_password_button: /contact-us-style-1</p>
+login_button_url: /contact-us-style-1
+login_button_title: 'Contact Us'
+register_button_url: /contact-us-style-1
+register_button_title: 'Contact Us'
+re_password_button_url: /contact-us-style-1
+re_password_button_title: 'Contact Us'
+back-to-top: 1

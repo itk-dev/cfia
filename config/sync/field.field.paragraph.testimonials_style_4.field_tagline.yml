@@ -1,0 +1,19 @@
+uuid: 1c4e1ef8-b187-4193-b8ee-33263cffd493
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tagline
+    - paragraphs.paragraphs_type.testimonials_style_4
+id: paragraph.testimonials_style_4.field_tagline
+field_name: field_tagline
+entity_type: paragraph
+bundle: testimonials_style_4
+label: Tagline
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

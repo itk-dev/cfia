@@ -1,0 +1,22 @@
+uuid: d022b580-ea56-4be4-84df-a9ce6a1acfbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.company_info
+id: block_content.company_info.status
+field_name: status
+entity_type: block_content
+bundle: company_info
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
