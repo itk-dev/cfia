@@ -17,4 +17,8 @@ settings:
   label: 'AddToAny buttons'
   label_display: '0'
   provider: addtoany
+  link_url: ''
+  link_title: ''
+  buttons_size: ''
+  addtoany_html: ''
 visibility: {  }

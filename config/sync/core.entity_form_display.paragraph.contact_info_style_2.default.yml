@@ -1,11 +1,10 @@
-uuid: null
+uuid: 31a5f5b6-2812-4b2f-8963-e6c0b8d38bbe
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.paragraph.contact_info_style_2.field_description
     - field.field.paragraph.contact_info_style_2.field_email
-    - field.field.paragraph.contact_info_style_2.field_embed_map
     - field.field.paragraph.contact_info_style_2.field_form
     - field.field.paragraph.contact_info_style_2.field_tagline
     - field.field.paragraph.contact_info_style_2.field_text_2
@@ -36,14 +35,6 @@ content:
     settings:
       placeholder: ''
       size: 60
-    third_party_settings: {  }
-  field_embed_map:
-    type: text_textarea
-    weight: 0
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
     third_party_settings: {  }
   field_form:
     type: webform_entity_reference_select

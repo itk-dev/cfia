@@ -1,9 +1,9 @@
+uuid: 57bd8123-a4db-454f-9843-6357e7ab77f3
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.paragraph.blogs_style_4.field_link
-    - field.field.paragraph.blogs_style_4.field_tagline
     - field.field.paragraph.blogs_style_4.field_title
     - field.field.paragraph.blogs_style_4.field_view
     - paragraphs.paragraphs_type.blogs_style_4
@@ -40,5 +40,4 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_tagline: true
   status: true

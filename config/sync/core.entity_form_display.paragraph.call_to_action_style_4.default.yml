@@ -1,9 +1,9 @@
+uuid: 90d669de-1098-4d52-b8aa-14507adf1cd3
 langcode: en
 status: true
 dependencies:
   config:
     - entity_browser.browser.browse_files_modal
-    - field.field.paragraph.call_to_action_style_4.field_check
     - field.field.paragraph.call_to_action_style_4.field_image
     - field.field.paragraph.call_to_action_style_4.field_link
     - field.field.paragraph.call_to_action_style_4.field_title
@@ -17,13 +17,6 @@ targetEntityType: paragraph
 bundle: call_to_action_style_4
 mode: default
 content:
-  field_check:
-    type: boolean_checkbox
-    weight: 1
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
   field_image:
     type: entity_browser_file
     weight: 0

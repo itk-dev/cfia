@@ -1,0 +1,24 @@
+uuid: bb37c4b4-634b-4877-a719-f7df3f6bfd75
+langcode: en
+status: false
+dependencies:
+  module:
+    - addtoany
+  theme:
+    - cfia
+id: cfia_addtoanybuttons
+theme: cfia
+region: content
+weight: -12
+provider: null
+plugin: addtoany_block
+settings:
+  id: addtoany_block
+  label: 'AddToAny buttons'
+  label_display: '0'
+  provider: addtoany
+  link_url: ''
+  link_title: ''
+  buttons_size: ''
+  addtoany_html: ''
+visibility: {  }

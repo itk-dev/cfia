@@ -1,11 +1,10 @@
-uuid: null
+uuid: 579d02a2-fe1f-435b-88cd-1d392851db9b
 langcode: en
 status: true
 dependencies:
   config:
     - entity_browser.browser.browse_files_modal
     - field.field.paragraph.clients_style_4.field_images
-    - field.field.paragraph.clients_style_4.field_tagline
     - field.field.paragraph.clients_style_4.field_title
     - paragraphs.paragraphs_type.clients_style_4
   module:
@@ -40,5 +39,4 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_tagline: true
   status: true

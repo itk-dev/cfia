@@ -1,9 +1,9 @@
+uuid: 65ba5d68-de9c-4ceb-be0d-3ac42f2a2445
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.paragraph.team_style_4.field_link
-    - field.field.paragraph.team_style_4.field_tagline
     - field.field.paragraph.team_style_4.field_title
     - field.field.paragraph.team_style_4.field_view
     - paragraphs.paragraphs_type.team_style_4
@@ -23,14 +23,6 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
-    third_party_settings: {  }
-  field_tagline:
-    type: string_textfield
-    weight: 0
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   field_title:
     type: text_textfield
