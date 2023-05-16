@@ -20,6 +20,7 @@ core
 # Ignore configuration files that may contain sensitive information.
 web/sites/default/settings.local.php
 web/sites/default/services.local.yml
+web/sites/default/files
 sites/*/services*.yml
 
 # Ignore paths that contain user-generated content.
