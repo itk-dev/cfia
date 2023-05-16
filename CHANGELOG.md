@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.0.0
+* Upgrade to drupal 10
+* New theme 
+
 ## 1.10.9
 * Update Drupal to 8.9.13
 * Update contrib modules to latest versions

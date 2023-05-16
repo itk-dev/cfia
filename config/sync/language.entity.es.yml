@@ -1,9 +1,0 @@
-uuid: 1d632ad3-ed9b-479e-97cd-e89d4bca4039
-langcode: es
-status: true
-dependencies: {  }
-id: es
-label: Spa
-direction: ltr
-weight: 2
-locked: false
