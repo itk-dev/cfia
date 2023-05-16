@@ -6,8 +6,7 @@ url:
   source: path_prefix
   prefixes:
     en: en
-    '': null
-    da: da
+    da: ''
   domains:
     en: ''
     da: ''
