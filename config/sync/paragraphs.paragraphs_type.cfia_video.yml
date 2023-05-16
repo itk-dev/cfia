@@ -1,7 +1,0 @@
-uuid: bb2fef9f-00f0-4362-a155-4a2e00454365
-langcode: en
-status: true
-dependencies: {  }
-id: cfia_video
-label: Video
-behavior_plugins: {  }

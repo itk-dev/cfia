@@ -1,8 +1,0 @@
-# --- Administration pages routing --- #
-cfia_base.settings:
-  path: '/admin/cfia'
-  defaults:
-    _form: '\Drupal\cfia_base\Form\CfiaSettingsForm'
-    _title: 'CFIA Settings'
-  requirements:
-    _permission: 'access cfia settings'

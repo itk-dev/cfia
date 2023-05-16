@@ -1,5 +1,0 @@
-name: CFIA PDF Pages
-description: Show PDFFFFER
-package: Custom
-type: module
-core_version_requirement: ^8.8 || ^9

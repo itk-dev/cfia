@@ -1,3 +1,0 @@
-langcode: da
-interface:
-  default: php_mail

@@ -1,4 +1,4 @@
-# itk-version: 2.1.0
+# itk-version: 3.0.1
 version: "3"
 
 networks:
@@ -10,7 +10,7 @@ networks:
 
 services:
   phpfpm:
-    image: itkdev/php7.4-fpm:alpine
+    image: itkdev/php8.1-fpm:alpine
     restart: unless-stopped
     networks:
       - app
@@ -23,7 +23,7 @@ services:
     depends_on:
       - memcached
     volumes:
-      - .:/app:delegated
+      - .:/app
 
   nginx:
     image: nginxinc/nginx-unprivileged:alpine
@@ -36,7 +36,8 @@ services:
     ports:
       - '8080'
     volumes:
-      - ${PWD}/.docker/vhost.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./.docker/vhost.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./.docker/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./:/app:rw
     labels:
       - "traefik.enable=true"

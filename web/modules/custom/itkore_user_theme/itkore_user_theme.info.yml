@@ -1,5 +1,0 @@
-name: ITKore user theme
-type: module
-description: 'Sets admin theme for user pages.'
-package: Itkore boilerplate
-core_version_requirement: ^8.8 || ^9

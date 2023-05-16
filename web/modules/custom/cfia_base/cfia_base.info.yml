@@ -1,9 +1,0 @@
-name: CFIA Base
-type: module
-description: 'Provides administration interface for setting config values.'
-package: cfia
-core_version_requirement: ^8.8 || ^9
-# These modules are required by the tests, must be available at bootstrap time
-dependencies:
-  - system
-  - file
