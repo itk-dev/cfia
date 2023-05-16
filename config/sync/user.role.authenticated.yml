@@ -4,28 +4,142 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - node.type.article
+    - node.type.blog_post
+    - node.type.case
+    - node.type.elements
+    - node.type.home_page
+    - node.type.page
+    - node.type.portfolio
+    - node.type.service
+    - node.type.team
+    - node.type.testimonials
+    - taxonomy.vocabulary.categories_portfolio
+    - taxonomy.vocabulary.category_blog
+    - taxonomy.vocabulary.category_case
+    - taxonomy.vocabulary.tags
   module:
     - comment
     - contact
+    - contextual
+    - file
     - filter
     - fontawesome
+    - node
+    - path
+    - quick_node_clone
     - search
-    - shortcut
     - system
+    - taxonomy
+    - toolbar
+    - tour
+    - tour_ui
 _core:
   default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
 id: authenticated
-label: 'Authenticated user'
+label: 'Godkendt bruger'
 weight: 1
 is_admin: false
 permissions:
+  - 'access administration pages'
   - 'access comments'
   - 'access content'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
   - 'access fontawesome additional settings'
-  - 'access shortcuts'
   - 'access site-wide contact form'
-  - 'link to any page'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access tour'
+  - 'access user profiles'
+  - 'administer menu'
+  - 'administer nodes'
+  - 'administer tour'
+  - 'administer url aliases'
+  - 'administer users'
+  - 'bypass node access'
+  - 'cancel account'
+  - 'change own username'
+  - 'clone article content'
+  - 'clone blog_post content'
+  - 'clone case content'
+  - 'clone elements content'
+  - 'clone home_page content'
+  - 'clone page content'
+  - 'clone portfolio content'
+  - 'clone service content'
+  - 'clone team content'
+  - 'clone testimonials content'
+  - 'create article content'
+  - 'create blog_post content'
+  - 'create case content'
+  - 'create elements content'
+  - 'create home_page content'
+  - 'create page content'
+  - 'create portfolio content'
+  - 'create service content'
+  - 'create team content'
+  - 'create terms in categories_portfolio'
+  - 'create terms in category_blog'
+  - 'create terms in category_case'
+  - 'create terms in tags'
+  - 'create testimonials content'
+  - 'create url aliases'
+  - 'delete any article content'
+  - 'delete any blog_post content'
+  - 'delete any case content'
+  - 'delete any elements content'
+  - 'delete any home_page content'
+  - 'delete any page content'
+  - 'delete any portfolio content'
+  - 'delete any service content'
+  - 'delete any team content'
+  - 'delete any testimonials content'
+  - 'delete own article content'
+  - 'delete own blog_post content'
+  - 'delete own case content'
+  - 'delete own elements content'
+  - 'delete own home_page content'
+  - 'delete own page content'
+  - 'delete own portfolio content'
+  - 'delete own service content'
+  - 'delete own team content'
+  - 'delete own testimonials content'
+  - 'delete page revisions'
+  - 'delete terms in categories_portfolio'
+  - 'delete terms in category_blog'
+  - 'delete terms in category_case'
+  - 'delete terms in tags'
+  - 'edit any article content'
+  - 'edit any blog_post content'
+  - 'edit any case content'
+  - 'edit any elements content'
+  - 'edit any home_page content'
+  - 'edit any page content'
+  - 'edit any portfolio content'
+  - 'edit any service content'
+  - 'edit any team content'
+  - 'edit any testimonials content'
+  - 'edit own article content'
+  - 'edit own blog_post content'
+  - 'edit own case content'
+  - 'edit own comments'
+  - 'edit own elements content'
+  - 'edit own home_page content'
+  - 'edit own page content'
+  - 'edit own portfolio content'
+  - 'edit own service content'
+  - 'edit own team content'
+  - 'edit own testimonials content'
+  - 'edit terms in categories_portfolio'
+  - 'edit terms in category_blog'
+  - 'edit terms in category_case'
+  - 'edit terms in tags'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'view own unpublished content'
+  - 'view the administration theme'
+  - 'view user email addresses'
