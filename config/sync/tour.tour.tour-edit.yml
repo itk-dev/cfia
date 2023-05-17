@@ -1,5 +1,5 @@
 uuid: dc0c9927-a58f-4371-99e8-c88e602c2321
-langcode: en
+langcode: da
 status: true
 dependencies:
   module:
@@ -24,7 +24,7 @@ tips:
   tour-label:
     id: tour-label
     plugin: text
-    label: Label
+    label: Etiket
     weight: -99
     position: bottom
     selector: '#edit-label'
@@ -32,7 +32,7 @@ tips:
   module:
     id: module
     plugin: text
-    label: Module
+    label: Modul
     weight: -98
     position: bottom
     selector: '#edit-module'
@@ -48,7 +48,7 @@ tips:
   tour-tips:
     id: tour-tips
     plugin: text
-    label: Tips
+    label: 'Gode råd'
     weight: -96
     position: top
     selector: '#edit-tips'

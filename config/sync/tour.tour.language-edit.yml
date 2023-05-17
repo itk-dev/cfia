@@ -1,5 +1,5 @@
 uuid: d2800d9b-19bd-4368-8c63-14751cb37d49
-langcode: en
+langcode: da
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: gjYvYwMqulNsq7VmScWKOqEUxar9AX0TvG8vfCCguUQ
 id: language-edit
-label: 'Editing languages'
+label: 'Redigering af sprog'
 module: language
 routes:
   -
@@ -16,33 +16,33 @@ tips:
   language-edit-overview:
     id: language-edit-overview
     plugin: text
-    label: 'Editing languages'
+    label: 'Redigering af sprog'
     weight: 1
-    body: '<p>This page provides the ability to edit a language on your site, including custom languages.</p>'
+    body: '<p>På denne side kan du redigere sitets sprog, inklusive brugerdefinerede sprog.</p>'
   language-edit-langcode:
     id: language-edit-langcode
     plugin: text
-    label: 'Language code'
+    label: Sprogkode
     weight: 2
     selector: '#edit-langcode-view'
-    body: '<p>You cannot change the code of a language on the site, since it is used by the system to keep track of the language.</p>'
+    body: '<p>Du kan ikke ændre en sprogkode på sitet. Det skyldes at systemet bruger koden til at holde styr på sproget.</p>'
   language-edit-label:
     id: language-edit-label
     plugin: text
-    label: 'Language name'
+    label: Sprognavn
     weight: 3
     selector: '#edit-label'
-    body: '<p>The language name is used throughout the site for all users and is written in English. Names of built-in languages can be translated using the Interface Translation module, and names of both built-in and custom languages can be translated using the Configuration Translation module.</p>'
+    body: '<p>Sprognavnet bruges på hele webstedet for alle brugere og er skrevet på engelsk. Navnene på indbyggede sprog kan oversættes ved hjælp af oversættelse modulet, og navnene på både indbyggede og brugerdefinerede sprog kan oversættes ved hjælp af konfiguration oversættelse modulet.</p>'
   language-edit-direction:
     id: language-edit-direction
     plugin: text
-    label: 'Language direction'
+    label: Sprogretning
     weight: 4
     selector: '#edit-direction--wrapper--description'
-    body: '<p>Choose if the language is a "Left to right" or "Right to left" language.</p><p>Note that not all themes support "Right to left" layouts, so test your theme if you are using "Right to left".</p>'
+    body: '<p>Vælg om det er et  "venstre mod højre" eller "højre mod venstre" sprog.</p><p>Bemærk, at ikke alle temaer støtte "højre mod venstre" layout, så test dit tema, hvis du skal bruge dette.</p>'
   language-edit-continue:
     id: language-edit-continue
     plugin: text
-    label: 'Continuing on'
+    label: 'Fortsætter på'
     weight: 5
-    body: '<p>Now that you have an overview of the "Edit language" feature, you can continue by:<ul><li>Editing a language</li><li><a href="[site:url]admin/config/regional/language">Viewing configured languages</a></li></ul></p>'
+    body: '<p>Nu hvor du har overblik over funktionen "Rediger sprog", kan du fortsætte ved at:<ul><li>Redigering et sprog</li><li><a href="[site:url]admin/config/regional/language">Vis konfigureret sprog</a></li></ul></p>'

@@ -1,5 +1,5 @@
 uuid: 97dd7a1c-92aa-4c8e-9a0e-63d4fb9a6352
-langcode: en
+langcode: da
 status: true
 dependencies:
   enforced:
@@ -8,8 +8,8 @@ dependencies:
 _core:
   default_config_hash: RKkc6tf1VudvYiOtwPCf3Tp_EoA6fov6BFC34D7gMoQ
 id: size
-label: Size
-category: General
+label: Størrelse
+category: Generelt
 likert: false
 options: |
   Extra Small: Extra Small

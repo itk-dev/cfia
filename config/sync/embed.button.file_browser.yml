@@ -1,5 +1,5 @@
 uuid: 5859c96b-f913-4887-bcfd-179ded37ab9f
-langcode: en
+langcode: da
 status: true
 dependencies:
   module:
@@ -8,7 +8,7 @@ dependencies:
     - image
 _core:
   default_config_hash: D5QbkhbHfWlohKBxTofPCBUqp9vCE2dFnJii5JdWEk4
-label: 'File Browser'
+label: Filvælger
 id: file_browser
 type_id: entity
 type_settings:

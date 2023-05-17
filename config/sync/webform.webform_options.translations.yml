@@ -1,5 +1,5 @@
 uuid: 6b2521c1-4caa-4eb0-9618-8256381a7637
-langcode: en
+langcode: da
 status: true
 dependencies:
   enforced:
@@ -9,6 +9,6 @@ _core:
   default_config_hash: Mb_L3vE-0IBZH5s2rjpk2LNn0QHClQP9AARQdCmVLt4
 id: translations
 label: Translations
-category: Language
+category: Sprog
 likert: false
 options: ''

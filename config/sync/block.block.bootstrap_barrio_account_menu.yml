@@ -1,5 +1,5 @@
 uuid: af455aaf-91da-4067-9632-cd7d7e8d9018
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -18,7 +18,7 @@ provider: null
 plugin: 'system_menu_block:account'
 settings:
   id: 'system_menu_block:account'
-  label: 'User account menu'
+  label: Brugerkontomenu
   label_display: '0'
   provider: system
   level: 1

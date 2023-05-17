@@ -1,5 +1,6 @@
 _core:
   default_config_hash: w2HQYJGLG4-Mmk19eIIKgoXCiXEJm-NVSNhhv-VdpUI
+langcode: da
 favicon:
   mimetype: image/png
   path: 'public://favicon.png'

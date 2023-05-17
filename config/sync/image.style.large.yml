@@ -1,11 +1,11 @@
 uuid: 3c592657-cbb2-4f84-b226-269ec2479377
-langcode: en
+langcode: da
 status: true
 dependencies: {  }
 _core:
   default_config_hash: J2n0RpFzS0-bgSyxjs6rSdgxB1rb-bTAgqywNx_964M
 name: large
-label: 'Large (480×480)'
+label: 'Stor (480×480)'
 effects:
   ddd73aa7-4bd6-4c85-b600-bdf2b1628d1d:
     uuid: ddd73aa7-4bd6-4c85-b600-bdf2b1628d1d

@@ -1,5 +1,6 @@
 _core:
   default_config_hash: mdb0TbcHBhZKr-rXOjpU0yvbfz26ROAUfFvZdubHJsM
+langcode: da
 tag: i
 method: webfonts
 load_assets: true

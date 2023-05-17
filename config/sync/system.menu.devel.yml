@@ -1,5 +1,5 @@
 uuid: 24557dd0-fc3c-433d-bb14-c3f9f0304188
-langcode: en
+langcode: da
 status: true
 dependencies:
   enforced:
@@ -8,6 +8,6 @@ dependencies:
 _core:
   default_config_hash: 3V-l1uuTcyirYOGLPZV5HWaDfr02uEbWZJIwc8Byz-c
 id: devel
-label: Development
+label: Udvikling
 description: 'Links related to Devel module.'
 locked: true

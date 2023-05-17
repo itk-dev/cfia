@@ -1,5 +1,5 @@
 uuid: 4de92646-2b8b-4a08-a47d-329e270ff497
-langcode: en
+langcode: da
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
     - node
 _core:
   default_config_hash: xgvZUh-eaMilacE1XYCQ9nLH-2-meOjCyofXSO82gqg
-label: Node
+label: Indholdselement
 id: node
 type_id: entity
 type_settings:
