@@ -1,5 +1,5 @@
 {# List - Full Width design #}
-{# <a href="{{ url('entity.node.canonical', { 'node': node.id() })}}" title="{{node.label}}"><h2>{{node.label}}</h2></a> 
+{# <a href="{{ url('entity.node.canonical', { 'node': node.id() })}}" title="{{node.label}}"><h2>{{node.label}}</h2></a>
 {{content.field_category.0}}
 {{content.body.0}}
 {{node.getCreatedTime|format_date('custom','d F Y')}}
@@ -15,9 +15,9 @@
 <div class="col-md-6 col-lg-4">
     <div class="blog-items">
         <div class="img-wrapper">
-            <a href="{{ url('entity.node.canonical', { 'node': node.id() })}}" title="{{node.label}}"> 
+            <a href="{{ url('entity.node.canonical', { 'node': node.id() })}}" title="{{node.label}}">
                 <img src="{{file_url(content.field_image['#items'].entity.uri.value)}}" alt="{{content.field_image['#items'].alt}}">
-            </a>   
+            </a>
             <div class="blog-uid-tag">
                 <span>{{node.getCreatedTime|format_date('custom','d M Y')}}</span>
             </div>
@@ -28,21 +28,20 @@
                     <span>{{content.field_category.0}}</span>
                 </div>
                 <h6 class="cmt"> {{comment_count}} Comments</h6>
-            </div>    
-            <a href="{{ url('entity.node.canonical', { 'node': node.id() })}}" title="{{node.label}}"> 
+            </div>
+            <a href="{{ url('entity.node.canonical', { 'node': node.id() })}}" title="{{node.label}}">
                 <h5 class="blog-title"> {{node.label}}</h5>
             </a>
             <div class="blog-content-summary">
                 {{content.body.0}}
             </div>
             <div class="read">
-                <a href="{{ url('entity.node.canonical', { 'node': node.id() })}}" title="{{node.label}}">Read More
+                <a href="{{ url('entity.node.canonical', { 'node': node.id() })}}" title="{{node.label}}">FISK {{ 'Read More'|t }}
                     <svg xmlns="http://www.w3.org/2000/svg" width="150" height="44" viewBox="0 0 150 44">
                         <path  data-name="Path 40738" d="M44,24.431,23.919,0,0,24.431H19.489V150h7.087V24.431Z" transform="translate(150) rotate(90)" fill="#1b1f29" fill-rule="evenodd"/>
                     </svg>
-                </a>    
+                </a>
             </div>
-        </div>    
-    </div>      
+        </div>
+    </div>
 </div>
-            
