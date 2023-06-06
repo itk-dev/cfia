@@ -1,8 +1,11 @@
 # CHANGELOG
 
+## Unreleased
+* Drupal 10 new theme demo pages
+
 ## 2.0.0
 * Upgrade to drupal 10
-* New theme 
+* New theme
 
 ## 1.10.9
 * Update Drupal to 8.9.13
