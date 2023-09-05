@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "65f5ba8cdf32a3c072dc103ff85ae4bf",
+    "content-hash": "939c09296eb8531c5119c6d14448cde3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5555,6 +5555,29 @@
             "time": "2023-04-17T16:00:45+00:00"
         },
         {
+            "name": "itk-dev/web_accessibility_statement",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/itk-dev/web_accessibility_statement.git",
+                "reference": "443bfc52b4ba6ffaf27317f7866ad67d097139b0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/itk-dev/web_accessibility_statement/zipball/443bfc52b4ba6ffaf27317f7866ad67d097139b0",
+                "reference": "443bfc52b4ba6ffaf27317f7866ad67d097139b0",
+                "shasum": ""
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Provides path for accessibility statement",
+            "support": {
+                "issues": "https://github.com/itk-dev/web_accessibility_statement/issues",
+                "source": "https://github.com/itk-dev/web_accessibility_statement/tree/1.1.0"
+            },
+            "time": "2023-06-30T10:13:03+00:00"
+        },
+        {
             "name": "kint-php/kint",
             "version": "4.2.3",
             "source": {
@@ -9470,16 +9493,16 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "drupal/entity_embed": 20,
-        "drupal/languageicons": 10,
+        "drupal/gin": 5,
+        "drupal/gin_toolbar": 5,
         "drupal/lang_dropdown": 20,
+        "drupal/languageicons": 10,
         "drupal/linkit": 20,
-        "drupal/paragraphs_features": 10,
         "drupal/paragraphs_ee": 15,
+        "drupal/paragraphs_features": 10,
         "drupal/tour_ui": 20,
         "drupal/viewsreference": 10,
-        "drupal/webform": 20,
-        "drupal/gin_toolbar": 5,
-        "drupal/gin": 5
+        "drupal/webform": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
