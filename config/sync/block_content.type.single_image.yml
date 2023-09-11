@@ -1,8 +1,0 @@
-uuid: 60478d66-62b8-413d-8b0e-7d675cb9547d
-langcode: da
-status: true
-dependencies: {  }
-id: single_image
-label: 'Single image'
-revision: 0
-description: 'Use this to insert a image in a region'

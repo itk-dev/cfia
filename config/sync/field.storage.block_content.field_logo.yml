@@ -1,13 +1,13 @@
-uuid: 696669eb-9cda-4877-b6c5-98c0d0f339c7
-langcode: da
+uuid: 02645dcc-c805-4469-8277-9f0f21652cae
+langcode: en
 status: true
 dependencies:
   module:
     - block_content
     - file
     - image
-id: block_content.field_single_image
-field_name: field_single_image
+id: block_content.field_logo
+field_name: field_logo
 entity_type: block_content
 type: image
 settings:

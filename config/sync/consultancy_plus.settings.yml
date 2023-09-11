@@ -4,15 +4,14 @@ langcode: da
 favicon:
   mimetype: image/png
   path: 'public://favicon.png'
-  use_default: true
+  use_default: false
 features:
   favicon: true
 logo:
   path: ''
-  use_default: true
+  use_default: false
 bootstrap_barrio_library: production
 bootstrap_barrio_fluid_container: 0
-bootstrap_barrio_container: container
 bootstrap_barrio_region_clean_top_header: 0
 bootstrap_barrio_region_class_top_header: row
 bootstrap_barrio_region_clean_top_header_form: 0
@@ -65,7 +64,6 @@ bootstrap_barrio_sidebar_first_offset: 0
 bootstrap_barrio_sidebar_second_width: 3
 bootstrap_barrio_sidebar_second_offset: 0
 bootstrap_barrio_hide_node_label: 0
-bootstrap_barrio_breadcrumb_divider: ''
 bootstrap_barrio_button: 1
 bootstrap_barrio_button_size: ''
 bootstrap_barrio_button_type: primary
@@ -86,7 +84,6 @@ bootstrap_barrio_navbar_slide: false
 bootstrap_barrio_navbar_offcanvas: ''
 bootstrap_barrio_messages_widget: alerts
 bootstrap_barrio_float_label: '0'
-bootstrap_barrio_checkbox: ''
 bootstrap_barrio_navbar_top_affix: 0
 bootstrap_barrio_navbar_affix: 0
 bootstrap_barrio_sidebar_first_affix: 0
@@ -135,15 +132,17 @@ r_pass_email_text: 'Password reset instructions will be sent to your registered 
 mode_type: '2'
 maintenance_mode_title: 'Under Maintenance'
 maintenance_mode_description: ''
-bg_image_m: {  }
+bg_image_m:
+  - '113'
 comingsoon_title: 'Coming Soon'
 comingsoon_description: ''
-bg_image_c: {  }
+bg_image_c:
+  - '209'
 date: '2025-03-21'
 custom_message: 'The site will go live soon'
 search_banner_title: 'Search Result'
 search_banner_image: {  }
-header_variation: header-1
+header_variation: header-2
 sticky: 1
 address_text: ''
 address: ''
@@ -156,9 +155,9 @@ copyrights:
   value: '<p>© 2023. All Rights Reserved. Consultancy Plus Theme by <a href="https://www.drupalthemes.io/" target="_blank" title="drupalthemes.io">drupalthemes.io</a></p>'
   format: basic_html
 styles: ''
-default_color: 0
-primary_color: '#10302d'
-secondary_color: '#f9e24c'
+default_color: 1
+primary_color: '#000000'
+secondary_color: '#000000'
 show_pannel: 1
 bootstrap_barrio_region_clean_logo: 0
 bootstrap_barrio_region_class_logo: row
@@ -171,7 +170,8 @@ bootstrap_barrio_region_class_social_media: row
 bootstrap_barrio_region_clean_banner: 0
 bootstrap_barrio_region_class_banner: row
 contact_text: 'Call us for a quote'
-footer_bg_image: {  }
+footer_bg_image:
+  - '77'
 pager_prev_text_3: 'Prev Case'
 pager_next_text_3: 'Next Case'
 login_content_1:
