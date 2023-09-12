@@ -36,7 +36,7 @@
         "drupal/fontawesome": "^2.25",
         "drupal/gin": "^3.0@RC",
         "drupal/gin_toolbar": "^1.0@RC",
-        "drupal/honeypot": "^2.1",
+        "drupal/honeypot": "2.1.x-dev@dev",
         "drupal/lang_dropdown": "2.x-dev@dev",
         "drupal/languageicons": "^2.0@beta",
         "drupal/linkit": "^6.1",
