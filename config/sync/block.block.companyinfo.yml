@@ -1,0 +1,25 @@
+uuid: 4394585e-db96-40ed-afad-faf1889410be
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:company_info:62a8ae46-3a48-4cac-b4bb-e0657edb84f6'
+  module:
+    - block_content
+  theme:
+    - consultancy_plus
+id: companyinfo
+theme: consultancy_plus
+region: footer_first
+weight: -13
+provider: null
+plugin: 'block_content:62a8ae46-3a48-4cac-b4bb-e0657edb84f6'
+settings:
+  id: 'block_content:62a8ae46-3a48-4cac-b4bb-e0657edb84f6'
+  label: 'Company Info'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

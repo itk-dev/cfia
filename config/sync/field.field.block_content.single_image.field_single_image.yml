@@ -1,17 +1,17 @@
-uuid: b521c916-358c-449c-aabe-38e1886b864d
-langcode: en
+uuid: 3230f18e-278b-4be8-a695-44280dfc5ebf
+langcode: da
 status: true
 dependencies:
   config:
-    - block_content.type.company_info
-    - field.storage.block_content.field_logo
+    - block_content.type.single_image
+    - field.storage.block_content.field_single_image
   module:
     - image
-id: block_content.company_info.field_logo
-field_name: field_logo
+id: block_content.single_image.field_single_image
+field_name: field_single_image
 entity_type: block_content
-bundle: company_info
-label: Logo
+bundle: single_image
+label: single-image
 description: ''
 required: false
 translatable: false
@@ -21,11 +21,11 @@ settings:
   handler: 'default:file'
   handler_settings: {  }
   file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'png gif jpg jpeg'
+  file_extensions: 'png gif jpg jpeg svg'
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''
-  alt_field: true
+  alt_field: false
   alt_field_required: true
   title_field: false
   title_field_required: false

@@ -1,0 +1,25 @@
+uuid: 02b2d15f-02b8-4ee5-8301-9a2eae081bf3
+langcode: da
+status: true
+dependencies:
+  content:
+    - 'block_content:footer_info:79843d06-3507-4330-8579-bf0b79836706'
+  module:
+    - block_content
+  theme:
+    - cfia
+id: cfiafootermedaaklogo
+theme: cfia
+region: footer_first
+weight: -12
+provider: null
+plugin: 'block_content:79843d06-3507-4330-8579-bf0b79836706'
+settings:
+  id: 'block_content:79843d06-3507-4330-8579-bf0b79836706'
+  label: 'CFIA footer info'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
