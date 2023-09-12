@@ -36,6 +36,7 @@
         "drupal/fontawesome": "^2.25",
         "drupal/gin": "^3.0@RC",
         "drupal/gin_toolbar": "^1.0@RC",
+        "drupal/honeypot": "^2.1",
         "drupal/lang_dropdown": "2.x-dev@dev",
         "drupal/languageicons": "^2.0@beta",
         "drupal/linkit": "^6.1",
@@ -55,7 +56,8 @@
         "drupal/viewsreference": "^2.0@beta",
         "drupal/webform": "6.2.x-dev@dev",
         "drush/drush": "^11 || ^12",
-        "itk-dev/web_accessibility_statement": "^1.1"
+        "itk-dev/web_accessibility_statement": "^1.1",
+        "wikimedia/composer-merge-plugin": "^2.1"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -70,7 +72,8 @@
             "phpstan/extension-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "cweagans/composer-patches": true,
-            "drupal/core-vendor-hardening": true
+            "drupal/core-vendor-hardening": true,
+            "wikimedia/composer-merge-plugin": true
         },
         "sort-packages": true
     },
@@ -129,6 +132,19 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
+        },
+        "merge-plugin": {
+            "include": [
+              "composer.libraries.json"
+            ],
+            "recurse": true,
+            "replace": false,
+            "ignore-duplicates": false,
+            "merge-dev": true,
+            "merge-extra": false,
+            "merge-extra-deep": false,
+            "merge-replace": true,
+            "merge-scripts": false
         }
     }
 }

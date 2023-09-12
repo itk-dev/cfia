@@ -45,3 +45,22 @@ sites/simpletest
 # simpletest
 
 .idea
+
+# Ignore libraries from composer
+/web/libraries/*
+!/web/libraries/a11y-accordion-tabs
+!/web/libraries/a11y-accordion-tabs-master
+!/web/libraries/bootstrap
+!/web/libraries/bootstrap-languages
+!/web/libraries/chosen
+!/web/libraries/dropzone
+!/web/libraries/fonticonpicker--fonticonpicker
+!/web/libraries/imagesloaded
+!/web/libraries/jquery.cycle
+!/web/libraries/jquery.hoverIntent
+!/web/libraries/jquery.pause
+!/web/libraries/json2
+!/web/libraries/masonry
+
+# Ignore private files folder
+/private
