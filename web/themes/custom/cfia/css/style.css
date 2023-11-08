@@ -17,6 +17,7 @@
   --heading-font: var(--cfia-font-family);
   --paragraph-font: var(--cfia-font-family);
   --menu-font: var(--cfia-font-family);
+  --cfia-spacer: 20px;
 }
 
 /* Change header behavior */
@@ -119,6 +120,19 @@ a:hover, .link:hover {
 /* Remove negative margin on features */
 .features-style-3 .feature-bg {
   margint-top: initial;
+}
+
+/* Portfolio */
+.portfolio-style-2 .container .container ul li:first-of-type {
+  padding-left: initial;
+}
+
+.portfolio .tag-title-btn {
+  margin-top: var(--cfia-spacer);
+}
+
+.portfolio .tag-title-btn .quate-btn-rect {
+  display: none;
 }
 
 /* Hide/remove unwanted elements*/
