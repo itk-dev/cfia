@@ -116,6 +116,11 @@ a:hover, .link:hover {
   background-color: #fff;
 }
 
+/* Remove negative margin on features */
+.features-style-3 .feature-bg {
+  margint-top: initial;
+}
+
 /* Hide/remove unwanted elements*/
 .case-items .read,
 .home-slide4 .slide-details,
