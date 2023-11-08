@@ -2,9 +2,15 @@
 ** Customization of theme css
 */
 
+/* Import Source Sans font*/
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;900&display=swap");
+
 /* Override variabels */
 :root {
   --paragraph-text-color: hsl(0deg, 0%, 5%);
+  --cfia-background-color: rgb(244, 242,230);
+  --cfia-primary-color: var(--bs-primary);
+  --cfia-secondary-color: var(--bs-secondary);
 }
 
 /* Change header behavior */
@@ -20,4 +26,98 @@
 .footer-block .content p,
 .footer-block .content a {
   color: white;
+}
+
+body {
+  background-color: var(--cfia-background-color);
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 400;
+}
+
+/* Font styles */
+strong, b, h1, h2, h3, h4, h5 {
+  font-weight: 900;
+}
+
+/* Link styles */
+a, .link {
+  color: var(--cfia-secondary-color);
+}
+
+a:hover, .link:hover {
+  color: var(--cfia-primary-color);
+  text-decoration: underline;
+}
+
+.cases-title a,
+.portfolio-title a,
+.portfolio-title a:hover h4 {
+  color: var(--cfia-primary-color);
+}
+
+.cases-title a:hover,
+.portfolio-title a:hover {
+  text-decoration: underline;
+}
+
+/* Color changes */
+.blog-2-items::after {
+  background-color: var(--cfia-background-color);
+}
+
+.footer-block::before {
+  background-color: var(--cfia-primary-color);
+}
+
+/* Buttons */
+.quate-btn-rect {
+  width: max-content;
+  border-radius: 5px;
+}
+
+.quate-btn-rect a {
+  width: auto;
+  gap: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* Page banner */
+.page-banner {
+  height: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* Show bullets on lists */
+.content-descriptions li {
+  display: list-item;
+}
+
+/* Truncate text in blog list */
+.blog-content {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Highlight background on service grid on hover */
+.service-grid-3 .service-wrapper:hover {
+  background-color: #fff;
+}
+
+/* Hide/remove unwanted elements*/
+.case-items .read,
+.home-slide4 .slide-details,
+.cases .img-wrapper:hover .svg-wrapp,
+.cases .img-wrapper:hover::before,
+.portfolio-grid-3 .img-wrapper .svg-wrapp:hover,
+.portfolio-grid-3 .img-wrapper:hover .svg-wrapp {
+  display: none;
+}
+
+.features-style-3 .feature-bg,
+.features-style-3 .feature-bg::before {
+  background: none;
 }
