@@ -11,6 +11,10 @@
   --cfia-background-color: rgb(244, 242,230);
   --cfia-primary-color: var(--bs-primary);
   --cfia-secondary-color: var(--bs-secondary);
+  --cfia-font-family: "Source Sans 3", sans-serif;
+  --heading-font: var(--cfia-font-family);
+  --paragraph-font: var(--cfia-font-family);
+  --menu-font: var(--cfia-font-family);
 }
 
 /* Change header behavior */
@@ -30,7 +34,6 @@
 
 body {
   background-color: var(--cfia-background-color);
-  font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
 }
 
