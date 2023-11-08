@@ -64,3 +64,6 @@ sites/simpletest
 
 # Ignore private files folder
 /private
+
+# Ignore serverside env file
+.env.docker.local
