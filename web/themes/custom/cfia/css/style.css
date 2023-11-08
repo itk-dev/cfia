@@ -12,6 +12,8 @@
   --cfia-primary-color: var(--bs-primary);
   --cfia-secondary-color: var(--bs-secondary);
   --cfia-font-family: "Source Sans 3", sans-serif;
+  --cfia-font-weight-regular: 400;
+  --cfia-font-weight-bold: 900;
   --heading-font: var(--cfia-font-family);
   --paragraph-font: var(--cfia-font-family);
   --menu-font: var(--cfia-font-family);
@@ -26,6 +28,10 @@
   filter: invert(1);
 }
 
+#header-4 .nav-link {
+  font-weight: var(--cfia-font-weight-regular);
+}
+
 /* Change footer text color */
 .footer-block .content p,
 .footer-block .content a {
@@ -34,12 +40,12 @@
 
 body {
   background-color: var(--cfia-background-color);
-  font-weight: 400;
+  font-weight: var(--cfia-font-weight-regular);
 }
 
 /* Font styles */
 strong, b, h1, h2, h3, h4, h5 {
-  font-weight: 900;
+  font-weight: var(--cfia-font-weight-bold);
 }
 
 /* Link styles */
