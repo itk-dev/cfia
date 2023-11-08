@@ -92,6 +92,10 @@ a:hover, .link:hover {
   padding-right: 40px;
 }
 
+.home1-btn {
+  margin-top: 0;
+}
+
 /* Page banner */
 .page-banner {
   height: auto;
@@ -117,6 +121,12 @@ a:hover, .link:hover {
   background-color: #fff;
 }
 
+/* Services grid spacing*/
+.service-style-1 .z-sec {
+  padding-bottom: 20px;
+  border-bottom: 0;
+}
+
 /* Remove negative margin on features */
 .features-style-3 .feature-bg {
   margint-top: initial;
@@ -133,6 +143,10 @@ a:hover, .link:hover {
 
 .portfolio .tag-title-btn .quate-btn-rect {
   display: none;
+}
+
+.portfolio-style_1 .carousels-1 .carousel-detail {
+  padding-bottom: 59px;
 }
 
 /* Hide/remove unwanted elements*/
