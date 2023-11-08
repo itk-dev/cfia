@@ -17,7 +17,7 @@
   --heading-font: var(--cfia-font-family);
   --paragraph-font: var(--cfia-font-family);
   --menu-font: var(--cfia-font-family);
-  --cfia-spacer: 20px;
+  --cfia-spacer: 1rem;
 }
 
 /* Change header behavior */
@@ -124,11 +124,11 @@ a:hover, .link:hover {
 
 /* Portfolio */
 .portfolio-style-2 .container .container ul li:first-of-type {
-  padding-left: initial;
+  padding-left: var(--cfia-spacer);
 }
 
 .portfolio .tag-title-btn {
-  margin-top: var(--cfia-spacer);
+  margin-top: calc(var(--cfia-spacer) * 2);
 }
 
 .portfolio .tag-title-btn .quate-btn-rect {
