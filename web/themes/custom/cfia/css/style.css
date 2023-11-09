@@ -103,6 +103,10 @@ a:hover, .link:hover {
   padding-bottom: 30px;
 }
 
+#page_content.header-4 .page-banner-style-2 .heading {
+  padding-top: 80px !important;
+}
+
 /* Show bullets on lists */
 .content-descriptions li {
   display: list-item;
