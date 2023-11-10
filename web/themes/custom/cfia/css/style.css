@@ -153,6 +153,14 @@ a:hover, .link:hover {
   padding-bottom: 59px;
 }
 
+.portfolio-grid-3 .img-wrapper::before {
+  display: none;
+}
+
+.portfolio-grid-3 .img-wrapper:hover {
+  opacity: 0.85;
+}
+
 /* Sidebar */
 .sidebar .block {
   padding: 0;
