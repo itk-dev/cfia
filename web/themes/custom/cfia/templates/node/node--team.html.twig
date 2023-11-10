@@ -1,0 +1,17 @@
+
+<section class="my-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-3">
+              <img src="{{file_url(content.field_image['#items'].entity.uri.value)}}" alt="{{content.field_image['#items'].alt}}">
+            </div>
+            <div class="col-lg-8 col-md-9 team1">
+                <div>
+                    <h3 class="mt-3">{{node.label}}</h3>
+                </div>
+                <p>{{content.field_designation.0}}</p>
+                {{content.field_section}}
+            </div>
+        </div>
+    </div>
+</section>
