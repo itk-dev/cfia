@@ -18,13 +18,13 @@
                 <div class="portfolio-addtoany">{{drupal_block('addtoany_block')}}</div>
             </div>
         </div>
-        {{content.field_section}}
         <div class="case-image-wrapper">
             <img src="{{file_url(content.field_image['#items'].entity.uri.value)}}" alt="{{content.field_image['#items'].alt}}">
         </div>
         <div class="content-descriptions">
             {{content.body.0}}
         </div>
+        {{content.field_section}}
         <div class="prev-next-node">
             <a href="{{prev_case_url}}">
                 <div class="svg_wrapper">
