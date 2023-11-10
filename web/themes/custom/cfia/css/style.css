@@ -153,6 +153,11 @@ a:hover, .link:hover {
   padding-bottom: 59px;
 }
 
+/* Sidebar */
+.sidebar .block {
+  padding: 0;
+}
+
 /* Hide/remove unwanted elements*/
 .case-items .read,
 .home-slide4 .slide-details,
