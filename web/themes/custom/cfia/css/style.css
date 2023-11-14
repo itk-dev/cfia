@@ -108,9 +108,25 @@ a:hover, .link:hover {
   padding-top: 80px !important;
 }
 
-/* Show bullets on lists */
-.content-descriptions li {
-  display: list-item;
+/* Show red bullets on lists */
+.content-descriptions ul,
+.list-wrapper ul {
+  list-style: none;
+}
+
+.content-descriptions ul li::before,
+.list-wrapper ul li::before {
+  content: "\2022";
+  color: var(--cfia-secondary-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.content-descriptions ul li p,
+.list-wrapper ul li p{
+  display: inline;
 }
 
 /* Truncate text in blog list */
