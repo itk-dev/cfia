@@ -1,0 +1,28 @@
+{% if content.field_list['#items'] !="" %}
+<div class="abt-list pt-10">
+    <h4>{{content.field_title.0}}</h4>
+    <div class="content-descriptions">
+        <p>{{content.field_description.0}}</p>
+    </div>
+    <div class="lists-block lists">
+        <div class="list1">
+            <div class="list-wrapper">
+                <ul>
+                    {% for key,value in content.field_list['#items'] %}
+                    <li>
+                        <p>{{content.field_list[key]}}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+  {% else %}
+  <div class="abt-list">
+    <h4>{{content.field_title.0}}</h4>
+    <div class="content-descriptions">
+        <p>{{content.field_description.0}}</p>
+    </div>
+</div>
+  {% endif %}
