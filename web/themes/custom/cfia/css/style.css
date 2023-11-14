@@ -7,10 +7,11 @@
 
 /* Override variabels */
 :root {
-  --paragraph-text-color: hsl(0deg, 0%, 5%);
   --cfia-background-color: rgb(244, 242,230);
   --cfia-primary-color: var(--bs-primary);
   --cfia-secondary-color: var(--bs-secondary);
+  --paragraph-text-color: var(--bs-primary);
+  --heading-text-color: var(--bs-primary);
   --cfia-font-family: "Source Sans 3", sans-serif;
   --cfia-font-weight-regular: 400;
   --cfia-font-weight-bold: 900;
