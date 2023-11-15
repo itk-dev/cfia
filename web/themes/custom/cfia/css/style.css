@@ -62,7 +62,9 @@ a:hover, .link:hover {
 
 .cases-title a,
 .portfolio-title a,
-.portfolio-title a:hover h4 {
+.portfolio-title a:hover h4,
+.blog-title,
+.read a {
   color: var(--cfia-primary-color);
 }
 
@@ -79,6 +81,7 @@ a:hover, .link:hover {
 .footer-block::before {
   background-color: var(--cfia-primary-color);
 }
+
 
 /* Buttons */
 .quate-btn-rect {
