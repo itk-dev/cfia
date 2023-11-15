@@ -132,6 +132,14 @@ a:hover, .link:hover {
   display: inline;
 }
 
+.content-descriptions li {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-text-color);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+}
+
 /* Truncate text in blog list */
 .blog-content {
   display: -webkit-box;
