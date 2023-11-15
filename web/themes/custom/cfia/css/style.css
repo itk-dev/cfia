@@ -140,6 +140,11 @@ a:hover, .link:hover {
   overflow: hidden;
 }
 
+/* Align texts */
+.des-uid {
+  align-items: baseline;
+}
+
 /* Highlight background on service grid on hover */
 .service-grid-3 .service-wrapper:hover {
   background-color: #fff;
