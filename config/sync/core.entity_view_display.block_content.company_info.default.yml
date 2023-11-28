@@ -8,7 +8,7 @@ dependencies:
     - field.field.block_content.company_info.field_contact_number
     - field.field.block_content.company_info.field_email
     - field.field.block_content.company_info.field_form
-    - field.field.block_content.company_info.field_logo
+    - field.field.block_content.company_info.field_image
   module:
     - image
     - text
@@ -20,44 +20,45 @@ mode: default
 content:
   field_address:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
   field_contact_number:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_email:
     type: basic_string
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   field_form:
     type: webform_entity_reference_entity_view
-    label: above
+    label: hidden
     settings:
       source_entity: true
+      lazy: false
     third_party_settings: {  }
-    weight: 4
+    weight: 3
     region: content
-  field_logo:
+  field_image:
     type: image
-    label: above
+    label: hidden
     settings:
       image_link: ''
       image_style: ''
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 0
+    weight: 4
     region: content
 hidden:
   langcode: true

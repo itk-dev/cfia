@@ -1,0 +1,25 @@
+uuid: bed19b34-8483-4ac9-8af7-0fac6d9df15c
+langcode: da
+status: true
+dependencies:
+  content:
+    - 'block_content:single_image:26cc72cb-8065-4843-ad7f-41afb5a14dfe'
+  module:
+    - block_content
+  theme:
+    - cfia
+id: aaklogo
+theme: cfia
+region: footer_first
+weight: -11
+provider: null
+plugin: 'block_content:26cc72cb-8065-4843-ad7f-41afb5a14dfe'
+settings:
+  id: 'block_content:26cc72cb-8065-4843-ad7f-41afb5a14dfe'
+  label: 'AAK logo'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

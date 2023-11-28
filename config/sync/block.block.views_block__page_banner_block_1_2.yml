@@ -1,0 +1,30 @@
+uuid: 8a342512-84c0-46cd-9b69-e2092844eb58
+langcode: da
+status: true
+dependencies:
+  config:
+    - views.view.page_banner
+  module:
+    - system
+    - views
+  theme:
+    - cfia
+id: views_block__page_banner_block_1_2
+theme: cfia
+region: banner
+weight: 0
+provider: null
+plugin: 'views_block:page_banner-block_1'
+settings:
+  id: 'views_block:page_banner-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '/cases/*'

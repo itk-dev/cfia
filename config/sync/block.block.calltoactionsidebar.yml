@@ -1,0 +1,30 @@
+uuid: fa3ea0cf-886a-4fbf-834f-b113dfc654e1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:call_to_action_sidebar:afab0c7e-4acf-46ac-82c1-75df32c1b074'
+  module:
+    - block_content
+    - system
+  theme:
+    - consultancy_plus
+id: calltoactionsidebar
+theme: consultancy_plus
+region: sidebar_second
+weight: -7
+provider: null
+plugin: 'block_content:afab0c7e-4acf-46ac-82c1-75df32c1b074'
+settings:
+  id: 'block_content:afab0c7e-4acf-46ac-82c1-75df32c1b074'
+  label: 'Call To Action - Sidebar (Style 1)'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/46
