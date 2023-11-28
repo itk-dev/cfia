@@ -1,0 +1,18 @@
+uuid: 8b6e41e3-0cbd-4a14-a548-0e1b3caa6f1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.call_to_action_sidebar
+id: block_content.call_to_action_sidebar.changed
+field_name: changed
+entity_type: block_content
+bundle: call_to_action_sidebar
+label: Changed
+description: 'The time that the custom block was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

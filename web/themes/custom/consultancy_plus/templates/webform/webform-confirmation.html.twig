@@ -1,0 +1,52 @@
+{#
+/**
+ * @file
+ * Default theme implementation to webform confirmation.
+ *
+ * Available variables:
+ * - progress: Progress bar.
+ * - message: Confirmation message.
+ * - back_url: URL to the previous webform submission.
+ *
+ * @see template_preprocess_webform_confirmation()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set base_url = url('<front>')  %}
+<section class="page-banner dt-section" style="background-image:url({{base_url}}/themes/custom/consultancy_plus/assets/theme/img/1.jpeg);background-repeat: no-repeat;background-size: cover;background-position: center;">
+    <div class="container">
+        <div class="heading text-center">
+            <h1>{{ "confirmation Page" | t }}</h1>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="{{base_url}}">Home</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</section>
+{{ attach_library('webform/webform.confirmation') }}
+
+{% if progress %}
+  {{ progress }}
+{% endif %}
+<div class="webform_conformation_page_custom">
+    <div class="container">
+        <div class="webform-confirm-wrapper">
+            <div{{ attributes.addClass('webform-confirmation') }}>
+
+                {% if message %}
+                    <div class="webform-confirmation__message"><h4>{{ message }}</h4></div>
+                {% endif %}
+
+                {% if back %}
+                <div class="webform-confirmation__back">
+                    <a href="{{ back_url }}" rel="prev"{{ back_attributes }}>{{ back_label }}</a>
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</div>

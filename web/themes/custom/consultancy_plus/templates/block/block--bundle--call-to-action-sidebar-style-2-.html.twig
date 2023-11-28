@@ -1,0 +1,64 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a menu block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: HTML attributes for the containing element.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: HTML attributes for the title element.
+ * - content_attributes: HTML attributes for the content element.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * Headings should be used on navigation menus that consistently appear on
+ * multiple pages. When this menu block's label is configured to not be
+ * displayed, it is automatically made invisible using the 'visually-hidden' CSS
+ * class, which still keeps it visible for screen-readers and assistive
+ * technology. Headings allow screen-reader and keyboard only users to navigate
+ * to or skip the links.
+ * See http://juicystudio.com/article/screen-readers-display-none.php and
+ * http://www.w3.org/TR/WCAG-TECHS/H42.html for more information.
+ *
+ * @ingroup themeable
+ */
+#}
+{% set heading_id = attributes.id ~ '-menu'|clean_id %}
+<nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes|without('role', 'aria-labelledby') }}>
+  {# Label. If not displayed, we still provide it for screen readers. #}
+  {% if not configuration.label_display %}
+    {% set title_attributes = title_attributes.addClass('visually-hidden') %}
+  {% endif %}
+  {{ title_prefix }}
+  <h3 {{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h3>
+  {{ title_suffix }}
+  {# Content #}
+  {% block content %}
+    <div class="call-to-action-sidebar call-to-action-sidebar-2"  style="background-image:linear-gradient(rgba(27, 31, 41, 0.8), rgba(27, 31, 41, 0.8)) ,  url({{file_url(content.field_image['#items'].entity.uri.value)}}); background-repeat: no-repeat;
+    background-size: cover; background-position: center;">
+      <div class="call-sidebar-wrapper">
+        <h4>{{content.field_title.0}}</h4>
+        <h3>{{content.field_contact_number.0}}</h3>
+        <span>{{content.field_text.0}}</span>
+          <div class="contact-btn-circle">
+            <a href="{{content.field_link.0['#url']}}" class="btn-lg btn-custom">
+              {{content.field_link.0['#title']}}
+              <svg xmlns="http://www.w3.org/2000/svg" width="150" height="44" viewBox="0 0 150 44">
+                <path data-name="Path 40738" d="M44,24.431,23.919,0,0,24.431H19.489V150h7.087V24.431Z" transform="translate(150) rotate(90)" fill="#1b1f29" fill-rule="evenodd"/>
+              </svg>
+            </a>
+          </div>  
+      </div>    
+    </div>
+  {% endblock %}
+</nav>

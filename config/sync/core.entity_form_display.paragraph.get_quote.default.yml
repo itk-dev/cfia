@@ -1,0 +1,25 @@
+uuid: 84380d5e-bf90-48c1-872b-56b9c8b070cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.get_quote.field_form
+    - paragraphs.paragraphs_type.get_quote
+  module:
+    - webform
+id: paragraph.get_quote.default
+targetEntityType: paragraph
+bundle: get_quote
+mode: default
+content:
+  field_form:
+    type: webform_entity_reference_select
+    weight: 0
+    region: content
+    settings:
+      default_data: true
+      webforms: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

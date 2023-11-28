@@ -1,8 +1,10 @@
-uuid: 19e9c967-69de-4425-ad15-210bee753072
+uuid: 7162b673-747e-4894-a934-ae8e772af7d1
 langcode: da
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: Q2Ra3jfoIVk0f3SjxJX61byRQFVBAbpzYDQOiY-kno8
 id: main
-label: 'Main navigation'
-description: 'Use this for linking to the main site sections.'
+label: 'Primær navigation'
+description: 'Links til sitets sektioner'
 locked: true

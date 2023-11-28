@@ -1,0 +1,22 @@
+uuid: c4a88f4a-ca3a-4be9-aaa7-7a1c04791340
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - consultancy_plus
+_core:
+  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
+id: consultancy_plus_messages
+theme: consultancy_plus
+region: highlighted
+weight: -14
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

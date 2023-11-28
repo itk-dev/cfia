@@ -1,0 +1,32 @@
+uuid: d126f5c6-9aa1-4300-a768-2a8c77080f71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_form
+    - paragraphs.paragraphs_type.contact_info_style_2
+    - webform.webform.contact
+  module:
+    - webform
+id: paragraph.contact_info_style_2.field_form
+field_name: field_form
+entity_type: paragraph
+bundle: contact_info_style_2
+label: Form
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    target_uuid: f7c9c59a-e75c-4346-8c0d-d14c9a7820aa
+    default_data: ''
+    status: open
+    open: ''
+    close: ''
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

@@ -1,0 +1,21 @@
+uuid: ed170a4f-ff09-448f-b6c2-f5d02138c7e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_address
+    - paragraphs.paragraphs_type.contact_info_style_3
+  module:
+    - text
+id: paragraph.contact_info_style_3.field_address
+field_name: field_address
+entity_type: paragraph
+bundle: contact_info_style_3
+label: Address
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

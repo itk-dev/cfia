@@ -1,0 +1,77 @@
+uuid: f212d412-4caf-4862-864d-c4ab7b6a02d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.about_us_style_1.field_description
+    - field.field.paragraph.about_us_style_1.field_image
+    - field.field.paragraph.about_us_style_1.field_link
+    - field.field.paragraph.about_us_style_1.field_tagline
+    - field.field.paragraph.about_us_style_1.field_title
+    - field.field.paragraph.about_us_style_1.field_widget
+    - paragraphs.paragraphs_type.about_us_style_1
+  module:
+    - entity_reference_revisions
+    - image
+    - link
+    - text
+id: paragraph.about_us_style_1.default
+targetEntityType: paragraph
+bundle: about_us_style_1
+mode: default
+content:
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_tagline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_widget:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden: {  }

@@ -1,0 +1,10 @@
+uuid: 5f4d72f1-6946-41cd-bbb7-0434b57b6ad4
+langcode: en
+status: true
+dependencies: {  }
+id: content
+label: Content
+icon_uuid: null
+icon_default: null
+description: 'Use to add the content with image in details pages'
+behavior_plugins: {  }

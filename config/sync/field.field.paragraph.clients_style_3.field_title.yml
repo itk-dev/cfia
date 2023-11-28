@@ -1,0 +1,21 @@
+uuid: 4dc32307-aae4-4d47-b3a4-05c21314a945
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.clients_style_3
+  module:
+    - text
+id: paragraph.clients_style_3.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: clients_style_3
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

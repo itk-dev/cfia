@@ -1,0 +1,13 @@
+<section class="blog-detail-banner" style="background-image:linear-gradient(rgba(27, 31, 41, .47), rgba(27, 31, 41, .47)) , url('{{ file_url(content.field_multiple_image['#items'][key].entity.uri.value) }}'); background-repeat: no-repeat;background-size: cover;" >
+    <div class="container">
+        <div class="blog-detail-banner-head">
+            <span>{{fields.field_category.content}}</span>
+            <h1>{{fields.title.content}}</h1>
+            <div class="create-uid">
+                <p>{{fields.uid.content}}</p>
+                <p>{{fields.created.content}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{# {{ file_url(content.field_multiple_image['#items'][key].entity.uri.value) }} #}

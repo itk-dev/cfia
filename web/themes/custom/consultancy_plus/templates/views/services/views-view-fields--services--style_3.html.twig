@@ -1,0 +1,47 @@
+{# <div class="mt-2">
+    
+    {{fields.field_images.content}}
+    {{fields.field_images_1.content}}
+    
+    {{fields.counter.content}}
+
+    
+   
+</div> #}
+
+{% if fields.counter.content == '1' or fields.counter.content == '3' or fields.counter.content == '7' or fields.counter.content == '9' or fields.counter.content == '11' %}
+<div class="col-md-6 col-lg-6"> 
+    <div class="service-wrapper odd-service">
+        <div class="service-icon">
+           {{fields.field_svg_icon.content}}
+        </div>
+        <a href="{{fields.view_node.content}}" title="services-details"><h4>{{fields.title.content}}</h4></a>
+        <div class="service-content">
+            <p>{{fields.body.content}}</p>
+        </div>
+        <div class="read">
+            <a href="{{fields.view_node.content}}" title="services-details"> {{fields.nothing.content}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="150" height="44" viewBox="0 0 150 44"><path data-name="Path 40738" d="M44,24.431,23.919,0,0,24.431H19.489V150h7.087V24.431Z" transform="translate(150) rotate(90)" fill="#1b1f29" fill-rule="evenodd"></path></svg>
+            </a>    
+        </div>
+    </div> 
+</div>          
+{% else %}
+<div class="col-md-6 col-lg-6"> 
+    <div class="service-wrapper even-service">
+        <div class="service-icon">
+           {{fields.field_svg_icon.content}}
+        </div>
+        <a href="{{fields.view_node.content}}" title="services-details"><h4>{{fields.title.content}}</h4></a>
+        <div class="service-content">
+            <p>{{fields.body.content}}</p>
+        </div>
+        <div class="read">
+            <a href="{{fields.view_node.content}}" title="services-details"> {{fields.nothing.content}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="150" height="44" viewBox="0 0 150 44"><path data-name="Path 40738" d="M44,24.431,23.919,0,0,24.431H19.489V150h7.087V24.431Z" transform="translate(150) rotate(90)" fill="#1b1f29" fill-rule="evenodd"></path></svg>
+            </a>    
+        </div>
+    </div> 
+</div> 
+
+{% endif %}

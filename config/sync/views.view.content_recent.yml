@@ -1,25 +1,27 @@
-uuid: f3ae95e7-b2d7-40a5-9a00-ae0dfab865f3
+uuid: 1c1b71f7-b332-46ec-84a5-d46cfc37e26d
 langcode: da
-status: false
+status: true
 dependencies:
   module:
     - node
     - user
+_core:
+  default_config_hash: YqZN5rc7XDQcFcInc8wkzuaHJmC5YvirhTmDcrarT6M
 id: content_recent
-label: 'Recent content'
+label: 'Seneste indhold'
 module: node
-description: 'Recent content.'
+description: 'Seneste indhold.'
 tag: default
 base_table: node_field_data
 base_field: nid
 display:
   default:
     id: default
-    display_title: Master
+    display_title: Standard
     display_plugin: default
     position: 0
     display_options:
-      title: 'Recent content'
+      title: 'Seneste indhold'
       fields:
         title:
           id: title
@@ -57,15 +59,15 @@ display:
           type: string
           settings:
             link_to_entity: true
-        name:
-          id: name
-          table: users_field_data
-          field: name
-          relationship: uid
+        changed:
+          id: changed
+          table: node_field_data
+          field: changed
+          relationship: none
           group_type: group
           admin_label: ''
-          entity_type: user
-          entity_field: name
+          entity_type: node
+          entity_field: changed
           plugin_id: field
           label: ''
           exclude: false
@@ -96,57 +98,6 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: div
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          type: user_name
-        edit_node:
-          id: edit_node
-          table: node
-          field: edit_node
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          plugin_id: entity_link_edit
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
@@ -159,58 +110,19 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: Edit
-        delete_node:
-          id: delete_node
-          table: node
-          field: delete_node
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          plugin_id: entity_link_delete
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          text: Delete
+          click_sort_column: value
+          type: timestamp_ago
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
       pager:
         type: some
         options:
@@ -219,13 +131,13 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Udfør
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Gendan
+          exposed_sorts_label: 'Sortér efter'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Stigende
+          sort_desc_label: Faldende
       access:
         type: perm
         options:
@@ -243,7 +155,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'No content available.'
+          content: 'Der er intet indhold at vise.'
           tokenize: false
       sorts:
         changed:
@@ -346,52 +258,14 @@ display:
             default_group_multiple: {  }
             group_items: {  }
       style:
-        type: table
+        type: html_list
         options:
           grouping: {  }
           row_class: ''
           default_row_class: true
-          columns:
-            title: title
-            name: title
-            edit_node: edit_node
-            delete_node: delete_node
-          default: '-1'
-          info:
-            title:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            name:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            edit_node:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: true
-              responsive: ''
-            delete_node:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: true
-              responsive: ''
-          override: true
-          sticky: false
-          summary: ''
-          empty_table: false
-          caption: ''
-          description: ''
+          type: ul
+          wrapper_class: item-list
+          class: ''
       row:
         type: fields
       query:
@@ -414,11 +288,11 @@ display:
           entity_field: uid
           plugin_id: standard
           required: true
-      use_more: true
-      use_more_always: true
-      use_more_text: More
-      link_display: custom_url
-      link_url: admin/content
+      use_more: false
+      use_more_always: false
+      use_more_text: Mere
+      link_display: '0'
+      link_url: ''
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -433,7 +307,7 @@ display:
       tags: {  }
   block_1:
     id: block_1
-    display_title: Block
+    display_title: Blok
     display_plugin: block
     position: 1
     display_options:

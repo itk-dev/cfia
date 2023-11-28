@@ -1,0 +1,42 @@
+
+<section class="contact-style-1">
+    <div class="map1">
+        {{content.field_embed_map.0}}
+    </div>
+    <div class="contact1-wrapper">
+        <div class="container">   
+            <div class="row">
+                <div class="col-lg-6 cont_form">
+                    <div class="contact-form-wrapper">
+                        <div class="tagline-title">
+                            <span>{{content.field_tagline.0}}</span>
+                            <h2>{{content.field_title.0}}</h2>
+                        </div>
+                        {{content.field_form.0}}
+                    </div>
+                </div>
+            </div>        
+        </div> 
+        <div class="image-wrapper">
+            <img src="{{file_url(content.field_image['#items'].entity.uri.value)}}" alt="{{content.field_image['#items'].alt}}">
+        </div>   
+    </div>
+    {% if content.field_address.0 != "" and content.field_email.0 != "" and content.field_text_2.0  != "" %}
+    <div class="container">
+        <div class="contactInfo">
+            <div class="add">
+                <span>{{content.field_title_4.0}}</span>
+                {{content.field_address.0}}
+            </div>
+            <div class="mail">
+                <span>{{content.field_title_3.0}}</span>
+                <a href="mailto:{{content.field_email.0}}"><h3>{{content.field_email.0}}</h3></a>
+            </div>
+            <div class="call">
+                <span>{{content.field_title_2.0}}</span>
+                <a href="tel:{{content.field_text_2.0}}"><h3>{{content.field_text_2.0}}</h3></a>
+            </div>
+        </div>
+    </div>  
+    {% endif %}
+</section>

@@ -1,0 +1,10 @@
+uuid: e6ae0826-de5b-41f9-8535-96431500d5bb
+langcode: en
+status: true
+dependencies: {  }
+id: about_us_style_4
+label: 'About Us - Style 4'
+icon_uuid: null
+icon_default: null
+description: 'Use to add "About us" section'
+behavior_plugins: {  }

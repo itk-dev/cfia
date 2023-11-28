@@ -1,0 +1,24 @@
+uuid: 3847e0d3-7558-4e19-a101-afc953dd4585
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.achievements_style_1.field_widget
+    - paragraphs.paragraphs_type.achievements_style_1
+  module:
+    - entity_reference_revisions
+id: paragraph.achievements_style_1.default
+targetEntityType: paragraph
+bundle: achievements_style_1
+mode: default
+content:
+  field_widget:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

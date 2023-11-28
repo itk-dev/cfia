@@ -1,0 +1,22 @@
+uuid: daacadde-ecd8-4626-bcaf-1c9fcadcbc1b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: elements
+label: Elements
+type: 'canonical_entities:node'
+pattern: 'elements/[node:title]'
+selection_criteria:
+  9046c0ac-4ce0-4b21-8c71-ad1a13a6bee5:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 9046c0ac-4ce0-4b21-8c71-ad1a13a6bee5
+    context_mapping:
+      node: node
+    bundles:
+      elements: elements
+selection_logic: and
+weight: -5
+relationships: {  }

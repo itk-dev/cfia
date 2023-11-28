@@ -1,0 +1,19 @@
+uuid: b04909dc-e825-4e8c-b879-b4e9578ac7b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_3
+    - node.type.portfolio
+id: node.portfolio.field_title_3
+field_name: field_title_3
+entity_type: node
+bundle: portfolio
+label: 'Title 3'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

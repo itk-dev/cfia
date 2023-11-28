@@ -1,0 +1,149 @@
+uuid: 913a8b30-b87b-4aeb-ba26-7e4499de9c64
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: home-page
+label: 'Home page'
+module: node
+routes:
+  -
+    route_name: entity.node.canonical
+tips:
+  get-started:
+    id: get-started
+    plugin: text
+    label: 'Get Started'
+    weight: -100
+    position: auto
+    selector: null
+    body: 'Learn to customize this Landing Page'
+  logo:
+    id: logo
+    plugin: text
+    label: Logo
+    weight: -99
+    position: auto
+    selector: ' .navbar .navbar-brand'
+    body: 'Logo can be modified in theme settings(Both in Header and Footer). <b> Home  👉 Appearance  👉 Settings  👉  consultancy  Plus 👉 Logo Image</b>'
+  navigation:
+    id: navigation
+    plugin: text
+    label: Navigation
+    weight: -98
+    position: auto
+    selector: '.header .navbar nav'
+    body: "Menu links and sub-menu links.\r\nGo to<strong> Home 👉 Structure 👉 Menus 👉 Main navigation</strong> and then click <b>Edit menu</b> to edit or add new meu links."
+  search-form:
+    id: search-form
+    plugin: text
+    label: 'Search Form'
+    weight: -97
+    position: auto
+    selector: '.header .search'
+    body: 'Click  🔍  which opens the search form. By using this form, We can able to search for information on this website.'
+  control-panel:
+    id: control-panel
+    plugin: text
+    label: 'Control Panel'
+    weight: -96
+    position: auto
+    selector: '.pt-skins-panel .control-panel'
+    body: "By Clicking ⚙ Icon\r\n<ul>\r\n<li> 1️⃣ to change primary and secondary colors</li>\r\n<li> 2️⃣ to make header stickey</li>\r\n<li> 3️⃣ to choose headers from multiple variants</li>\r\n</ul>"
+  home-slider:
+    id: home-slider
+    plugin: text
+    label: 'Home Slider'
+    weight: -95
+    position: auto
+    selector: .home-slider-1
+    body: 'Home Banner fields show as slides, We can customize this content by navigating to <b>Home 👉 Content (<i>Home</i>)</b> and then click <b>Edit</b>'
+  about-us:
+    id: about-us
+    plugin: text
+    label: 'About us'
+    weight: -94
+    position: auto
+    selector: .about-us-style-1
+    body: 'Provides About us contents, We can customize this content by navigating to <b>Home 👉 Content (<i>Home</i>)</b> and then click <b>Edit</b> '
+  services:
+    id: services
+    plugin: text
+    label: Services
+    weight: -93
+    position: auto
+    selector: .service-style-1
+    body: 'Multiple services Displayed Here, We can customize this Section by navigating to <b>Home 👉 Content (<i>Home</i>)</b> and then click <b>Edit</b> '
+  portfolio:
+    id: portfolio
+    plugin: text
+    label: Portfolio
+    weight: -92
+    position: auto
+    selector: '.portfolio-style-1 '
+    body: 'Collection of  Portfolio  style displayed here.We can customize this section by navigating to  We can customize this content by navigating to <b>Home 👉 Content (<i>Home</i>)</b> and then click <b>Edit</b> '
+  features:
+    id: features
+    plugin: text
+    label: Features
+    weight: -91
+    position: auto
+    selector: .features-style-1
+    body: 'Collection of  feaure  style displayed here, We can customize this section by navigating to <b>Home 👉 Content (<i>Home</i>)</b> and then click <b>Edit</b>'
+  testimonials:
+    id: testimonials
+    plugin: text
+    label: Testimonials
+    weight: -90
+    position: auto
+    selector: '.carousels .carousel2'
+    body: 'Clients Testimonials displayed here. We can customize this content by navigating to <b>Home 👉 Content (<i>Home</i>)</b> and then click <b>Edit</b>'
+  team-members:
+    id: team-members
+    plugin: text
+    label: 'Team members'
+    weight: -89
+    position: auto
+    selector: .team-style-1
+    body: ' Collection of Team Member styles  displayed here. We can customize this content by navigating to <b>Home 👉 Content (<i>Home</i>)</b> and then click <b>Edit</b> '
+  pricing-plans:
+    id: pricing-plans
+    plugin: text
+    label: 'Pricing Plans'
+    weight: -88
+    position: auto
+    selector: '.pricing-style-1 .container'
+    body: 'Collection of pricing plan style displayed here. We can customize this content by navigating to <b>Home 👉 Content (<i>Home</i>)</b> and then click <b>Edit</b>'
+  blogs:
+    id: blogs
+    plugin: text
+    label: Blogs
+    weight: -87
+    position: auto
+    selector: '.blog-style-1 .container'
+    body: 'The latest News & Articles from the Blog are displayed here. We can customize this content by navigating to <b>Home 👉 Content (<i>Home</i>)</b> and then click <b>Edit</b> '
+  call-to-action:
+    id: call-to-action
+    plugin: text
+    label: 'Call To Action'
+    weight: -86
+    position: auto
+    selector: '.cta-1 .container'
+    body: 'Collection of call to action displayed here. We can customize this content by navigating to <b>Home 👉 Content (<i>Home</i>)</b> and then click <b>Edit</b> '
+  contact-us:
+    id: contact-us
+    plugin: text
+    label: 'Contact Us'
+    weight: -85
+    position: auto
+    selector: .contact-style-1
+    body: 'Our contact us style displayed here.We can customize this content by navigating to <b>Home 👉 Content (<i>Home</i>)</b> and then click <b>Edit</b> <br>'
+  clients:
+    id: clients
+    plugin: text
+    label: Clients
+    weight: -84
+    position: auto
+    selector: '.client-style-1 .container'
+    body: 'Our clients style  are displayed here. We can customize this content by navigating to <b>Home 👉 Content (<i>Home</i>)</b> and then click <b>Edit</b>'

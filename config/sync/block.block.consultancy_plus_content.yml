@@ -1,0 +1,22 @@
+uuid: f7aee2cd-c723-4b90-b3f9-b6390329ade0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - consultancy_plus
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: consultancy_plus_content
+theme: consultancy_plus
+region: content
+weight: -13
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

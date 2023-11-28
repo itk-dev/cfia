@@ -1,0 +1,19 @@
+uuid: 45f270eb-1324-4e2b-bf22-129f3663a2cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tagline
+    - paragraphs.paragraphs_type.about_us_style_5
+id: paragraph.about_us_style_5.field_tagline
+field_name: field_tagline
+entity_type: paragraph
+bundle: about_us_style_5
+label: Tagline
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

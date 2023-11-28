@@ -1,8 +1,0 @@
-uuid: 728df60e-23a1-4a46-b01f-3d8cc5eb551a
-langcode: da
-status: true
-dependencies: {  }
-_core:
-  default_config_hash: 086Q3cPpbZVziRsC7K_h1XFGkq0G0Boyu1vEpWEAWYo
-id: cfia_iframe
-label: Iframe

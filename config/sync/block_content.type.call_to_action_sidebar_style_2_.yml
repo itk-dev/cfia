@@ -1,0 +1,8 @@
+uuid: 26fb6945-589d-449b-8d93-f00848137df0
+langcode: en
+status: true
+dependencies: {  }
+id: call_to_action_sidebar_style_2_
+label: 'Call To Action - Sidebar (Style 2)'
+revision: 0
+description: 'Use to add "Call To Action" widget'

@@ -1,0 +1,19 @@
+uuid: 011467ae-0fe2-4c18-ae8a-233c15514477
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tagline
+    - paragraphs.paragraphs_type.slide
+id: paragraph.slide.field_tagline
+field_name: field_tagline
+entity_type: paragraph
+bundle: slide
+label: Tagline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

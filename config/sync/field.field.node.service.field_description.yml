@@ -1,0 +1,21 @@
+uuid: b3dee3cb-8a4f-4c5b-ba7a-57fa2ec7395a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.service
+  module:
+    - text
+id: node.service.field_description
+field_name: field_description
+entity_type: node
+bundle: service
+label: 'Description - List Full Width'
+description: 'Enter the description to show in List Full Width page'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

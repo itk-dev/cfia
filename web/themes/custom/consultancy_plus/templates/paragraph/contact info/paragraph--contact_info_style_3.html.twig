@@ -1,0 +1,71 @@
+
+{% if content.field_address.0 == "" and content.field_email.0 == "" and content.field_text_2.0  == "" %}
+<section class="contact-style-3 contact">
+    <div class="contact2-wrapper ">
+        <div class="map">
+            {{content.field_embed_map.0}}
+        </div>
+        <div class="container">   
+            <div class="row">
+                <div class="col-lg-6 cont_form">
+                    <div class="contact3-form">
+                        <h2>{{content.field_text.0}}</h2>
+                        {{content.field_form.0}}
+                    </div>    
+                </div>
+            </div>        
+        </div>   
+    </div>    
+</section>
+{% else %}
+    <section class="contact-style-3-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="section-title">
+                        <h2>{{content.field_title.0}}</h2>
+                    </div>
+                    <div class="content-descriptions">
+                        {{content.field_formatted_description.0}}
+                    </div>
+                    <div class="contact3-info">
+                        <div class="call pb-10">
+                            <span>{{content.field_title_2.0}}</span>
+                           <a href="tel:{{content.field_text_2.0}}"><h3>{{content.field_text_2.0}}</h3></a>
+                        </div>
+                        <div class="mail pb-10">
+                            <span>{{content.field_title_3.0}}</span>
+                            <a href="mailto:{{content.field_email.0}}"><h3>{{content.field_email.0}}</h3></a>
+                        </div>
+                        <div class="add">
+                            <span>{{content.field_title_4.0}}</span>
+                            {{content.field_address.0}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="image-wrapper">
+                        <img src="{{file_url(content.field_image['#items'].entity.uri.value)}}" alt="{{content.field_image['#items'].alt}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-style-3 contact">
+            <div class="contact2-wrapper ">
+                <div class="map">
+                    {{content.field_embed_map.0}}
+                </div>
+                <div class="container">   
+                    <div class="row">
+                        <div class="col-lg-6 cont_form">
+                            <div class="contact3-form">
+                                <h2>{{content.field_text.0}}</h2>
+                                {{content.field_form.0}}
+                            </div>    
+                        </div>
+                    </div>        
+                </div>   
+            </div>  
+        </div>      
+    </section>
+{% endif %}

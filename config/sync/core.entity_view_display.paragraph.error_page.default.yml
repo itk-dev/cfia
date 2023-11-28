@@ -1,0 +1,39 @@
+uuid: 79a27cae-8cab-411c-8b3f-1a2f8bcd741a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.error_page.field_description
+    - field.field.paragraph.error_page.field_text
+    - field.field.paragraph.error_page.field_title
+    - paragraphs.paragraphs_type.error_page
+  module:
+    - text
+id: paragraph.error_page.default
+targetEntityType: paragraph
+bundle: error_page
+mode: default
+content:
+  field_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

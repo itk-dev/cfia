@@ -1,0 +1,37 @@
+uuid: ab0e8b75-8f36-4324-a8ce-2c171092dfd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.testimonials_style_1.field_image
+    - field.field.paragraph.testimonials_style_1.field_view
+    - paragraphs.paragraphs_type.testimonials_style_1
+  module:
+    - image
+    - viewsreference
+id: paragraph.testimonials_style_1.default
+targetEntityType: paragraph
+bundle: testimonials_style_1
+mode: default
+content:
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_view:
+    type: viewsreference_formatter
+    label: above
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

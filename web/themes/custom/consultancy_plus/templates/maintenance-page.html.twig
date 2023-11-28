@@ -1,0 +1,83 @@
+{#
+/**
+ * @file
+ * Theme override to display a single Drupal page while offline.
+ *
+ * All available variables are mirrored in page.html.twig.
+ * Some may be blank but they are provided for consistency.
+ *
+ * @see template_preprocess_maintenance_page()
+ */
+#}
+
+{% set base_url = url('<front>') %}
+{% if "1" in mode_type  %}
+<!-- Maintenance mode -->
+{% if bg_image_m_url %}
+<section class="maintenance bg-image" style="background-image:linear-gradient(rgba(27, 31, 41, 0.58), rgba(27, 31, 41, 0.58)) , url({{bg_image_m_url}});background-repeat:no-repeat;background-size:cover;">
+{% else %}
+<section class="maintenance bg-image" style="background-image:linear-gradient(rgba(27, 31, 41, 0.58), rgba(27, 31, 41, 0.58)) , url({{base_url}}sites/default/files/default_images/SubPage-Banner.jpeg);background-repeat:no-repeat;background-size:cover;">
+{% endif %}
+    <div class="container">
+        <div class="maitenance-item">
+            {% if maintenance_mode_tagline %}
+            <span>{{maintenance_mode_tagline}}</span>
+            {% endif %}
+            {% if maintenance_mode_title %}
+            <h1>{{maintenance_mode_title}}</h1>
+            {% endif %}
+        </div>
+    </div>
+</section>
+<!-- Maintenance mode End-->
+{% else %}
+{% if bg_image_c_url %}
+<section class="coming-soon bg-image" style="background-image:linear-gradient(rgba(27, 31, 41, 0.58), rgba(27, 31, 41, 0.58)) , url({{bg_image_c_url}});background-repeat:no-repeat;background-size:cover;">
+{% else %}
+<section class="coming-soon bg-image" style="background-image:linear-gradient(rgba(27, 31, 41, 0.58), rgba(27, 31, 41, 0.58)) , url({{base_url}}sites/default/files/default_images/SubPage-Banner.jpeg);background-repeat:no-repeat;background-size:cover;">
+{% endif %}
+    <div class="container">
+      <div class="maitenance-item ">
+          {% if comingsoon_tagline %}
+          <span>{{comingsoon_tagline}}</span>
+          {% endif %}
+          <h1>{{comingsoon_title}}</h1>  
+          <h2 class="comming-soon-date" style="visibility:hidden;">{{date}}</h2> 
+          <div id="timer-wrapper" class="timer-wrapper">
+              <div id="clockdiv" class="cs-counter">
+                  <ul class="list-unstyled">
+                      <li>
+                          <div class="cs-date">
+                              <h6 class="days time" id="day">00</h6>
+                              <p class="counting-title">Days</p>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="cs-date">
+                              <h6 class="hours time" id="hour">00</h6>
+                              <p class="counting-title">Hours</p>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="cs-date">
+                              <h6 class="minutes time" id="minute">00</h6>
+                              <p class="counting-title">Minutes</p>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="cs-date">
+                              <h6 class="seconds time" id="second">00</h6>
+                              <p class="counting-title">Seconds</p>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+        </div>
+    </div>
+</section>
+<!-- Coming Soon End -->
+{% endif %}
+
+
+

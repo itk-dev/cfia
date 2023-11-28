@@ -1,0 +1,85 @@
+{% set paragraph_parent = paragraph.getParentEntity() %}
+{% set parent = paragraph_parent.type.value[0].target_id %}
+{% if parent == "about_us_style_1" %}
+    <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="200">
+        <div class="counter-wrapper">
+            <p class="count-range">
+                <span data-purecounter-start="0" data-purecounter-end="{{ content.field_number.0 }}" class="purecounter" data-purecounter-duration="1"></span>
+                <span>{{ content.field_text_format.0 }}</span>
+            </p>
+            <h5>{{ content.field_title.0 }}</h5>
+        </div>
+    </div>
+{% elseif parent == "achievements_style_1" %}
+{# Code #}
+    <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="200">
+        <div class="counter-wrapper">
+            <div class="svg-wrapper">
+                {{content.field_svg_icon.0}} 
+            </div>
+            <div>
+                <h5>{{ content.field_title.0 }}</h5>
+                <p class="count-range">
+                    <span data-purecounter-start="0" data-purecounter-end="{{ content.field_number.0 }}" class="purecounter" data-purecounter-duration="1"></span>
+                    <span>{{ content.field_text_format.0 }}</span>
+                </p>
+            </div>
+        </div>
+    </div>   
+{% elseif parent == "achievements_style_2" %}
+        <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="200">
+        <div class="counter-wrapper">
+            <div>
+                <p class="count-range">
+                    <span data-purecounter-start="0" data-purecounter-end="{{ content.field_number.0 }}" class="purecounter" data-purecounter-duration="1"></span>
+                    <span>{{ content.field_text_format.0 }}</span>
+                </p>
+                <h5>{{ content.field_title.0 }}</h5>
+            </div>
+            <div class="svg-wrapper">
+                {{content.field_svg_icon.0}} 
+            </div>
+        </div>
+    </div>
+{# Code #}
+{% elseif parent == "about_style_3" %}
+{# Code #}
+{% elseif parent == "video_style_2" %} 
+    <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="200">
+        <div class="counter-wrapper">
+            <div>
+                <p class="count-range">
+                    <span data-purecounter-start="0" data-purecounter-end="{{ content.field_number.0 }}" class="purecounter" data-purecounter-duration="1"></span>
+                    <span>{{ content.field_text_format.0 }}</span>
+                </p>
+                <h5>{{ content.field_title.0 }}</h5>
+            </div>
+            <div class="svg-wrapper">
+                {{content.field_svg_icon.0}} 
+            </div>
+        </div>
+    </div>
+{% elseif parent == "video_style_3" %}
+    <div class="col-md-6">
+        <div class="counter-content">
+            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="200">
+                <div class="counter-wrapper">
+                    <div>
+                        <p class="count-range">
+                            <span data-purecounter-start="0" data-purecounter-end="{{ content.field_number.0 }}" class="purecounter" data-purecounter-duration="1"></span>
+                            <span>{{ content.field_text_format.0 }}</span>
+                        </p>
+                        <h5>{{ content.field_title.0 }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+{% endif %}
+
+
+
+{# {{content.field_title.0}}
+{{content.field_text_format.0}}
+{{content.field_number.0}}
+#}

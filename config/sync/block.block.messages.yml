@@ -1,0 +1,20 @@
+uuid: d1bf133f-6d2f-4621-82d7-51e3668b6e12
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - consultancy_plus
+id: messages
+theme: consultancy_plus
+region: content
+weight: -15
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

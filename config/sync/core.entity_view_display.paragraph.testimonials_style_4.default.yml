@@ -1,0 +1,42 @@
+uuid: 8a58e719-436b-4272-bdbd-b3451de2d1a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.testimonials_style_4.field_tagline
+    - field.field.paragraph.testimonials_style_4.field_title
+    - field.field.paragraph.testimonials_style_4.field_view
+    - paragraphs.paragraphs_type.testimonials_style_4
+  module:
+    - text
+    - viewsreference
+id: paragraph.testimonials_style_4.default
+targetEntityType: paragraph
+bundle: testimonials_style_4
+mode: default
+content:
+  field_tagline:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_view:
+    type: viewsreference_formatter
+    label: above
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

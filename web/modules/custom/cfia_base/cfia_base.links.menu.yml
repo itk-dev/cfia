@@ -1,6 +1,0 @@
-# Define the menu links for this module
-cfia_base.settings:
-  title: CFIA
-  route_name: cfia_base.settings
-  parent: system.admin
-  description: 'Settings for CFIA'

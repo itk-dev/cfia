@@ -1,0 +1,61 @@
+uuid: 348c4321-5b79-4665-860d-3819744c22c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view
+    - paragraphs.paragraphs_type.testimonials_style_2
+  module:
+    - viewsreference
+id: paragraph.testimonials_style_2.field_view
+field_name: field_view
+entity_type: paragraph
+bundle: testimonials_style_2
+label: Testimonials
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    entity_browser: 0
+    feed: 0
+    embed: 0
+  preselect_views:
+    testimonials: testimonials
+    block_content: 0
+    blog: 0
+    cases: 0
+    categories: 0
+    comment: 0
+    comments_recent: 0
+    content: 0
+    content_recent: 0
+    files: 0
+    file_entity_browser: 0
+    frontpage: 0
+    page_banner: 0
+    portfolio: 0
+    services: 0
+    taxonomy_term: 0
+    team: 0
+    user_admin_people: 0
+    watchdog: 0
+    webform_submissions: 0
+    who_s_new: 0
+    who_s_online: 0
+  enabled_settings:
+    limit: limit
+    pager: pager
+    offset: offset
+    argument: 0
+    title: 0
+field_type: viewsreference

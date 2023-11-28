@@ -1,0 +1,49 @@
+uuid: ad172ac7-12e2-4d23-8ced-e8ebc213e065
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.portfolio_style_3.field_link
+    - field.field.paragraph.portfolio_style_3.field_tagline
+    - field.field.paragraph.portfolio_style_3.field_title
+    - field.field.paragraph.portfolio_style_3.field_view
+    - paragraphs.paragraphs_type.portfolio_style_3
+  module:
+    - link
+    - text
+    - viewsreference
+id: paragraph.portfolio_style_3.default
+targetEntityType: paragraph
+bundle: portfolio_style_3
+mode: default
+content:
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_view:
+    type: viewsreference_formatter
+    label: above
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_tagline: true

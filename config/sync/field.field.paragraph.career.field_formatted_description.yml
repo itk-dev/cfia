@@ -1,0 +1,21 @@
+uuid: 03559aed-21cd-40f2-be75-091b351e4932
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_formatted_description
+    - paragraphs.paragraphs_type.career
+  module:
+    - text
+id: paragraph.career.field_formatted_description
+field_name: field_formatted_description
+entity_type: paragraph
+bundle: career
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

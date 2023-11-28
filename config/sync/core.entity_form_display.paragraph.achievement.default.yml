@@ -1,0 +1,53 @@
+uuid: ff6a71f4-d7e1-47b3-85dc-a925aad9576f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.achievement.field_number
+    - field.field.paragraph.achievement.field_svg_icon
+    - field.field.paragraph.achievement.field_text_format
+    - field.field.paragraph.achievement.field_title
+    - paragraphs.paragraphs_type.achievement
+  module:
+    - svg_image_field
+    - text
+id: paragraph.achievement.default
+targetEntityType: paragraph
+bundle: achievement
+mode: default
+content:
+  field_number:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_svg_icon:
+    type: svg_image_field_widget
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_max_width: 300
+      preview_image_max_height: 300
+    third_party_settings: {  }
+  field_text_format:
+    type: text_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: text_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

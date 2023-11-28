@@ -1,0 +1,45 @@
+uuid: a227007f-6b02-4051-b0c5-f084c1ed075f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_2
+    - paragraphs.paragraphs_type.services_style_5
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+id: paragraph.services_style_5.field_image_2
+field_name: field_image_2
+entity_type: paragraph
+bundle: services_style_5
+label: 'Background image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: b5df6228-ee02-4f9f-9539-45b72e137232
+    alt: Image
+    title: ''
+    width: 1110
+    height: 602
+field_type: image

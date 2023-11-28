@@ -1,25 +1,27 @@
-uuid: 8d922780-5712-4242-ba3c-60d6e3b1dc4a
+uuid: 4cacf10e-ce97-40df-bb9c-69b0d33da330
 langcode: da
 status: true
 dependencies:
   module:
     - file
     - user
+_core:
+  default_config_hash: DaGeEDJMcbbQtgV96AuPeZ-0irMc_Oa6Zzh2U3Kmul8
 id: files
-label: Files
+label: Filer
 module: file
-description: 'Find and manage files.'
+description: 'Find og håndtér filer.'
 tag: default
 base_table: file_managed
 base_field: fid
 display:
   default:
     id: default
-    display_title: Master
+    display_title: Standard
     display_plugin: default
     position: 0
     display_options:
-      title: Files
+      title: Filer
       fields:
         fid:
           id: fid
@@ -64,7 +66,7 @@ display:
           entity_type: file
           entity_field: filename
           plugin_id: field
-          label: Name
+          label: Navn
           exclude: false
           alter:
             alter_text: false
@@ -127,7 +129,7 @@ display:
           entity_type: file
           entity_field: filemime
           plugin_id: field
-          label: 'Mime type'
+          label: 'MIME type'
           exclude: false
           alter:
             alter_text: false
@@ -179,7 +181,7 @@ display:
           entity_type: file
           entity_field: filesize
           plugin_id: field
-          label: Size
+          label: Størrelse
           exclude: false
           alter:
             alter_text: false
@@ -275,7 +277,7 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_false: Temporary
+            format_custom_false: Midlertidig
             format_custom_true: Permanent
         created:
           id: created
@@ -286,8 +288,8 @@ display:
           admin_label: ''
           entity_type: file
           entity_field: created
-          plugin_id: date
-          label: 'Upload date'
+          plugin_id: field
+          label: Upload-dato
           exclude: false
           alter:
             alter_text: false
@@ -328,9 +330,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          date_format: medium
-          custom_date_format: ''
-          timezone: ''
+          type: timestamp
+          settings:
+            date_format: medium
+            custom_date_format: ''
+            timezone: ''
         changed:
           id: changed
           table: file_managed
@@ -340,8 +344,8 @@ display:
           admin_label: ''
           entity_type: file
           entity_field: changed
-          plugin_id: date
-          label: 'Changed date'
+          plugin_id: field
+          label: Ændringsdato
           exclude: false
           alter:
             alter_text: false
@@ -382,9 +386,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          date_format: medium
-          custom_date_format: ''
-          timezone: ''
+          type: timestamp
+          settings:
+            date_format: medium
+            custom_date_format: ''
+            timezone: ''
         count:
           id: count
           table: file_usage
@@ -393,7 +399,7 @@ display:
           group_type: sum
           admin_label: ''
           plugin_id: numeric
-          label: 'Used in'
+          label: 'Brugt i'
           exclude: false
           alter:
             alter_text: false
@@ -450,26 +456,26 @@ display:
           total_pages: 0
           id: 0
           tags:
-            next: 'next ›'
-            previous: '‹ previous'
+            next: 'Næste ›'
+            previous: '‹ Forrige'
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Antal elementer'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Alle -'
             offset: false
-            offset_label: Offset
+            offset_label: Forskydning
       exposed_form:
         type: basic
         options:
           submit_button: Filter
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Gendan
+          exposed_sorts_label: 'Sortér efter'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Stigende
+          sort_desc_label: Faldende
       access:
         type: perm
         options:
@@ -484,7 +490,7 @@ display:
           field: area_text_custom
           plugin_id: text_custom
           empty: true
-          content: 'No files available.'
+          content: 'Ingen tilgængelige filer.'
       sorts: {  }
       arguments: {  }
       filters:
@@ -504,7 +510,7 @@ display:
           exposed: true
           expose:
             operator_id: filemime_op
-            label: Filename
+            label: Filnavn
             description: ''
             use_operator: false
             operator: filename_op
@@ -518,7 +524,6 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
-            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -547,7 +552,7 @@ display:
           exposed: true
           expose:
             operator_id: filemime_op
-            label: 'Mime type'
+            label: 'MIME type'
             description: ''
             use_operator: false
             operator: filemime_op
@@ -561,7 +566,6 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
-            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -731,7 +735,7 @@ display:
       tags: {  }
   page_1:
     id: page_1
-    display_title: 'Files overview'
+    display_title: Filoversigt
     display_plugin: page
     position: 1
     display_options:
@@ -752,11 +756,9 @@ display:
       path: admin/content/files
       menu:
         type: tab
-        title: Files
+        title: Filer
         description: ''
         weight: 0
-        enabled: true
-        expanded: false
         menu_name: admin
         context: ''
     cache_metadata:
@@ -834,7 +836,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: standard
-          label: 'Entity type'
+          label: Entity-type
           exclude: false
           alter:
             alter_text: false
@@ -883,7 +885,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: standard
-          label: 'Registering module'
+          label: 'Registrerer modul'
           exclude: false
           alter:
             alter_text: false
@@ -932,7 +934,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: numeric
-          label: 'Use count'
+          label: 'Brug antal'
           exclude: false
           alter:
             alter_text: false
@@ -989,16 +991,16 @@ display:
           total_pages: 0
           id: 0
           tags:
-            next: 'next ›'
-            previous: '‹ previous'
+            next: 'Næste ›'
+            previous: '‹ Forrige'
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Antal elementer'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Alle -'
             offset: false
-            offset_label: Offset
+            offset_label: Forskydning
       empty: {  }
       arguments:
         fid:
@@ -1015,9 +1017,9 @@ display:
           exception:
             value: all
             title_enable: false
-            title: All
+            title: Alle
           title_enable: true
-          title: 'File usage information for %1'
+          title: 'Information om brug af filen {{ arguments.fid }}'
           default_argument_type: fixed
           default_argument_options:
             argument: ''
@@ -1117,9 +1119,6 @@ display:
       display_description: ''
       display_extenders: {  }
       path: admin/content/files/usage/%
-      menu:
-        enabled: true
-        expanded: false
     cache_metadata:
       max-age: -1
       contexts:

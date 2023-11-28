@@ -1,0 +1,10 @@
+uuid: 6d5db8ed-215b-48ca-9cb4-c084a9957361
+langcode: en
+status: true
+dependencies: {  }
+id: slide
+label: Slide
+icon_uuid: null
+icon_default: null
+description: 'Slide content for home slider section'
+behavior_plugins: {  }

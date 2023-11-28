@@ -1,0 +1,45 @@
+uuid: acccf0a3-a8b8-43a8-9ffd-5640b076ba9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_2
+    - paragraphs.paragraphs_type.about_us_style_4
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+id: paragraph.about_us_style_4.field_image_2
+field_name: field_image_2
+entity_type: paragraph
+bundle: about_us_style_4
+label: 'Highlighted Text 1 - BG Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

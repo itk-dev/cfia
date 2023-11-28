@@ -1,8 +1,10 @@
-uuid: 55c05c02-0990-4d6e-b606-06b05f3f4354
+uuid: 85e8785b-7896-40ec-99a5-5f57dd849485
 langcode: da
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: 7yrlW5z9zdg2eBucB2GPqXKSMQfH9lSRSO4DbWF7AFc
 id: footer
 label: Sidefod
-description: 'Use this for linking to site information.'
+description: 'Links til informationen om sitet'
 locked: true

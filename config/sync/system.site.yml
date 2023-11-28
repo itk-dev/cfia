@@ -1,12 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
 langcode: da
-uuid: 1cd4d3e6-a431-4760-b10e-148c186a6f89
-name: cfia
-mail: cfi@aarhus.dk
+uuid: 103f29fe-6b9b-44ca-bf86-c12b0d3cebf0
+name: 'Consultancy Plus'
+mail: dtio.themes@gmail.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /front
+  front: /node/1
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: da

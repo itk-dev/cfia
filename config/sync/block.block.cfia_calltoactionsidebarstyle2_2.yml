@@ -1,0 +1,27 @@
+uuid: 9820d8d2-3bb5-4c51-a02e-ad6fae86e7e1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cfia
+id: cfia_calltoactionsidebarstyle2_2
+theme: cfia
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:d4b1e72c-db00-4b83-b5ee-332c061f9bed'
+settings:
+  id: 'block_content:d4b1e72c-db00-4b83-b5ee-332c061f9bed'
+  label: 'Call To Action - Sidebar (Style 2)'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/63

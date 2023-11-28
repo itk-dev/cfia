@@ -1,0 +1,11 @@
+uuid: a6fd1223-7416-4c46-bcb1-43faf2cf295a
+langcode: da
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.metoder
+id: taxonomy_term.metoder
+target_entity_type_id: taxonomy_term
+target_bundle: metoder
+default_langcode: site_default
+language_alterable: false

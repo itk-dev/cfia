@@ -1,0 +1,23 @@
+<form{{ attributes.addClass('form-style-3') }}>
+	<div class="row forms">  
+		<div class="form-group col-md-12">
+			{{ element.elements.name }}
+		</div>
+		<div class="form-group col-md-12">
+			{{ element.elements.email }}
+		</div>
+		<div class="form-group col-md-12">
+			{{ element.elements.phone }}
+		</div>		
+		<div class="form-group col-md-12">
+			{{ element.elements.subject }}
+		</div>
+		<div class="form-group col-md-12">
+			{{ element.elements.message }}
+		</div>
+	</div>
+	<div class="quate-btn-rect">{{ element.elements.actions }}</div>
+	{{ element.form_build_id }}
+	{{ element.form_token }}
+	{{ element.form_id }}
+</form>

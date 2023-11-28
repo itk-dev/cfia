@@ -1,7 +1,9 @@
-uuid: c5f234fe-d58f-49ba-a200-cfa55f19e3a7
+uuid: bbbf101c-0b7b-4a0e-b027-eeba29214d66
 langcode: da
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: NIKBt6kw_uPhNI0qtR2DnRf7mSOgAQdx7Q94SKMjXbQ
 name: 'Ren tekst'
 format: plain_text
 weight: 10

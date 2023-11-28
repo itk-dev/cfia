@@ -1,0 +1,33 @@
+{% if content.field_list['#items'] !="" %}
+<div class="abt-list pt-10">
+    <h4>{{content.field_title.0}}</h4>
+    <div class="content-descriptions">
+        <p>{{content.field_description.0}}</p>
+    </div>
+    <div class="lists-block lists">
+        <div class="list1">
+            <div class="list-wrapper">
+                <ul class="list-unstyled">
+                    {% for key,value in content.field_list['#items'] %}
+                    <li>
+                        <div class="svg-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 200 150">
+                                <path  data-name="Path 40733" d="M374.334,167.3c-35.362,36.588-70.75,73-106.152,109.59l-54.823-47.166-18.5,22.941,64.975,55.9,10.152,8.734,9.361-9.665c38.482-39.814,76.984-79.391,115.511-119.253L374.328,167.3Z" transform="translate(-194.86 -167.301)" fill="#1b1f29"/>
+                            </svg>
+                        </div>
+                        <p>{{content.field_list[key]}}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div> 
+</div>
+  {% else %}
+  <div class="abt-list">
+    <h4>{{content.field_title.0}}</h4>
+    <div class="content-descriptions">
+        <p>{{content.field_description.0}}</p>
+    </div> 
+</div>
+  {% endif %}

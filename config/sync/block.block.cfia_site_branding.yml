@@ -1,0 +1,25 @@
+uuid: 3ef2a51a-0778-4c62-b702-50af9f233252
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cfia
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: cfia_site_branding
+theme: cfia
+region: logo
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

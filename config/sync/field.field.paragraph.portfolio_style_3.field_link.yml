@@ -1,0 +1,23 @@
+uuid: c1ebebd2-7e36-4005-8a2b-29da3c0e60a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.portfolio_style_3
+  module:
+    - link
+id: paragraph.portfolio_style_3.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: portfolio_style_3
+label: Button
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

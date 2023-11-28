@@ -1,0 +1,19 @@
+uuid: 1948d551-0d84-4ff8-906d-aa11724608db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_3
+    - paragraphs.paragraphs_type.contact_info_style_3
+id: paragraph.contact_info_style_3.field_title_3
+field_name: field_title_3
+entity_type: paragraph
+bundle: contact_info_style_3
+label: 'Email Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: aa000a6a-f7f8-4cd1-9b38-d1cc9e8aed8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tagline
+    - paragraphs.paragraphs_type.contact_info_style_1
+id: paragraph.contact_info_style_1.field_tagline
+field_name: field_tagline
+entity_type: paragraph
+bundle: contact_info_style_1
+label: Tagline
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

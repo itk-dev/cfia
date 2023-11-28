@@ -1,13 +1,20 @@
-uuid: 0d3cb8d2-13fa-4986-a21f-31689e294ea9
+uuid: b07d58ff-0d9e-41ac-ab08-ccbcf8e251ee
 langcode: da
 status: true
 dependencies:
   module:
+    - comment
+    - contact
+    - search
     - system
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
 id: anonymous
-label: 'Anonymous user'
+label: 'Anonym bruger'
 weight: 0
 is_admin: false
 permissions:
+  - 'access comments'
   - 'access content'
-  - 'view the administration theme'
+  - 'access site-wide contact form'
+  - 'search content'

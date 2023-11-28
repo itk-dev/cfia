@@ -1,0 +1,8 @@
+uuid: 043c665c-a228-4a96-9ad3-40b478db5600
+langcode: da
+status: true
+dependencies: {  }
+id: useful-links
+label: 'Footer links'
+description: 'Site Information Links in footer'
+locked: false

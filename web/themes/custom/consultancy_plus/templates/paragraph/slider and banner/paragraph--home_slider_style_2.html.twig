@@ -1,0 +1,9 @@
+<section class="home-slider2" style="background-image:url('{{file_url(content.field_image['#items'].entity.uri.value)}}');background-repeat:no-repeat;background-size:cover;">
+    <div class="overlay-image">
+        <img  src="{{file_url(content.field_image_2['#items'].entity.uri.value)}}" alt="{{content.field_image_2['#items'].alt}}">
+    </div>
+    <div class="owl-carousel home-slider-2 owl-theme">
+        {{content.field_widget}}
+    </div>   
+</section>
+{#  #}

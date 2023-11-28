@@ -1,0 +1,20 @@
+uuid: 8adfb103-ff82-48ab-bbc2-c63d2028bbf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.categories_portfolio
+  module:
+    - path
+id: taxonomy_term.categories_portfolio.path
+field_name: path
+entity_type: taxonomy_term
+bundle: categories_portfolio
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

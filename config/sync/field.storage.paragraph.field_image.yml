@@ -1,13 +1,11 @@
-uuid: f12e7587-f29c-4782-b500-f187d1dd774f
-langcode: da
+uuid: f4b644fb-10bf-430e-ac86-5f5eb08b31cc
+langcode: en
 status: true
 dependencies:
   module:
     - file
     - image
     - paragraphs
-_core:
-  default_config_hash: HEfuMhdYu7cVxp1TIluxnWW1LAS9s4cssLjLOmr5s4c
 id: paragraph.field_image
 field_name: field_image
 entity_type: paragraph

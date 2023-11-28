@@ -1,0 +1,23 @@
+uuid: ffe78cec-693a-454e-adb2-dd95a0465105
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_check
+    - paragraphs.paragraphs_type.testimonials_style_2
+id: paragraph.testimonials_style_2.field_check
+field_name: field_check
+entity_type: paragraph
+bundle: testimonials_style_2
+label: 'Background Color'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

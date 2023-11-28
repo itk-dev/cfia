@@ -1,0 +1,10 @@
+uuid: dd97682e-f75f-4f4c-8a0b-2e8026900b47
+langcode: en
+status: true
+dependencies: {  }
+id: content_features_
+label: 'Content - Features '
+icon_uuid: null
+icon_default: null
+description: 'Use to add contents for features section'
+behavior_plugins: {  }

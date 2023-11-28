@@ -1,0 +1,21 @@
+uuid: 9fbc1375-c76e-4287-ac2e-723f48bcbe1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_format
+    - paragraphs.paragraphs_type.clients_style_3
+  module:
+    - text
+id: paragraph.clients_style_3.field_text_format
+field_name: field_text_format
+entity_type: paragraph
+bundle: clients_style_3
+label: Count
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

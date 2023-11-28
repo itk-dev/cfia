@@ -1,0 +1,9 @@
+#header-1.active,#header-2.active,#header-3.active,#header-4.active,#header-5.active {
+    display: block;
+}
+#header-1, #header-2, #header-3, #header-4,#header-5 {
+    display: none;
+}
+.navbar-nav {
+    flex-direction: row;
+}

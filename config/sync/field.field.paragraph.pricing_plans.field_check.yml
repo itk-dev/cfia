@@ -1,0 +1,23 @@
+uuid: 96c2b4bd-09a2-422d-9075-b55104db7806
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_check
+    - paragraphs.paragraphs_type.pricing_plans
+id: paragraph.pricing_plans.field_check
+field_name: field_check
+entity_type: paragraph
+bundle: pricing_plans
+label: Highlighted
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

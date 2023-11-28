@@ -1,0 +1,10 @@
+uuid: 2fdb6740-4d12-4675-a9af-28228c2a590a
+langcode: en
+status: true
+dependencies: {  }
+id: sidebar
+label: Sidebar
+icon_uuid: null
+icon_default: null
+description: 'Use to add sidebar widget'
+behavior_plugins: {  }

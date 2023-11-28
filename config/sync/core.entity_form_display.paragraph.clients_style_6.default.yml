@@ -1,0 +1,32 @@
+uuid: 34c32e61-cbda-4364-a478-4bb71744966c
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.browse_files_modal
+    - field.field.paragraph.clients_style_6.field_images
+    - paragraphs.paragraphs_type.clients_style_6
+  module:
+    - entity_browser
+id: paragraph.clients_style_6.default
+targetEntityType: paragraph
+bundle: clients_style_6
+mode: default
+content:
+  field_images:
+    type: entity_browser_file
+    weight: 0
+    region: content
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: true
+      open: false
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

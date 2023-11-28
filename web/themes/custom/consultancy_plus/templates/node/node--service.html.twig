@@ -1,0 +1,23 @@
+<section class="services-details z-sec"> 
+    <div class="container">
+        <div class="content-descriptions">
+            {{content.body.0}}
+        </div>
+        <div class="row"> 
+            {% for key,value in content.field_images['#items'] %}
+            
+                {% if key == 0 %}
+                        <div class="col-md-6">
+                            <img src="{{file_url(content.field_images['#items'][key].entity.uri.value)}}" alt="{{content.field_images['#items'].alt}}">
+                        </div>
+                {% else %}   
+                        <div class="col-md-6">
+                            <img src="{{file_url(content.field_images['#items'][key].entity.uri.value)}}" alt="{{content.field_images['#items'].alt}}">
+                        </div>
+                {% endif %} 
+                    
+            {% endfor %}
+         </div>  
+        {{content.field_section}}
+    </div>
+</section>

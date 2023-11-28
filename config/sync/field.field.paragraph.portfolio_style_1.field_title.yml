@@ -1,0 +1,21 @@
+uuid: 09688af0-644c-440a-a9d0-a9388d58352b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.portfolio_style_1
+  module:
+    - text
+id: paragraph.portfolio_style_1.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: portfolio_style_1
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

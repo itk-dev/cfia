@@ -1,0 +1,22 @@
+uuid: 17679bd0-89cd-4ace-836e-7274604f3e74
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.achievement
+id: paragraph.achievement.status
+field_name: status
+entity_type: paragraph
+bundle: achievement
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

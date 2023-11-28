@@ -1,0 +1,21 @@
+
+
+
+<section class="carousels z-sec">
+     <div class="container">  
+        <div class="page-cilents-block">
+            <div class="row">
+                    {% for key, value in content.field_images['#items'] %}
+                    <div class="col-md-4">
+                    {# <div class="item mb-4"> #}
+                        <div class="carousel-content-wrapper">
+                            <div class="img-wrapper">
+                                <img src="{{file_url(content.field_images['#items'][key].entity.uri.value)}}" alt="{{content.field_images['#items'][key].alt}}">
+                            </div>
+                        </div>
+                    </div>
+                 {% endfor %}
+            </div>
+        </div> 
+    </div>
+</section>

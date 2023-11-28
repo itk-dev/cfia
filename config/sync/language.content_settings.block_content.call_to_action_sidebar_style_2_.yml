@@ -1,0 +1,18 @@
+uuid: 42de1b84-1585-4fce-8148-92b3fe6f83bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.call_to_action_sidebar_style_2_
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: block_content.call_to_action_sidebar_style_2_
+target_entity_type_id: block_content
+target_bundle: call_to_action_sidebar_style_2_
+default_langcode: site_default
+language_alterable: false

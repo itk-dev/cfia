@@ -1,0 +1,23 @@
+uuid: de34d864-80c2-4adb-a423-144162fdac7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_check
+    - paragraphs.paragraphs_type.pricing_style_3
+id: paragraph.pricing_style_3.field_check
+field_name: field_check
+entity_type: paragraph
+bundle: pricing_style_3
+label: 'Background Color'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

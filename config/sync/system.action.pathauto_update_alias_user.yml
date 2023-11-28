@@ -1,11 +1,16 @@
-uuid: 43b69796-c78e-4977-8301-1bf3837994d1
+uuid: 15743d0f-dbac-477d-a331-7fde2586b66b
 langcode: da
 status: true
 dependencies:
   module:
     - pathauto
+  enforced:
+    module:
+      - user
+_core:
+  default_config_hash: x_ok_ZsfA4Xk4B_hVW3O4-3PcNoK57nXLz_Dlletidg
 id: pathauto_update_alias_user
-label: 'Update URL-Alias'
+label: 'Opdatér alternativ URL'
 type: user
 plugin: pathauto_update_alias
 configuration: {  }

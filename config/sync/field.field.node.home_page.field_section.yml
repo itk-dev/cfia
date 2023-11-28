@@ -1,0 +1,44 @@
+uuid: 2aa77008-2c14-4f3a-954a-3d17f1c9100d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.home_page
+  module:
+    - entity_reference_revisions
+id: node.home_page.field_section
+field_name: field_section
+entity_type: node
+bundle: home_page
+label: Section
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    negate: 0
+    target_bundles_drag_drop:
+      content:
+        weight: 7
+        enabled: false
+      get_quote:
+        weight: 8
+        enabled: false
+      icon_profile_link:
+        weight: 9
+        enabled: false
+      section:
+        weight: 10
+        enabled: false
+      sidebar:
+        weight: 11
+        enabled: false
+      social_media:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

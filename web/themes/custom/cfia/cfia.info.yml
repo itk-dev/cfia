@@ -1,0 +1,30 @@
+name: CFIA
+type: theme
+description: 'A custom theme based on Consultancy Plus.'
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
+base theme: consultancy_plus
+
+libraries:
+  - cfia/global-styling
+
+regions:
+  logo: 'Logo'
+  primary_menu: 'Primary menu'
+  language_block: 'Language'
+  search: 'Search'
+  social_media: 'Social Media'
+  highlighted: 'Highlighted'
+  featured_top: 'Featured top'
+  banner: 'Banner'
+  content: 'Content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  featured_bottom_first: 'Featured bottom first'
+  featured_bottom_second: 'Featured bottom second'
+  featured_bottom_third: 'Featured bottom third'
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
+  footer_fourth: 'Footer fourth'
+  footer_fifth: 'Footer fifth'

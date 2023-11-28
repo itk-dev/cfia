@@ -1,0 +1,23 @@
+uuid: baa06574-d6de-4a93-9dc8-3dc71aee7db0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.pricing_plans
+  module:
+    - link
+id: paragraph.pricing_plans.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: pricing_plans
+label: Button
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

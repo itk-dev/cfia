@@ -1,0 +1,41 @@
+uuid: 2ee6368a-9146-4424-b248-d68defce169f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.careers.field_description
+    - field.field.paragraph.careers.field_title
+    - field.field.paragraph.careers.field_widget
+    - paragraphs.paragraphs_type.careers
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.careers.default
+targetEntityType: paragraph
+bundle: careers
+mode: default
+content:
+  field_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_widget:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

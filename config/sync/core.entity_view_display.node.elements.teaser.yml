@@ -1,0 +1,34 @@
+uuid: 42a4528a-cd1d-4661-8774-f4628bcc5420
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.elements.body
+    - field.field.node.elements.field_banner_image
+    - node.type.elements
+  module:
+    - text
+    - user
+id: node.elements.teaser
+targetEntityType: node
+bundle: elements
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  field_banner_image: true
+  langcode: true

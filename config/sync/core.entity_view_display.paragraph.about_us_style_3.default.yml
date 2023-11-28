@@ -1,0 +1,132 @@
+uuid: d94f88b4-664d-46ab-ad45-9054961df876
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.about_us_style_3.field_designation
+    - field.field.paragraph.about_us_style_3.field_formatted_description
+    - field.field.paragraph.about_us_style_3.field_image
+    - field.field.paragraph.about_us_style_3.field_image_2
+    - field.field.paragraph.about_us_style_3.field_link
+    - field.field.paragraph.about_us_style_3.field_person_message
+    - field.field.paragraph.about_us_style_3.field_person_name
+    - field.field.paragraph.about_us_style_3.field_svg_icon
+    - field.field.paragraph.about_us_style_3.field_text
+    - field.field.paragraph.about_us_style_3.field_text_2
+    - field.field.paragraph.about_us_style_3.field_title
+    - paragraphs.paragraphs_type.about_us_style_3
+  module:
+    - image
+    - link
+    - svg_image_field
+    - text
+id: paragraph.about_us_style_3.default
+targetEntityType: paragraph
+bundle: about_us_style_3
+mode: default
+content:
+  field_designation:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_formatted_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_image_2:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_person_message:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_person_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_svg_icon:
+    type: svg_image_field_formatter
+    label: above
+    settings:
+      inline: true
+      apply_dimensions: true
+      width: 25
+      height: 25
+      enable_alt: true
+      enable_title: true
+      link: ''
+      force_fill: false
+      sanitize: true
+      sanitize_remote: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_text_2:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

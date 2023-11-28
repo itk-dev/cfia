@@ -1,0 +1,38 @@
+{# {{fields.title.content}}
+{{fields.field_image.content}}
+{{fields.field_image_1.content}}
+{{fields.field_category.content}}
+{{fields.nothing.content}}
+{{fields.view_node.content}}
+{{fields.created.content}}
+{{fields.counter.content}} #}
+
+
+
+<div class="col-md-6 "> 
+    <div class="case-item">
+        <div class="img-wrapper">
+            <img src="{{fields.field_image.content}}" alt="{{fields.field_image_1.content}}">
+        </div> 
+    </div>    
+</div>   
+<div class="col-md-6">  
+    <div class="case-items">
+        <div class="designation">
+            <span>{{fields.field_category.content}}</span>
+        </div>
+        <a href="{{fields.view_node.content}}">
+            <h3> {{fields.title.content}}</h3>
+        </a>   
+        <div class="case-content">
+            <p>{{fields.body.content}}</p>
+        </div>
+        <div class="read">
+            <a href="{{fields.view_node.content}}" title="blog-details">{{fields.nothing.content}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="150" height="44" viewBox="0 0 150 44">
+                    <path  data-name="Path 40738" d="M44,24.431,23.919,0,0,24.431H19.489V150h7.087V24.431Z" transform="translate(150) rotate(90)" fill="#1b1f29" fill-rule="evenodd"/>
+                </svg>
+            </a>    
+        </div>
+    </div>    
+</div>

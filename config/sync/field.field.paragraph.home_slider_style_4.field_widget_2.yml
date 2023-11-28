@@ -1,0 +1,178 @@
+uuid: b7ae58cb-5327-4357-9286-0846d07331a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_widget_2
+    - paragraphs.paragraphs_type.home_slider_style_4
+    - paragraphs.paragraphs_type.social_media
+  module:
+    - entity_reference_revisions
+id: paragraph.home_slider_style_4.field_widget_2
+field_name: field_widget_2
+entity_type: paragraph
+bundle: home_slider_style_4
+label: 'Social Media Profiles'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      social_media: social_media
+    negate: 0
+    target_bundles_drag_drop:
+      about_us_style_1:
+        weight: 51
+        enabled: false
+      about_us_style_2:
+        weight: 52
+        enabled: false
+      about_us_style_3:
+        weight: 53
+        enabled: false
+      achievement:
+        weight: 54
+        enabled: false
+      achievements_style_1:
+        weight: 55
+        enabled: false
+      achievements_style_2:
+        weight: 56
+        enabled: false
+      blog_style_3:
+        weight: 59
+        enabled: false
+      blogs_style_1:
+        weight: 57
+        enabled: false
+      blogs_style_2:
+        weight: 58
+        enabled: false
+      call_to_action_style_1:
+        weight: 60
+        enabled: false
+      call_to_action_style_2:
+        weight: 61
+        enabled: false
+      call_to_action_style_3:
+        weight: 62
+        enabled: false
+      clients_style_1:
+        weight: 63
+        enabled: false
+      clients_style_2:
+        weight: 64
+        enabled: false
+      clients_style_3:
+        weight: 65
+        enabled: false
+      contact_info_style_1:
+        weight: 66
+        enabled: false
+      contact_info_style_2:
+        weight: 67
+        enabled: false
+      contact_info_style_3:
+        weight: 68
+        enabled: false
+      content:
+        weight: 69
+        enabled: false
+      content_features_:
+        weight: 70
+        enabled: false
+      features_pricing_plan:
+        weight: 71
+        enabled: false
+      features_style_1:
+        weight: 72
+        enabled: false
+      features_style_2:
+        weight: 73
+        enabled: false
+      features_style_3:
+        weight: 74
+        enabled: false
+      get_quote:
+        weight: 75
+        enabled: false
+      home_slider_style_1:
+        weight: 76
+        enabled: false
+      home_slider_style_2:
+        weight: 77
+        enabled: false
+      home_slider_style_3:
+        weight: 78
+        enabled: false
+      home_slider_style_4:
+        weight: 79
+        enabled: false
+      icon_profile_link:
+        weight: 80
+        enabled: false
+      portfolio_style_1:
+        weight: 81
+        enabled: false
+      portfolio_style_2:
+        weight: 82
+        enabled: false
+      portfolio_style_3:
+        weight: 83
+        enabled: false
+      pricing_plans:
+        weight: 84
+        enabled: false
+      pricing_style_1:
+        weight: 85
+        enabled: false
+      pricing_style_2:
+        weight: 86
+        enabled: false
+      pricing_style_3:
+        weight: 87
+        enabled: false
+      section:
+        weight: 88
+        enabled: false
+      services_style_1:
+        weight: 89
+        enabled: false
+      services_style_2:
+        weight: 90
+        enabled: false
+      services_style_3:
+        weight: 91
+        enabled: false
+      sidebar:
+        weight: 92
+        enabled: false
+      slide:
+        weight: 93
+        enabled: false
+      social_media:
+        weight: 94
+        enabled: true
+      team_style_1:
+        weight: 95
+        enabled: false
+      team_style_2:
+        weight: 96
+        enabled: false
+      team_style_3:
+        weight: 97
+        enabled: false
+      testimonials_style_1:
+        weight: 98
+        enabled: false
+      testimonials_style_2:
+        weight: 99
+        enabled: false
+      video_style_1:
+        weight: 100
+        enabled: false
+field_type: entity_reference_revisions

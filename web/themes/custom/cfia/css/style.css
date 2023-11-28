@@ -1,0 +1,23 @@
+/*
+** Customization of theme css
+*/
+
+/* Override variabels */
+:root {
+  --paragraph-text-color: hsl(0deg, 0%, 5%);
+}
+
+/* Change header behavior */
+#header-4 .nav-sticky::after {
+  display: none;
+}
+
+#header-4 .nav-sticky.header-fixed .navbar-brand img {
+  filter: invert(1);
+}
+
+/* Change footer text color */
+.footer-block .content p,
+.footer-block .content a {
+  color: white;
+}

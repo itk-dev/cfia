@@ -1,0 +1,27 @@
+uuid: f9c71225-457d-4939-a23c-410bad425e6a
+langcode: da
+status: true
+dependencies:
+  config:
+    - block_content.type.single_image
+    - field.field.block_content.single_image.field_single_image
+  module:
+    - image
+id: block_content.single_image.default
+targetEntityType: block_content
+bundle: single_image
+mode: default
+content:
+  field_single_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

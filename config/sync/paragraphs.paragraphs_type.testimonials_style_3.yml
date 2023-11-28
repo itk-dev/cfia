@@ -1,0 +1,10 @@
+uuid: 403a551b-8bb2-46d2-b4f7-0c8b7150db60
+langcode: en
+status: true
+dependencies: {  }
+id: testimonials_style_3
+label: 'Testimonials - Style 3'
+icon_uuid: null
+icon_default: null
+description: 'Use to add testimonials section'
+behavior_plugins: {  }

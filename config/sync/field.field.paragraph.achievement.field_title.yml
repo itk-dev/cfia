@@ -1,0 +1,21 @@
+uuid: abe5ab15-08f1-44c7-b7c0-15bbd1207425
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.achievement
+  module:
+    - text
+id: paragraph.achievement.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: achievement
+label: Caption
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

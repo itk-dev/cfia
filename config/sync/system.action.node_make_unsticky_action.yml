@@ -1,11 +1,13 @@
-uuid: a6c86db1-6fca-4b07-b404-4b3785397fbf
+uuid: 4d8c284a-2f9e-4f29-a9f5-29501f2e55cf
 langcode: da
 status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: lDM9mvIGAu8Sw8rt-uCO4Sr7yX5VPrDPxYcawkbKd6k
 id: node_make_unsticky_action
-label: 'Make content unsticky'
+label: 'Fjern klæbrighed'
 type: node
 plugin: node_make_unsticky_action
 configuration: {  }

@@ -1,0 +1,25 @@
+uuid: 5a34fe92-a903-4203-bd7c-3d1962b510c1
+langcode: da
+status: true
+dependencies:
+  config:
+    - system.menu.useful-links
+  module:
+    - system
+  theme:
+    - cfia
+id: usefullinks_2
+theme: cfia
+region: footer_second
+weight: -12
+provider: null
+plugin: 'system_menu_block:useful-links'
+settings:
+  id: 'system_menu_block:useful-links'
+  label: Links
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

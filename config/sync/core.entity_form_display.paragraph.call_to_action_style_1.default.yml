@@ -1,0 +1,35 @@
+uuid: dc09c336-9452-492c-b45c-aa17e82ccd5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.call_to_action_style_1.field_link
+    - field.field.paragraph.call_to_action_style_1.field_title
+    - paragraphs.paragraphs_type.call_to_action_style_1
+  module:
+    - link
+    - text
+id: paragraph.call_to_action_style_1.default
+targetEntityType: paragraph
+bundle: call_to_action_style_1
+mode: default
+content:
+  field_link:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_title:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

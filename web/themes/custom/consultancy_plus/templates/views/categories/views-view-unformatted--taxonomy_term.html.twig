@@ -1,0 +1,51 @@
+{# {{fields.title.content}}
+{{fields.field_image.content}}
+{{fields.field_image_1.content}}
+{{fields.field_category.content}}
+{{fields.nothing.content}}
+{{fields.view_node.content}}
+{{fields.created.content}}
+{{fields.created_1.content}}
+{{fields.created_2.content}}
+{{fields.uid.content}}
+{{fields.body.content}}
+{{fields.counter.content}}
+{{fields.comment_count.content}}
+{{fields.totalcount.content}} #}
+
+
+
+
+{% if rows[0].content['#node'].type.value[0].target_id == "blog_post" %}
+    <section class="blogs blog-grid-3 z-sec blogs-term">
+        <div class="container">
+            <div class="blog-5">
+                <div class="row">
+                     {% for row in rows %}
+                        {{ row.content }}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>                
+    {% elseif rows[0].content['#node'].type.value[0].target_id == "case" %}
+    <section class="cases z-sec case-taxonomy cases-grid-2">
+        <div class="container">
+            <div class="row ">
+                {% for row in rows %}
+                    {{ row.content }}
+                {% endfor %}  
+            </div>
+        </div>
+    </section>       
+        {% elseif rows[0].content['#node'].type.value[0].target_id == "portfolio" %}
+    <section class="portfolio portfolio-grid-2 port-tax">
+        <div class="container">
+            <div class="row row-mr filter-item filtering">
+                {% for row in rows %}
+                    {{ row.content }}
+                {% endfor %}  
+            </div>
+        </div>
+    </section>      
+{% endif %}    

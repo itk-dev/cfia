@@ -1,0 +1,8 @@
+uuid: 1b85b430-4cdb-4646-b38d-76f335a422d3
+langcode: en
+status: true
+dependencies: {  }
+name: 'Categories - Blog'
+vid: category_blog
+description: 'Blog categories in the site'
+weight: 0

@@ -1,0 +1,21 @@
+uuid: 582ebf87-9284-4991-b644-c52ebb6281ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_formatted_description
+    - paragraphs.paragraphs_type.contact_info_style_3
+  module:
+    - text
+id: paragraph.contact_info_style_3.field_formatted_description
+field_name: field_formatted_description
+entity_type: paragraph
+bundle: contact_info_style_3
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

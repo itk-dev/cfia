@@ -1,0 +1,37 @@
+uuid: 4ad0a860-b55c-43af-b668-79211c1cdc2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.portfolio
+    - paragraphs.paragraphs_type.content
+  module:
+    - entity_reference_revisions
+id: node.portfolio.field_section
+field_name: field_section
+entity_type: node
+bundle: portfolio
+label: 'Additional Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      content: content
+    negate: 0
+    target_bundles_drag_drop:
+      content:
+        weight: 4
+        enabled: true
+      icon_profile_link:
+        weight: 5
+        enabled: false
+      social_media:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

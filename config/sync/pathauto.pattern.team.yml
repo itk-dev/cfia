@@ -1,0 +1,22 @@
+uuid: 413b26ea-eba3-456c-bb58-4ce6a7921d65
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: team
+label: Team
+type: 'canonical_entities:node'
+pattern: 'team/[node:title]'
+selection_criteria:
+  da249b1f-3d0c-40a0-a670-c6080ade49aa:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: da249b1f-3d0c-40a0-a670-c6080ade49aa
+    context_mapping:
+      node: node
+    bundles:
+      team: team
+selection_logic: and
+weight: -5
+relationships: {  }

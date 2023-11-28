@@ -1,28 +1,11 @@
 # CFIA
-Site for cfiaarhus.dk
 
-## Installation instructions for development
-- Requires: https://github.com/aakb/itkdev-docker
+This project is created on top of the theme project Consultancy Plus.
+For the theme to work properly the config for this site was exported
+from a database included in the Consultancy plus package. 
 
-Setup Docker environment (Optional):
-```
-itkdev-docker-compose up -d
-```
-Get php packages
-```
-itkdev-docker-compose composer install
-```
-Setup local site configuration:
-```
-cp web/sites/default/_docker.settings.local.php web/sites/default/docker.settings.local.php
-cp web/sites/default/_services.local.yml web/sites/default/services.local.yml
-```
-Install site:
-```
-itkdev-docker-compose vendor/bin/drush site-install minimal --existing-config -y
-```
+[Consultancy Plus](https://www.drupalthemes.io/drupal-themes/consultancy-plus)
 
-## Sync files and DB
-```
-itkdev-docker-compose sync
-```
+### Guide for local development README
+
+[Local development](web/documentation/localDevelopment.md)

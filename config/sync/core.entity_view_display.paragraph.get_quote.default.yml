@@ -1,0 +1,23 @@
+uuid: 2aeef53b-2240-4983-a4a9-8fa97e10ff0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.get_quote.field_form
+    - paragraphs.paragraphs_type.get_quote
+  module:
+    - webform
+id: paragraph.get_quote.default
+targetEntityType: paragraph
+bundle: get_quote
+mode: default
+content:
+  field_form:
+    type: webform_entity_reference_entity_view
+    label: above
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

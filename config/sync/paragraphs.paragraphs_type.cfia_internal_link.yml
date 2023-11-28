@@ -1,8 +1,0 @@
-uuid: 3313cc80-f730-4349-830a-c9b6dd9255ac
-langcode: da
-status: true
-dependencies: {  }
-_core:
-  default_config_hash: m-6XhBFqGQuj_SCX4X9Aw69hBIPGY49gp_gl0G6bojo
-id: cfia_internal_link
-label: 'Liste element/link'

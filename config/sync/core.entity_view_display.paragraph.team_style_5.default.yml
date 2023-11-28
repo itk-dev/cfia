@@ -1,0 +1,56 @@
+uuid: 37e85290-2cac-4d82-a399-3bc6a4498fb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.team_style_5.field_link
+    - field.field.paragraph.team_style_5.field_tagline
+    - field.field.paragraph.team_style_5.field_title
+    - field.field.paragraph.team_style_5.field_view
+    - paragraphs.paragraphs_type.team_style_5
+  module:
+    - link
+    - text
+    - viewsreference
+id: paragraph.team_style_5.default
+targetEntityType: paragraph
+bundle: team_style_5
+mode: default
+content:
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_tagline:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_view:
+    type: viewsreference_formatter
+    label: above
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

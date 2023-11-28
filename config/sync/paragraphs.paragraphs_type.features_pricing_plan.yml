@@ -1,0 +1,10 @@
+uuid: 69e0413d-1842-4338-9ec4-25c68fffc032
+langcode: en
+status: true
+dependencies: {  }
+id: features_pricing_plan
+label: 'Features - Pricing Plan'
+icon_uuid: null
+icon_default: null
+description: 'Features of the pricing plan'
+behavior_plugins: {  }

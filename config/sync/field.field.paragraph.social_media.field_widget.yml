@@ -1,0 +1,34 @@
+uuid: 8e52e1a8-85ed-4457-88db-53cb39931efd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_widget
+    - paragraphs.paragraphs_type.icon_profile_link
+    - paragraphs.paragraphs_type.social_media
+  module:
+    - entity_reference_revisions
+id: paragraph.social_media.field_widget
+field_name: field_widget
+entity_type: paragraph
+bundle: social_media
+label: 'Icon & Profile Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      icon_profile_link: icon_profile_link
+    negate: 0
+    target_bundles_drag_drop:
+      icon_profile_link:
+        weight: 3
+        enabled: true
+      social_media:
+        weight: 2
+        enabled: false
+field_type: entity_reference_revisions

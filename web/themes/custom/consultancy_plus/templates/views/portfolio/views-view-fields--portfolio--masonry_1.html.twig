@@ -1,0 +1,122 @@
+{# <div class="mt-2">
+    {{fields.title.content}}
+    {{fields.field_images.content}}
+    {{fields.field_images_1.content}}
+    {{fields.field_category.content}}
+    {{fields.nothing.content}}
+    {{fields.counter.content}}
+    {{fields.view_node.content}}
+    {{fields.created.content}}
+    {{fields.field_category_1.content}} 
+</div> #}
+
+
+
+{# {% if fields.counter.content == '1' or fields.counter.content == '3' or fields.counter.content == '6' %}
+    <div class="col-md-4 col-sm-6 item1 first" style="position: absolute; left: 0px; top: 0px;">
+        <div class="img-wrapper h-1">
+            <img src="{{fields.field_images.content}}" alt="Protfolio-Image">
+            <div class="content-wrapper">
+                <div class="up">
+                    <a href="{{fields.field_images.content}}" title="Protfolio-Image" data-fancybox="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="149.998" height="150" viewBox="0 0 149.998 150">
+                            <g data-name="Group 40009" transform="translate(12396.73 12619.245)">
+                                <path data-name="Path 39232" d="M175.8,30.8a75,75,0,1,0,75,75A75.085,75.085,0,0,0,175.8,30.8Zm0,143.258A68.258,68.258,0,1,1,244.058,105.8,68.335,68.335,0,0,1,175.8,174.059Z" transform="translate(-12497.53 -12650.046)" fill="#111"></path>
+                                <path data-name="Path 39233" d="M284.1,174.2H267.4v23.2H244.2v16.7h23.2v23.2h16.7V214.1h23.2V197.4H284.1Z" transform="translate(-12597.484 -12750)" fill="#111"></path>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="down">
+                    <h5>{{fields.title.content}}</h5> 
+                    <p>{{fields.field_portfolio_category.content}}</p>
+                </div>
+            </div> #}
+        {# </div> #}
+    
+
+{# {% else %}     #}
+    {# <div class="col-md-4 col-sm-6 item1 second" style="position: absolute; left: 380px; top: 0px;"> #}
+        {# <div class="img-wrapper second">
+            <img src="{{fields.field_images.content}}" alt="Protfolio-Image">
+            <div class="content-wrapper">
+                <div class="up">
+                    <a href="{{fields.field_images.content}}" title="Protfolio-Image" data-fancybox="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="149.998" height="150" viewBox="0 0 149.998 150">
+                            <g data-name="Group 40009" transform="translate(12396.73 12619.245)">
+                                <path data-name="Path 39232" d="M175.8,30.8a75,75,0,1,0,75,75A75.085,75.085,0,0,0,175.8,30.8Zm0,143.258A68.258,68.258,0,1,1,244.058,105.8,68.335,68.335,0,0,1,175.8,174.059Z" transform="translate(-12497.53 -12650.046)" fill="#111"></path>
+                                <path data-name="Path 39233" d="M284.1,174.2H267.4v23.2H244.2v16.7h23.2v23.2h16.7V214.1h23.2V197.4H284.1Z" transform="translate(-12597.484 -12750)" fill="#111"></path>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="down">
+                    <h5>{{fields.title.content}}</h5> 
+                    <p>{{fields.field_portfolio_category.content}}</p>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+{% endif %}     #}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% if fields.counter.content == '1' or fields.counter.content == '3' or fields.counter.content == '6' or fields.counter.content == '7' or fields.counter.content == '9' %}
+    <div class="col-md-4 item item1 {{fields.field_category_1.content}}"  style="position: absolute; left: 0px; top: 0px;">
+        <div class="img-wrapper mas-1">
+            <img src="{{fields.field_images.content}}" alt="Protfolio-Image">
+            <div class="content-wrapper">
+                <div class="up">
+                    <a href="{{fields.field_images.content}}" title="Protfolio-Image" data-fancybox="">
+                        <div class="svg-wrapp">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150">
+                                <path data-name="Path 40747" d="M154,79c0,6.912-.6,12.5-7.512,12.5H91.5v54.988c0,6.9-5.587,7.512-12.5,7.512s-12.5-.612-12.5-7.512V91.5H11.512C4.612,91.5,4,85.912,4,79s.612-12.5,7.512-12.5H66.5V11.512C66.5,4.6,72.088,4,79,4s12.5.6,12.5,7.512V66.5h54.988C153.4,66.5,154,72.088,154,79Z" transform="translate(-4 -4)" fill="#1b1f29"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="down">
+                    <h4>{{fields.title.content}}</h4> 
+                    <p>{{fields.field_category.content}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% else %}    
+    <div class="col-md-4 item item1" {{fields.field_category_1.content}} style="position: absolute; left: 380px; top: 0px;">
+        <div class="img-wrapper mas-2">
+            <img src="{{fields.field_images.content}}" alt="Protfolio-Image">
+            <div class="content-wrapper">
+                <div class="up">
+                    <a href="{{fields.field_images.content}}" title="Protfolio-Image" data-fancybox="">
+                        <div class="svg-wrapp">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150">
+                                <path data-name="Path 40747" d="M154,79c0,6.912-.6,12.5-7.512,12.5H91.5v54.988c0,6.9-5.587,7.512-12.5,7.512s-12.5-.612-12.5-7.512V91.5H11.512C4.612,91.5,4,85.912,4,79s.612-12.5,7.512-12.5H66.5V11.512C66.5,4.6,72.088,4,79,4s12.5.6,12.5,7.512V66.5h54.988C153.4,66.5,154,72.088,154,79Z" transform="translate(-4 -4)" fill="#1b1f29"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="down">
+                    <h4>{{fields.title.content}}</h4> 
+                    <p>{{fields.field_category.content}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}    

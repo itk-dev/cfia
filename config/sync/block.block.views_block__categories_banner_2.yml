@@ -1,0 +1,25 @@
+uuid: 853382be-0e2d-4548-a850-371065fecad3
+langcode: da
+status: false
+dependencies:
+  config:
+    - views.view.categories
+  module:
+    - views
+  theme:
+    - cfia
+id: views_block__categories_banner_2
+theme: cfia
+region: banner
+weight: 0
+provider: null
+plugin: 'views_block:categories-banner'
+settings:
+  id: 'views_block:categories-banner'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility: {  }

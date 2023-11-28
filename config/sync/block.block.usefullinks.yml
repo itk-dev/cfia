@@ -1,0 +1,25 @@
+uuid: 5a719896-e4dd-4f7b-961a-2ed111d55dc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.useful-links
+  module:
+    - system
+  theme:
+    - consultancy_plus
+id: usefullinks
+theme: consultancy_plus
+region: footer_third
+weight: 0
+provider: null
+plugin: 'system_menu_block:useful-links'
+settings:
+  id: 'system_menu_block:useful-links'
+  label: 'Useful Links'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

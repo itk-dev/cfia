@@ -1,0 +1,21 @@
+uuid: 715060bd-d1f5-4764-8102-9a303722393e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.pricing_plans
+  module:
+    - text
+id: paragraph.pricing_plans.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: pricing_plans
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

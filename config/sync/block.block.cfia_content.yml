@@ -1,0 +1,22 @@
+uuid: fcdfca69-584e-4719-9579-eebf83a8f5dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cfia
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: cfia_content
+theme: cfia
+region: content
+weight: -13
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

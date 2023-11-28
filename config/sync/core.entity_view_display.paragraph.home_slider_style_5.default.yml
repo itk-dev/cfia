@@ -1,0 +1,24 @@
+uuid: 81d4c2e7-ca58-4d62-98ba-07ec0a35dad6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.home_slider_style_5.field_widget
+    - paragraphs.paragraphs_type.home_slider_style_5
+  module:
+    - entity_reference_revisions
+id: paragraph.home_slider_style_5.default
+targetEntityType: paragraph
+bundle: home_slider_style_5
+mode: default
+content:
+  field_widget:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

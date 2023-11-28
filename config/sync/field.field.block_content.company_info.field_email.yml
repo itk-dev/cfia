@@ -1,0 +1,19 @@
+uuid: 556660b1-c9e6-443b-bea4-9daec4a5c421
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.company_info
+    - field.storage.block_content.field_email
+id: block_content.company_info.field_email
+field_name: field_email
+entity_type: block_content
+bundle: company_info
+label: 'E-Mail Address'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

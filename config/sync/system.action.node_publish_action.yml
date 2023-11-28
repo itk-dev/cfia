@@ -1,11 +1,13 @@
-uuid: 5d7bcc7b-c251-40fe-9525-371d533e285e
+uuid: 401f67e5-641b-4bf0-80df-7a9b71ff64a6
 langcode: da
 status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: 2B9uF8NL5gutNKSdPRAhhAsDWFZZG1PJOBmx0aBGd_0
 id: node_publish_action
-label: 'Publish content'
+label: 'Udgiv indhold'
 type: node
 plugin: 'entity:publish_action:node'
 configuration: {  }

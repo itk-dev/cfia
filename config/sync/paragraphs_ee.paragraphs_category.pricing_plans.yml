@@ -1,0 +1,8 @@
+uuid: 0b96a433-de54-4bc9-b135-4ab4e1080ee9
+langcode: en
+status: true
+dependencies: {  }
+id: pricing_plans
+label: 'Pricing Plans'
+description: ''
+weight: -10

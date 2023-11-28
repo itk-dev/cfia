@@ -1,0 +1,28 @@
+{# {{fields.field_title_1.content}}
+{{fields.field_text_1.content}}
+{{fields.field_title_2.content}}
+{{fields.field_category.content}}
+{{fields.field_title_3.content}}
+{{fields.field_text_3.content}}
+{{fields.field_title_4.content}}
+{{drupal_block('addtoany_block')}} #}
+
+
+        <div class="portflio-detail-created">   
+            <div class="display-portfolio">
+                <span>{{fields.field_title_1.content}}</span> {# Title 1 #}
+                <h4>{{fields.field_text_1.content}}</h4> {# Text 1 #}
+            </div>
+            <div class="display-portfolio">
+                <span>{{fields.field_title_2.content}}</span> {# Title 2 #}
+                <h4>{{fields.field_category.content}}</h4>
+            </div>
+            <div class="display-portfolio">
+                <span>{{fields.field_title_3.content}}</span> {# Title 3 #}
+                <h4>{{fields.field_text_3.content}}</h4> {# Text 3 (Date) #}
+            </div>
+            <div class="display-portfolio">
+                <span>{{fields.field_title_4.content}}</span> {# Title 4 #}
+                <div class="portfolio-addtoany">{{drupal_block('addtoany_block')}}</div>
+            </div>
+        </div>
