@@ -3,7 +3,7 @@
         <div class="content-descriptions">
             {{content.body.0}}
         </div>
-        <div class="portflio-detail-created">   
+        <div class="portflio-detail-created">
             <div class="display-portfolio">
                 <span>{{content.field_title_1.0}}</span> {# Title 1 #}
                 <h4>{{content.field_text_1.0}}</h4> {# Text 1 #}
@@ -27,7 +27,7 @@
                 <div class="col-md-6">
                     <div class="image-wrapper">
                         <img src="{{file_url(content.field_images['#items'][key].entity.uri.value)}}" alt="{{content.field_images['#items'][key].alt}}" />
-                    </div>               
+                    </div>
                 </div>
             {% endfor %}
         {% elseif content.field_images[2] %}
@@ -36,7 +36,7 @@
                         <div class="image-wrapper">
                             <img src="{{file_url(content.field_images['#items'][key].entity.uri.value)}}" alt="{{content.field_images['#items'].alt}}" />
                         </div>
-                    </div>   
+                    </div>
             {% endfor %}
         {% endif %}
         </div>
@@ -66,6 +66,11 @@
             </a>
             <a href="{{next_portfolio_url}}" class="next_node">
                 <h4>{{pager_prev_text_3}}</h4>
+                </div>
+                <h4>{{pager_prev_text}}</h4>
+            </a>
+            <a href="{{next_portfolio_url}}" class="next_node">
+                <h4>{{pager_next_text}}</h4>
                 <div class="svg_wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="88" height="150" viewBox="0 0 88 150">
                         <path  data-name="Path 40741" d="M0,13.409,13.422,0,88,75,13.347,150,0,136.591,61.306,75Z" fill="#1b1f29"/>

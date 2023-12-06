@@ -2,9 +2,23 @@
 ** Customization of theme css
 */
 
+/* Import Source Sans font*/
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;900&display=swap");
+
 /* Override variabels */
 :root {
-  --paragraph-text-color: hsl(0deg, 0%, 5%);
+  --cfia-background-color: rgb(244, 242,230);
+  --cfia-primary-color: var(--bs-primary);
+  --cfia-secondary-color: var(--bs-secondary);
+  --paragraph-text-color: var(--bs-primary);
+  --heading-text-color: var(--bs-primary);
+  --cfia-font-family: "Source Sans 3", sans-serif;
+  --cfia-font-weight-regular: 400;
+  --cfia-font-weight-bold: 900;
+  --heading-font: var(--cfia-font-family);
+  --paragraph-font: var(--cfia-font-family);
+  --menu-font: var(--cfia-font-family);
+  --cfia-spacer: 1rem;
 }
 
 /* Change header behavior */
@@ -16,8 +30,186 @@
   filter: invert(1);
 }
 
+#header-4 .nav-link {
+  font-weight: var(--cfia-font-weight-regular);
+}
+
 /* Change footer text color */
 .footer-block .content p,
 .footer-block .content a {
   color: white;
+}
+
+body {
+  background-color: var(--cfia-background-color);
+  font-weight: var(--cfia-font-weight-regular);
+}
+
+/* Font styles */
+strong, b, h1, h2, h3, h4, h5 {
+  font-weight: var(--cfia-font-weight-bold);
+}
+
+/* Link styles */
+a, .link {
+  color: var(--cfia-secondary-color);
+}
+
+a:hover, .link:hover {
+  color: var(--cfia-primary-color);
+  text-decoration: underline;
+}
+
+.cases-title a,
+.portfolio-title a,
+.portfolio-title a:hover h4,
+.blog-title,
+.read a {
+  color: var(--cfia-primary-color);
+}
+
+.cases-title a:hover,
+.portfolio-title a:hover {
+  text-decoration: underline;
+}
+
+/* Color changes */
+.blog-2-items::after {
+  background-color: var(--cfia-background-color);
+}
+
+.footer-block::before {
+  background-color: var(--cfia-primary-color);
+}
+
+
+/* Buttons */
+.quate-btn-rect {
+  width: max-content;
+  border-radius: 5px;
+}
+
+.quate-btn-rect a {
+  width: auto;
+  gap: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.home1-btn {
+  margin-top: 0;
+}
+
+/* Page banner */
+.page-banner {
+  height: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#page_content.header-4 .page-banner-style-2 .heading {
+  padding-top: 80px !important;
+}
+
+/* Show red bullets on lists */
+.content-descriptions ul,
+.list-wrapper ul {
+  list-style: none;
+}
+
+.content-descriptions ul li::before,
+.list-wrapper ul li::before {
+  content: "\2022";
+  color: var(--cfia-secondary-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.content-descriptions ul li p,
+.list-wrapper ul li p{
+  display: inline;
+}
+
+.content-descriptions li {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-text-color);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+/* Truncate text in blog list */
+.blog-content {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Align texts */
+.des-uid {
+  align-items: baseline;
+}
+
+/* Highlight background on service grid on hover */
+.service-grid-3 .service-wrapper:hover {
+  background-color: #fff;
+}
+
+/* Services grid spacing*/
+.service-style-1 .z-sec {
+  padding-bottom: 20px;
+  border-bottom: 0;
+}
+
+/* Remove negative margin on features */
+.features-style-3 .feature-bg {
+  margin-top: initial;
+}
+
+/* Portfolio */
+.portfolio-style-2 .container .container ul li:first-of-type {
+  padding-left: var(--cfia-spacer);
+}
+
+.portfolio .tag-title-btn {
+  margin-top: calc(var(--cfia-spacer) * 2);
+}
+
+.portfolio .tag-title-btn .quate-btn-rect {
+  display: none;
+}
+
+.portfolio-style_1 .carousels-1 .carousel-detail {
+  padding-bottom: 59px;
+}
+
+.portfolio-grid-3 .img-wrapper::before {
+  display: none;
+}
+
+.portfolio-grid-3 .img-wrapper:hover {
+  opacity: 0.85;
+}
+
+/* Sidebar */
+.sidebar .block {
+  padding: 0;
+}
+
+/* Hide/remove unwanted elements*/
+.case-items .read,
+.home-slide4 .slide-details,
+.cases .img-wrapper:hover .svg-wrapp,
+.cases .img-wrapper:hover::before,
+.portfolio-grid-3 .img-wrapper .svg-wrapp:hover,
+.portfolio-grid-3 .img-wrapper:hover .svg-wrapp {
+  display: none;
+}
+
+.features-style-3 .feature-bg,
+.features-style-3 .feature-bg::before {
+  background: none;
 }
