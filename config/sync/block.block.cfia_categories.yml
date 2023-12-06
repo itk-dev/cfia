@@ -1,8 +1,9 @@
 uuid: d6b5b5d0-4a8e-4c17-8590-7d62d1594b12
 langcode: en
-status: true
+status: false
 dependencies:
   module:
+    - node
     - system
   theme:
     - cfia
@@ -14,9 +15,9 @@ provider: null
 plugin: 'block_content:23e57cba-b8b5-44f2-bcb4-cbc5028ac0b7'
 settings:
   id: 'block_content:23e57cba-b8b5-44f2-bcb4-cbc5028ac0b7'
-  label: Categories
+  label: Kategorier
   label_display: visible
-  provider: block_content
+  provider: core
   status: true
   info: ''
   view_mode: full
@@ -25,3 +26,10 @@ visibility:
     id: request_path
     negate: false
     pages: "/node/35\r\n/node/39"
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      case: case

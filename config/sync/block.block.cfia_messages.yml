@@ -11,7 +11,7 @@ _core:
 id: cfia_messages
 theme: cfia
 region: highlighted
-weight: -14
+weight: -13
 provider: null
 plugin: system_messages_block
 settings:

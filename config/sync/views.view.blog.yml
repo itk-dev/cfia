@@ -28,7 +28,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Blog
+      title: Seneste
       fields:
         title:
           id: title
@@ -627,7 +627,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: 'Read More'
+            text: 'Læs mere'
             make_link: false
             path: ''
             absolute: false

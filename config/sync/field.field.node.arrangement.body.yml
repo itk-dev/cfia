@@ -1,0 +1,24 @@
+uuid: cebc7a03-65f4-4599-b890-7790bdb87b4c
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.arrangement
+  module:
+    - text
+id: node.arrangement.body
+field_name: body
+entity_type: node
+bundle: arrangement
+label: Body
+description: 'Arrangement beskrivelse'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

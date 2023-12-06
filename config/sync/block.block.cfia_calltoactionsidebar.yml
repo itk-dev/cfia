@@ -1,22 +1,23 @@
 uuid: 66fcedeb-1316-4fde-a5ba-2ab38b12c908
 langcode: en
-status: true
+status: false
 dependencies:
   module:
+    - node
     - system
   theme:
     - cfia
 id: cfia_calltoactionsidebar
 theme: cfia
-region: sidebar_second
-weight: -7
+region: sidebar_first
+weight: -15
 provider: null
 plugin: 'block_content:afab0c7e-4acf-46ac-82c1-75df32c1b074'
 settings:
   id: 'block_content:afab0c7e-4acf-46ac-82c1-75df32c1b074'
   label: 'Call To Action - Sidebar (Style 1)'
   label_display: '0'
-  provider: block_content
+  provider: core
   status: true
   info: ''
   view_mode: full
@@ -25,3 +26,10 @@ visibility:
     id: request_path
     negate: false
     pages: /node/46
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      service: service

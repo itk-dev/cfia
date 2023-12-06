@@ -1,0 +1,23 @@
+uuid: 8661f2d3-b03a-4ff7-997f-178f4fa6512b
+langcode: da
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cfia
+id: cfia_sitebranding
+theme: cfia
+region: logo
+weight: -13
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Cfia logo'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

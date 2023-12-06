@@ -1,0 +1,19 @@
+uuid: 7bea9da9-03a8-43cc-80ab-f933a2387dac
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_1
+    - node.type.arrangement
+id: node.arrangement.field_text_1
+field_name: field_text_1
+entity_type: node
+bundle: arrangement
+label: 'Text 1'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

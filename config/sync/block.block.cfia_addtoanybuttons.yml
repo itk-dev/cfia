@@ -9,7 +9,7 @@ dependencies:
 id: cfia_addtoanybuttons
 theme: cfia
 region: content
-weight: -12
+weight: -14
 provider: null
 plugin: addtoany_block
 settings:

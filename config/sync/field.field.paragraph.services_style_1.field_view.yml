@@ -30,10 +30,11 @@ settings:
     feed: 0
     embed: 0
   preselect_views:
+    arrangementer: arrangementer
+    blog: blog
+    cases: cases
     services: services
     block_content: 0
-    blog: 0
-    cases: 0
     categories: 0
     comment: 0
     comments_recent: 0
@@ -44,6 +45,7 @@ settings:
     frontpage: 0
     page_banner: 0
     portfolio: 0
+    procesmodel: 0
     taxonomy_term: 0
     team: 0
     testimonials: 0
@@ -53,8 +55,8 @@ settings:
     who_s_new: 0
     who_s_online: 0
   enabled_settings:
-    limit: limit
     pager: pager
+    limit: limit
     offset: offset
     argument: 0
     title: 0

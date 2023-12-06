@@ -11,7 +11,7 @@ dependencies:
 id: views_block__blog_banner_2
 theme: cfia
 region: banner
-weight: 0
+weight: -10
 provider: null
 plugin: 'views_block:blog-banner'
 settings:

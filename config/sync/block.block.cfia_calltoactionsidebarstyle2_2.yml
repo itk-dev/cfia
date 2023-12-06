@@ -1,6 +1,6 @@
 uuid: 9820d8d2-3bb5-4c51-a02e-ad6fae86e7e1
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -8,8 +8,8 @@ dependencies:
     - cfia
 id: cfia_calltoactionsidebarstyle2_2
 theme: cfia
-region: sidebar_second
-weight: 0
+region: sidebar_first
+weight: -14
 provider: null
 plugin: 'block_content:d4b1e72c-db00-4b83-b5ee-332c061f9bed'
 settings:

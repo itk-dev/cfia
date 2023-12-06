@@ -1,0 +1,32 @@
+uuid: a0307d37-035c-4cc6-9bc4-8852ba7ae222
+langcode: da
+status: true
+dependencies:
+  config:
+    - block_content.type.sidebar_services
+    - field.field.block_content.sidebar_services.body
+    - field.field.block_content.sidebar_services.field_menu
+  module:
+    - text
+id: block_content.sidebar_services.default
+targetEntityType: block_content
+bundle: sidebar_services
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_menu:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

@@ -27,7 +27,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Categories
+      title: Kategorier
       fields:
         name:
           id: name

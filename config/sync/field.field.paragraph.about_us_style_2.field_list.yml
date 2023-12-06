@@ -1,0 +1,19 @@
+uuid: 1f8726ec-8963-4153-b62f-69c17f38361b
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_list
+    - paragraphs.paragraphs_type.about_us_style_2
+id: paragraph.about_us_style_2.field_list
+field_name: field_list
+entity_type: paragraph
+bundle: about_us_style_2
+label: List
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,73 @@
+uuid: 7bb4ff99-ab9e-48c6-bad1-9c22fd5294a0
+langcode: da
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.arrangement.body
+    - field.field.node.arrangement.field_banner_image
+    - field.field.node.arrangement.field_category
+    - field.field.node.arrangement.field_image
+    - field.field.node.arrangement.field_section
+    - field.field.node.arrangement.field_tags
+    - field.field.node.arrangement.field_text_1
+    - field.field.node.arrangement.field_text_3
+    - field.field.node.arrangement.field_title_1
+    - field.field.node.arrangement.field_title_2
+    - field.field.node.arrangement.field_title_3
+    - field.field.node.arrangement.field_title_4
+    - image.style.medium
+    - node.type.arrangement
+  module:
+    - image
+    - text
+    - user
+id: node.arrangement.teaser
+targetEntityType: node
+bundle: arrangement
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  field_banner_image: true
+  field_category: true
+  field_section: true
+  field_text_1: true
+  field_text_3: true
+  field_title_1: true
+  field_title_2: true
+  field_title_3: true
+  field_title_4: true
+  langcode: true

@@ -8,7 +8,7 @@ third_party_settings:
   menu_ui:
     available_menus:
       - main
-    parent: 'main:'
+    parent: 'main:menu_link_content:807bb9d2-fdd1-43e9-85c2-48ccd189a6ef'
 name: Service
 type: service
 description: 'Use <em>service</em> to add your service detail pages'

@@ -100,6 +100,7 @@ permissions:
   - 'delete own blog_post content'
   - 'delete own case content'
   - 'delete own elements content'
+  - 'delete own files'
   - 'delete own home_page content'
   - 'delete own page content'
   - 'delete own portfolio content'

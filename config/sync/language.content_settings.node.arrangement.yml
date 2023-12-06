@@ -1,0 +1,11 @@
+uuid: f79579c8-07ed-4ebd-a53d-d30e87461e1d
+langcode: da
+status: true
+dependencies:
+  config:
+    - node.type.arrangement
+id: node.arrangement
+target_entity_type_id: node
+target_bundle: arrangement
+default_langcode: site_default
+language_alterable: false

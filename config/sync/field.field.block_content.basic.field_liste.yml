@@ -1,0 +1,21 @@
+uuid: 233e3344-437c-4716-a932-df56f27e68a3
+langcode: da
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.block_content.field_liste
+  module:
+    - options
+id: block_content.basic.field_liste
+field_name: field_liste
+entity_type: block_content
+bundle: basic
+label: liste
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

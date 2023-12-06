@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - block_content.type.basic
+    - field.field.block_content.basic.field_liste
     - field.field.block_content.basic.field_widget
   module:
     - paragraphs
@@ -16,6 +17,12 @@ targetEntityType: block_content
 bundle: basic
 mode: default
 content:
+  field_liste:
+    type: options_select
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_widget:
     type: paragraphs
     weight: 26

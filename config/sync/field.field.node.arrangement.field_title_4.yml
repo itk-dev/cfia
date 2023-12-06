@@ -1,0 +1,19 @@
+uuid: f610d16d-7111-4691-8247-c2ab237f2223
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_4
+    - node.type.arrangement
+id: node.arrangement.field_title_4
+field_name: field_title_4
+entity_type: node
+bundle: arrangement
+label: 'Title 4'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

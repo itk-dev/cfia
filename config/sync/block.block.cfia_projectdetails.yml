@@ -1,0 +1,33 @@
+uuid: 4bd8efd2-fb7f-49f7-a00e-5cf25df2a3cc
+langcode: da
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:bfd6af7d-138a-4f4a-98bf-37e0a87f3d1d'
+  module:
+    - block_content
+    - node
+  theme:
+    - cfia
+id: cfia_projectdetails
+theme: cfia
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:bfd6af7d-138a-4f4a-98bf-37e0a87f3d1d'
+settings:
+  id: 'block_content:bfd6af7d-138a-4f4a-98bf-37e0a87f3d1d'
+  label: 'Project details'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      portfolio: portfolio

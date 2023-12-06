@@ -1,0 +1,51 @@
+uuid: 0e9c1e37-de1a-4449-9e53-4ea9ff578e06
+langcode: da
+status: true
+dependencies:
+  config:
+    - block_content.type.sidebar_services
+    - field.field.block_content.sidebar_services.body
+    - field.field.block_content.sidebar_services.field_menu
+  module:
+    - text
+id: block_content.sidebar_services.default
+targetEntityType: block_content
+bundle: sidebar_services
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_menu:
+    type: entity_reference_autocomplete
+    weight: 27
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

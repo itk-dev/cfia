@@ -23,14 +23,13 @@ settings:
     target_bundles: null
     auto_create: 0
   plugin_types:
+    page: page
     block: block
     default: 0
-    page: 0
     entity_browser: 0
     feed: 0
     embed: 0
   preselect_views:
-    services: services
     block_content: 0
     blog: 0
     cases: 0
@@ -44,6 +43,8 @@ settings:
     frontpage: 0
     page_banner: 0
     portfolio: 0
+    procesmodel: 0
+    services: 0
     taxonomy_term: 0
     team: 0
     testimonials: 0
@@ -53,8 +54,8 @@ settings:
     who_s_new: 0
     who_s_online: 0
   enabled_settings:
-    limit: limit
     pager: pager
+    limit: limit
     offset: offset
     argument: 0
     title: 0

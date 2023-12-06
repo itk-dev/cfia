@@ -8,7 +8,7 @@ favicon:
 features:
   favicon: true
 logo:
-  path: 'public://cfia-logo.png'
+  path: sites/default/files/cfia-logo.png
   use_default: false
 bootstrap_barrio_library: production
 bootstrap_barrio_fluid_container: 0
@@ -21,7 +21,7 @@ bootstrap_barrio_region_clean_header: 1
 bootstrap_barrio_region_class_header: ''
 bootstrap_barrio_region_clean_header_form: 0
 bootstrap_barrio_region_class_header_form: row
-bootstrap_barrio_region_clean_primary_menu: 1
+bootstrap_barrio_region_clean_primary_menu: 0
 bootstrap_barrio_region_class_primary_menu: ''
 bootstrap_barrio_region_clean_secondary_menu: 0
 bootstrap_barrio_region_class_secondary_menu: row
@@ -35,11 +35,11 @@ bootstrap_barrio_region_clean_featured_top: 0
 bootstrap_barrio_region_class_featured_top: row
 bootstrap_barrio_region_clean_breadcrumb: 1
 bootstrap_barrio_region_class_breadcrumb: ''
-bootstrap_barrio_region_clean_content: 1
+bootstrap_barrio_region_clean_content: 0
 bootstrap_barrio_region_class_content: ''
-bootstrap_barrio_region_clean_sidebar_first: 1
+bootstrap_barrio_region_clean_sidebar_first: 0
 bootstrap_barrio_region_class_sidebar_first: ''
-bootstrap_barrio_region_clean_sidebar_second: 1
+bootstrap_barrio_region_clean_sidebar_second: 0
 bootstrap_barrio_region_class_sidebar_second: ''
 bootstrap_barrio_region_clean_featured_bottom_first: 0
 bootstrap_barrio_region_class_featured_bottom_first: row
@@ -70,7 +70,7 @@ bootstrap_barrio_button: 1
 bootstrap_barrio_button_size: ''
 bootstrap_barrio_button_type: primary
 bootstrap_barrio_button_outline: 0
-bootstrap_barrio_navbar_container: '0'
+bootstrap_barrio_navbar_container: '1'
 bootstrap_barrio_navbar_toggle: navbar-toggleable-lg
 bootstrap_barrio_navbar_top_navbar: 0
 bootstrap_barrio_navbar_top_class: ''
@@ -87,8 +87,8 @@ bootstrap_barrio_navbar_offcanvas: ''
 bootstrap_barrio_messages_widget: alerts
 bootstrap_barrio_float_label: '0'
 bootstrap_barrio_checkbox: ''
-bootstrap_barrio_navbar_top_affix: 0
-bootstrap_barrio_navbar_affix: 0
+bootstrap_barrio_navbar_top_affix: 1
+bootstrap_barrio_navbar_affix: 1
 bootstrap_barrio_sidebar_first_affix: 0
 bootstrap_barrio_sidebar_second_affix: 0
 bootstrap_barrio_scroll_spy: ''
@@ -101,11 +101,12 @@ bootstrap_barrio_table_hover: 1
 bootstrap_barrio_table_head: ''
 bootstrap_barrio_image_fluid: false
 bootstrap_barrio_tabs_style: ''
+bootstrap_barrio_enable_color: false
 loader: 1
-pager_prev_text: 'Prev Blog'
-pager_next_text: 'Next Blog'
-pager_prev_text_2: 'Prev Case'
-pager_next_text_2: 'Next Case'
+pager_prev_text: Forrige
+pager_next_text: Næste
+pager_prev_text_2: Forrige
+pager_next_text_2: Næste
 login_banner_title: 'Log ind'
 login_banner_image:
   - '78'
@@ -143,10 +144,10 @@ comingsoon_description: ''
 bg_image_c: {  }
 date: '2025-03-21'
 custom_message: 'The site will go live soon'
-search_banner_title: 'Search Result'
+search_banner_title: Røgeresultater
 search_banner_image: {  }
 header_variation: header-4
-sticky: 1
+sticky: 0
 address_text: ''
 address: ''
 email_text: ''
@@ -159,8 +160,8 @@ copyrights:
   format: basic_html
 styles: ''
 default_color: 0
-primary_color: '#07605d'
-secondary_color: '#edbf2b'
+primary_color: '#2e534f'
+secondary_color: '#aa563e'
 show_pannel: 1
 bootstrap_barrio_region_clean_logo: 0
 bootstrap_barrio_region_class_logo: row
@@ -169,13 +170,13 @@ bootstrap_barrio_region_class_language_block: row
 bootstrap_barrio_region_clean_search: 0
 bootstrap_barrio_region_class_search: row
 bootstrap_barrio_region_clean_social_media: 0
-bootstrap_barrio_region_class_social_media: row
+bootstrap_barrio_region_class_social_media: ''
 bootstrap_barrio_region_clean_banner: 0
 bootstrap_barrio_region_class_banner: row
 contact_text: 'Kontakt os'
 footer_bg_image: {  }
-pager_prev_text_3: 'Prev Case'
-pager_next_text_3: 'Next Case'
+pager_prev_text_3: Forrige
+pager_next_text_3: Næste
 login_content_1:
   value: ''
   format: basic_html

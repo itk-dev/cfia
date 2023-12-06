@@ -1,5 +1,5 @@
-uuid: 0b29c6d1-3ef0-4d85-a5f7-75841b55b52a
-langcode: en
+uuid: e4a6b4e0-9f64-4dfc-85df-6985185a3255
+langcode: da
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ bundle: portfolio
 label: Category
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -25,5 +25,5 @@ settings:
       field: name
       direction: asc
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: category_blog
 field_type: entity_reference

@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.about_us_style_2.field_formatted_description
     - field.field.paragraph.about_us_style_2.field_image
-    - field.field.paragraph.about_us_style_2.field_link
+    - field.field.paragraph.about_us_style_2.field_list
     - field.field.paragraph.about_us_style_2.field_tagline
     - field.field.paragraph.about_us_style_2.field_text
     - field.field.paragraph.about_us_style_2.field_text_2
@@ -13,7 +13,6 @@ dependencies:
     - paragraphs.paragraphs_type.about_us_style_2
   module:
     - image
-    - link
     - text
 id: paragraph.about_us_style_2.default
 targetEntityType: paragraph
@@ -25,7 +24,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 7
+    weight: 2
     region: content
   field_image:
     type: image
@@ -38,17 +37,13 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
-  field_link:
-    type: link
+  field_list:
+    type: string
     label: above
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      link_to_entity: false
     third_party_settings: {  }
-    weight: 6
+    weight: 11
     region: content
   field_tagline:
     type: string

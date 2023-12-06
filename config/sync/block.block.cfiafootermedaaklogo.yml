@@ -11,7 +11,7 @@ dependencies:
 id: cfiafootermedaaklogo
 theme: cfia
 region: footer_first
-weight: -12
+weight: -14
 provider: null
 plugin: 'block_content:79843d06-3507-4330-8579-bf0b79836706'
 settings:

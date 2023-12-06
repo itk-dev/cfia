@@ -1,19 +1,12 @@
-uuid: 5ce60ab6-3f02-477e-8a5b-7738848c8654
-langcode: en
+uuid: 071d11e4-c774-4f1f-b935-c3737a9fe590
+langcode: da
 status: true
 dependencies:
   config:
     - field.storage.node.field_image
     - node.type.case
   module:
-    - content_translation
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      alt: alt
-      title: title
-      file: '0'
 id: node.case.field_image
 field_name: field_image
 entity_type: node
@@ -21,7 +14,7 @@ bundle: case
 label: Image
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

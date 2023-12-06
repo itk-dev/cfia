@@ -30,6 +30,7 @@ settings:
     feed: 0
     embed: 0
   preselect_views:
+    arrangementer: arrangementer
     blog: blog
     cases: cases
     portfolio: portfolio
@@ -46,6 +47,7 @@ settings:
     file_entity_browser: 0
     frontpage: 0
     page_banner: 0
+    procesmodel: 0
     taxonomy_term: 0
     user_admin_people: 0
     watchdog: 0
@@ -53,8 +55,8 @@ settings:
     who_s_new: 0
     who_s_online: 0
   enabled_settings:
-    limit: limit
     pager: pager
+    limit: limit
     offset: offset
     argument: 0
     title: 0

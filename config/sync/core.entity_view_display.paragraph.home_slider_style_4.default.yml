@@ -17,13 +17,6 @@ targetEntityType: paragraph
 bundle: home_slider_style_4
 mode: default
 content:
-  field_email:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 4
-    region: content
   field_image:
     type: image
     label: above
@@ -35,14 +28,6 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_text:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 3
-    region: content
   field_widget:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -50,15 +35,9 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
-  field_widget_2:
-    type: entity_reference_revisions_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 5
-    region: content
-hidden: {  }
+hidden:
+  field_email: true
+  field_text: true
+  field_widget_2: true

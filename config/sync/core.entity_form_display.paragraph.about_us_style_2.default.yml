@@ -6,7 +6,7 @@ dependencies:
     - entity_browser.browser.browse_files_modal
     - field.field.paragraph.about_us_style_2.field_formatted_description
     - field.field.paragraph.about_us_style_2.field_image
-    - field.field.paragraph.about_us_style_2.field_link
+    - field.field.paragraph.about_us_style_2.field_list
     - field.field.paragraph.about_us_style_2.field_tagline
     - field.field.paragraph.about_us_style_2.field_text
     - field.field.paragraph.about_us_style_2.field_text_2
@@ -14,7 +14,6 @@ dependencies:
     - paragraphs.paragraphs_type.about_us_style_2
   module:
     - entity_browser
-    - link
     - text
 id: paragraph.about_us_style_2.default
 targetEntityType: paragraph
@@ -43,13 +42,13 @@ content:
       view_mode: default
       preview_image_style: thumbnail
     third_party_settings: {  }
-  field_link:
-    type: link_default
+  field_list:
+    type: string_textfield
     weight: 6
     region: content
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_tagline:
     type: string_textfield

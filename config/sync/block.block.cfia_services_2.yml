@@ -1,0 +1,33 @@
+uuid: 515fa015-f602-4bb4-a318-76f07aa3a4a2
+langcode: da
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4a91aa55-64cf-4428-99cd-ffcd0431a1ee'
+  module:
+    - block_content
+    - node
+  theme:
+    - cfia
+id: cfia_services_2
+theme: cfia
+region: sidebar_first
+weight: -16
+provider: null
+plugin: 'block_content:4a91aa55-64cf-4428-99cd-ffcd0431a1ee'
+settings:
+  id: 'block_content:4a91aa55-64cf-4428-99cd-ffcd0431a1ee'
+  label: Services
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      service: service

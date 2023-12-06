@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.case.body
     - field.field.node.case.field_banner_image
     - field.field.node.case.field_category
+    - field.field.node.case.field_contact_person
     - field.field.node.case.field_image
     - field.field.node.case.field_section
     - field.field.node.case.field_text_1
@@ -14,6 +15,7 @@ dependencies:
     - field.field.node.case.field_title_2
     - field.field.node.case.field_title_3
     - field.field.node.case.field_title_4
+    - image.style.wide
     - node.type.case
   module:
     - entity_reference_revisions
@@ -30,7 +32,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 4
     region: content
   field_banner_image:
     type: image
@@ -51,16 +53,25 @@ content:
     third_party_settings: {  }
     weight: 8
     region: content
-  field_image:
-    type: image
+  field_contact_person:
+    type: entity_reference_entity_view
     label: above
     settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
       image_link: ''
-      image_style: ''
+      image_style: wide
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 3
+    weight: 1
     region: content
   field_section:
     type: entity_reference_revisions_entity_view
@@ -69,7 +80,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 4
+    weight: 13
     region: content
   field_text_1:
     type: string
@@ -117,12 +128,12 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 11
+    weight: 2
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 3
     region: content
 hidden:
   addtoany: true

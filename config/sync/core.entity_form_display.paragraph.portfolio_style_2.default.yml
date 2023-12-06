@@ -3,13 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.portfolio_style_2.field_link
     - field.field.paragraph.portfolio_style_2.field_tagline
     - field.field.paragraph.portfolio_style_2.field_title
     - field.field.paragraph.portfolio_style_2.field_view
     - paragraphs.paragraphs_type.portfolio_style_2
   module:
-    - link
     - text
     - viewsreference
 id: paragraph.portfolio_style_2.default
@@ -17,14 +15,6 @@ targetEntityType: paragraph
 bundle: portfolio_style_2
 mode: default
 content:
-  field_link:
-    type: link_default
-    weight: 3
-    region: content
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
   field_tagline:
     type: string_textfield
     weight: 0

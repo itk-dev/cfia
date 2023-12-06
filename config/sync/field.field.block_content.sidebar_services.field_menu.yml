@@ -1,0 +1,23 @@
+uuid: 4b940fbf-668b-4fd7-8969-acfc55d59007
+langcode: da
+status: true
+dependencies:
+  config:
+    - block_content.type.sidebar_services
+    - field.storage.block_content.field_menu
+id: block_content.sidebar_services.field_menu
+field_name: field_menu
+entity_type: block_content
+bundle: sidebar_services
+label: Menu
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

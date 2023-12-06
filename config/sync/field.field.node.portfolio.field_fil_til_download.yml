@@ -1,0 +1,27 @@
+uuid: 5c3e2934-0dac-4fbe-8eee-f7381cdd1904
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fil_til_download
+    - node.type.portfolio
+  module:
+    - file
+id: node.portfolio.field_fil_til_download
+field_name: field_fil_til_download
+entity_type: node
+bundle: portfolio
+label: 'Fil til download'
+description: 'Forsøg på at kunne downloade en fil'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf'
+  max_filesize: ''
+  description_field: false
+field_type: file

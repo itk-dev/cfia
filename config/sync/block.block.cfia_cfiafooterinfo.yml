@@ -1,0 +1,33 @@
+uuid: 91e70172-0a02-41fc-813d-a2f5c55feb86
+langcode: da
+status: true
+dependencies:
+  content:
+    - 'block_content:footer_info:79843d06-3507-4330-8579-bf0b79836706'
+  module:
+    - block_content
+    - language
+  theme:
+    - cfia
+id: cfia_cfiafooterinfo
+theme: cfia
+region: social_media
+weight: 0
+provider: null
+plugin: 'block_content:79843d06-3507-4330-8579-bf0b79836706'
+settings:
+  id: 'block_content:79843d06-3507-4330-8579-bf0b79836706'
+  label: 'CFIA Footer info'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      da: da

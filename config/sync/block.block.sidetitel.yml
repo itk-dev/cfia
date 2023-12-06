@@ -7,7 +7,7 @@ dependencies:
 id: sidetitel
 theme: cfia
 region: banner
-weight: 0
+weight: -7
 provider: null
 plugin: page_title_block
 settings:

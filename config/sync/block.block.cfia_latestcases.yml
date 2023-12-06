@@ -1,6 +1,6 @@
 uuid: feacca67-7086-4e54-8cfe-6253b12701c9
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -9,7 +9,7 @@ dependencies:
 id: cfia_latestcases
 theme: cfia
 region: sidebar_second
-weight: -8
+weight: -12
 provider: null
 plugin: 'block_content:e56404cb-e8e5-4cd6-9bfa-7daafb8c56da'
 settings:

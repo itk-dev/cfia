@@ -1,6 +1,6 @@
 uuid: 118d27fd-805f-47a1-8d7f-9a7a292b81ea
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -9,14 +9,14 @@ dependencies:
 id: cfia_latestblog
 theme: cfia
 region: sidebar_second
-weight: -12
+weight: -11
 provider: null
 plugin: 'block_content:54c6fc3a-3560-4d97-a1c7-c70f862c3567'
 settings:
   id: 'block_content:54c6fc3a-3560-4d97-a1c7-c70f862c3567'
-  label: 'Latest Blog'
+  label: 'Case detaljer'
   label_display: visible
-  provider: block_content
+  provider: core
   status: true
   info: ''
   view_mode: full

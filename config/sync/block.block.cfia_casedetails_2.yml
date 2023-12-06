@@ -1,0 +1,33 @@
+uuid: 8a88ebd9-72be-4baf-9d6d-ccf92e148a0f
+langcode: da
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6edc211c-5a9b-474b-9527-4ec3ee945870'
+  module:
+    - block_content
+    - node
+  theme:
+    - cfia
+id: cfia_casedetails_2
+theme: cfia
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:6edc211c-5a9b-474b-9527-4ec3ee945870'
+settings:
+  id: 'block_content:6edc211c-5a9b-474b-9527-4ec3ee945870'
+  label: 'Case details'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      case: case
