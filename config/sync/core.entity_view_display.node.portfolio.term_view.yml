@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.portfolio.body
     - field.field.node.portfolio.field_banner_image
     - field.field.node.portfolio.field_category
+    - field.field.node.portfolio.field_document
     - field.field.node.portfolio.field_images
     - field.field.node.portfolio.field_section
     - field.field.node.portfolio.field_text_1
@@ -60,6 +61,7 @@ content:
 hidden:
   addtoany: true
   field_banner_image: true
+  field_document: true
   field_section: true
   field_text_1: true
   field_text_3: true

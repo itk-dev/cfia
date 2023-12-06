@@ -1,0 +1,77 @@
+<section class="portfolio-details z-sec">
+    <div class="container">
+        <div class="content-descriptions">
+            {{content.body.0}}
+        </div>
+        <div class="portflio-detail-created">   
+            <div class="display-portfolio">
+                <span>{{content.field_title_1.0}}</span> {# Title 1 #}
+                <h4>{{content.field_text_1.0}}</h4> {# Text 1 #}
+            </div>
+            <div class="display-portfolio">
+                <span>{{content.field_title_2.0}}</span> {# Title 2 #}
+                <h4>{{content.field_category.0}}</h4>
+            </div>
+            <div class="display-portfolio">
+                <span>{{content.field_title_3.0}}</span> {# Title 3 #}
+                <h4>{{content.field_text_3.0}}</h4> {# Text 3 (Date) #}
+            </div>
+            <div class="display-portfolio">
+                <span>{{content.field_title_4.0}}</span> {# Title 4 #}
+                <div class="portfolio-addtoany">{{drupal_block('addtoany_block')}}</div>
+            </div>
+        </div>
+        <div class="row">
+        {% if content.field_images[1] %}
+            {% for key,value in content.field_images['#items'] %}
+                <div class="col-md-6">
+                    <div class="image-wrapper">
+                        <img src="{{file_url(content.field_images['#items'][key].entity.uri.value)}}" alt="{{content.field_images['#items'][key].alt}}" />
+                    </div>               
+                </div>
+            {% endfor %}
+        {% elseif content.field_images[2] %}
+            {% for key,value in content.field_image['#items'] %}
+                    <div class="col-md-12">
+                        <div class="image-wrapper">
+                            <img src="{{file_url(content.field_images['#items'][key].entity.uri.value)}}" alt="{{content.field_images['#items'].alt}}" />
+                        </div>
+                    </div>   
+            {% endfor %}
+        {% endif %}
+        </div>
+        {{content.field_section}}
+
+        {% if node.field_document.value %}
+          {% set filesize = (node.field_document.entity.filesize.value / 1000000)|round(3, 'floor') %}
+          {% set filesize_suffix = '(' ~ filesize ~ ' MB)' %}
+          <div class="cta-wrapp">
+            <div class="quate-btn-rect home1-btn" style="display:inline-block; width:auto;">
+              {% if node.field_document.value[0].description %}
+                <a style="width:auto;padding:1em;" class="btn-md" href="{{ file_url(node.field_document.entity.uri.value) }}">{{ node.field_document.value[0].description ~ ' ' ~ filesize_suffix }}</a>
+              {% else %}
+                <a style="width:auto;padding:1em;" style="" class="btn-md" href="{{ file_url(node.field_document.entity.uri.value) }}">{{ node.field_document.entity.filename.value ~ ' ' ~ filesize_suffix }}</a>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+        <div class="prev-next-node">
+            <a href="{{prev_portfolio_url}}">
+                <div class="svg_wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="88" height="150" viewBox="0 0 88 150">
+                        <path  data-name="Path 40740" d="M88,136.591,74.578,150,0,75,74.653,0,88,13.409,26.694,75Z" fill="#1b1f29"/>
+                    </svg>
+                </div>    
+                <h4>{{pager_prev_text_3}}</h4>
+            </a>
+            <a href="{{next_portfolio_url}}" class="next_node">
+                <h4>{{pager_prev_text_3}}</h4>
+                <div class="svg_wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="88" height="150" viewBox="0 0 88 150">
+                        <path  data-name="Path 40741" d="M0,13.409,13.422,0,88,75,13.347,150,0,136.591,61.306,75Z" fill="#1b1f29"/>
+                    </svg>
+                </div>    
+            </a>
+        </div>
+    </div>
+</section>
