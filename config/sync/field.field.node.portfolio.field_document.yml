@@ -1,0 +1,27 @@
+uuid: 9d35fd96-df21-49f6-920e-686b6fd32c84
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document
+    - node.type.portfolio
+  module:
+    - file
+id: node.portfolio.field_document
+field_name: field_document
+entity_type: node
+bundle: portfolio
+label: Document
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: portfolio_documents
+  file_extensions: 'pdf doc docx'
+  max_filesize: 50MB
+  description_field: true
+field_type: file

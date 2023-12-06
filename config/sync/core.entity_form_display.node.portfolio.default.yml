@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.portfolio.body
     - field.field.node.portfolio.field_banner_image
     - field.field.node.portfolio.field_category
+    - field.field.node.portfolio.field_document
     - field.field.node.portfolio.field_images
     - field.field.node.portfolio.field_section
     - field.field.node.portfolio.field_text_1
@@ -18,6 +19,7 @@ dependencies:
     - node.type.portfolio
   module:
     - entity_browser
+    - file
     - paragraphs
     - paragraphs_ee
     - paragraphs_features
@@ -63,6 +65,13 @@ content:
     weight: 15
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_document:
+    type: file_generic
+    weight: 26
+    region: content
+    settings:
+      progress_indicator: throbber
     third_party_settings: {  }
   field_image:
     type: entity_browser_file
