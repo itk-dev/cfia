@@ -164,6 +164,12 @@ a:hover, .link:hover {
   border-bottom: 0;
 }
 
+/* Services enlarge icon size */
+.service-1 .service-icon svg {
+  width: 80px;
+  height: 100px;
+}
+
 /* Remove negative margin on features */
 .features-style-3 .feature-bg {
   margin-top: initial;
