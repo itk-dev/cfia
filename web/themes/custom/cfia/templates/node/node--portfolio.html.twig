@@ -17,12 +17,28 @@
                 <span>{{content.field_title_3.0}}</span> {# Title 3 #}
                 <h4>{{content.field_text_3.0}}</h4> {# Text 3 (Date) #}
             </div>
-            <div class="display-portfolio">
-                <span>{{content.field_title_4.0}}</span> {# Title 4 #}
+            {# <div class="display-portfolio">
+                <span>{{content.field_title_4.0}}</span>
                 <div class="portfolio-addtoany">{{drupal_block('addtoany_block')}}</div>
-            </div>
-        </div>
+            </div> #}
 
+        </div>
+        <div class="portfolio-download">
+          <h5>{{ "Download files"|t }}</h5>
+          {% if node.field_fil_til_download.value %}
+            {% set filesize = (node.field_fil_til_download.entity.filesize.value / 1000000)|round(3, 'floor') %}
+            {% set filesize_suffix = '(' ~ filesize ~ ' MB)' %}
+            <div class="cta-wrapp">
+              <div class="quate-btn-rect home1-btn" style="display:inline-block; width:auto;">
+                {% if node.field_fil_til_download.value[0].description %}
+                  <a style="width:auto;padding:1em;" class="btn-md" href="{{ file_url(node.field_fil_til_download.entity.uri.value) }}">{{ node.field_fil_til_download.value[0].description ~ ' ' ~ filesize_suffix }}</a>
+                {% else %}
+                  <a style="width:auto;padding:1em;" style="" class="btn-md" href="{{ file_url(node.field_fil_til_download.entity.uri.value) }}">{{ node.field_fil_til_download.entity.filename.value ~ ' ' ~ filesize_suffix }}</a>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        </div>
         <div class="row">
         {% if content.field_images[1] %}
             {% for key,value in content.field_images['#items'] %}
@@ -44,19 +60,7 @@
         </div>
         {{content.field_section}}
 
-        {% if node.field_fil_til_download.value %}
-          {% set filesize = (node.field_fil_til_download.entity.filesize.value / 1000000)|round(3, 'floor') %}
-          {% set filesize_suffix = '(' ~ filesize ~ ' MB)' %}
-          <div class="cta-wrapp">
-            <div class="quate-btn-rect home1-btn" style="display:inline-block; width:auto;">
-              {% if node.field_fil_til_download.value[0].description %}
-                <a style="width:auto;padding:1em;" class="btn-md" href="{{ file_url(node.field_fil_til_download.entity.uri.value) }}">{{ node.field_fil_til_download.value[0].description ~ ' ' ~ filesize_suffix }}</a>
-              {% else %}
-                <a style="width:auto;padding:1em;" style="" class="btn-md" href="{{ file_url(node.field_fil_til_download.entity.uri.value) }}">{{ node.field_fil_til_download.entity.filename.value ~ ' ' ~ filesize_suffix }}</a>
-              {% endif %}
-            </div>
-          </div>
-        {% endif %}
+
         <div class="prev-next-node">
             <a href="{{prev_portfolio_url}}">
                 <div class="svg_wrapper">

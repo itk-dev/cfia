@@ -111,28 +111,37 @@ a:hover, .link:hover {
   padding-top: 80px !important;
 }
 
-/* Show red bullets on lists */
+/* Show colored bullets on lists */
 .content-descriptions ul,
+.basic-content ul,
 .list-wrapper ul {
   list-style: none;
 }
 
 .content-descriptions ul li::before,
+.basic-content ul li::before,
 .list-wrapper ul li::before {
   content: "\2022";
   color: var(--cfia-secondary-color);
   font-weight: bold;
   display: inline-block;
-  width: 1em;
-  margin-left: -1em;
+  width: 20px;
+  margin-left: -20px;
+}
+
+.content-descriptions ul li,
+.basic-content ul li {
+  display: block;
 }
 
 .content-descriptions ul li p,
+.basic-content ul li p,
 .list-wrapper ul li p{
   display: inline;
 }
 
-.content-descriptions li {
+.content-descriptions li,
+.basic-content li {
   font-family: var(--paragraph-font);
   color: var(--paragraph-text-color);
   font-weight: 400;
