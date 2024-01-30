@@ -23,9 +23,9 @@
             </div> #}
 
         </div>
-        <div class="portfolio-download">
-          <h5>{{ "Download files"|t }}</h5>
           {% if node.field_fil_til_download.value %}
+            <div class="portfolio-download">
+            <h5>{{ "Download files"|t }}</h5>
             {% set filesize = (node.field_fil_til_download.entity.filesize.value / 1000000)|round(3, 'floor') %}
             {% set filesize_suffix = '(' ~ filesize ~ ' MB)' %}
             <div class="cta-wrapp">
@@ -37,8 +37,8 @@
                 {% endif %}
               </div>
             </div>
+            </div>
           {% endif %}
-        </div>
         <div class="row">
         {% if content.field_images[1] %}
             {% for key,value in content.field_images['#items'] %}
