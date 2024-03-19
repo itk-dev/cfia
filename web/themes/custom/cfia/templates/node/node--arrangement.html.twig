@@ -13,10 +13,6 @@
                 <span>{{content.field_title_3.0}}</span> {# Title 3 #}
                 <h4>{{content.field_text_3.0}}</h4> {# Text 3 (Date) #}
             </div>
-            <div class="display-portfolio">
-                <span>{{content.field_title_4.0}}</span> {# Title 4 #}
-                <div class="portfolio-addtoany">{{drupal_block('addtoany_block')}}</div>
-            </div>
         </div>
         <div class="case-image-wrapper">
             <img src="{{file_url(content.field_image['#items'].entity.uri.value)}}" alt="{{content.field_image['#items'].alt}}">
