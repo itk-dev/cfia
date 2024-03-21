@@ -1,0 +1,6 @@
+<figure>
+  <img src="{{ file_url(paragraph.field_image.entity.uri.value) }}" alt="{{ paragraph.field_image[0].alt ? paragraph.field_image[0].alt : "" }}"/>
+  {% if paragraph.field_title.value %}
+    <figcaption>{{ paragraph.field_title.value }}</figcaption>
+  {% endif %}
+</figure>
