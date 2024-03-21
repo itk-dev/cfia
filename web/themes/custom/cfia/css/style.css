@@ -184,6 +184,13 @@ a:hover, .link:hover {
   margin-top: initial;
 }
 
+/* Case styling */
+
+.cases-page .cases-details.z-sec {
+  padding-top: 80px;
+}
+
+
 /* Portfolio */
 .portfolio-style-2 .container .container ul li:first-of-type {
   padding-left: var(--cfia-spacer);
