@@ -72,12 +72,26 @@
 {% include '@cfia/header/header.html.twig' %}
 
 {% block content %}
-        {% if page.banner %}
         <!-- Banner -->
-        {{ page.banner }}
+        {% if search_banner_title %}
+        {% if search_banner_img_url %}
+        <section class="page-banner" style="background-image: url('{{search_banner_img_url}}');">
+        {% else %}
+        <section class="page-banner" style="background-image: url('{{base_url}}/sites/default/files/default_images/SubPage-Banner.jpeg');">
+        {% endif %}
+            <div class="container">
+                <div class="heading">
+                    <h1>{{search_banner_title}}</h1>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{base_url}}">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{search_banner_title}}}</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
         <!-- End of Banner -->
         {% endif %}
-        <div id="main">
+        <div id="main" class="searchResultPage">
           <div class="clearfix">
               <main>
                   <a id="main-content" tabindex="-1"></a>

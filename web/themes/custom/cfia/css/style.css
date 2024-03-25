@@ -190,6 +190,10 @@ a:hover, .link:hover {
   padding-top: 80px;
 }
 
+.cases-page .sidebar .block-cfia-caseskategorier {
+
+}
+
 
 /* Portfolio */
 .portfolio-style-2 .container .container ul li:first-of-type {
@@ -220,6 +224,22 @@ a:hover, .link:hover {
 .sidebar .block {
   padding: 0;
 }
+
+.sidebar h2 {
+  font-family: var(--paragraph-font);
+  font-weight: var(--cfia-font-weight-regular);
+  font-size: 21px !important;
+  color: var(--cfia-secondary-color) !important;
+}
+
+.sidebar-title::before {
+  background-color: var(--cfia-secondary-color) !important;
+}
+
+.sidebar button.collapsed i {
+  transform: rotate(180deg);
+}
+
 
 /* Hide/remove unwanted elements*/
 .case-items .read,

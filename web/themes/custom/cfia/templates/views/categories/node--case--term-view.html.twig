@@ -1,0 +1,22 @@
+ <div class="col-md-4">
+  <div class="case-items">
+    <div class="img-wrapper">
+      <a href="{{ url('entity.node.canonical', { 'node': node.id() })}}">
+        <img src="{{file_url(content.field_image['#items'].entity.uri.value)}}" alt="{{content.field_image['#items'].alt}}">
+      </a>
+    </div>
+    <div class="designation">
+      <span>{{content.field_category.0}}</span>
+    </div>
+    <div class="cases-title">
+      <a href="{{ url('entity.node.canonical', { 'node': node.id() })}}">
+        <h4> {{node.label}}</h4>
+      </a>
+    </div>
+    <div class="read">
+      <a href="{{ url('entity.node.canonical', { 'node': node.id() })}}">
+        {{node.label}}
+      </a>
+    </div>
+  </div>
+</div>

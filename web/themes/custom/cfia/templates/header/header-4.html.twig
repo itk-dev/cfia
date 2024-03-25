@@ -1,0 +1,56 @@
+
+<!-- Header Style 4 -->
+<header id="header-4" class="header header_type {{active_4}}">
+    <div class="header4">
+    {% if sticky == 1 %}
+        <div class="nav-sticky navigation-sticky">
+    {% else %}
+        <div class="nav-sticky">
+    {% endif %}
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        {% if page.logo %}
+                            {{page.logo}}
+                        {% endif %}
+                        <button class="navbar-toggler collapsed hamber-btn" type="button" data-bs-toggle="collapse" data-bs-target="#headernavbar-4">
+                            <svg class="hamber-icon" xmlns="http://www.w3.org/2000/svg" width="180" height="150" viewBox="0 0 180 150">
+                                <path  data-name="Path 40744" d="M137.2,112v20h180V112Zm0,65v20h180V177Zm0,65v20h180V242Z" transform="translate(-137.2 -112)" fill="#1b1f29"/>
+                            </svg>
+                            <svg class="close-icon dnone" xmlns="http://www.w3.org/2000/svg" width="100" height="99.998" viewBox="0 0 100 99.998">
+                                <g data-name="Group 40185" transform="translate(12865.792 17231.002)">
+                                    <path data-name="Path 39630" d="M202.364,132.359a50.058,50.058,0,0,0,0,70.719,50.008,50.008,0,0,0,70.751,0,50.017,50.017,0,1,0-70.751-70.718Zm65.919,65.89a43.186,43.186,0,0,1-61.087-61.06,43.185,43.185,0,1,1,61.086,61.059Z" transform="translate(-13053.531 -17348.744)" fill="#16161b"></path>
+                                    <path data-name="Path 39631" d="M321.833,216.72,306.757,231.8,291.682,216.72l-4.966,4.966,15.076,15.075-15.076,15.076,4.966,4.966,15.076-15.075L321.833,256.8l4.966-4.966-15.075-15.076L326.8,221.686Z" transform="translate(-13122.554 -17417.775)" fill="#16161b"></path>
+                                </g>
+                            </svg>
+                        </button>
+                        <div class="collapse navbar-collapse" id="headernavbar-4">
+                            {% if page.primary_menu %}
+                            {{page.primary_menu}}
+                            {% endif %}
+                        </div>
+                        <a href="#" class="search" title="search" role="button" id="searchdropdown6" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150">
+                                <path  data-name="Path 40737" d="M230.817,152.136,194.072,115.41a63.161,63.161,0,1,0-8.806,8.778l36.714,36.726a6.228,6.228,0,0,0,8.837-8.778ZM195.885,75.586a50.4,50.4,0,1,1-50.4-50.415A50.46,50.46,0,0,1,195.885,75.586Z" transform="translate(-82.631 -12.74)" fill="#1b1f29"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu header-seach-form" aria-labelledby="searchdropdown6">
+                            <form action="{{base_url}}/search/node" method="get" data-once="form-updated" data-drupal-form-fields="">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search" aria-describedby="search-value4" name="keys">
+                                    <button class="btn btn-primary" type="submit" id="search-value4">Search</button>
+                                </div>
+                            </form>
+                        </div>
+						{{page.language_block}}
+                        <div class="header-link-square">
+                           <a href="{{button_link}}" title="{{button_text}}">
+						   		{{button_text}}
+                           </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

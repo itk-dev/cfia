@@ -1,0 +1,103 @@
+{# 
+<header id="header-5" class="header header_type {{active_5}}">
+    {{contact_number}}
+    {{email_text}}
+    {{email_address}}
+    {{address_text}}
+    {{address}}
+    {{button_text}}
+    {{button_link}} #}
+	{# Language Block #}
+	{# {{page.language_block}} #}
+	{# Logo #}
+	{# {{page.logo}} #}
+	{# Main Menu #}
+	{# {{page.primary_menu}} #}
+	{# Search Block #}
+	{# {% if page.search %}
+		{{page.search}}
+	{% endif %} #}
+	{# Social Media Profiles #}
+	{# {% if page.social_media %}
+		{{page.social_media}}
+	{% endif %}
+</header> #}
+
+
+<!-- Header Style 5 -->
+<header id="header-5" class="header header_type {{active_5}}">
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-header">
+                <div class="header-contacts">
+                    <div class="header-mail">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="188" height="150" viewBox="0 0 188 150">
+                            <path  data-name="Path 40695" d="M269.723,211,329,257.114a9.88,9.88,0,0,0,11.594,0L399.878,211Zm144.614,7.5-73.769,57.386a9.926,9.926,0,0,1-11.533,0L255.265,218.5v105A7.381,7.381,0,0,0,262.511,331h144.58a7.363,7.363,0,0,0,7.246-7.506v-105Zm7.209-22.5a7.382,7.382,0,0,1,7.254,7.54V338.459A7.41,7.41,0,0,1,421.546,346H248.052a7.382,7.382,0,0,1-7.253-7.541V203.54a7.411,7.411,0,0,1,7.253-7.54Z" transform="translate(-240.799 -196)" fill="#1b1f29" fill-rule="evenodd"/>
+                        </svg>
+                        <a href="mailto:{{email_address}}">{{email_address}}</a>
+                    </div>
+                    <div class="header-phone">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="149.999" height="150" viewBox="0 0 149.999 150">
+                            <path id="noun-support-5012357" d="M121.071,93.928a58.928,58.928,0,1,1,117.856,0v6.031A21.439,21.439,0,0,1,255,120.713v21.428a21.449,21.449,0,0,1-25.053,21.123,40.836,40.836,0,0,1-38.161,21.681q-.529.052-1.071.053H180a10.714,10.714,0,1,1,0-21.428h10.714a10.716,10.716,0,0,1,10.672,9.756,30.085,30.085,0,0,0,18.767-14.476,21.39,21.39,0,0,1-8.01-16.709V120.713a21.439,21.439,0,0,1,16.071-20.754V93.928a48.214,48.214,0,1,0-96.428,0v6.031a21.439,21.439,0,0,1,16.071,20.754v21.428a21.428,21.428,0,0,1-42.857,0V120.713a21.439,21.439,0,0,1,16.071-20.754ZM126.428,110a10.714,10.714,0,0,0-10.714,10.714v21.428a10.714,10.714,0,1,0,21.428,0V120.713A10.714,10.714,0,0,0,126.428,110Zm96.428,10.714a10.714,10.714,0,1,1,21.428,0v21.428a10.714,10.714,0,1,1-21.428,0Z" transform="translate(-105 -35)" fill="#1b1f29" fill-rule="evenodd"/>
+                        </svg>
+                       <a href="tel:{{contact_number}}">{{contact_number}}</a>
+                    </div>
+                </div>
+				<div class="btn-lang">
+                    <a class="quote-link" href="{{button_link}}">{{button_text}}</a>
+                    {{page.language_block}}
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div class="header1">
+    {% if sticky == 1 %}
+        <div class="nav-sticky navigation-sticky">
+    {% else %}
+        <div class="nav-sticky">
+    {% endif %}
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        {% if page.logo %}
+                            {{page.logo}}
+                        {% endif %}
+                        <button class="navbar-toggler collapsed hamber-btn" type="button" data-bs-toggle="collapse" data-bs-target="#headernavbar-5">               
+                            <svg class="hamber-icon" xmlns="http://www.w3.org/2000/svg" width="180" height="150" viewBox="0 0 180 150">
+                                <path data-name="Path 40744" d="M137.2,112v20h180V112Zm0,65v20h180V177Zm0,65v20h180V242Z" transform="translate(-137.2 -112)" fill="#1b1f29"/>
+                            </svg>
+                            <svg class="close-icon dnone" xmlns="http://www.w3.org/2000/svg" width="100" height="99.998" viewBox="0 0 100 99.998">
+                                <g data-name="Group 40185" transform="translate(12865.792 17231.002)">
+                                    <path data-name="Path 39630" d="M202.364,132.359a50.058,50.058,0,0,0,0,70.719,50.008,50.008,0,0,0,70.751,0,50.017,50.017,0,1,0-70.751-70.718Zm65.919,65.89a43.186,43.186,0,0,1-61.087-61.06,43.185,43.185,0,1,1,61.086,61.059Z" transform="translate(-13053.531 -17348.744)" fill="#16161b"></path>
+                                    <path data-name="Path 39631" d="M321.833,216.72,306.757,231.8,291.682,216.72l-4.966,4.966,15.076,15.075-15.076,15.076,4.966,4.966,15.076-15.075L321.833,256.8l4.966-4.966-15.075-15.076L326.8,221.686Z" transform="translate(-13122.554 -17417.775)" fill="#16161b"></path>
+                                </g>
+                            </svg>
+                        </button>
+                        <div class="collapse navbar-collapse" id="headernavbar-5">
+                            {% if page.primary_menu %}
+                            {{page.primary_menu}}
+                            {% endif %}
+                        </div>                  
+                        <a href="#" class="search" title="search" role="button" id="searchdropdown7" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150">
+                                <path  data-name="Path 40737" d="M230.817,152.136,194.072,115.41a63.161,63.161,0,1,0-8.806,8.778l36.714,36.726a6.228,6.228,0,0,0,8.837-8.778ZM195.885,75.586a50.4,50.4,0,1,1-50.4-50.415A50.46,50.46,0,0,1,195.885,75.586Z" transform="translate(-82.631 -12.74)" fill="#1b1f29"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu header-seach-form" aria-labelledby="searchdropdown7">
+                            <form action="{{base_url}}/search/node" method="get" data-once="form-updated" data-drupal-form-fields="">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search" aria-describedby="search-value5" name="keys">
+                                    <button class="btn btn-primary" type="submit" id="search-value5">Search</button>
+                                </div>
+                            </form>
+                        </div>
+                        {% if page.social_media %}
+					        {{page.social_media}}
+				        {% endif %}
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+ <!-- header 5 End -->

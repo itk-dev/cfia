@@ -1,0 +1,33 @@
+{% if page.sidebar_first %}
+  <!-- Sidebar - Left -->
+  <section class="sidebar-page dt-section">
+    <div class="{{container}}">
+        <div class="row gx-5">
+          <div class="col-lg-4 col-12">
+            <div class="sidebar accordion" id="sidebarAccordion">
+              {{page.sidebar_first}}
+            </div>
+          </div>
+          <div class="col-lg-8 col-12">
+            {{page.content}}
+          </div>
+        </div>
+    </div>
+  </section>
+{% else %}
+  <!-- Sidebar - Right -->
+  <section class="sidebar-page dt-section">
+    <div class="{{container}}">
+        <div class="row x-section">
+          <div class=" col-lg-8 col-12 order-1 order-md-0">
+              {{page.content}}
+          </div>
+          <div class="col-lg-4 col-12 order-0 order-md-1 mt-5 mt-md-0">
+            <div class="sidebar" id="sidebarAccordion">
+              {{page.sidebar_second}}
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+{% endif %}

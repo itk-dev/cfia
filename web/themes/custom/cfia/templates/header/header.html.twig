@@ -1,0 +1,29 @@
+{% if header_variation == 'header-1' %}
+  {% set active_1 = 'active' %}
+{% elseif header_variation == 'header-2' %}
+  {% set active_2 = 'active' %}
+{% elseif header_variation == 'header-3' %}
+  {% set active_3 = 'active' %}
+{% elseif header_variation == 'header-4' %}
+  {% set active_4 = 'active' %}
+{% elseif header_variation == 'header-5' %}
+  {% set active_5 = 'active' %}
+{% endif %}
+
+{% block head %}
+<!-- header -->
+    <div class="pt_nav_header">
+    {% if  'header-1' in header_variation  %}
+      {% include '@cfia/header/header-1.html.twig' %}
+    {% elseif  'header-2' in header_variation  %}
+      {% include '@cfia/header/header-2.html.twig' %}
+    {% elseif  'header-3' in header_variation  %}
+      {% include '@cfia/header/header-3.html.twig' %}
+    {% elseif  'header-4' in header_variation  %}
+      {% include '@cfia/header/header-4.html.twig' %}
+    {% elseif  'header-5' in header_variation  %}
+      {% include '@cfia/header/header-5.html.twig' %}
+    {% endif %}
+    </div>
+<!-- End of header -->
+{% endblock %}

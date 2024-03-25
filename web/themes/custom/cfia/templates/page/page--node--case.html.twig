@@ -69,35 +69,8 @@
  */
 #}
 
-{% if header_variation == 'header-1' %}
-  {% set active_1 = 'active' %}
-{% elseif header_variation == 'header-2' %}
-  {% set active_2 = 'active' %}
-{% elseif header_variation == 'header-3' %}
-  {% set active_3 = 'active' %}
-{% elseif header_variation == 'header-4' %}
-  {% set active_4 = 'active' %}
-{% elseif header_variation == 'header-5' %}
-  {% set active_5 = 'active' %}
-{% endif %}
+{% include '@cfia/header/header.html.twig' %}
 
-{% block head %}
-<!-- header -->
-    <div class="pt_nav_header">
-    {% if  'header-1' in header_variation  %}
-      {% include '@consultancy_plus/header/header-1.html.twig' %}
-    {% elseif  'header-2' in header_variation  %}
-      {% include '@consultancy_plus/header/header-2.html.twig' %}
-    {% elseif  'header-3' in header_variation  %}
-      {% include '@consultancy_plus/header/header-3.html.twig' %}
-    {% elseif  'header-4' in header_variation  %}
-      {% include '@consultancy_plus/header/header-4.html.twig' %}
-    {% elseif  'header-5' in header_variation  %}
-      {% include '@consultancy_plus/header/header-5.html.twig' %}
-    {% endif %}
-    </div>
-<!-- End of header -->
-{% endblock %}
 {% block content %}
         {% if page.banner %}
         <!-- Banner -->
@@ -111,39 +84,7 @@
                   {% set url = url('<current>') %}
                   <!-- Content with Sidebar -->
                   {% if page.sidebar_first or page.sidebar_second %}
-                      {% if page.sidebar_first %}
-                    <!-- Sidebar - Left -->
-                    <section class="sidebar-page dt-section cases-page">
-                      <div class="{{container}}">
-                          <div class="row x-section">
-                            <div class="col-lg-4 col-12 order-2-md">
-                              {{page.sidebar_first}}
-                            </div>
-                            <div class="col-lg-8 col-12">
-                              <div class="sidebar">
-                                {{page.content}}
-                              </div> 
-                            </div> 
-                          </div>
-                      </div>
-                    </section>
-                    {% else %}
-                    <!-- Sidebar - Right -->
-                    <section class="sidebar-page dt-section cases-page">
-                      <div class="{{container}}">
-                          <div class="row x-section">
-                            <div class=" col-lg-8 col-12">
-                                {{page.content}}
-                            </div> 
-                            <div class="col-lg-4 col-12">
-                              <div class="sidebar">
-                              {{page.sidebar_second}}
-                              </div> 
-                            </div>
-                          </div>
-                      </div>
-                    </section>
-                    {% endif %}
+                      {% include '@cfia/page/_sidebar-page.html.twig' %}
                   {% else %}
                   <!-- Full Width Page-->
                   {{page.content}}
@@ -156,4 +97,4 @@
 {% endblock %}
 {% block footer %}
   {% include '@consultancy_plus/footer/footer.html.twig' %}
-{% endblock %}  
+{% endblock %}
