@@ -107,6 +107,11 @@ a:hover, .link:hover {
   padding-bottom: 30px;
 }
 
+.page-banner h1 {
+  text-align: center;
+  word-break: normal;
+}
+
 #page_content.header-4 .page-banner-style-2 .heading {
   padding-top: 80px !important;
 }
@@ -147,6 +152,10 @@ a:hover, .link:hover {
   font-weight: 400;
   font-size: 15px;
   line-height: 22px;
+}
+
+.content-descriptions li {
+  display: list-item;
 }
 
 /* Truncate text in blog list */
@@ -254,4 +263,19 @@ a:hover, .link:hover {
 .features-style-3 .feature-bg,
 .features-style-3 .feature-bg::before {
   background: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .page-banner .breadcrumb {
+    text-align: center;
+  }
+
+  .page-banner .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    float: none;
+  }
+
+  .footer-wrapper img {
+    max-height: 10vh;
+    width: auto;
+  }
 }
