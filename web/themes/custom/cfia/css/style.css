@@ -261,6 +261,13 @@ a:hover, .link:hover {
   font-size: large;
 }
 
+/* Accordion */
+.accordion-style,
+.accordion-style .content,
+.accordion-style .content .card {
+  background-color: transparent;
+}
+
 /* Hide/remove unwanted elements*/
 .case-items .read,
 .home-slide4 .slide-details,
