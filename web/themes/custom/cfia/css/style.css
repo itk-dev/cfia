@@ -65,6 +65,7 @@ a:hover, .link:hover {
 .portfolio-title a:hover h4,
 .blog-title,
 .read a {
+  text-transform: none;
   color: var(--cfia-primary-color);
 }
 

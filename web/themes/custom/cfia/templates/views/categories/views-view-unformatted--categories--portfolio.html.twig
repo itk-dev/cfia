@@ -1,0 +1,16 @@
+{# <ul class="list-unstyled .">
+    {% for row in rows %}
+        {{ row.content }}
+    {% endfor %}
+</ul> #}
+
+    <div class="container">
+        <ul class="portfolio filter-menu list-unstyled nav-tabs portfolio-categories">
+            <li class="active nav-link">
+                <a class="menu-link" data-filter="*" href="#" title="All">{{ "All"|t }}</a>
+            </li>
+            {% for row in rows %}
+            {{ row.content }}
+            {% endfor %}
+        </ul>
+    </div>
