@@ -1,16 +1,19 @@
 <div class="mb-3">
+
+  {% set accordionTarget = elements['#plugin_id']|clean_class %}
+
   {{ title_prefix }}
     {% if label %}
     <div class="title-border d-flex justify-content-between align-items-start">
       {# Sidebar widget title #}
       <h2{{ title_attributes }} class="sidebar-title">{{ label }}</h2>
-      <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ label|clean_class }}" aria-expanded="true" aria-controls="collapse{{ label|clean_class }}">
+      <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ accordionTarget }}" aria-expanded="true" aria-controls="collapse{{ accordionTarget }}">
         <i class="fas fa-angle-up"></i>
       </button>
     </div>
     {% endif %}
   {{ title_suffix }}
-  <div class="collapse show" id="collapse{{ label|clean_class }}" />
+  <div class="collapse show" id="collapse{{ accordionTarget }}" />
     {% block content %}
       <div{{ content_attributes.addClass('content') }}>
         {{ content }}

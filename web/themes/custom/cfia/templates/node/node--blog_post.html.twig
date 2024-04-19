@@ -1,0 +1,32 @@
+
+<section class="blog-details-full z-sec">
+    <div class="container">
+        <div class="dropcops1 blockquotes-block content-descriptions">
+            {{content.body.0}}
+        </div>
+        <div class="detail-image">
+            <img src="{{file_url(content.field_image['#items'].entity.uri.value)}}" alt="{{content.field_image['#items'].alt}}" />
+        </div>
+        {{content.field_section}}
+        {{content.field_contact_person}}
+        <div class="prev-next-node">
+            <a href="{{prev_url}}">
+                <div class="svg_wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="88" height="150" viewBox="0 0 88 150">
+                        <path  data-name="Path 40740" d="M88,136.591,74.578,150,0,75,74.653,0,88,13.409,26.694,75Z" fill="#1b1f29"/>
+                    </svg>
+                </div>
+                <h4>{{pager_prev_text}}</h4>
+            </a>
+            <a href="{{next_url}}" class="next_node">
+                <h4>{{pager_next_text}}</h4>
+                <div class="svg_wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="88" height="150" viewBox="0 0 88 150">
+                        <path  data-name="Path 40741" d="M0,13.409,13.422,0,88,75,13.347,150,0,136.591,61.306,75Z" fill="#1b1f29"/>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+

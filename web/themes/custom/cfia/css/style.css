@@ -7,8 +7,9 @@
 
 /* Override variabels */
 :root {
-  --cfia-background-color: rgb(244, 242,230);
+  --cfia-background-color: oklch(95.94% 0.016 99);
   --cfia-primary-color: var(--bs-primary);
+  --cfia-primary-color-dark: oklch(34.12% 0.034 186.76);
   --cfia-secondary-color: var(--bs-secondary);
   --paragraph-text-color: var(--bs-primary);
   --heading-text-color: var(--bs-primary);
@@ -50,6 +51,17 @@ strong, b, h1, h2, h3, h4, h5 {
   font-weight: var(--cfia-font-weight-bold);
 }
 
+/* Images */
+img {
+  max-width: 100%;
+}
+
+/* Reset z-sec */
+.z-sec {
+  padding: 0;
+  padding-bottom: calc(var(--cfia-spacer) * 3);
+}
+
 /* Link styles */
 a, .link {
   color: var(--cfia-secondary-color);
@@ -83,6 +95,10 @@ a:hover, .link:hover {
   background-color: var(--cfia-primary-color);
 }
 
+/* Add start padding for main content */
+.content section {
+  padding-top: calc(var(--cfia-spacer) * 2);
+}
 
 /* Buttons */
 .quate-btn-rect {
@@ -172,15 +188,26 @@ a:hover, .link:hover {
   align-items: baseline;
 }
 
+/* Set services to same height */
+.service-wrapper {
+  height: 100%;
+  margin-bottom: var(--cfia-spacer);
+}
 /* Highlight background on service grid on hover */
 .service-grid-3 .service-wrapper:hover {
   background-color: #fff;
 }
 
 /* Services grid spacing*/
+.service-style-1 {
+  padding-top: calc(var(--cfia-spacer) * 2);
+  padding-bottom: calc(var(--cfia-spacer) * 2);
+}
 .service-style-1 .z-sec {
-  padding-bottom: 20px;
   border-bottom: 0;
+}
+.service-style-1 .tagline-title {
+  margin-bottom: var(--cfia-spacer);
 }
 
 /* Services enlarge icon size */
@@ -268,6 +295,50 @@ a:hover, .link:hover {
 .accordion-style .content .card {
   background-color: transparent;
 }
+
+/* Node term item */
+.node-term-item {
+  --transition-timing: .4s;
+  --transition-ease: ease-in-out;
+}
+
+.node-term-item a img{
+  transform: scale(1);
+  transition: transform var(--transition-timing) var(--transition-ease);
+}
+
+.node-term-item .image-wrapper {
+  height: 240px;
+  overflow: hidden;
+}
+
+.node-term-item .image-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.node-term-item a:hover img {
+  transform: scale(1.1);
+  transition: transform var(--transition-timing) var(--transition-ease);
+}
+.node-term-item a:hover .categories,
+.node-term-item a:hover .title {
+  color: var(--cfia-primary-color-dark);
+  transition: color var(--transition-timing) var(--transition-ease);
+}
+
+.field__label {
+  color: var(--cfia-primary-color);
+  font-weight: var(--cfia-font-weight-bold);
+}
+
+/* Testemonial carousel */
+.testimonial-style-5 .z-sec {
+  padding-top: calc(var(--cfia-spacer) * 3)
+}
+
 
 /* Hide/remove unwanted elements*/
 .case-items .read,

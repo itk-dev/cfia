@@ -1,9 +1,9 @@
-{% include directory ~ '/templates/component/node-term-item.html.twig' with
+{% include directory ~ '/templates/component/card-item.html.twig' with
   {
     'ImageUri': file_url(content.field_image['#items'].entity.uri.value),
     'ImageAlt': content.field_image['#items'].alt,
     'Url': url('entity.node.canonical', { 'node': node.id() }),
-    'Category': node.field_category.referencedEntities,
+    'Category': content.field_category.0,
     'Label': node.label,
   }
 %}

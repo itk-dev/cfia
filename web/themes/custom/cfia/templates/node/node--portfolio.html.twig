@@ -55,6 +55,11 @@
         </div>
         {{content.field_section}}
 
+        {% if content.field_contact_person %}
+          <div class="content-contact-person">
+              {{ content.field_contact_person }}
+          </div>
+        {% endif %}
 
         <div class="prev-next-node">
             <a href="{{prev_portfolio_url}}">

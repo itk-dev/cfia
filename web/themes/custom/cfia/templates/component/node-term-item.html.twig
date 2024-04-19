@@ -1,0 +1,17 @@
+{# Node term view #}
+
+<div class="node-term-item col-md-4 h-100 mb-3 mb-md-5">
+  <a href="{{ Url }}" class="text-decoration-none">
+    <div class="image-wrapper rounded">
+      <img src="{{ ImageUri }}" alt="{{ ImageAlt }}" />
+    </div>
+
+    <div class="categories py-2">
+      {% for item in Category %}
+        {{ item.name.value }}{{ loop.last ? '' : ', '}}
+      {% endfor %}
+    </div>
+
+    <h4 class="title">{{ Label }}</h4>
+  </a>
+</div>
