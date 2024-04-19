@@ -97,7 +97,7 @@ a:hover, .link:hover {
 }
 
 /* Add start padding for main content */
-.content section {
+.content < section {
   padding-top: calc(var(--cfia-spacer) * 2);
 }
 
