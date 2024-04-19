@@ -290,10 +290,19 @@ a:hover, .link:hover {
 }
 
 /* Accordion */
-.accordion-style,
+.accordion-style {
+  background-color: transparent;
+}
+
+.accordion-style p,
+.accordion-style ul,
+.accordion-style h3 {
+  color: var(--cfia-background-color);
+}
+
 .accordion-style .content,
 .accordion-style .content .card {
-  background-color: transparent;
+  background-color: var(--cfia-primary-color);
 }
 
 /* Node term item */
