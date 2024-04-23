@@ -795,6 +795,17 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # $settings['migrate_source_version'] = '';
 # $settings['migrate_file_public_path'] = '';
 # $settings['migrate_file_private_path'] = '';
+$settings['twig_sandbox_allowed_methods'] = [
+  // Defaults:
+  'id',
+  'label',
+  'bundle',
+  'get',
+  '__toString',
+  'toString',
+  // Additions:
+  'referencedEntities',
+];
 
 /**
  * Load local development override configuration, if available.
