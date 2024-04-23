@@ -1,0 +1,27 @@
+uuid: 845fbd30-63c7-4584-b103-da5ea79b7551
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fil_til_download
+    - node.type.service
+  module:
+    - file
+id: node.service.field_fil_til_download
+field_name: field_fil_til_download
+entity_type: node
+bundle: service
+label: 'Fil til download'
+description: 'Fil relateret til portfolio.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: portfolio_documents
+  file_extensions: 'doc docx pdf'
+  max_filesize: '50 MB'
+  description_field: true
+field_type: file

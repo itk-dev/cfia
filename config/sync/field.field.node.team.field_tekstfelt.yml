@@ -1,0 +1,26 @@
+uuid: 22592736-a443-47d5-898d-bc6564b63705
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tekstfelt
+    - filter.format.basic_html
+    - filter.format.full_html
+    - node.type.team
+  module:
+    - text
+id: node.team.field_tekstfelt
+field_name: field_tekstfelt
+entity_type: node
+bundle: team
+label: Tekstfelt
+description: 'Bruges til at tilføje et tekstfelt. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - full_html
+field_type: text_long

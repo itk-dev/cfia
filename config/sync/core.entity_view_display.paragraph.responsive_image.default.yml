@@ -1,0 +1,35 @@
+uuid: 4724a990-fbca-4c25-8880-05058eb52173
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.responsive_image.field_image
+    - field.field.paragraph.responsive_image.field_title
+    - paragraphs.paragraphs_type.responsive_image
+  module:
+    - image
+    - text
+id: paragraph.responsive_image.default
+targetEntityType: paragraph
+bundle: responsive_image
+mode: default
+content:
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

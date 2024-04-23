@@ -1,5 +1,5 @@
-uuid: 98e9d865-6ab9-4c76-bf96-0ba401e0f8b2
-langcode: en
+uuid: e1a5948e-59e1-4ac9-9653-05c7666c7c30
+langcode: da
 status: true
 dependencies:
   config:
@@ -12,7 +12,7 @@ bundle: case
 label: 'Title 4'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

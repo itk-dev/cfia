@@ -1,0 +1,30 @@
+uuid: 2db3fac9-2760-4ea7-b1f4-ed4d3aa60d9e
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_person
+    - node.type.service
+    - node.type.team
+id: node.service.field_contact_person
+field_name: field_contact_person
+entity_type: node
+bundle: service
+label: 'Kontaktperson test'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      service: service
+      team: team
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: service
+field_type: entity_reference

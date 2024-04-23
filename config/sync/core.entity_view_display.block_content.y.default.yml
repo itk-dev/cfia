@@ -1,0 +1,32 @@
+uuid: f96e0649-35b3-4c41-ac7c-4545b9c4b199
+langcode: da
+status: true
+dependencies:
+  config:
+    - block_content.type.y
+    - field.field.block_content.y.body
+    - field.field.block_content.y.field__z
+  module:
+    - text
+id: block_content.y.default
+targetEntityType: block_content
+bundle: 'y'
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field__z:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

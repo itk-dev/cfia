@@ -5,7 +5,6 @@ dependencies:
   config:
     - system.menu.main
   module:
-    - node
     - system
   theme:
     - cfia
@@ -25,22 +24,4 @@ settings:
   level: 1
   depth: 0
   expand_all_items: true
-visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
-    bundles:
-      arrangement: arrangement
-      article: article
-      blog_post: blog_post
-      case: case
-      elements: elements
-      home_page: home_page
-      metode: metode
-      page: page
-      portfolio: portfolio
-      service: service
-      team: team
-      testimonials: testimonials
+visibility: {  }

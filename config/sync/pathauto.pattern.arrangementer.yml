@@ -1,0 +1,22 @@
+uuid: 43626513-d496-4f2a-a1e1-e21800376bef
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: arrangementer
+label: Arrangementer
+type: 'canonical_entities:node'
+pattern: 'arrangementer/[node:title]'
+selection_criteria:
+  81a49c29-c5f6-4e6e-9176-05c66170acbc:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 81a49c29-c5f6-4e6e-9176-05c66170acbc
+    context_mapping:
+      node: node
+    bundles:
+      arrangement: arrangement
+selection_logic: and
+weight: -5
+relationships: {  }

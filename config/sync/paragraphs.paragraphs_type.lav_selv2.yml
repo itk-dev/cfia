@@ -1,0 +1,15 @@
+uuid: c7f395f3-77c2-4658-9e22-7e67e3a8f6b2
+langcode: da
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories: {  }
+id: lav_selv2
+label: 'Lav selv2'
+icon_uuid: null
+icon_default: null
+description: 'Lav selv2'
+behavior_plugins: {  }

@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.team.field_designation
     - field.field.node.team.field_image
     - field.field.node.team.field_section
+    - field.field.node.team.field_tekstfelt
     - node.type.team
   module:
     - entity_reference_revisions
@@ -28,14 +29,14 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_description:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_designation:
     type: string
@@ -64,6 +65,13 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_tekstfelt:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
     region: content
 hidden:
   addtoany: true

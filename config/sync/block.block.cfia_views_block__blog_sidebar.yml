@@ -12,7 +12,7 @@ dependencies:
 id: cfia_views_block__blog_sidebar
 theme: cfia
 region: sidebar_second
-weight: 0
+weight: -15
 provider: null
 plugin: 'views_block:blog-sidebar'
 settings:

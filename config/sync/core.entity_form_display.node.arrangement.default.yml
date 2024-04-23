@@ -7,11 +7,14 @@ dependencies:
     - field.field.node.arrangement.body
     - field.field.node.arrangement.field_banner_image
     - field.field.node.arrangement.field_category
+    - field.field.node.arrangement.field_contact_person
     - field.field.node.arrangement.field_image
     - field.field.node.arrangement.field_section
     - field.field.node.arrangement.field_tags
     - field.field.node.arrangement.field_text_1
+    - field.field.node.arrangement.field_text_2
     - field.field.node.arrangement.field_text_3
+    - field.field.node.arrangement.field_text_4
     - field.field.node.arrangement.field_title_1
     - field.field.node.arrangement.field_title_2
     - field.field.node.arrangement.field_title_3
@@ -67,6 +70,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_contact_person:
+    type: entity_reference_autocomplete
+    weight: 22
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_image:
     type: image_image
     weight: 9
@@ -115,37 +128,13 @@ content:
     third_party_settings: {  }
   field_text_1:
     type: string_textfield
-    weight: 14
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_text_3:
-    type: string_textfield
-    weight: 18
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_title_1:
-    type: string_textfield
-    weight: 13
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_title_2:
-    type: string_textfield
     weight: 15
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_title_3:
+  field_text_2:
     type: string_textfield
     weight: 17
     region: content
@@ -153,9 +142,49 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_text_3:
+    type: string_textfield
+    weight: 19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_text_4:
+    type: text_textfield
+    weight: 21
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title_1:
+    type: string_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title_2:
+    type: string_textfield
+    weight: 16
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title_3:
+    type: string_textfield
+    weight: 18
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_title_4:
     type: string_textfield
-    weight: 26
+    weight: 20
     region: content
     settings:
       size: 60

@@ -8,7 +8,7 @@ favicon:
 features:
   favicon: true
 logo:
-  path: sites/default/files/cfia-logo.png
+  path: themes/custom/cfia/cfia-logo.svg
   use_default: false
 bootstrap_barrio_library: production
 bootstrap_barrio_fluid_container: 0
@@ -147,7 +147,7 @@ custom_message: 'The site will go live soon'
 search_banner_title: Røgeresultater
 search_banner_image: {  }
 header_variation: header-4
-sticky: 0
+sticky: 1
 address_text: ''
 address: ''
 email_text: ''
@@ -161,7 +161,7 @@ copyrights:
 styles: ''
 default_color: 0
 primary_color: '#2e534f'
-secondary_color: '#aa563e'
+secondary_color: '#1b887b'
 show_pannel: 1
 bootstrap_barrio_region_clean_logo: 0
 bootstrap_barrio_region_class_logo: row

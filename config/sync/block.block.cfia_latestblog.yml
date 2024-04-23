@@ -9,7 +9,7 @@ dependencies:
 id: cfia_latestblog
 theme: cfia
 region: sidebar_second
-weight: -11
+weight: -10
 provider: null
 plugin: 'block_content:54c6fc3a-3560-4d97-a1c7-c70f862c3567'
 settings:

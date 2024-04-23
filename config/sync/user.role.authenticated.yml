@@ -25,6 +25,7 @@ dependencies:
     - file
     - filter
     - fontawesome
+    - media
     - node
     - path
     - quick_node_clone
@@ -141,6 +142,7 @@ permissions:
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'view media'
   - 'view own unpublished content'
   - 'view the administration theme'
   - 'view user email addresses'

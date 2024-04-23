@@ -1,0 +1,24 @@
+uuid: 137e27fb-dbe2-4149-bcea-9af332dd2d0e
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.responsive_image
+  module:
+    - text
+id: paragraph.responsive_image.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: responsive_image
+label: Title
+description: 'Used to show a description below the image'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text

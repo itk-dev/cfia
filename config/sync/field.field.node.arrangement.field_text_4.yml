@@ -1,0 +1,22 @@
+uuid: 37172675-9c28-458b-98d2-8bce843975b5
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_4
+    - node.type.arrangement
+  module:
+    - text
+id: node.arrangement.field_text_4
+field_name: field_text_4
+entity_type: node
+bundle: arrangement
+label: 'Text 4'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

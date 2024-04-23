@@ -10,7 +10,7 @@ id: node.case.field_contact_person
 field_name: field_contact_person
 entity_type: node
 bundle: case
-label: 'Contact person'
+label: Kontaktperson
 description: ''
 required: false
 translatable: false

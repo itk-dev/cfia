@@ -10,7 +10,7 @@ dependencies:
 id: cfia_categories
 theme: cfia
 region: sidebar_second
-weight: -13
+weight: -12
 provider: null
 plugin: 'block_content:23e57cba-b8b5-44f2-bcb4-cbc5028ac0b7'
 settings:

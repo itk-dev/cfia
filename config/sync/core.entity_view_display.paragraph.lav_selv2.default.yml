@@ -1,0 +1,21 @@
+uuid: f439af3c-e7e1-4a23-80ca-a19cf1844d43
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.lav_selv2.field_x
+    - paragraphs.paragraphs_type.lav_selv2
+id: paragraph.lav_selv2.default
+targetEntityType: paragraph
+bundle: lav_selv2
+mode: default
+content:
+  field_x:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

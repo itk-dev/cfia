@@ -1,0 +1,23 @@
+uuid: 94b38246-ed9e-4fec-85e6-0e27d0f8ce90
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.lav_selv2.field_x
+    - paragraphs.paragraphs_type.lav_selv2
+id: paragraph.lav_selv2.default
+targetEntityType: paragraph
+bundle: lav_selv2
+mode: default
+content:
+  field_x:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

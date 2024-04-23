@@ -263,6 +263,9 @@ settings:
       testimonials_style_4:
         weight: 163
         enabled: false
+      testul_hoej:
+        weight: 165
+        enabled: false
       video_style_1:
         weight: 164
         enabled: false

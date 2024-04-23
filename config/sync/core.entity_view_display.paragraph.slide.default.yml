@@ -11,6 +11,7 @@ dependencies:
     - paragraphs.paragraphs_type.slide
   module:
     - image
+    - link
     - text
 id: paragraph.slide.default
 targetEntityType: paragraph
@@ -35,6 +36,18 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
   field_tagline:
     type: string
     label: above
@@ -50,5 +63,4 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-hidden:
-  field_link: true
+hidden: {  }

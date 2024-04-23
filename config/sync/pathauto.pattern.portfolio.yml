@@ -5,14 +5,14 @@ dependencies:
   module:
     - node
 id: portfolio
-label: Portfolio
+label: Metoder
 type: 'canonical_entities:node'
-pattern: 'portfolio/[node:title]'
+pattern: 'metoder/[node:title]'
 selection_criteria:
-  0713c6df-79cf-4942-8416-1de059d319e1:
+  94ad2d86-1b4a-4d9f-8565-3de34483e226:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 0713c6df-79cf-4942-8416-1de059d319e1
+    uuid: 94ad2d86-1b4a-4d9f-8565-3de34483e226
     context_mapping:
       node: node
     bundles:

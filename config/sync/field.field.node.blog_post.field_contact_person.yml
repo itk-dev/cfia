@@ -1,0 +1,29 @@
+uuid: fa8ab75c-65c4-4db8-9c3d-5dd46882b7bd
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_person
+    - node.type.blog_post
+    - node.type.team
+id: node.blog_post.field_contact_person
+field_name: field_contact_person
+entity_type: node
+bundle: blog_post
+label: Kontaktperson
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      team: team
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: arrangement
+field_type: entity_reference

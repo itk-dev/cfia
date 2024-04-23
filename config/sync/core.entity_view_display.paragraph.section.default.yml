@@ -3,15 +3,24 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.section.field_title
     - field.field.paragraph.section.field_view
     - paragraphs.paragraphs_type.section
   module:
+    - text
     - viewsreference
 id: paragraph.section.default
 targetEntityType: paragraph
 bundle: section
 mode: default
 content:
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
   field_view:
     type: viewsreference_formatter
     label: above
@@ -19,6 +28,6 @@ content:
       plugin_types:
         - block
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
 hidden: {  }

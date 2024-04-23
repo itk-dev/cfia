@@ -1,0 +1,29 @@
+uuid: e62dc011-44ff-4dde-a54a-dd4738a44fdc
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_person
+    - node.type.arrangement
+    - node.type.team
+id: node.arrangement.field_contact_person
+field_name: field_contact_person
+entity_type: node
+bundle: arrangement
+label: 'Vil du vide mere om arrangementet? Så kontakt os her!'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      team: team
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: arrangement
+field_type: entity_reference

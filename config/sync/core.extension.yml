@@ -47,8 +47,12 @@ module:
   jquery_ui_slider: 0
   jquery_ui_touch_punch: 0
   language: 0
+  layout_builder: 0
+  layout_discovery: 0
   link: 0
   locale: 0
+  media: 0
+  media_library: 0
   menu_link_attributes: 0
   menu_link_content: 0
   menu_ui: 0

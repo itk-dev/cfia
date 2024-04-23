@@ -1,0 +1,51 @@
+uuid: 4545c1ff-6d4f-4712-af18-465a3532b16f
+langcode: da
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.term_view
+    - field.field.node.service.body
+    - field.field.node.service.comment
+    - field.field.node.service.field_banner_image
+    - field.field.node.service.field_category
+    - field.field.node.service.field_contact_person
+    - field.field.node.service.field_description
+    - field.field.node.service.field_fil_til_download
+    - field.field.node.service.field_images
+    - field.field.node.service.field_section
+    - field.field.node.service.field_svg_icon
+    - field.field.node.service.field_tags
+    - node.type.service
+  module:
+    - user
+id: node.service.term_view
+targetEntityType: node
+bundle: service
+mode: term_view
+content:
+  field_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  body: true
+  comment: true
+  field_banner_image: true
+  field_contact_person: true
+  field_description: true
+  field_fil_til_download: true
+  field_images: true
+  field_section: true
+  field_svg_icon: true
+  field_tags: true
+  langcode: true

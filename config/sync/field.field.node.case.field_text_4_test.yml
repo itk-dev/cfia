@@ -1,0 +1,19 @@
+uuid: f69473ac-a45d-4d9c-ad2e-14e0582164cd
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_4_test
+    - node.type.case
+id: node.case.field_text_4_test
+field_name: field_text_4_test
+entity_type: node
+bundle: case
+label: 'Text 4 test'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

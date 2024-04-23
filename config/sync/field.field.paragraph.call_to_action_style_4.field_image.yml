@@ -19,7 +19,7 @@ field_name: field_image
 entity_type: paragraph
 bundle: call_to_action_style_4
 label: 'Background Image'
-description: ''
+description: ' '
 required: false
 translatable: true
 default_value: {  }

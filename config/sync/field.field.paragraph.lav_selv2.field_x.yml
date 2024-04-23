@@ -1,0 +1,19 @@
+uuid: f7ebf8fd-f8eb-4992-bb9f-d8d7f20a7789
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_x
+    - paragraphs.paragraphs_type.lav_selv2
+id: paragraph.lav_selv2.field_x
+field_name: field_x
+entity_type: paragraph
+bundle: lav_selv2
+label: x
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -12,12 +12,12 @@ dependencies:
 id: cfia_casedetails_2
 theme: cfia
 region: sidebar_second
-weight: 0
+weight: -14
 provider: null
 plugin: 'block_content:6edc211c-5a9b-474b-9527-4ec3ee945870'
 settings:
   id: 'block_content:6edc211c-5a9b-474b-9527-4ec3ee945870'
-  label: 'Case details'
+  label: Detaljer
   label_display: visible
   provider: block_content
   status: true

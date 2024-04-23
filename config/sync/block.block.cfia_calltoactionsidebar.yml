@@ -10,7 +10,7 @@ dependencies:
 id: cfia_calltoactionsidebar
 theme: cfia
 region: sidebar_first
-weight: -15
+weight: -16
 provider: null
 plugin: 'block_content:afab0c7e-4acf-46ac-82c1-75df32c1b074'
 settings:

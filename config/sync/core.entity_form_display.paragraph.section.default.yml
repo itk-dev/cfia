@@ -3,18 +3,28 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.section.field_title
     - field.field.paragraph.section.field_view
     - paragraphs.paragraphs_type.section
   module:
+    - text
     - viewsreference
 id: paragraph.section.default
 targetEntityType: paragraph
 bundle: section
 mode: default
 content:
+  field_title:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_view:
     type: viewsreference_select
-    weight: 0
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }

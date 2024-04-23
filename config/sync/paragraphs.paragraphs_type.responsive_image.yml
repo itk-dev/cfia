@@ -1,0 +1,24 @@
+uuid: 757fcaae-bf3d-471a-9023-8609efd7367d
+langcode: da
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      about_us: about_us
+      blogs: blogs
+      call_to_action: call_to_action
+      features: features
+      home_slider: home_slider
+      portfolio: portfolio
+      pricing_plans: pricing_plans
+      services: services
+      team_members: team_members
+id: responsive_image
+label: 'Responsive image'
+icon_uuid: null
+icon_default: null
+description: 'Used to insert responsive image'
+behavior_plugins: {  }

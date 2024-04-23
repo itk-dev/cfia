@@ -12,12 +12,12 @@ dependencies:
 id: cfia_projectdetails
 theme: cfia
 region: sidebar_second
-weight: 0
+weight: -12
 provider: null
 plugin: 'block_content:bfd6af7d-138a-4f4a-98bf-37e0a87f3d1d'
 settings:
   id: 'block_content:bfd6af7d-138a-4f4a-98bf-37e0a87f3d1d'
-  label: 'Project details'
+  label: 'Hurtigt overblik'
   label_display: visible
   provider: block_content
   status: true
@@ -30,4 +30,5 @@ visibility:
     context_mapping:
       node: '@node.node_route_context:node'
     bundles:
+      metode: metode
       portfolio: portfolio

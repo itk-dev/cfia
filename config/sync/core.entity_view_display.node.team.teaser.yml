@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.team.field_designation
     - field.field.node.team.field_image
     - field.field.node.team.field_section
+    - field.field.node.team.field_tekstfelt
     - node.type.team
   module:
     - user
@@ -29,4 +30,5 @@ hidden:
   field_designation: true
   field_image: true
   field_section: true
+  field_tekstfelt: true
   langcode: true

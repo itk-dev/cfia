@@ -3,15 +3,24 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.faq.field_title
     - field.field.paragraph.faq.field_widget
     - paragraphs.paragraphs_type.faq
   module:
     - entity_reference_revisions
+    - text
 id: paragraph.faq.default
 targetEntityType: paragraph
 bundle: faq
 mode: default
 content:
+  field_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
   field_widget:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -19,6 +28,6 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
 hidden: {  }

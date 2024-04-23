@@ -9,6 +9,7 @@ dependencies:
 third_party_settings:
   paragraphs_ee:
     paragraphs_categories:
+      cases: cases
       portfolio: portfolio
 id: portfolio_style_1
 label: 'Portfolio - Style 1'

@@ -3,20 +3,30 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.faq.field_title
     - field.field.paragraph.faq.field_widget
     - paragraphs.paragraphs_type.faq
   module:
     - paragraphs
     - paragraphs_ee
     - paragraphs_features
+    - text
 id: paragraph.faq.default
 targetEntityType: paragraph
 bundle: faq
 mode: default
 content:
+  field_title:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_widget:
     type: paragraphs
-    weight: 0
+    weight: 1
     region: content
     settings:
       title: Paragraph

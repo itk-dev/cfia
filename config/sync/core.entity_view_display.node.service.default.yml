@@ -3,14 +3,21 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.comment.default
     - field.field.node.service.body
+    - field.field.node.service.comment
     - field.field.node.service.field_banner_image
+    - field.field.node.service.field_category
+    - field.field.node.service.field_contact_person
     - field.field.node.service.field_description
+    - field.field.node.service.field_fil_til_download
     - field.field.node.service.field_images
     - field.field.node.service.field_section
     - field.field.node.service.field_svg_icon
+    - field.field.node.service.field_tags
     - node.type.service
   module:
+    - comment
     - entity_reference_revisions
     - image
     - svg_image_field
@@ -26,7 +33,16 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 1
+    region: content
+  comment:
+    type: comment_default
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 6
     region: content
   field_banner_image:
     type: image
@@ -37,14 +53,16 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 102
+    weight: 2
     region: content
-  field_description:
-    type: text_default
-    label: above
-    settings: {  }
+  field_contact_person:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
     third_party_settings: {  }
-    weight: 106
+    weight: 7
     region: content
   field_images:
     type: image
@@ -55,7 +73,7 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 103
+    weight: 3
     region: content
   field_section:
     type: entity_reference_revisions_entity_view
@@ -64,7 +82,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 104
+    weight: 4
     region: content
   field_svg_icon:
     type: svg_image_field_formatter
@@ -81,13 +99,17 @@ content:
       sanitize: true
       sanitize_remote: false
     third_party_settings: {  }
-    weight: 105
+    weight: 5
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
   addtoany: true
+  field_category: true
+  field_description: true
+  field_fil_til_download: true
+  field_tags: true
   langcode: true

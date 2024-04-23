@@ -1,0 +1,22 @@
+uuid: 6adecb3b-7db8-4926-87d4-aed620bea6cb
+langcode: da
+status: true
+dependencies:
+  module:
+    - addtoany
+  theme:
+    - cfia
+id: cfia_addtoanyfollowbuttons
+theme: cfia
+region: footer_third
+weight: -15
+provider: null
+plugin: addtoany_follow_block
+settings:
+  id: addtoany_follow_block
+  label: 'LI og Insta'
+  label_display: '0'
+  provider: addtoany
+  buttons_size: '40'
+  addtoany_html: "<a class=\"a2a_button_linkedin\" href=\"https://www.linkedin.com/company/center_for_innovation_i_aarhus\"></a>\r\n<a class=\"a2a_button_instagram\" href=\"https://www.instagram.com/cfiaarhus\"></a>"
+visibility: {  }
