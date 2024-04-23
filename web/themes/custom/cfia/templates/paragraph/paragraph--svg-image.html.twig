@@ -1,0 +1,22 @@
+{# Add container for content alignment #}
+{% if paragraph.field_full_width.value == 0 %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+{% endif %}
+{# End #}
+
+      <figure>
+        <img src="{{ file_url(paragraph.field_svg_icon.entity.uri.value) }}" alt="{{ paragraph.field_alt_text.value ? paragraph.field_alt_text.value : "" }}"/>
+        {% if paragraph.field_title.value %}
+          <figcaption>{{ paragraph.field_title.value }}</figcaption>
+        {% endif %}
+      </figure>
+
+{# End container for content alignment #}
+{% if paragraph.field_full_width.value == 0 %}
+    </div>
+  </div>
+</div>
+{% endif %}
+{# End #}
