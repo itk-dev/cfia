@@ -3,21 +3,15 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-3">
-              <img src="{{file_url(content.field_image['#items'].entity.uri.value)}}" alt="{{content.field_image['#items'].alt}}">
+              <a href="{{ url }}"><img src="{{file_url(content.field_image['#items'].entity.uri.value)}}" alt="{{content.field_image['#items'].alt}}"></a>
             </div>
             <div class="col-lg-8 col-md-9 team1">
                 <div>
-                    <h3 class="mt-3">{{node.label}}</h3>
+                    <a href="{{ url }}"><h3 class="mt-3">{{node.label}}</h3></a>
                 </div>
                 <p>{{content.field_designation.0}}</p>
                 <div class="mb-3">
                   {{content.field_section}}
-                </div>
-                <div class="mb-3">
-                  {{content.field_tekstfelt}}
-                </div>
-                <div class="mb-3">
-                  {{content.field_description}}
                 </div>
             </div>
         </div>
