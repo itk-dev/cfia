@@ -194,6 +194,12 @@ a:hover, .link:hover {
   height: 100%;
   margin-bottom: var(--cfia-spacer);
 }
+
+/* Service title center text */
+.service-1 .service-wrapper h4 {
+  text-align: center;
+}
+
 /* Highlight background on service grid on hover */
 .service-grid-3 .service-wrapper:hover {
   background-color: #fff;
