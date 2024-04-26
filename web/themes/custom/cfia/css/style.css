@@ -96,6 +96,12 @@ a:hover, .link:hover {
   background-color: var(--cfia-primary-color);
 }
 
+/* Footer add to any icons z-index fix */
+.block-addtoany-follow-block {
+  z-index: 1;
+}
+
+
 /* Add start padding for main content */
 .content < section {
   padding-top: calc(var(--cfia-spacer) * 2);
