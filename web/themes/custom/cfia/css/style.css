@@ -9,6 +9,7 @@
 :root {
   --cfia-background-color: oklch(95.94% 0.016 99);
   --cfia-primary-color: var(--bs-primary);
+  --cfia-primary-color-light: oklch(89.04% 0.037 163.15);
   --cfia-primary-color-dark: oklch(34.12% 0.034 186.76);
   --cfia-secondary-color: var(--bs-secondary);
   --paragraph-text-color: var(--bs-primary);
@@ -20,6 +21,7 @@
   --paragraph-font: var(--cfia-font-family);
   --menu-font: var(--cfia-font-family);
   --cfia-spacer: 1rem;
+
 }
 
 /* Change header behavior */
@@ -375,6 +377,17 @@ a:hover, .link:hover {
 .features-style-3 .feature-bg,
 .features-style-3 .feature-bg::before {
   background: none;
+}
+
+/* Reset svg colors */
+.service-icon .cls-1 {
+  fill: white !important;
+}
+.service-icon .cls-2 {
+  fill: var(--cfia-primary-color-light) !important;
+}
+.service-icon .cls-3 {
+  fill: var(--cfia-primary-color-dark) !important;
 }
 
 @media only screen and (max-width: 600px) {
