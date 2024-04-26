@@ -65,7 +65,7 @@ content:
     third_party_settings: {  }
   field_billede_til_reference:
     type: image_image
-    weight: 27
+    weight: 20
     region: content
     settings:
       progress_indicator: throbber
@@ -73,13 +73,13 @@ content:
     third_party_settings: {  }
   field_category:
     type: options_buttons
-    weight: 12
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
   field_fil_til_download:
     type: file_generic
-    weight: 28
+    weight: 21
     region: content
     settings:
       progress_indicator: throbber
@@ -114,7 +114,7 @@ content:
     third_party_settings: {  }
   field_section:
     type: paragraphs
-    weight: 11
+    weight: 12
     region: content
     settings:
       title: Paragraph
@@ -142,7 +142,7 @@ content:
           dialog_style: tiles
   field_text_1:
     type: string_textfield
-    weight: 13
+    weight: 14
     region: content
     settings:
       size: 60
@@ -150,7 +150,7 @@ content:
     third_party_settings: {  }
   field_text_3:
     type: string_textfield
-    weight: 17
+    weight: 18
     region: content
     settings:
       size: 60
@@ -158,7 +158,7 @@ content:
     third_party_settings: {  }
   field_title_1:
     type: string_textfield
-    weight: 12
+    weight: 13
     region: content
     settings:
       size: 60
@@ -166,7 +166,7 @@ content:
     third_party_settings: {  }
   field_title_2:
     type: string_textfield
-    weight: 14
+    weight: 15
     region: content
     settings:
       size: 60
@@ -174,7 +174,7 @@ content:
     third_party_settings: {  }
   field_title_3:
     type: string_textfield
-    weight: 16
+    weight: 17
     region: content
     settings:
       size: 60
@@ -182,7 +182,7 @@ content:
     third_party_settings: {  }
   field_title_4:
     type: string_textfield
-    weight: 18
+    weight: 19
     region: content
     settings:
       size: 60
@@ -231,7 +231,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -1,0 +1,23 @@
+uuid: 18b50d99-f52f-4723-827b-df26cf90a7fd
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_full_width
+    - paragraphs.paragraphs_type.svg_image
+id: paragraph.svg_image.field_full_width
+field_name: field_full_width
+entity_type: paragraph
+bundle: svg_image
+label: 'Full width'
+description: 'Used to toggle full width or contained width.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Fuld bredde'
+  off_label: 'Indrykket med indhold.'
+field_type: boolean

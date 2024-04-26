@@ -17,6 +17,6 @@ settings:
   label: 'LI og Insta'
   label_display: '0'
   provider: addtoany
-  buttons_size: '40'
-  addtoany_html: "<a class=\"a2a_button_linkedin\" href=\"https://www.linkedin.com/company/center_for_innovation_i_aarhus\"></a>\r\n<a class=\"a2a_button_instagram\" href=\"https://www.instagram.com/cfiaarhus\"></a>"
+  buttons_size: 40
+  addtoany_html: "<a class=\"a2a_button_linkedin me-2\" href=\"https://www.linkedin.com/company/center_for_innovation_i_aarhus\"><i class=\"fab fa-linkedin fa-2x\"></i></a>\r\n<a class=\"a2a_button_instagram\" href=\"https://www.instagram.com/cfiaarhus\"><i class=\"fab fa-instagram fa-2x\"></i></a>"
 visibility: {  }

@@ -1,0 +1,23 @@
+uuid: 2a2d2507-59e7-4d4a-a2a2-4d3ad1afef54
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.cases_cards_row
+  module:
+    - link
+id: paragraph.cases_cards_row.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: cases_cards_row
+label: Button
+description: 'Used to provide a button with a link to more content'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

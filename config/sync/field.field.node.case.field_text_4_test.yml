@@ -9,7 +9,7 @@ id: node.case.field_text_4_test
 field_name: field_text_4_test
 entity_type: node
 bundle: case
-label: 'Text 4 test'
+label: 'Text 4'
 description: ''
 required: false
 translatable: false

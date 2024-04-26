@@ -1,0 +1,24 @@
+uuid: f1746b8e-fbbb-48d7-afcb-5772c1a83c0f
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - filter.format.plain_text
+    - paragraphs.paragraphs_type.svg_image
+  module:
+    - text
+id: paragraph.svg_image.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: svg_image
+label: Title
+description: 'Used to create an optional title to show below the image'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text

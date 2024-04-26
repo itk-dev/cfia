@@ -1,0 +1,24 @@
+uuid: 3b4e03f2-598a-4519-9c92-0efdde9f1ccd
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - filter.format.plain_text
+    - paragraphs.paragraphs_type.cases_cards_row
+  module:
+    - text
+id: paragraph.cases_cards_row.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: cases_cards_row
+label: Title
+description: 'Used to provide a title for the section'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text

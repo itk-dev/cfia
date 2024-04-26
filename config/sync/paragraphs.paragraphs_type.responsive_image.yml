@@ -7,15 +7,7 @@ dependencies:
 third_party_settings:
   paragraphs_ee:
     paragraphs_categories:
-      about_us: about_us
-      blogs: blogs
-      call_to_action: call_to_action
-      features: features
-      home_slider: home_slider
-      portfolio: portfolio
-      pricing_plans: pricing_plans
-      services: services
-      team_members: team_members
+      itk: itk
 id: responsive_image
 label: 'Responsive image'
 icon_uuid: null

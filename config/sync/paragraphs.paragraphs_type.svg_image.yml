@@ -1,0 +1,16 @@
+uuid: a2a93e2e-4b7a-45d0-8518-62ab7d6e32e6
+langcode: da
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      itk: itk
+id: svg_image
+label: 'Svg image'
+icon_uuid: null
+icon_default: null
+description: 'Used to insert an svg as a image'
+behavior_plugins: {  }

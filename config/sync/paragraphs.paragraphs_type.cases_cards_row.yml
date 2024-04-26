@@ -1,0 +1,16 @@
+uuid: fc2f10a0-464e-4b6c-a9ec-34beac7348a4
+langcode: da
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      itk: itk
+id: cases_cards_row
+label: 'Cases cards row'
+icon_uuid: null
+icon_default: null
+description: 'Used to create a section with title, 3 cases and a button'
+behavior_plugins: {  }

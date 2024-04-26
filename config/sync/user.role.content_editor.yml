@@ -24,6 +24,7 @@ dependencies:
     - file
     - filter
     - fontawesome
+    - help
     - node
     - path
     - quick_node_clone
@@ -44,6 +45,7 @@ permissions:
   - 'access contextual links'
   - 'access files overview'
   - 'access fontawesome additional settings'
+  - 'access help pages'
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'access tour'

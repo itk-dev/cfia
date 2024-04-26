@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - filter.format.webform_default
     - node.type.article
     - node.type.blog_post
     - node.type.case
@@ -25,6 +26,7 @@ dependencies:
     - file
     - filter
     - fontawesome
+    - help
     - media
     - node
     - path
@@ -49,6 +51,7 @@ permissions:
   - 'access contextual links'
   - 'access files overview'
   - 'access fontawesome additional settings'
+  - 'access help pages'
   - 'access site-wide contact form'
   - 'access taxonomy overview'
   - 'access toolbar'
@@ -142,6 +145,7 @@ permissions:
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'use text format webform_default'
   - 'view media'
   - 'view own unpublished content'
   - 'view the administration theme'

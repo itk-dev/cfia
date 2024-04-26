@@ -1,0 +1,20 @@
+uuid: 1f15ff13-61d2-4726-891e-d03b67fc4a3c
+langcode: da
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_reference_cases
+field_name: field_reference_cases
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

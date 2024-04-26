@@ -1,0 +1,19 @@
+uuid: f4a3419a-1a4e-44c7-8917-8e661dc0578c
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_alt_text
+    - paragraphs.paragraphs_type.svg_image
+id: paragraph.svg_image.field_alt_text
+field_name: field_alt_text
+entity_type: paragraph
+bundle: svg_image
+label: 'Alt text'
+description: 'Used to create an alternative text for non-decorative images.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
