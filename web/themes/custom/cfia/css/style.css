@@ -289,7 +289,12 @@ a:hover, .link:hover {
 }
 
 .sidebar button.collapsed i {
-  transform: rotate(180deg);
+  display: none;
+  /*transform: rotate(180deg);*/
+}
+
+.sidebar .collapse:not(.show){
+  display: block;
 }
 
 /* Blockquotes */
@@ -396,5 +401,14 @@ a:hover, .link:hover {
   .footer-wrapper img {
     max-height: 10vh;
     width: auto;
+  }
+
+  .sidebar button.collapsed i {
+    display: block;
+    transform: rotate(180deg);
+  }
+
+  .sidebar .collapse:not(.show){
+    display: none;
   }
 }
