@@ -3,7 +3,7 @@ _core:
 langcode: da
 uuid: 103f29fe-6b9b-44ca-bf86-c12b0d3cebf0
 name: CFIA
-mail: cfi@aarhus.dk
+mail: nyheder@cfiaarhus.dk
 slogan: 'Center for Innovation Aarhus'
 page:
   403: ''
