@@ -1,7 +1,8 @@
 # CHANGELOG
 
 ## Unreleased
-* Drupal 10 new theme demo pages
+* [PR-20](https://github.com/itk-dev/cfia/pull/20)
+  Fixes after release
 
 ## 2.0.0
 * Upgrade to drupal 10
