@@ -42,6 +42,7 @@ module:
   history: 0
   honeypot: 0
   image: 0
+  itk_siteimprove: 0
   jquery_ui: 0
   jquery_ui_datepicker: 0
   jquery_ui_slider: 0
