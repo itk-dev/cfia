@@ -1,6 +1,9 @@
 # CHANGELOG
 
 ## Unreleased
+
+## 2.1.1
+
 * [PR-20](https://github.com/itk-dev/cfia/pull/20)
   Fixes after release
 
