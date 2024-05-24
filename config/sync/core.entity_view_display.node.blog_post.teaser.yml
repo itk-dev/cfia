@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.blog_post.field_banner_image
     - field.field.node.blog_post.field_category
     - field.field.node.blog_post.field_contact_person
+    - field.field.node.blog_post.field_fil_til_download
     - field.field.node.blog_post.field_image
     - field.field.node.blog_post.field_section
     - node.type.blog_post
@@ -37,6 +38,7 @@ hidden:
   field_banner_image: true
   field_category: true
   field_contact_person: true
+  field_fil_til_download: true
   field_image: true
   field_section: true
   langcode: true
