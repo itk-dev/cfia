@@ -1,0 +1,27 @@
+uuid: d4b3d2dd-2aad-4aa8-9afd-9bf270a79000
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fil_til_download
+    - node.type.blog_post
+  module:
+    - file
+id: node.blog_post.field_fil_til_download
+field_name: field_fil_til_download
+entity_type: node
+bundle: blog_post
+label: 'Fil til download'
+description: 'Fil relateret til portfolio.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: portfolio_documents
+  file_extensions: 'doc docx pdf'
+  max_filesize: '50 MB'
+  description_field: true
+field_type: file
