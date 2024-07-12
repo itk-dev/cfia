@@ -374,33 +374,35 @@ function consultancy_plus_preprocess_node(&$variables) {
   
     // Next node url
     if($nid == end($blog_nodes)){
-      $data_next = Node::load($blog_nodes[0]);
+      $data_next = isset($blog_nodes[0]) ? Node::load($blog_nodes[0]) : null;
     }else{
-      $data_next = Node::load($blog_nodes[$key+1]);
+      $data_next = isset($blog_nodes[$key+1]) ? Node::load($blog_nodes[$key+1]) : null;
     }
   
     // Prev node url
     if($nid == $blog_nodes[0]){
       $lkey = array_search(end($blog_nodes), $blog_nodes);
-      $data_prev = Node::load($blog_nodes[$lkey]);
+      $data_prev = isset($blog_nodes[$lkey]) ? Node::load($blog_nodes[$lkey]): null;
     }
     else{
-      $data_prev = Node::load($blog_nodes[$key-1]);
+      $data_prev = isset($blog_nodes[$key-1]) ? Node::load($blog_nodes[$key-1]): null;
     }
     $variables['next_url'] = isset($data_next) ? $data_next->toUrl()->setAbsolute()->toString() : '';
     $variables['prev_url'] = isset($data_prev) ? $data_prev->toUrl()->setAbsolute()->toString() : '';
-        
-    
-    $variables['nextNodeTitle']=$data_next->getTitle();
-    $variables['prevNodeTitle']=$data_prev->getTitle();
-  
-    $prevNodeDate = $data_prev->getCreatedTime();
-    $nextNodeDate = $data_next->getCreatedTime();
-    $variables['nextnodedate'] = \Drupal::service('date.formatter')->format($nextNodeDate, 'dd/mm');
-    $variables['prevnodedate'] = \Drupal::service('date.formatter')->format($prevNodeDate, 'dd/mm');
-  
-    $variables['nextImage'] = $data_next->get('field_image')->entity->uri->value;
-    $variables['prevImage'] = $data_prev->get('field_image')->entity->uri->value;
+
+    if(isset($data_next) && isset($data_prev)) {
+      $variables[ 'nextNodeTitle' ] = $data_next->getTitle();
+      $variables[ 'prevNodeTitle' ] = $data_prev->getTitle();
+
+      $prevNodeDate = $data_prev->getCreatedTime();
+      $nextNodeDate = $data_next->getCreatedTime();
+
+      $variables['nextnodedate'] = \Drupal::service('date.formatter')->format($nextNodeDate, 'dd/mm');
+      $variables['prevnodedate'] = \Drupal::service('date.formatter')->format($prevNodeDate, 'dd/mm');
+
+      $variables['nextImage'] = $data_next->get('field_image')->entity->uri->value;
+      $variables['prevImage'] = $data_prev->get('field_image')->entity->uri->value;
+    }
    
     // COMMENT COUNT
     $nid = $variables['node']->nid->value;
@@ -428,7 +430,7 @@ function consultancy_plus_preprocess_node(&$variables) {
     }else{
       $data_next = isset($blog_nodes[$key+1]) ? Node::load($blog_nodes[$key+1]) : null;
     }
-  
+
     // Prev node url
     if($nid == $blog_nodes[0]){
       $lkey = array_search(end($blog_nodes), $blog_nodes);
