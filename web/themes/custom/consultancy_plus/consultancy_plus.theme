@@ -387,11 +387,11 @@ function consultancy_plus_preprocess_node(&$variables) {
     else{
       $data_prev = Node::load($blog_nodes[$key-1]);
     }
-    $variables['next_url'] = $data_next->toUrl()->setAbsolute()->toString();
-    $variables['prev_url'] = $data_prev->toUrl()->setAbsolute()->toString();
+    $variables['next_url'] = isset($data_next) ? $data_next->toUrl()->setAbsolute()->toString() : '';
+    $variables['prev_url'] = isset($data_prev) ? $data_prev->toUrl()->setAbsolute()->toString() : '';
         
     
-    $variables['nextNodeTitle']=$data_next->getTitle();    
+    $variables['nextNodeTitle']=$data_next->getTitle();
     $variables['prevNodeTitle']=$data_prev->getTitle();
   
     $prevNodeDate = $data_prev->getCreatedTime();
@@ -424,9 +424,9 @@ function consultancy_plus_preprocess_node(&$variables) {
   
     // Next node url
     if($nid == end($blog_nodes)){
-      $data_next = Node::load($blog_nodes[0]);
+      $data_next = isset($blog_nodes[0]) ? Node::load($blog_nodes[0]) : null;
     }else{
-      $data_next = Node::load($blog_nodes[$key+1]);
+      $data_next = isset($blog_nodes[$key+1]) ? Node::load($blog_nodes[$key+1]) : null;
     }
   
     // Prev node url
@@ -435,19 +435,23 @@ function consultancy_plus_preprocess_node(&$variables) {
       $data_prev = Node::load($blog_nodes[$lkey]);
     }
     else{
-      $data_prev = Node::load($blog_nodes[$key-1]);
+      $data_prev = isset($blog_nodes[$key-1]) ? Node::load($blog_nodes[$key-1]) : null;
     }
-    $variables['next_portfolio_url'] = $data_next->toUrl()->setAbsolute()->toString();
-    $variables['prev_portfolio_url'] = $data_prev->toUrl()->setAbsolute()->toString();
-        
-    
-    $variables['nextNodeTitle']=$data_next->getTitle();    
-    $variables['prevNodeTitle']=$data_prev->getTitle();
-  
-    $prevNodeDate = $data_prev->getCreatedTime();
-    $nextNodeDate = $data_next->getCreatedTime();
-    $variables['nextnodedate'] = \Drupal::service('date.formatter')->format($nextNodeDate, 'dd/mm');
-    $variables['prevnodedate'] = \Drupal::service('date.formatter')->format($prevNodeDate, 'dd/mm');
+
+    if(isset($data_next) && isset($data_prev)) {
+      $variables['next_portfolio_url'] = $data_next->toUrl()->setAbsolute()->toString();
+      $variables['prev_portfolio_url'] = $data_prev->toUrl()->setAbsolute()->toString();
+
+
+      $variables['nextNodeTitle']=$data_next->getTitle();
+      $variables['prevNodeTitle']=$data_prev->getTitle();
+
+      $prevNodeDate = $data_prev->getCreatedTime();
+      $nextNodeDate = $data_next->getCreatedTime();
+      $variables['nextnodedate'] = \Drupal::service('date.formatter')->format($nextNodeDate, 'dd/mm');
+      $variables['prevnodedate'] = \Drupal::service('date.formatter')->format($prevNodeDate, 'dd/mm');
+
+    }
 
 
   }
