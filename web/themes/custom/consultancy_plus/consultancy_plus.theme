@@ -14,7 +14,7 @@ use Drupal\node\Entity\Node;
 /**
  * Implements hook_theme().
  */
-function consultancy_plus_theme(&$existing, $type, $theme, $path) { 
+function consultancy_plus_theme(&$existing, $type, $theme, $path) {
    $hooks = array();
    $hooks['user_login_form'] = array(
     'render element' => 'form',
@@ -37,7 +37,7 @@ function consultancy_plus_theme(&$existing, $type, $theme, $path) {
        'consultancy_plus_preprocess_user_pass'
     ),
    );
-   return $hooks; 
+   return $hooks;
 }
 /**
  * Implements hook_preprocess_user_login().
@@ -137,7 +137,7 @@ function consultancy_plus_form_alter( &$form, &$form_state, $form_id ) {
 }
 // Search Result Page
 function consultancy_plus_preprocess_item_list__search_results(array &$variables) {
-  
+
   $pager = \Drupal::service('pager.manager')->getPager();
   if (!empty($pager)){
     $count_results = $pager->getTotalItems();
@@ -266,7 +266,7 @@ function consultancy_plus_preprocess_page(&$variables) {
   $variables['email_address'] = theme_get_setting('email_address');
   $variables['button_text'] = theme_get_setting('button_text');
   $variables['button_link'] = theme_get_setting('button_link');
-  // Header 
+  // Header
   $variables['header_variation'] = theme_get_setting('header_variation');
   $variables['sticky'] = theme_get_setting('sticky');
   $variables['loader'] = theme_get_setting('loader');
@@ -319,7 +319,7 @@ function consultancy_plus_form_comment_form_alter(&$form, &$form_state, $form_id
   $form['subject']['widget']['#access'] = FALSE;
   $form['actions']['submit']['#value'] = t('Post Comment');
   $form['actions']['submit']['#attributes']['class'][] = 'btn-style-3 btn btn-style-sm';
-  $form['actions']['preview']['#access'] = FALSE; 
+  $form['actions']['preview']['#access'] = FALSE;
 }
 function consultancy_plus_preprocess_comment(&$variables) {
   $comment = $variables['elements']['#comment'];
@@ -338,7 +338,7 @@ function consultancy_plus_preprocess_node(&$variables) {
   // Portfolio - Prev Next
   $variables['pager_prev_text_3'] = theme_get_setting('pager_prev_text_3');
   $variables['pager_next_text_3'] = theme_get_setting('pager_next_text_3');
-  
+
   // Get statistics count for current node.
   $node = $variables['node'];
   if($node->getType()=='blog'){
@@ -346,21 +346,8 @@ function consultancy_plus_preprocess_node(&$variables) {
   $node_view = $stats_storage->fetchView($node->id());
   $variables['total_count'] = $node_view ? $node_view->getTotalCount() : 0;
   }
-    // ADDTOANY
-    if ($variables['node']->getType() == 'portfolio'){
-      $block = \Drupal\block\Entity\Block::load('addtoanybuttons');
-      $variables['share'] = \Drupal::entityTypeManager()
-        ->getViewBuilder('block')
-        ->view($block);
-    }
-    if ($variables['node']->getType() == 'blog_post'){
-      $block = \Drupal\block\Entity\Block::load('addtoanybuttons');
-      $variables['blogshare'] = \Drupal::entityTypeManager()
-        ->getViewBuilder('block')
-        ->view($block);
-    }
-  
-    // PREVOIOS NODE NEXT NODE
+
+  // PREVOIOS NODE NEXT NODE
   if ($variables['node']->getType() == 'blog_post'){
     $nids = \Drupal::entityQuery('node')->accessCheck(FALSE)
               ->condition('type','blog_post')->condition('status',1)->execute();
@@ -368,17 +355,17 @@ function consultancy_plus_preprocess_node(&$variables) {
     foreach($nids as $n){
       $blog_nodes[] = $n;
     }
-  
+
     $nid = $variables['node']->id();
     $key = array_search($nid, $blog_nodes);
-  
+
     // Next node url
     if($nid == end($blog_nodes)){
       $data_next = isset($blog_nodes[0]) ? Node::load($blog_nodes[0]) : null;
     }else{
       $data_next = isset($blog_nodes[$key+1]) ? Node::load($blog_nodes[$key+1]) : null;
     }
-  
+
     // Prev node url
     if($nid == $blog_nodes[0]){
       $lkey = array_search(end($blog_nodes), $blog_nodes);
@@ -403,7 +390,7 @@ function consultancy_plus_preprocess_node(&$variables) {
       $variables['nextImage'] = $data_next->get('field_image')->entity->uri->value;
       $variables['prevImage'] = $data_prev->get('field_image')->entity->uri->value;
     }
-   
+
     // COMMENT COUNT
     $nid = $variables['node']->nid->value;
     $database = \Drupal::database();
@@ -420,10 +407,10 @@ function consultancy_plus_preprocess_node(&$variables) {
     foreach($nids as $n){
       $blog_nodes[] = $n;
     }
-  
+
     $nid = $variables['node']->id();
     $key = array_search($nid, $blog_nodes);
-  
+
     // Next node url
     if($nid == end($blog_nodes)){
       $data_next = isset($blog_nodes[0]) ? Node::load($blog_nodes[0]) : null;
@@ -465,17 +452,17 @@ function consultancy_plus_preprocess_node(&$variables) {
     foreach($nids as $n){
       $blog_nodes[] = $n;
     }
-  
+
     $nid = $variables['node']->id();
     $key = array_search($nid, $blog_nodes);
-  
+
     // Next node url
     if($nid == end($blog_nodes)){
       $data_next = Node::load($blog_nodes[0]);
     }else{
       $data_next = Node::load($blog_nodes[$key+1]);
     }
-  
+
     // Prev node url
     if($nid == $blog_nodes[0]){
       $lkey = array_search(end($blog_nodes), $blog_nodes);
@@ -486,10 +473,10 @@ function consultancy_plus_preprocess_node(&$variables) {
     }
     $variables['next_case_url'] = $data_next->toUrl()->setAbsolute()->toString();
     $variables['prev_case_url'] = $data_prev->toUrl()->setAbsolute()->toString();
-        
-    
-    
-  
+
+
+
+
     $prevNodeDate = $data_prev->getCreatedTime();
     $nextNodeDate = $data_next->getCreatedTime();
     $variables['nextnodedate'] = \Drupal::service('date.formatter')->format($nextNodeDate, 'dd/mm');
@@ -502,13 +489,13 @@ function consultancy_plus_preprocess_node(&$variables) {
 
 
 }
-/* 
-  Maintenance and Coming soon page 
+/*
+  Maintenance and Coming soon page
 */
 function consultancy_plus_preprocess_maintenance_page(&$variables) {
   $variables['maintenance_mode_tagline'] = theme_get_setting('maintenance_mode_tagline');
   $variables['maintenance_mode_title'] = theme_get_setting('maintenance_mode_title');
-  $variables['maintenance_mode_description'] = theme_get_setting('maintenance_mode_description'); 
+  $variables['maintenance_mode_description'] = theme_get_setting('maintenance_mode_description');
   $variables['bg_image_m'] = theme_get_setting('bg_image_m');
   // Maintenance - Background Image
   if (theme_get_setting('bg_image_m') != Null) {
@@ -521,7 +508,7 @@ function consultancy_plus_preprocess_maintenance_page(&$variables) {
   }
   $variables['comingsoon_tagline'] = theme_get_setting('comingsoon_tagline');
   $variables['comingsoon_title'] = theme_get_setting('comingsoon_title');
-  $variables['comingsoon_description'] = theme_get_setting('comingsoon_description'); 
+  $variables['comingsoon_description'] = theme_get_setting('comingsoon_description');
   // Coming Soon - Image
   $path = "";
   if (theme_get_setting('bg_image_c') != Null) {
@@ -532,8 +519,8 @@ function consultancy_plus_preprocess_maintenance_page(&$variables) {
   }
   $variables['bg_image_c_url'] = $path;
   }
-  $variables['mode_type'] = theme_get_setting('mode_type'); 
-  $variables['date'] = theme_get_setting('date'); 
+  $variables['mode_type'] = theme_get_setting('mode_type');
+  $variables['date'] = theme_get_setting('date');
   $variables['custom_message'] = theme_get_setting('custom_message');
   $variables['#attached'] = [
       'drupalSettings' => [
@@ -565,7 +552,7 @@ function consultancy_plus_preprocess_views_view_unformatted(&$variables) {
     $j;
     foreach($variables['rows'] as $key => $row){
         $j = $key;
-        $variables['rows'][$key]['nid'] = $node->id(); 
+        $variables['rows'][$key]['nid'] = $node->id();
     }
   }
 }

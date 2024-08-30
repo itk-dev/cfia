@@ -3,7 +3,7 @@ _core:
 langcode: da
 favicon:
   mimetype: image/vnd.microsoft.icon
-  path: 'public://favicon_0.ico'
+  path: 'public://favicon[1].ico'
   use_default: false
 features:
   favicon: true
@@ -201,3 +201,22 @@ register_button_title: 'Contact Us'
 re_password_button_url: /kontakt
 re_password_button_title: 'Kontakt os'
 back-to-top: 1
+bootstrap_barrio_region_width_logo: 0
+bootstrap_barrio_region_width_primary_menu: 0
+bootstrap_barrio_region_width_language_block: 0
+bootstrap_barrio_region_width_search: 0
+bootstrap_barrio_region_width_social_media: 0
+bootstrap_barrio_region_width_highlighted: 0
+bootstrap_barrio_region_width_featured_top: 0
+bootstrap_barrio_region_width_banner: 0
+bootstrap_barrio_region_width_content: 0
+bootstrap_barrio_region_width_sidebar_first: 0
+bootstrap_barrio_region_width_sidebar_second: 0
+bootstrap_barrio_region_width_featured_bottom_first: 0
+bootstrap_barrio_region_width_featured_bottom_second: 0
+bootstrap_barrio_region_width_featured_bottom_third: 0
+bootstrap_barrio_region_width_footer_first: 0
+bootstrap_barrio_region_width_footer_second: 0
+bootstrap_barrio_region_width_footer_third: 0
+bootstrap_barrio_region_width_footer_fourth: 0
+bootstrap_barrio_region_width_footer_fifth: 0

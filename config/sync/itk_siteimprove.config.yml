@@ -1,0 +1,4 @@
+exclude_admin: 0
+excludes: ''
+use_cookieinformation: false
+exclude_patterns: {  }
