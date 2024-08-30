@@ -8,16 +8,13 @@
             <img src="{{file_url(content.field_image['#items'].entity.uri.value)}}" alt="{{content.field_image['#items'].alt}}" />
         </div>
         {{content.field_section}}
-        <div class="blog-addtoany">
-            {{drupal_block('addtoany_block')}}
-        </div>
         <div class="prev-next-node">
             <a href="{{prev_url}}">
                 <div class="svg_wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="88" height="150" viewBox="0 0 88 150">
                         <path  data-name="Path 40740" d="M88,136.591,74.578,150,0,75,74.653,0,88,13.409,26.694,75Z" fill="#1b1f29"/>
                     </svg>
-                </div>    
+                </div>
                 <h4>{{pager_prev_text}}</h4>
             </a>
             <a href="{{next_url}}" class="next_node">
@@ -26,18 +23,18 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="88" height="150" viewBox="0 0 88 150">
                         <path  data-name="Path 40741" d="M0,13.409,13.422,0,88,75,13.347,150,0,136.591,61.306,75Z" fill="#1b1f29"/>
                     </svg>
-                </div>    
+                </div>
             </a>
-        </div>     
+        </div>
         <div class="blog-comment-wrapper">
             <h2 class="cmt-counts">{{comment_count}} {{ "Comments"| t}}</h2>
-            {{content.comment.0}}  
+            {{content.comment.0}}
             {% if logged_in == false %}
                 <div class="login-wrapper">
                     <h3><a href="{{base_url}}/user/login" title="Login">{{"Login" | t}}</a> or <a href="{{base_url}}/user/register" title="Register">{{"Register" | t}}</a> {{"to post comments" | t}}</h3>
                 </div>
-            {% endif %} 
+            {% endif %}
         </div>
     </div>
 </section>
-        
+

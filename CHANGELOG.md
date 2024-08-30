@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## 2.1.5
+
+* Removed add-to-any module (called home).
+* Update docker compose setup.
+
+## 2.1.2
+
 * [PR-21](https://github.com/itk-dev/cfia/pull/21)
   Added site improve
 
