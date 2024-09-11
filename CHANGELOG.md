@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 2.1.6
+
+* Disabled user reg. page.
+
 ## 2.1.5
 
 * Removed add-to-any module (called home).
