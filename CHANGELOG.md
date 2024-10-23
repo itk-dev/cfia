@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+* Security update
+
 ## 2.1.6
 
 * Disabled user reg. page.
