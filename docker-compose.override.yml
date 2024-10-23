@@ -1,0 +1,4 @@
+services:
+  phpfpm:
+    environment:
+      - PHP_MEMORY_LIMIT=512M
