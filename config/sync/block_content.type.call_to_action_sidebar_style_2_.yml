@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: call_to_action_sidebar_style_2_
 label: 'Call To Action - Sidebar (Style 2)'
-revision: 0
+revision: false
 description: 'Use to add "Call To Action" widget'

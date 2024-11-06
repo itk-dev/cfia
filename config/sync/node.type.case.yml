@@ -12,7 +12,7 @@ third_party_settings:
 name: Case
 type: case
 description: 'Use <em>case</em> to add case study pages'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false
