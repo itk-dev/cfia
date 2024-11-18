@@ -257,11 +257,11 @@ services:
 
 ### Start docker and install site
 
-```sh
-docker-compose pull
-docker-compose up --detach
-docker-compose exec phpfpm composer install
-docker-compose exec phpfpm vendor/bin/drush --yes site:install --existing-config
+``` shell name="site-install"
+docker compose pull
+docker compose up --detach
+docker compose exec phpfpm composer install
+docker compose exec phpfpm vendor/bin/drush --yes site:install --existing-config
 # Get admin sign in url
-docker-compose exec phpfpm vendor/bin/drush --yes --uri="http://cfia.local.itkdev.dk" user:login
+docker compose exec phpfpm vendor/bin/drush --yes --uri="http://cfia.local.itkdev.dk" user:login
 ```

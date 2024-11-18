@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: single_image
 label: 'Single image'
-revision: 0
+revision: false
 description: 'Use this to insert a image in a region'

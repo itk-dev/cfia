@@ -21,14 +21,14 @@ settings:
   handler: 'default:view'
   handler_settings:
     target_bundles: null
-    auto_create: 0
+    auto_create: false
   plugin_types:
     block: block
-    default: 0
-    page: 0
-    entity_browser: 0
-    feed: 0
-    embed: 0
+    default: '0'
+    page: '0'
+    entity_browser: '0'
+    feed: '0'
+    embed: '0'
   preselect_views:
     arrangementer: arrangementer
     blog: blog
@@ -37,27 +37,27 @@ settings:
     services: services
     team: team
     testimonials: testimonials
-    block_content: 0
-    categories: 0
-    comment: 0
-    comments_recent: 0
-    content: 0
-    content_recent: 0
-    files: 0
-    file_entity_browser: 0
-    frontpage: 0
-    page_banner: 0
-    procesmodel: 0
-    taxonomy_term: 0
-    user_admin_people: 0
-    watchdog: 0
-    webform_submissions: 0
-    who_s_new: 0
-    who_s_online: 0
+    block_content: '0'
+    categories: '0'
+    comment: '0'
+    comments_recent: '0'
+    content: '0'
+    content_recent: '0'
+    files: '0'
+    file_entity_browser: '0'
+    frontpage: '0'
+    page_banner: '0'
+    procesmodel: '0'
+    taxonomy_term: '0'
+    user_admin_people: '0'
+    watchdog: '0'
+    webform_submissions: '0'
+    who_s_new: '0'
+    who_s_online: '0'
   enabled_settings:
     pager: pager
     limit: limit
     offset: offset
-    argument: 0
-    title: 0
+    argument: '0'
+    title: '0'
 field_type: viewsreference

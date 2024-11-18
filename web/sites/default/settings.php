@@ -88,7 +88,18 @@
  * ];
  * @endcode
  */
-$databases = [];
+$databases['default']['default'] = [
+  'database' => 'db',
+  'username' => 'db',
+  'password' => 'db',
+  'prefix' => '',
+  'host' => 'mariadb',
+  'port' => '',
+  'isolation_level' => 'READ COMMITTED',
+  'driver' => 'mysql',
+  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
+];
 
 /**
  * Customizing database settings.
@@ -235,7 +246,7 @@ $databases = [];
  * directory in the public files path. The setting below allows you to set
  * its location.
  */
-# $settings['config_sync_directory'] = '/directory/outside/webroot';
+$settings['config_sync_directory'] = '../config/sync';
 
 /**
  * Settings:
@@ -264,7 +275,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = 'NZ9dYC2kmorE2fsrhRGVJ_cjxThge9MgHQn0AmdCapef03bhbV5l-PH2tr_vGF-rtQJRAL7ygw';
 
 /**
  * Deployment identifier.
@@ -355,7 +366,8 @@ $settings['update_free_access'] = FALSE;
  * Be aware, however, that it is likely that this would allow IP
  * address spoofing unless more advanced precautions are taken.
  */
-# $settings['reverse_proxy'] = TRUE;
+// https://www.drupal.org/docs/getting-started/installing-drupal/using-a-load-balancer-or-reverse-proxy
+$settings['reverse_proxy'] = TRUE;
 
 /**
  * Reverse proxy addresses.
@@ -364,7 +376,7 @@ $settings['update_free_access'] = FALSE;
  * IPv4/IPv6 addresses or subnets in CIDR notation. This setting is required if
  * $settings['reverse_proxy'] is TRUE.
  */
-# $settings['reverse_proxy_addresses'] = ['a.b.c.d', 'e.f.g.h/24', ...];
+$settings['reverse_proxy_addresses'] = [$_SERVER['REMOTE_ADDR']];
 
 /**
  * Reverse proxy trusted headers.
@@ -824,4 +836,3 @@ if (file_exists($app_root . "/" . $site_path . "/settings.local.php")) {
   include $app_root . "/" . $site_path . "/settings.local.php";
 }
 
-$settings['config_sync_directory'] = '../config/sync';

@@ -196,3 +196,4 @@ private-files/
 .vscode
 
 web/sites/default/settings.local.php
+.env.local

@@ -1,4 +1,4 @@
-uuid: null
+uuid: 8699e277-52cb-48c8-95bb-64657fa05892
 langcode: en
 status: true
 dependencies:
@@ -46,4 +46,5 @@ settings:
       multiBlock: true
     ckeditor5_sourceEditing:
       allowed_tags: {  }
-image_upload: {  }
+image_upload:
+  status: false
