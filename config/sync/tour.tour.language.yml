@@ -36,7 +36,7 @@ tips:
   language-default:
     id: language-default
     plugin: text
-    label: 'Set a language as default'
+    label: 'Vælg standardsprog'
     weight: 4
     selector: .js-form-item-site-default-language
     body: '<p>Du kan ændre standardsproget for webstedet ved at vælge et af dine konfigurerede sprog som standard. Webstedet vil bruge standardsproget i situationer, hvor ingen valg er truffet, men et sprog bør vælges som standard brug, da dette bland andet bliver brugt i administrations delen.</p>'

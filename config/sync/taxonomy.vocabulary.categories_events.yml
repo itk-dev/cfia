@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Categories - Events'
 vid: categories_events
-description: ''
+description: null
 weight: 0
+new_revision: false

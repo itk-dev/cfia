@@ -8,7 +8,7 @@ jobs:
       fail-fast: false
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@master
         with:
           fetch-depth: 2
 
@@ -45,7 +45,6 @@ jobs:
           composer validate composer.json
 
   install-site:
-    if: ${{ false }}  # Disable - Needs to be tested.
     name: Check that site can be installed
     runs-on: ubuntu-latest
     steps:
@@ -61,11 +60,32 @@ jobs:
           docker compose exec --user root phpfpm composer install --no-interaction
 
           # Install the site
-          docker compose exec --user root phpfpm vendor/bin/drush site:install minimal --existing-config --yes
-
-          # Build theme assets
-          docker compose run --rm node yarn --cwd /app/web/themes/custom/hoeringsportal install
-          docker compose run --rm node yarn --cwd /app/web/themes/custom/hoeringsportal build
+          docker compose exec --user root phpfpm vendor/bin/drush site:install --existing-config --yes
 
           # Open the site
           echo $(docker compose exec phpfpm vendor/bin/drush --uri=http://$(docker compose port nginx 8080) user:login)
+
+  config-check:
+    name: Check that config is up to date
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Install site
+        run: |
+          docker network create frontend
+          docker compose pull
+          docker compose up --detach
+
+          # Important: Use --no-interaction to make https://getcomposer.org/doc/06-config.md#discard-changes have effect.
+          docker compose exec --user root phpfpm composer install --no-interaction
+
+          # Install the site
+          docker compose exec --user root phpfpm vendor/bin/drush site:install --existing-config --yes
+
+      - name: Export config
+        run: |
+          docker compose exec --user root phpfpm vendor/bin/drush config:export --yes
+      - name: Check for changes in config
+        run: |
+          git diff --diff-filter=ACMRT --exit-code config/

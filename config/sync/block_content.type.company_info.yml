@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: company_info
 label: 'Company Info'
-revision: 0
+revision: false
 description: 'Information about the company'
