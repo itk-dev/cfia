@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.1.7
+
 * Automatic deployment
 * Security update
 
