@@ -8,6 +8,7 @@ services:
       - PHP_MEMORY_LIMIT=512M
     volumes:
       - ../../shared/settings.local.php:/app/web/sites/default/settings.local.php
+      - ../../shared/files:/app/web/sites/default/files
 
   nginx:
     environment:
