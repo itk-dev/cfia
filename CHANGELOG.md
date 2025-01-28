@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* [PR-23](https://github.com/itk-dev/cfia/pull/23)
+  Style case and service contact image the same
+
 ## 2.1.7
 
 * Automatic deployment
