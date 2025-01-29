@@ -1,5 +1,10 @@
 on: pull_request
+
 name: Review
+
+env:
+  COMPOSE_USER: runner
+
 jobs:
   changelog:
     runs-on: ubuntu-latest
