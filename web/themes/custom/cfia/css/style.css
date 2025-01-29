@@ -187,6 +187,7 @@ a:hover, .link:hover {
 /* Truncate text in blog list */
 .blog-content {
   display: -webkit-box;
+  line-clamp: 4;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -206,6 +207,13 @@ a:hover, .link:hover {
 /* Service title center text */
 .service-1 .service-wrapper h4 {
   text-align: center;
+}
+
+/* Services and case contacts image */
+.services-details img,
+.cases-details img {
+  width: 100%;
+  height: auto !important;
 }
 
 /* Highlight background on service grid on hover */
@@ -241,11 +249,6 @@ a:hover, .link:hover {
 .cases-page .cases-details.z-sec {
   padding-top: 80px;
 }
-
-.cases-page .sidebar .block-cfia-caseskategorier {
-
-}
-
 
 /* Portfolio */
 .portfolio-style-2 .container .container ul li:first-of-type {
