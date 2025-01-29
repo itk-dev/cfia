@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* [PR-24](https://github.com/itk-dev/cfia/pull/24)
+  Some menu for footer
+
 ## 2.1.7
 
 * Automatic deployment
