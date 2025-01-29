@@ -471,18 +471,18 @@ function consultancy_plus_preprocess_node(&$variables) {
     else{
       $data_prev = Node::load($blog_nodes[$key-1]);
     }
-    $variables['next_case_url'] = $data_next->toUrl()->setAbsolute()->toString();
-    $variables['prev_case_url'] = $data_prev->toUrl()->setAbsolute()->toString();
 
+    if ($data_prev) {
+      $variables['prev_case_url'] = $data_prev->toUrl()->setAbsolute()->toString();
+      $prevNodeDate = $data_prev->getCreatedTime();
+      $variables['prevnodedate'] = \Drupal::service('date.formatter')->format($prevNodeDate, 'dd/mm');
+    }
 
-
-
-    $prevNodeDate = $data_prev->getCreatedTime();
-    $nextNodeDate = $data_next->getCreatedTime();
-    $variables['nextnodedate'] = \Drupal::service('date.formatter')->format($nextNodeDate, 'dd/mm');
-    $variables['prevnodedate'] = \Drupal::service('date.formatter')->format($prevNodeDate, 'dd/mm');
-
-
+    if ($data_next) {
+      $variables['next_case_url'] = $data_next->toUrl()->setAbsolute()->toString();
+      $nextNodeDate = $data_next->getCreatedTime();
+      $variables['nextnodedate'] = \Drupal::service('date.formatter')->format($nextNodeDate, 'dd/mm');
+    }
   }
 
 
