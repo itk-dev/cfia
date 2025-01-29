@@ -4,6 +4,8 @@
 
 * [PR-23](https://github.com/itk-dev/cfia/pull/23)
   Style case and service contact image the same
+* [PR-24](https://github.com/itk-dev/cfia/pull/24)
+  Some menu for footer
 
 ## 2.1.7
 
