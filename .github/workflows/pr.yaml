@@ -95,21 +95,21 @@ jobs:
         run: |
           git diff --diff-filter=ACMRT --exit-code config/
 
-composer-audit:
-  name: Check that required packages are up to date
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@master
+  composer-audit:
+    name: Check that required packages are up to date
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
 
-    - name: Install site
-      run: |
-        docker network create frontend
-        docker compose pull
-        docker compose up --detach
+      - name: Install site
+        run: |
+          docker network create frontend
+          docker compose pull
+          docker compose up --detach
 
-        # Important: Use --no-interaction to make https://getcomposer.org/doc/06-config.md#discard-changes have effect.
-        docker compose exec --user root phpfpm composer install --no-interaction
+          # Important: Use --no-interaction to make https://getcomposer.org/doc/06-config.md#discard-changes have effect.
+          docker compose exec --user root phpfpm composer install --no-interaction
 
-    - name: Run audit
-      run: |
-        docker compose exec --user root phpfpm composer audit
+      - name: Run audit
+        run: |
+          docker compose exec --user root phpfpm composer audit
