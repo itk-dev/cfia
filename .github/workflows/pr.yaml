@@ -70,8 +70,8 @@ jobs:
           # Open the site
           echo $(docker compose exec phpfpm vendor/bin/drush --uri=http://$(docker compose port nginx 8080) user:login)
 
-  config-check:
-    name: Check that config is up to date
+  composer-audit:
+    name: Check that required packages are up to date
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -85,12 +85,6 @@ jobs:
           # Important: Use --no-interaction to make https://getcomposer.org/doc/06-config.md#discard-changes have effect.
           docker compose exec --user root phpfpm composer install --no-interaction
 
-          # Install the site
-          docker compose exec --user root phpfpm vendor/bin/drush site:install --existing-config --yes
-
-      - name: Export config
+      - name: Run audit
         run: |
-          docker compose exec --user root phpfpm vendor/bin/drush config:export --yes
-      - name: Check for changes in config
-        run: |
-          git diff --diff-filter=ACMRT --exit-code config/
+          docker compose exec --user root phpfpm composer audit
