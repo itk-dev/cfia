@@ -4,6 +4,8 @@
 
 * [PR-27](https://github.com/itk-dev/cfia/pull/27)
   * Security update
+* [PR-28](https://github.com/itk-dev/cfia/pull/28)
+  * Configure github actions
 
 ## 2.1.8
 
