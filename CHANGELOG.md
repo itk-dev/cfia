@@ -5,6 +5,9 @@
 * [PR-25](https://github.com/itk-dev/cfia/pull/25)
   Style case and service contact image the same.. Again.
 
+* [PR-27](https://github.com/itk-dev/cfia/pull/27)
+  * Security update
+
 ## 2.1.8
 
 * [PR-23](https://github.com/itk-dev/cfia/pull/23)
