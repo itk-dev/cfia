@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* [PR-29](https://github.com/itk-dev/cfia/pull/29)
+  * Updated default configuration
+  * Added task for exporting default configuration
 * [PR-27](https://github.com/itk-dev/cfia/pull/27)
   * Security update
 * [PR-28](https://github.com/itk-dev/cfia/pull/28)
