@@ -45,7 +45,7 @@ tasks:
     silent: true
 
   export-default-conf:
-    desc: "Build site using existing config and exports it"
+    desc: "Build site using existing config and exports it. Beware! This will reset your local database."
     cmds:
       - task compose -- up --detach
       - task composer -- install
