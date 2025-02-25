@@ -1,0 +1,8 @@
+uuid: 75448c2c-ce2c-401e-88ec-6d5189f05232
+langcode: da
+status: true
+dependencies: {  }
+id: some
+label: SoMe
+description: 'SoMe ikoner til footer'
+locked: false
