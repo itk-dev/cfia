@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [2.1.9] - 2025-03-05
+
 * [PR-29](https://github.com/itk-dev/cfia/pull/29)
   * Updated default configuration
   * Added task for exporting default configuration
@@ -218,7 +220,8 @@
 * First release
 
 
-[Unreleased]: https://github.com/itk-dev/cfia/compare/2.1.8...HEAD
+[Unreleased]: https://github.com/itk-dev/cfia/compare/2.1.9...HEAD
+[2.1.9]: https://github.com/itk-dev/cfia/compare/2.1.8...2.1.9
 [2.1.8]: https://github.com/itk-dev/cfia/compare/2.1.7...2.1.8
 [2.1.7]: https://github.com/itk-dev/cfia/compare/2.1.6...2.1.7
 [2.1.6]: https://github.com/itk-dev/cfia/compare/2.1.5...2.1.6
