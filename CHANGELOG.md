@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+* [PR-32](https://github.com/itk-dev/cfia/pull/32)
+  * Added weight to cfia theme assets
+
 ## [2.1.9] - 2025-03-05
 
 * [PR-29](https://github.com/itk-dev/cfia/pull/29)
