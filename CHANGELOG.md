@@ -1,5 +1,25 @@
 # CHANGELOG
 
+## 2.1.11
+
+* Update woodpecker task files with zone label
+* Add missing license
+* Add badges to readme
+
+## 2.1.10
+
+* Assets ordering by weight
+
+## 2.1.9
+
+* Add template for some menu
+* Make case and service contact image visually the same
+* Security updates
+* Support services contact image revisited
+* Task get updated config
+* Updating default conf
+* Streamline changelog formatting
+
 ## 2.1.8
 
 * [PR-23](https://github.com/itk-dev/cfia/pull/23)
