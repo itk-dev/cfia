@@ -5,7 +5,7 @@
 ## [2.1.11] - 2025-03-12
 
 * [PR-34](https://github.com/itk-dev/cfia/pull/34)
-  * Added weight to cfia theme assets
+  * Update woodpecker workflow files with zone label
 
 ## [2.1.10] - 2025-03-06
 
