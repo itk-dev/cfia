@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.browse_files
+    - entity_browser.browser.browse_files_modal
     - filter.format.basic_html
     - node.type.article
     - node.type.blog_post
@@ -21,6 +23,8 @@ dependencies:
   module:
     - comment
     - contextual
+    - dropzonejs
+    - entity_browser
     - file
     - filter
     - fontawesome
@@ -41,6 +45,8 @@ weight: 2
 is_admin: false
 permissions:
   - 'access administration pages'
+  - 'access browse_files entity browser pages'
+  - 'access browse_files_modal entity browser pages'
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
@@ -109,6 +115,7 @@ permissions:
   - 'delete terms in category_blog'
   - 'delete terms in category_case'
   - 'delete terms in tags'
+  - 'dropzone upload files'
   - 'edit any article content'
   - 'edit any blog_post content'
   - 'edit any case content'
