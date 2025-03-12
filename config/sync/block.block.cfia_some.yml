@@ -1,0 +1,25 @@
+uuid: 5e288edb-85a6-408f-a1f0-79cd87acde87
+langcode: da
+status: true
+dependencies:
+  config:
+    - system.menu.some
+  module:
+    - system
+  theme:
+    - cfia
+id: cfia_some
+theme: cfia
+region: footer_third
+weight: 0
+provider: null
+plugin: 'system_menu_block:some'
+settings:
+  id: 'system_menu_block:some'
+  label: SoMe
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
