@@ -210,8 +210,8 @@ a:hover, .link:hover {
 }
 
 /* Services and case contacts image */
-.services-details img,
-.cases-details img {
+.services-details .field--name-field-contact-person img,
+.cases-details .field--name-field-contact-person img {
   width: 100%;
   height: auto !important;
 }

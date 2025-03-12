@@ -1,0 +1,63 @@
+version: '3'
+
+dotenv: [".task.env", ".env"]
+
+vars:
+  DOCKER_COMPOSE: '{{ .TASK_DOCKER_COMPOSE | default "docker compose" }}'
+  # https://taskfile.dev/reference/templating/
+  BASE_URL: '{{.TASK_BASE_URL | default .COMPOSE_SERVER_DOMAIN | default .COMPOSE_DOMAIN | default ""}}'
+
+tasks:
+  compose:
+    desc: "Run `docker compose` command. Example: task compose -- up --detach"
+    cmds:
+      - '{{ .DOCKER_COMPOSE }} {{ .CLI_ARGS }}'
+
+  compose-exec:
+    desc: "Run `docker compose exec` command handling content on stdin. Example: task compose-exec -- phpfpm php -v"
+    cmds:
+      # Check if we have content on stdin (cf.
+      # https://unix.stackexchange.com/questions/762992/bash-check-if-the-standard-input-contains-anything)
+      - if [[ ! -t 0 ]]; then task compose -- exec --no-TTY {{ .CLI_ARGS }}; else task compose -- exec {{ .CLI_ARGS }}; fi
+    silent: true
+
+  composer:
+    desc: "Run composer command. Example: task composer -- install"
+    cmds:
+      - task compose-exec -- phpfpm composer {{ .CLI_ARGS }}
+    silent: true
+
+  drush:
+    desc: "Run Drush command. Example: task drush -- user:login"
+    cmds:
+      # Notice: To make debugging (with Xdebug) work, we have to call
+      # vendor/bin/drush.php directly (and not vendor/bin/drush)
+      - task compose-exec -- phpfpm vendor/bin/drush --uri={{.URI}} {{ .CLI_ARGS }}
+    vars:
+      URI:
+        sh: task site-url
+    silent: true
+
+  set-user-roles:
+    desc: "Set some user's roles"
+    cmds:
+      - task drush -- user:role:add 'administrator' admin
+    silent: true
+
+  export-default-conf:
+    desc: "Build site using existing config and exports it. Beware! This will reset your local database."
+    cmds:
+      - task compose -- up --detach
+      - task composer -- install
+      - task drush -- site-install --existing-config --yes
+      - task drush -- config:export --yes
+
+  site-url:
+    desc: "Show site URL"
+    cmds:
+      - echo {{.URL}}
+    vars:
+      URL:
+        # Compute base URL if not set.
+        sh: if [ ! -z "{{.BASE_URL}}" ]; then echo "https://{{.BASE_URL}}"; else echo "http://$(task compose -- port nginx 8080)"; fi
+    silent: true

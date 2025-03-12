@@ -31,7 +31,7 @@ jobs:
       - name: Setup PHP, with composer and extensions
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 8.1
+          php-version: 8.3
           extensions: ctype, dom, iconv, json, zip, gd, soap
           coverage: none
           tools: composer:v2
@@ -40,7 +40,7 @@ jobs:
         id: composer-cache
         run: echo "::set-output name=dir::$(composer config cache-files-dir)"
       - name: Cache dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
@@ -48,6 +48,7 @@ jobs:
       - name: Validate composer files
         run: |
           composer validate composer.json
+
 
   install-site:
     name: Check that site can be installed
@@ -94,3 +95,22 @@ jobs:
       - name: Check for changes in config
         run: |
           git diff --diff-filter=ACMRT --exit-code config/
+
+  composer-audit:
+    name: Check that required packages are up to date
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Install site
+        run: |
+          docker network create frontend
+          docker compose pull
+          docker compose up --detach
+
+          # Important: Use --no-interaction to make https://getcomposer.org/doc/06-config.md#discard-changes have effect.
+          docker compose exec --user root phpfpm composer install --no-interaction
+
+      - name: Run audit
+        run: |
+          docker compose exec --user root phpfpm composer audit
