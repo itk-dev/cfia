@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [2.1.11] - 2025-03-12
+
+* [PR-34](https://github.com/itk-dev/cfia/pull/34)
+  * Update woodpecker workflow files with zone label
+
 ## [2.1.10] - 2025-03-06
 
 * [PR-32](https://github.com/itk-dev/cfia/pull/32)
@@ -225,7 +230,8 @@
 * First release
 
 
-[Unreleased]: https://github.com/itk-dev/cfia/compare/2.1.10...HEAD
+[Unreleased]: https://github.com/itk-dev/cfia/compare/2.1.11...HEAD
+[2.1.11]: https://github.com/itk-dev/cfia/compare/2.1.10...2.1.11
 [2.1.10]: https://github.com/itk-dev/cfia/compare/2.1.9...2.1.10
 [2.1.9]: https://github.com/itk-dev/cfia/compare/2.1.8...2.1.9
 [2.1.8]: https://github.com/itk-dev/cfia/compare/2.1.7...2.1.8
