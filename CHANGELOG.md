@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+* [PR-35](https://github.com/itk-dev/cfia/pull/35)
+  * Update permission to allow content editor to upload images
+
 ## [2.1.11] - 2025-03-12
 
 * [PR-34](https://github.com/itk-dev/cfia/pull/34)
