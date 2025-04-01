@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## [2.1.13] - 2025-03-31
+
+* [PR-37](https://github.com/itk-dev/cfia/pull/37)
+  * Update woodpecker
+
+## [2.1.12] - 2025-03-31
+
+* [PR-36](https://github.com/itk-dev/cfia/pull/36)
+  * Update drupal core - 10.4.5
+
 * [PR-35](https://github.com/itk-dev/cfia/pull/35)
   * Update permission to allow content editor to upload images
 
