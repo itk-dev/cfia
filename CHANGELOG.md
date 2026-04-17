@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [2.1.14] - 2026-04-17
+
 * [PR-38](https://github.com/itk-dev/foreningsmentor/pull/38)
   * Security update
 
@@ -246,7 +248,8 @@
 * First release
 
 
-[Unreleased]: https://github.com/itk-dev/cfia/compare/2.1.11...HEAD
+[Unreleased]: https://github.com/itk-dev/cfia/compare/2.1.14...HEAD
+[2.1.14]: https://github.com/itk-dev/cfia/compare/2.1.11...2.1.14
 [2.1.11]: https://github.com/itk-dev/cfia/compare/2.1.10...2.1.11
 [2.1.10]: https://github.com/itk-dev/cfia/compare/2.1.9...2.1.10
 [2.1.9]: https://github.com/itk-dev/cfia/compare/2.1.8...2.1.9
