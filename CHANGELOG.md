@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+* [PR-38](https://github.com/itk-dev/foreningsmentor/pull/38)
+  * Security update
+
 ## [2.1.13] - 2025-03-31
 
 * [PR-37](https://github.com/itk-dev/cfia/pull/37)
