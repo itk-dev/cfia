@@ -2,9 +2,14 @@
 
 ## [Unreleased]
 
+## [2.1.15] - 2026-05-20
+
+* [PR-40](https://github.com/itk-dev/cfia/pull/40)
+  * Security update
+
 ## [2.1.14] - 2026-04-17
 
-* [PR-38](https://github.com/itk-dev/foreningsmentor/pull/38)
+* [PR-38](https://github.com/itk-dev/cfia/pull/38)
   * Security update
 
 ## [2.1.13] - 2025-03-31
@@ -248,8 +253,11 @@
 * First release
 
 
-[Unreleased]: https://github.com/itk-dev/cfia/compare/2.1.14...HEAD
-[2.1.14]: https://github.com/itk-dev/cfia/compare/2.1.11...2.1.14
+[Unreleased]: https://github.com/itk-dev/cfia/compare/2.1.15...HEAD
+[2.1.15]: https://github.com/itk-dev/cfia/compare/2.1.14...2.1.15
+[2.1.14]: https://github.com/itk-dev/cfia/compare/2.1.13...2.1.14
+[2.1.13]: https://github.com/itk-dev/cfia/compare/2.1.12...2.1.13
+[2.1.12]: https://github.com/itk-dev/cfia/compare/2.1.11...2.1.12
 [2.1.11]: https://github.com/itk-dev/cfia/compare/2.1.10...2.1.11
 [2.1.10]: https://github.com/itk-dev/cfia/compare/2.1.9...2.1.10
 [2.1.9]: https://github.com/itk-dev/cfia/compare/2.1.8...2.1.9
