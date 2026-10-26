@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [2.1.16] - 2026-10-26
+
+* [PR-41](https://github.com/itk-dev/cfia/pull/41)
+  * Use maintained nginx/nginx-unprivileged docker image
+
 ## [2.1.15] - 2026-05-20
 
 * [PR-40](https://github.com/itk-dev/cfia/pull/40)
@@ -253,7 +258,8 @@
 * First release
 
 
-[Unreleased]: https://github.com/itk-dev/cfia/compare/2.1.15...HEAD
+[Unreleased]: https://github.com/itk-dev/cfia/compare/2.1.16...HEAD
+[2.1.16]: https://github.com/itk-dev/cfia/compare/2.1.15...2.1.16
 [2.1.15]: https://github.com/itk-dev/cfia/compare/2.1.14...2.1.15
 [2.1.14]: https://github.com/itk-dev/cfia/compare/2.1.13...2.1.14
 [2.1.13]: https://github.com/itk-dev/cfia/compare/2.1.12...2.1.13
